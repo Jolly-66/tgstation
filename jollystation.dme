@@ -3352,6 +3352,7 @@
 #include "jollystation_modules\code\modules\client\client_defines.dm"
 #include "jollystation_modules\code\modules\client\preferences.dm"
 #include "jollystation_modules\code\modules\client\verbs\looc.dm"
+#include "jollystation_modules\code\modules\jobs\access.dm"
 #include "jollystation_modules\code\modules\jobs\job_types\head_of_service.dm"
 #include "jollystation_modules\code\modules\jobs\job_types\toxicologist.dm"
 #include "jollystation_modules\code\modules\jobs\job_types\xenobiologist.dm"
