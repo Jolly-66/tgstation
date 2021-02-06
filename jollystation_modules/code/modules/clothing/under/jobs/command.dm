@@ -3,8 +3,7 @@
 	name = "shuttle pilot's jumpsuit"
 	icon_state = "pilot"
 	icon = 'jollystation_modules/icons/obj/clothing/under/captain.dmi'
-	worn_icon = 'modular_skyrat/modules/mapping/icons/mob/clothing/under/captain.dmi'
-	worn_icon_digi = 'modular_skyrat/modules/mapping/icons/mob/clothing/under/captain_digi.dmi'
+	worn_icon = 'jollystation_modules/icons/mob/clothing/under/captain.dmi'
 
 /obj/item/clothing/under/rank/captain/pilot/skirt
 	name = "shuttle pilot's jumpskirt"
