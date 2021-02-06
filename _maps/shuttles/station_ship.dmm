@@ -378,12 +378,10 @@
 /obj/machinery/light{
 	dir = 4
 	},
-/obj/machinery/cryopod{
-	dir = 8
-	},
 /obj/effect/turf_decal/trimline/white/filled/line{
 	dir = 6
 	},
+/obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plasteel/dark,
 /area/shuttle/shipstation)
 "ci" = (
@@ -635,12 +633,10 @@
 /turf/open/floor/plasteel/dark,
 /area/shuttle/shipstation)
 "dw" = (
-/obj/machinery/cryopod{
-	dir = 4
-	},
 /obj/effect/turf_decal/trimline/white/filled/line{
 	dir = 10
 	},
+/obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plasteel/dark,
 /area/shuttle/shipstation)
 "dA" = (
@@ -693,28 +689,25 @@
 /turf/open/floor/plasteel/dark,
 /area/shuttle/shipstation)
 "dN" = (
-/obj/machinery/computer/cloning,
 /obj/effect/turf_decal/trimline/blue/filled/line{
 	dir = 1
 	},
+/obj/machinery/computer/scan_consolenew,
 /turf/open/floor/plasteel/dark,
 /area/shuttle/shipstation)
 "dO" = (
-/obj/machinery/computer/cryopod{
-	dir = 1;
-	pixel_y = -32
-	},
 /obj/effect/turf_decal/trimline/white/filled/end,
+/obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plasteel/dark,
 /area/shuttle/shipstation)
 "dP" = (
 /obj/machinery/light{
 	dir = 4
 	},
-/obj/machinery/clonepod,
 /obj/effect/turf_decal/trimline/blue/filled/line{
 	dir = 5
 	},
+/obj/item/kirbyplants/random,
 /turf/open/floor/plasteel/dark,
 /area/shuttle/shipstation)
 "dQ" = (
@@ -959,8 +952,11 @@
 /turf/open/floor/plasteel/dark,
 /area/shuttle/shipstation)
 "fc" = (
-/obj/machinery/posialert,
-/turf/closed/wall/mineral/titanium/nodiagonal,
+/obj/effect/turf_decal/trimline/white/filled/line{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/plasteel/dark,
 /area/shuttle/shipstation)
 "fg" = (
 /obj/structure/shuttle/engine/propulsion/right{
@@ -1824,9 +1820,9 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 1
 	},
-/obj/machinery/door/airlock/medical/glass{
-	name = "Genetics";
-	req_one_access_txt = "5;9"
+/obj/machinery/door/airlock/research{
+	name = "Genetics Lab";
+	req_access_txt = "9;47"
 	},
 /turf/open/floor/plasteel/dark,
 /area/shuttle/shipstation)
@@ -2210,12 +2206,11 @@
 /turf/open/floor/plasteel/dark,
 /area/shuttle/shipstation)
 "uI" = (
-/obj/machinery/cryopod{
-	dir = 8
-	},
 /obj/effect/turf_decal/trimline/white/filled/line{
 	dir = 5
 	},
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/cobweb/cobweb2,
 /turf/open/floor/plasteel/dark,
 /area/shuttle/shipstation)
 "uP" = (
@@ -4305,12 +4300,11 @@
 /area/shuttle/shipstation)
 "UO" = (
 /obj/machinery/camera/autoname,
-/obj/machinery/cryopod{
-	dir = 4
-	},
 /obj/effect/turf_decal/trimline/white/filled/line{
 	dir = 9
 	},
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/structure/closet/crate,
 /turf/open/floor/plasteel/dark,
 /area/shuttle/shipstation)
 "UU" = (
@@ -4360,6 +4354,7 @@
 /obj/effect/turf_decal/trimline/white/filled/corner{
 	dir = 8
 	},
+/obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plasteel/dark,
 /area/shuttle/shipstation)
 "Vk" = (
@@ -5067,7 +5062,7 @@ ew
 El
 wx
 Lk
-dh
+fc
 Vi
 dO
 ZH
@@ -5374,7 +5369,7 @@ ed
 "}
 (30,1,1) = {"
 wd
-fc
+ZH
 Cn
 Lo
 Ie
