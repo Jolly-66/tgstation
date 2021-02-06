@@ -5,7 +5,7 @@
 //	You do not need to raise this if you are adding new values that have sane defaults.
 //	Only raise this value when changing the meaning/format/name/layout of an existing value
 //	where you would want the updater procs below to run
-#define SAVEFILE_VERSION_MAX	38
+#define SAVEFILE_VERSION_MAX	39
 
 /*
 SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Carn
@@ -94,6 +94,9 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 		features["medical_records"] = strip_html_simple(features["medical_records"], MAX_FLAVOR_LEN, TRUE)
 		features["exploitable_info"] = strip_html_simple(features["exploitable_info"], MAX_FLAVOR_LEN, TRUE)
 		//NON-MODULE CHANGES END
+	if (current_version < 39)
+		LAZYADD(key_bindings["F"], "toggle_combat_mode")
+		LAZYADD(key_bindings["4"], "toggle_combat_mode")
 
 /datum/preferences/proc/update_character(current_version, savefile/S)
 	return
