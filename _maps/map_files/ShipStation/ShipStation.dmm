@@ -171,7 +171,7 @@
 	dir = 8
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/chair/sofa/bench/left{
+/obj/structure/chair/sofa/left{
 	dir = 4
 	},
 /turf/open/floor/plasteel/dark,
@@ -237,7 +237,7 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/chair/sofa/bench/right{
+/obj/structure/chair/sofa/right{
 	dir = 8
 	},
 /turf/open/floor/plasteel/dark,
@@ -446,7 +446,7 @@
 	dir = 8
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/chair/sofa/bench/right{
+/obj/structure/chair/sofa/right{
 	dir = 4
 	},
 /turf/open/floor/plasteel/dark,
@@ -491,7 +491,7 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/chair/sofa/bench/left{
+/obj/structure/chair/sofa/left{
 	dir = 8
 	},
 /turf/open/floor/plasteel/dark,
@@ -551,7 +551,7 @@
 /area/construction/mining/aux_base)
 "cp" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/chair/sofa/bench/right{
+/obj/structure/chair/sofa/right{
 	dir = 8
 	},
 /obj/structure/window/reinforced/spawner/east,
@@ -1423,10 +1423,11 @@
 /turf/open/floor/plasteel,
 /area/engine/atmos)
 "fE" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/trash_pile,
+/obj/effect/spawner/structure/window/hollow/reinforced/end{
+	dir = 1
+	},
 /turf/open/floor/plating,
-/area/maintenance/department/cargo)
+/area/vacant_room)
 "fG" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable,
@@ -1845,7 +1846,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable,
 /turf/open/floor/plasteel,
-/area/blueshield)
+/area/vacant_room/office)
 "ha" = (
 /obj/structure/cable,
 /obj/effect/decal/cleanable/dirt,
@@ -4385,11 +4386,6 @@
 /area/security/prison)
 "pH" = (
 /obj/structure/rack,
-/obj/item/tank/internals/nitrogen/belt/emergency,
-/obj/item/tank/internals/nitrogen/belt/emergency,
-/obj/item/tank/internals/nitrogen/belt/emergency,
-/obj/item/tank/internals/nitrogen/belt/emergency,
-/obj/item/tank/internals/nitrogen/belt/emergency,
 /obj/effect/spawner/lootdrop/prison_contraband,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
@@ -5181,7 +5177,7 @@
 /area/security/prison)
 "tF" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/chair/sofa/bench/left{
+/obj/structure/chair/sofa/left{
 	dir = 4
 	},
 /turf/open/floor/plasteel,
@@ -5670,7 +5666,7 @@
 "vW" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel,
-/area/blueshield)
+/area/vacant_room/office)
 "vX" = (
 /obj/structure/bed,
 /obj/item/bedsheet/dorms,
@@ -6930,14 +6926,11 @@
 /area/quartermaster/storage)
 "Cc" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/machinery/cryopod{
-	dir = 4
-	},
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 4
 	},
 /turf/open/floor/plasteel,
-/area/crew_quarters/cryopod)
+/area/vacant_room)
 "Cd" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/conveyor{
@@ -7000,7 +6993,7 @@
 /obj/structure/table/wood,
 /obj/machinery/light/small,
 /turf/open/floor/plasteel,
-/area/blueshield)
+/area/vacant_room/office)
 "Cl" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/conveyor{
@@ -7263,7 +7256,7 @@
 "Dq" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/carpet/executive,
-/area/blueshield)
+/area/vacant_room/office)
 "Dr" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/turf_decal/stripes/asteroid/line{
@@ -7675,7 +7668,7 @@
 /area/crew_quarters/dorms)
 "Ft" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/chair/sofa/bench/right{
+/obj/structure/chair/sofa/right{
 	dir = 8
 	},
 /turf/open/floor/plasteel,
@@ -7823,7 +7816,7 @@
 /area/crew_quarters/dorms)
 "FW" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/chair/sofa/bench/right{
+/obj/structure/chair/sofa/right{
 	dir = 4
 	},
 /turf/open/floor/plasteel,
@@ -7853,7 +7846,7 @@
 /area/library)
 "Gi" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/chair/sofa/bench/left{
+/obj/structure/chair/sofa/left{
 	dir = 8
 	},
 /turf/open/floor/plasteel,
@@ -7983,7 +7976,7 @@
 /area/crew_quarters/dorms/barracks)
 "GM" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/chair/sofa/bench/left{
+/obj/structure/chair/sofa/left{
 	dir = 8
 	},
 /obj/structure/window/reinforced/spawner/east,
@@ -8317,7 +8310,7 @@
 /obj/machinery/power/apc/auto_name/north,
 /obj/structure/cable,
 /turf/open/floor/plasteel,
-/area/blueshield)
+/area/vacant_room/office)
 "HY" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/firedoor,
@@ -8875,10 +8868,9 @@
 /area/crew_quarters/dorms/barracks)
 "Kk" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/landmark/start/blueshield,
 /obj/structure/chair/office,
 /turf/open/floor/carpet/executive,
-/area/blueshield)
+/area/vacant_room/office)
 "Kl" = (
 /obj/machinery/button/door{
 	id = "Cabin6";
@@ -9032,11 +9024,10 @@
 /area/engine/supermatter)
 "KS" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/machinery/door/airlock/command{
-	name = "Blueshield's Office";
-	req_access_txt = "73"
-	},
 /obj/structure/cable,
+/obj/machinery/door/airlock/maintenance{
+	req_access_txt = "12"
+	},
 /turf/open/floor/plasteel,
 /area/maintenance/central)
 "KU" = (
@@ -9121,7 +9112,7 @@
 /area/crew_quarters/dorms/barracks)
 "Lp" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/chair/sofa/bench/left{
+/obj/structure/chair/sofa/left{
 	dir = 4
 	},
 /obj/effect/turf_decal/siding/wood{
@@ -9131,7 +9122,7 @@
 /area/crew_quarters/dorms)
 "Lq" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/chair/sofa/bench/right{
+/obj/structure/chair/sofa/right{
 	dir = 8
 	},
 /obj/effect/turf_decal/siding/wood{
@@ -9364,7 +9355,7 @@
 /area/construction/mining/aux_base)
 "Mt" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/chair/sofa/bench/right{
+/obj/structure/chair/sofa/right{
 	dir = 4
 	},
 /obj/effect/turf_decal/siding/wood{
@@ -9374,7 +9365,7 @@
 /area/crew_quarters/dorms)
 "Mv" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/chair/sofa/bench/left{
+/obj/structure/chair/sofa/left{
 	dir = 8
 	},
 /obj/effect/turf_decal/siding/wood{
@@ -9654,7 +9645,7 @@
 /area/science/server)
 "NG" = (
 /turf/closed/wall,
-/area/blueshield)
+/area/vacant_room/office)
 "NJ" = (
 /obj/effect/spawner/structure/window/hollow/reinforced/middle{
 	dir = 1
@@ -9816,14 +9807,11 @@
 /area/maintenance/department/cargo)
 "Ou" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/machinery/cryopod{
-	dir = 8
-	},
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 8
 	},
 /turf/open/floor/plasteel,
-/area/crew_quarters/cryopod)
+/area/vacant_room)
 "Ov" = (
 /obj/machinery/button/door{
 	id = "commissarydoor";
@@ -9842,7 +9830,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/table/wood,
 /turf/open/floor/plasteel,
-/area/blueshield)
+/area/vacant_room/office)
 "Oz" = (
 /obj/structure/fans/tiny,
 /obj/effect/turf_decal/stripes/line,
@@ -9935,7 +9923,7 @@
 /area/hallway/secondary/entry)
 "OX" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/chair/sofa/bench/right,
+/obj/structure/chair/sofa/right,
 /turf/open/floor/plasteel,
 /area/hallway/secondary/entry)
 "OY" = (
@@ -9945,7 +9933,7 @@
 /area/space/nearstation)
 "Pb" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/chair/sofa/bench/left,
+/obj/structure/chair/sofa/left,
 /turf/open/floor/plasteel,
 /area/hallway/secondary/entry)
 "Pd" = (
@@ -10015,7 +10003,7 @@
 /area/hallway/primary/central)
 "Ps" = (
 /turf/closed/wall,
-/area/crew_quarters/cryopod)
+/area/vacant_room)
 "Pu" = (
 /obj/machinery/vending/coffee,
 /obj/effect/decal/cleanable/dirt,
@@ -10046,21 +10034,14 @@
 /obj/structure/window/reinforced/spawner,
 /obj/structure/window/reinforced/spawner/east,
 /turf/open/floor/grass,
-/area/crew_quarters/cryopod)
-"PA" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/machinery/computer/cryopod{
-	pixel_y = 32
-	},
-/turf/open/floor/plasteel,
-/area/crew_quarters/cryopod)
+/area/vacant_room)
 "PB" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/flora/ausbushes/lavendergrass,
 /obj/structure/window/reinforced/spawner,
 /obj/structure/window/reinforced/spawner/west,
 /turf/open/floor/grass,
-/area/crew_quarters/cryopod)
+/area/vacant_room)
 "PD" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/turf_decal/delivery,
@@ -10141,24 +10122,10 @@
 /obj/machinery/light,
 /turf/open/floor/plating/grass,
 /area/hydroponics)
-"PU" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/machinery/cryopod{
-	dir = 4
-	},
-/turf/open/floor/plasteel,
-/area/crew_quarters/cryopod)
-"PV" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plasteel,
-/area/crew_quarters/cryopod)
 "PZ" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/machinery/cryopod{
-	dir = 8
-	},
 /turf/open/floor/plasteel,
-/area/crew_quarters/cryopod)
+/area/vacant_room)
 "Qb" = (
 /obj/machinery/atmospherics/components/unary/portables_connector/visible{
 	dir = 1
@@ -10220,16 +10187,13 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2,
 /turf/open/floor/plasteel,
-/area/crew_quarters/cryopod)
+/area/vacant_room)
 "Qu" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/machinery/cryopod{
-	dir = 8
-	},
 /obj/machinery/power/apc/auto_name/east,
 /obj/structure/cable,
 /turf/open/floor/plasteel,
-/area/crew_quarters/cryopod)
+/area/vacant_room)
 "Qw" = (
 /turf/closed/wall/rust,
 /area/security/prison)
@@ -10317,7 +10281,7 @@
 /area/engine/engineering)
 "QJ" = (
 /turf/closed/wall/r_wall/rust,
-/area/blueshield)
+/area/vacant_room/office)
 "QK" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/turf_decal/stripes/line{
@@ -10445,7 +10409,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2,
 /turf/open/floor/plasteel,
-/area/hallway/secondary/entry)
+/area/vacant_room)
 "Rm" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/landmark/event_spawn,
@@ -10561,13 +10525,12 @@
 /area/engine/supermatter)
 "RM" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/closet/secure_closet/blueshield,
 /obj/machinery/light/small{
 	brightness = 3;
 	dir = 8
 	},
 /turf/open/floor/plasteel,
-/area/blueshield)
+/area/vacant_room/office)
 "RN" = (
 /obj/effect/turf_decal/stripes/asteroid/line{
 	dir = 5
@@ -11286,10 +11249,9 @@
 /turf/open/floor/plating,
 /area/hallway/secondary/entry)
 "UA" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/trash_pile,
+/obj/effect/spawner/structure/window/hollow/reinforced/end,
 /turf/open/floor/plating,
-/area/medical/psychology)
+/area/vacant_room)
 "UB" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/cyan/visible,
@@ -11379,7 +11341,7 @@
 /turf/open/floor/plasteel,
 /area/hallway/secondary/exit/departure_lounge)
 "UT" = (
-/turf/open/water/overlay/hotspring,
+/turf/open/floor/plating/beach/water,
 /area/security/prison)
 "UU" = (
 /obj/effect/decal/cleanable/dirt,
@@ -11729,7 +11691,7 @@
 	dir = 10
 	},
 /turf/open/floor/plasteel,
-/area/crew_quarters/cryopod)
+/area/vacant_room)
 "Wi" = (
 /obj/effect/turf_decal/plaque{
 	icon = 'icons/effects/crayondecal.dmi';
@@ -34751,7 +34713,7 @@ PM
 Zs
 Zs
 Zs
-fE
+Zs
 Tl
 GO
 HI
@@ -38352,12 +38314,12 @@ PM
 PM
 Tl
 Tl
-Tl
-Tl
-ML
-OO
-Tl
-Tl
+Ps
+Ps
+fE
+UA
+Ps
+Ps
 RA
 GD
 Su
@@ -38611,10 +38573,10 @@ PM
 Zs
 Ps
 Pz
-PU
+PZ
 Cc
-PU
-Tl
+PZ
+Ps
 RA
 Dw
 Su
@@ -38867,8 +38829,8 @@ OJ
 PM
 Pj
 Ps
-PA
-PV
+PZ
+PZ
 Wf
 Qs
 Rl
@@ -39128,7 +39090,7 @@ PB
 PZ
 Ou
 Qu
-Tl
+Ps
 RG
 Dw
 Sy
@@ -39359,7 +39321,7 @@ nv
 Bk
 BX
 Gx
-NW
+JQ
 EK
 Fw
 GE
@@ -39369,7 +39331,7 @@ Zs
 PM
 Zs
 Zs
-fE
+Zs
 PM
 Nn
 NO
@@ -39380,12 +39342,12 @@ OD
 OL
 JQ
 JQ
-JQ
-JQ
-EK
-Fw
-JQ
-JQ
+Ps
+Ps
+fE
+UA
+Ps
+Ps
 RN
 RY
 Pm
@@ -39615,8 +39577,8 @@ nv
 nv
 NW
 Cn
-NW
-NW
+JQ
+JQ
 ES
 aR
 bh
@@ -39873,7 +39835,7 @@ to
 to
 dv
 dv
-to
+JL
 rQ
 MP
 un
@@ -40380,14 +40342,14 @@ nv
 nv
 to
 qQ
-to
-to
-to
-to
-to
-to
-to
-to
+JL
+JL
+JL
+JL
+JL
+JL
+JL
+JL
 bh
 aR
 JQ
@@ -40637,7 +40599,7 @@ nv
 nv
 to
 qQ
-to
+JL
 xZ
 zk
 zl
@@ -40894,7 +40856,7 @@ nv
 nv
 to
 qQ
-to
+JL
 vb
 vb
 vb
@@ -41151,7 +41113,7 @@ nv
 nv
 to
 qQ
-to
+JL
 vb
 vb
 KV
@@ -41408,7 +41370,7 @@ to
 to
 to
 qQ
-to
+JL
 vb
 zl
 vb
@@ -41665,7 +41627,7 @@ qQ
 qQ
 qQ
 qQ
-to
+JL
 vb
 zl
 vb
@@ -41918,11 +41880,11 @@ nv
 nv
 to
 qQ
-to
-to
-to
-to
-to
+JL
+JL
+JL
+JL
+JL
 vb
 zl
 vb
@@ -42175,7 +42137,7 @@ nv
 nv
 to
 qQ
-to
+JL
 uX
 vb
 xd
@@ -42432,7 +42394,7 @@ nv
 nv
 to
 qQ
-to
+JL
 uZ
 vb
 xh
@@ -42689,7 +42651,7 @@ RI
 RI
 to
 qQ
-to
+JL
 vb
 vb
 vb
@@ -42946,7 +42908,7 @@ nv
 nv
 to
 qQ
-to
+JL
 ve
 vb
 vb
@@ -43203,7 +43165,7 @@ nv
 to
 to
 qQ
-to
+JL
 ve
 vb
 vb
@@ -43460,7 +43422,7 @@ nv
 to
 qQ
 qQ
-to
+JL
 vf
 we
 xi
@@ -43716,8 +43678,8 @@ nv
 nv
 to
 qQ
-to
-to
+JL
+JL
 vj
 vj
 vj
@@ -43973,7 +43935,7 @@ RI
 RI
 to
 qQ
-to
+JL
 uF
 vs
 wi
@@ -44230,7 +44192,7 @@ nv
 nv
 to
 qQ
-to
+JL
 uJ
 uJ
 uJ
@@ -44487,7 +44449,7 @@ nv
 nv
 to
 qQ
-to
+JL
 uJ
 uJ
 wl
@@ -44744,7 +44706,7 @@ nv
 nv
 to
 qQ
-to
+JL
 uK
 vt
 uJ
@@ -45001,9 +44963,9 @@ nv
 nv
 to
 qQ
-to
-to
-to
+JL
+JL
+JL
 wq
 xm
 wr
@@ -45260,7 +45222,7 @@ to
 qQ
 dv
 dv
-to
+JL
 wr
 wr
 wr
@@ -45517,7 +45479,7 @@ to
 qQ
 dv
 dv
-to
+JL
 wu
 xq
 wr
@@ -45774,7 +45736,7 @@ to
 qQ
 dv
 dv
-to
+JL
 wv
 xs
 uq
@@ -46031,7 +45993,7 @@ to
 qQ
 dv
 dv
-to
+JL
 wv
 xs
 uq
@@ -46288,7 +46250,7 @@ to
 qQ
 dv
 dv
-to
+JL
 wv
 xs
 uq
@@ -46545,7 +46507,7 @@ to
 qQ
 dv
 dv
-to
+JL
 wz
 uq
 uq
@@ -46802,7 +46764,7 @@ to
 qQ
 dv
 dv
-to
+JL
 Mz
 uq
 uq
@@ -47059,7 +47021,7 @@ to
 qQ
 dv
 dv
-to
+JL
 wE
 uq
 uq
@@ -47316,7 +47278,7 @@ qQ
 qQ
 dv
 Xe
-to
+JL
 wT
 xt
 xt
@@ -47570,10 +47532,10 @@ nv
 nv
 to
 qQ
-to
-to
-to
-to
+JL
+JL
+JL
+JL
 wU
 xu
 xJ
@@ -47640,7 +47602,7 @@ qt
 NZ
 Sf
 Sf
-UA
+Sf
 hO
 nv
 nv
@@ -47827,7 +47789,7 @@ rG
 tf
 to
 qQ
-to
+JL
 uh
 uN
 vu
@@ -48084,7 +48046,7 @@ qQ
 qQ
 tr
 qQ
-to
+JL
 up
 uq
 uq
@@ -48341,7 +48303,7 @@ rG
 tf
 to
 qQ
-to
+JL
 IR
 Zw
 vy
@@ -48598,14 +48560,14 @@ nv
 nv
 to
 qQ
-to
-to
-to
-to
-to
-to
-to
-to
+JL
+JL
+JL
+JL
+JL
+JL
+JL
+JL
 zX
 zX
 zX
@@ -51707,14 +51669,14 @@ sb
 Lq
 Mv
 MU
-Cs
-NW
+sb
+JQ
 tr
-wK
-wK
-NW
-NW
-NW
+JQ
+JQ
+JQ
+JQ
+JQ
 Pn
 Pu
 PL
@@ -51956,15 +51918,15 @@ ax
 ax
 Cs
 Cs
-Cs
-ax
-ax
-ax
-ax
-ax
-ax
-Cs
-Cs
+sb
+sb
+sb
+sb
+sb
+sb
+sb
+sb
+sb
 dv
 qQ
 dv
