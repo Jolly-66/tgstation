@@ -8,15 +8,15 @@
 	. = ..()
 	if(clicksound && world.time > next_clicksound && isliving(user))
 		next_clicksound = world.time + 5
-		playsound(src, get_sfx_skyrat(clicksound), clickvol)
+		playsound(src, get_sfx_comp(clicksound), clickvol)
 
 /obj/machinery/computer/ui_interact(mob/user, datum/tgui/ui)
 	if(clicksound && world.time > next_clicksound && isliving(user))
 		next_clicksound = world.time + 5
-		playsound(src, get_sfx_skyrat(clicksound), clickvol)
+		playsound(src, get_sfx_comp(clicksound), clickvol)
 	. = ..()
 
-/proc/get_sfx_skyrat(soundin)
+/proc/get_sfx_comp(soundin) //https://github.com/Skyrat-SS13/Skyrat-tg/pull/1245
 	if(istext(soundin))
 		switch(soundin)
 			if("keyboard")
