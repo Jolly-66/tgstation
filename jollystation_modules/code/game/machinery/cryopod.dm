@@ -93,7 +93,8 @@
 			playsound(src, 'sound/machines/terminal_prompt_deny.ogg', 50, 0)
 			updateUsrDialog()
 			return
-		if(!allow_items) return
+		if(!allow_items) 
+			return
 
 		if(frozen_items.len == 0)
 			to_chat(user, "<span class='notice'>There is nothing to recover from storage.</span>")
