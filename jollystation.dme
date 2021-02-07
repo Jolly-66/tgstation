@@ -3372,6 +3372,7 @@
 #include "jollystation_modules\code\modules\clothing\head\jobs.dm"
 #include "jollystation_modules\code\modules\clothing\under\jobs\command.dm"
 #include "jollystation_modules\code\modules\clothing\under\jobs\civilian\civilian.dm"
+#include "jollystation_modules\code\modules\jobs\access.dm"
 #include "jollystation_modules\code\modules\jobs\job_types\bridge_officer.dm"
 #include "jollystation_modules\code\modules\jobs\job_types\shuttle_pilot.dm"
 #include "jollystation_modules\code\modules\jobs\job_types\toxicologist.dm"
