@@ -474,10 +474,10 @@
 		to_chat(target, "<span class='boldnotice'>If you ghost, log out or close your client now, your character will shortly be permanently removed from the round.</span>")
 		name = "[name] ([occupant.name])"
 		if(target == user)
-			log_admin("<span class='notice'>[key_name(target)] entered a stasis pod.</span>")
+			log_game("<span class='notice'>[key_name(target)] entered a stasis pod.</span>")
 			message_admins("[key_name_admin(target)] entered a stasis pod. (<A HREF='?_src_=holder;[HrefToken()];adminplayerobservecoodjump=1;X=[x];Y=[y];Z=[z]'>JMP</a>)")
 		else
-			log_admin("<span class='notice'>[key_name(user)] put [key_name(target)] inside a stasis pod.</span>")
+			log_game("<span class='notice'>[key_name(user)] put [key_name(target)] inside a stasis pod.</span>")
 			message_admins("[key_name_admin(user)] put [key_name_admin(target)] inside a stasis pod. (<A HREF='?_src_=holder;[HrefToken()];adminplayerobservecoodjump=1;X=[x];Y=[y];Z=[z]'>JMP</a>)")
 		add_fingerprint(target)
 
