@@ -116,9 +116,7 @@
 		visible_message("<span class='notice'>The console beeps happily as it disgorges \the [I].</span>")
 		playsound(src, 'sound/machines/terminal_prompt_confirm.ogg', 50, 0)
 
-		I.forceMove(drop_location())
-		if(user && Adjacent(user) && user.can_hold_items())
-			user.put_in_hands(I)
+		user.put_in_hands(I)
 		frozen_items -= I
 		updateUsrDialog()
 
