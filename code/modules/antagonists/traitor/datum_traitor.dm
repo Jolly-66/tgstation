@@ -55,11 +55,16 @@
 	objectives -= O
 
 /datum/antagonist/traitor/proc/forge_traitor_objectives()
+	add_objective(new /datum/objective/ambitions()) //SKYRAT EDIT ADDITION - AMBITIONS
+	//JOLLY EDIT REMOVAL BEGIN - AMBITIONS
+	/*
 	switch(traitor_kind)
 		if(TRAITOR_AI)
 			forge_ai_objectives()
 		else
 			forge_human_objectives()
+	*/
+	//JOLLY EDIT REMOVAL END
 
 /datum/antagonist/traitor/proc/forge_human_objectives()
 	var/is_hijacker = FALSE
@@ -187,6 +192,7 @@
 	owner.announce_objectives()
 	if(should_give_codewords)
 		give_codewords()
+	..() //JOLLY EDIT ADDITION - AMBITIONS
 
 /datum/antagonist/traitor/proc/finalize_traitor()
 	switch(traitor_kind)
@@ -195,8 +201,12 @@
 			owner.current.playsound_local(get_turf(owner.current), 'sound/ambience/antag/malf.ogg', 100, FALSE, pressure_affected = FALSE, use_reverb = FALSE)
 			owner.current.grant_language(/datum/language/codespeak, TRUE, TRUE, LANGUAGE_MALF)
 		if(TRAITOR_HUMAN)
+			//JOLLY EDIT REMOVAL BEGIN - AMBITIONS
+			/*
 			if(should_equip)
 				equip(silent)
+			*/
+			//JOLLY EDIT REMOVAL END
 			owner.current.playsound_local(get_turf(owner.current), 'sound/ambience/antag/tatoralert.ogg', 100, FALSE, pressure_affected = FALSE, use_reverb = FALSE)
 
 /datum/antagonist/traitor/apply_innate_effects(mob/living/mob_override)
