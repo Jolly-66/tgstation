@@ -212,6 +212,10 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	if(hearted_until > world.realtime)
 		hearted = TRUE
 
+	// NON-MODULE CHANGES: client prefs
+	READ_FILE(S["hear_speech_sounds"] , hear_speech_sounds)
+	READ_FILE(S["hear_radio_sounds"] , hear_radio_sounds)
+
 	//try to fix any outdated data if necessary
 	if(needs_update >= 0)
 		var/bacpath = "[path].updatebac" //todo: if the savefile version is higher then the server, check the backup, and give the player a prompt to load the backup
@@ -258,6 +262,10 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	pda_style = sanitize_inlist(pda_style, GLOB.pda_styles, initial(pda_style))
 	pda_color = sanitize_hexcolor(pda_color, 6, 1, initial(pda_color))
 	key_bindings = sanitize_keybindings(key_bindings)
+
+	// NON-MODULE CHANGES: sanitization
+	hear_speech_sounds = sanitize_integer(hear_speech_sounds, FALSE, TRUE, initial(hear_speech_sounds))
+	hear_radio_sounds = sanitize_integer(hear_radio_sounds, FALSE, TRUE, initial(hear_radio_sounds))
 
 	if(needs_update >= 0) //save the updated version
 		var/old_default_slot = default_slot
@@ -334,6 +342,11 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	WRITE_FILE(S["pda_color"], pda_color)
 	WRITE_FILE(S["key_bindings"], key_bindings)
 	WRITE_FILE(S["hearted_until"], (hearted_until > world.realtime ? hearted_until : null))
+
+	// NON-MODULE CHANGES: client prefs
+	WRITE_FILE(S["hear_speech_sounds"] , hear_speech_sounds)
+	WRITE_FILE(S["hear_radio_sounds"] , hear_radio_sounds)
+
 	return TRUE
 
 /datum/preferences/proc/load_character(slot)
