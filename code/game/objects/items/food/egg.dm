@@ -137,3 +137,14 @@
 	w_class = WEIGHT_CLASS_NORMAL
 	tastes = list("egg" = 1, "bacon" = 1, "bun" = 1)
 	foodtypes = MEAT | BREAKFAST | GRAIN
+
+/obj/item/food/balancedegg //13140 eggs per year
+	name = "balanced breakfast"
+	desc = "Only 650 calories, perfect for any dieting station members!"
+	icon_state = "balancedegg"
+	trash_type = /obj/item/trash/plate
+	list_reagents = list(/datum/reagent/consumable/nutriment/protein = 108, /datum/reagent/consumable/nutriment/vitamin = 36) //520 kcals from protein in a diet of 650 kcals
+	w_class = WEIGHT_CLASS_BULKY
+	tastes = list("egg" = 36, "protein" = 1, "gains" = 1)
+	foodtypes = MEAT | BREAKFAST | DAIRY
+	venue_value = FOOD_PRICE_CHEAP

@@ -51,3 +51,12 @@
 	)
 	result = /obj/item/food/salad/eggbowl
 	subcategory = CAT_EGG
+
+/datum/crafting_recipe/food/balancedegg
+	name= "Balanced Breakfast"
+	reqs = list(
+		/obj/item/reagent_containers/food/snacks/boiledegg = 36, //SPECIFICALLY Hard boiled eggs
+		/datum/reagent/consumable/nutriment/vitamin = 4
+	)
+	result = /obj/item/food/balancedegg
+	subcategory = CAT_EGG
