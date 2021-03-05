@@ -28,6 +28,7 @@
 	name = "Bridge Officer"
 	jobtype = /datum/job/bo
 
+	id = /obj/item/card/id/advanced/silver
 	belt = /obj/item/pda/heads/hos
 	ears = /obj/item/radio/headset/heads/bo/alt
 	glasses = /obj/item/clothing/glasses/hud/security/sunglasses
