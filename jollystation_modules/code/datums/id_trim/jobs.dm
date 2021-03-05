@@ -3,7 +3,7 @@
 
 /datum/id_trim/job/bridge_officer
 	assignment = "Bridge Officer"
-	trim_state = "idbridgeofficer"
+	trim_state = "trim_bridgeofficer"
 	access = list(
 						ACCESS_MEDICAL, ACCESS_PSYCHOLOGY, ACCESS_ENGINE, ACCESS_EVA, ACCESS_HEADS, ACCESS_BRIG, ACCESS_COURT, ACCESS_ARMORY, ACCESS_SEC_DOORS, ACCESS_SECURITY,
 						ACCESS_MAINT_TUNNELS, ACCESS_BAR, ACCESS_JANITOR, ACCESS_CONSTRUCTION, ACCESS_MORGUE,
@@ -23,7 +23,7 @@
 
 /datum/id_trim/job/toxicologist
 	assignment = "Toxicologist"
-	trim_state = "idtoxicologist"
+	trim_state = "trim_toxicologist"
 	access = list(ACCESS_RND, ACCESS_TOXINS, ACCESS_TOXINS_STORAGE, ACCESS_RESEARCH,
 					ACCESS_MINERAL_STOREROOM)
 	minimal_access = list(ACCESS_RND, ACCESS_TOXINS, ACCESS_TOXINS_STORAGE, ACCESS_RESEARCH, ACCESS_XENOBIOLOGY, ACCESS_MECH_SCIENCE,
@@ -33,7 +33,7 @@
 
 /datum/id_trim/job/xenobiologist
 	assignment = "Xenobiologist"
-	trim_state = "idxenobiologist"
+	trim_state = "trim_xenobiologist"
 	access = list(ACCESS_ROBOTICS, ACCESS_RND, ACCESS_TOXINS, ACCESS_TOXINS_STORAGE, ACCESS_RESEARCH, ACCESS_XENOBIOLOGY,
 					ACCESS_MECH_SCIENCE, ACCESS_MINERAL_STOREROOM, ACCESS_TECH_STORAGE, ACCESS_GENETICS, ACCESS_AUX_BASE)
 	minimal_access = list(ACCESS_RND, ACCESS_RESEARCH, ACCESS_XENOBIOLOGY,
