@@ -143,8 +143,8 @@
 	desc = "Only 650 calories, perfect for any dieting station members!"
 	icon_state = "balancedegg"
 	trash_type = /obj/item/trash/plate
-	list_reagents = list(/datum/reagent/consumable/nutriment/protein = 108, /datum/reagent/consumable/nutriment/vitamin = 36)
+	list_reagents = list(/datum/reagent/consumable/nutriment/protein = 4, /datum/reagent/consumable/nutriment/vitamin = 2)
 	w_class = WEIGHT_CLASS_BULKY
-	tastes = list("egg" = 36, "protein" = 1, "gains" = 1)
+	tastes = list("egg" = 4, "protein" = 1, "gains" = 1)
 	foodtypes = MEAT | BREAKFAST | DAIRY
 	venue_value = FOOD_PRICE_CHEAP
