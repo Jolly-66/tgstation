@@ -17,7 +17,7 @@
 	reagents_add = list(/datum/reagent/consumable/nutriment/vitamin = 0.04, /datum/reagent/consumable/nutriment = 0.05)
 
 /obj/item/food/grown/leemabeens
-	seed = /obj/item/seeds/soya
+	seed = /obj/item/seeds/leemabeens
 	name = "leema beens"
 	desc = "What exactly are these supposed to be, anyway?"
 	gender = PLURAL
