@@ -80,11 +80,12 @@
 //   - Prisoner
 
 // Not Included, but in the DMI:
-// - All Costumes (costume.dm)
+// - Some Costumes (costume.dm)
 // - Centcom Outfits (centcom.dm)
 // - Plasmaman Outfit
 // - Trek Outfits (trek.dm)
 // - Shorts (shorts.dm)
+// - Normal Clown Outfit
 
 // Included, but needs edits:
 // - Amish Suit
