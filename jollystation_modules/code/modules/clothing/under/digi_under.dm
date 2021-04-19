@@ -35,46 +35,48 @@
 		fitted = initial(fitted)
 
 // Included:
-// - Misc. Jumpsuits (Burial Garments, Durathread, etc)
-// - Pants
-// - Suits
-// - Syndicate
-// - Basic Colored
+// - Misc. Jumpsuits
+// - All Pants
+// - All Suits
+// - Syndicate Turtlenecks
+// - Basic Colored Jumpsuits
 // - Civilian
 //   - Bartender (And Alt suits)
-//   - Botanist
+//   - Botanist (And Durathread)
 //   - Chaplain
+//   - Curator (Treature Hunter)
 //   - Chef
 //   - Head of Personnel
 //   - Janitor
-//   - Lawyer
-//   - Mime
-//   - Clown (Except for the base clown outfit)
+//   - Lawyer (And Alt Suits)
+//   - Mime (And Sexy Outfit)
+//   - Clown (Only Jester and Sexyclown)
 // - Cargo
 //   - Quartermaster
-//   - Miner
+//   - Miner (Explorer and Old Miner)
 // - Captain
 // - Engineering
-//   - Station Engineer
+//   - Station Engineer (Normal and Hazard)
 //   - Atmospheric Technician
 //   - Chief Engineer
 // - Medical
-//   - Medical Doctor (+Scrubs)
+//   - Medical Doctor (And Scrubs)
+//   - Paramedic
 //   - Virologist
 //   - Chemist
-//   - Chief Medical Officer
+//   - Chief Medical Officer (and Turtleneck)
 // - Science
 //   - Scientist
 //   - Xenobiologist
 //   - Toxicologist
 //   - Roboticist
 //   - Geneticist
-//   - Research Director (Turtleneck, Vest, Suit)
+//   - Research Director (Turtleneck, Vest, and Suit)
 // - Security
-//   - Detective (Tan, Grey)
-//   - Security Officer (Formal, Tan/Blue, Alt outfits)
-//   - Warden (Formal, Tan/Blue)
-//   - Head of Security (Turtleneck, Tan/Blue, Parade, Alt)
+//   - Detective (Tan and Grey)
+//   - Security Officer (Formal, Tan/Blue, and Alt outfits)
+//   - Warden (Formal and Tan/Blue)
+//   - Head of Security (Turtleneck, Tan/Blue, Parade, and Alt)
 //   - Prisoner
 
 // Not Included, but in the DMI:
@@ -275,6 +277,9 @@
 	use_modular_dmi = TRUE
 
 /obj/item/clothing/under/rank/medical/chief_medical_officer/skirt
+	use_modular_dmi = FALSE
+
+/obj/item/clothing/under/rank/medical/chief_medical_officer/turtleneck/skirt
 	use_modular_dmi = FALSE
 
 /obj/item/clothing/under/rank/medical/virologist/skirt

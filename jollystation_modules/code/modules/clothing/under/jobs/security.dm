@@ -4,6 +4,7 @@
 	icon_state = "blueshift"
 	inhand_icon_state = "blueshift"
 	armor = list(MELEE = 10, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 0, RAD = 0, FIRE = 50, ACID = 50, WOUND = 10)
+	sensor_mode = SENSOR_COORDS
 
 /obj/item/clothing/under/rank/security/bridge_officer/black
 	desc = "A distinguished black suit kitted out with padding for protection worn by the officers that work the bridge."
@@ -18,4 +19,5 @@
 	icon_state = "really_black_suit_skirt"
 	inhand_icon_state = "lawyer_black"
 	dying_key = DYE_REGISTRY_JUMPSKIRT
+	body_parts_covered = CHEST|GROIN|ARMS
 	fitted = FEMALE_UNIFORM_TOP
