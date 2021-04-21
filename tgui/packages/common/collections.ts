@@ -254,8 +254,6 @@ type Zip<T extends unknown[][]> = {
   [I in keyof T]: T[I] extends (infer U)[] ? U : never;
 }[];
 
-export const uniq = uniqBy();
-
 /**
  * Creates an array of grouped elements, the first of which contains
  * the first elements of the given arrays, the second of which contains

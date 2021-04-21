@@ -69,12 +69,6 @@
 	. = ..()
 	name = "[GLOB.pipe_color_name[pipe_color]] [name]"
 
-	///Is the thing being rebuilt by SSair or not. Prevents list bloat
-	var/rebuilding = FALSE
-
-	///The bitflag that's being checked on ventcrawling. Default is to allow ventcrawling and seeing pipes. 
-	var/vent_movement = VENTCRAWL_ALLOWED | VENTCRAWL_CAN_SEE
-
 /obj/machinery/atmospherics/examine(mob/user)
 	. = ..()
 	. += "<span class='notice'>[src] is on layer [piping_layer].</span>"
