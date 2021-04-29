@@ -312,7 +312,7 @@
 
 /obj/effect/temp_visual/kinetic_blast
 	name = "kinetic explosion"
-	icon = 'icons/obj/projectiles.dmi'
+	icon = 'icons/obj/guns/projectiles.dmi'
 	icon_state = "kinetic_blast"
 	layer = ABOVE_ALL_MOB_LAYER
 	duration = 4
@@ -364,6 +364,10 @@
 
 /obj/effect/temp_visual/impact_effect/green_laser
 	icon_state = "impact_laser_green"
+	duration = 4
+
+/obj/effect/temp_visual/impact_effect/yellow_laser
+	icon_state = "impact_laser_yellow"
 	duration = 4
 
 /obj/effect/temp_visual/impact_effect/purple_laser

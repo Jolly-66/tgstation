@@ -11,17 +11,19 @@
 
 
 	outfit = /datum/outfit/job/scientist/xenobiologist
+	plasmaman_outfit = /datum/outfit/plasmaman/science
 
-	access = list(ACCESS_ROBOTICS, ACCESS_RND, ACCESS_TOXINS, ACCESS_TOXINS_STORAGE, ACCESS_RESEARCH, ACCESS_XENOBIOLOGY,
-					ACCESS_MECH_SCIENCE, ACCESS_MINERAL_STOREROOM, ACCESS_TECH_STORAGE, ACCESS_GENETICS, ACCESS_AUX_BASE)
-	minimal_access = list(ACCESS_RND, ACCESS_RESEARCH, ACCESS_XENOBIOLOGY,
-							)
 	paycheck = PAYCHECK_MEDIUM
 	paycheck_department = ACCOUNT_SCI
 
 	display_order = JOB_DISPLAY_ORDER_SCIENTIST
 	bounty_types = CIV_JOB_SCI
 
+	family_heirlooms = list(/obj/item/toy/plush/slimeplushie)
+
 /datum/outfit/job/scientist/xenobiologist
 	name = "Xenobiologist"
+	suit = /obj/item/clothing/suit/toggle/labcoat/xenobio
+	uniform = /obj/item/clothing/under/rank/rnd/xenobiologist
 	jobtype = /datum/job/xenobiologist
+	id_trim = /datum/id_trim/job/xenobiologist

@@ -5,6 +5,7 @@
 	max_occurrences = 1
 	min_players = 10
 	earliest_start = 30 MINUTES
+	dynamic_should_hijack = TRUE
 	gamemode_blacklist = list("nuclear")
 
 #define PIRATES_ROGUES "Rogues"
@@ -191,7 +192,7 @@
 	STOP_PROCESSING(SSobj,src)
 
 /obj/machinery/shuttle_scrambler/update_icon_state()
-	icon_state = active ? "dominator-blue" : "dominator"
+	icon_state = active ? "dominator-Blue" : "dominator"
 	return ..()
 
 /obj/machinery/shuttle_scrambler/Destroy()

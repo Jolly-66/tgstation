@@ -218,10 +218,7 @@
 			var/mob/living/carbon/human/T = target
 			var/datum/antagonist/cult/C = user.mind.has_antag_datum(/datum/antagonist/cult,TRUE)
 			if(C?.cult_team.is_sacrifice_target(T.mind))
-				if(iscultist(user))
-					to_chat(user, "<span class='cult'><b>\"This soul is mine.</b></span> <span class='cultlarge'>SACRIFICE THEM!\"</span>")
-				else
-					to_chat(user, "<span class='danger'>[src] seems to reject this soul.</span>")
+				to_chat(user, "<span class='cult'><b>\"This soul is mine.</b></span> <span class='cultlarge'>SACRIFICE THEM!\"</span>")
 				return FALSE
 			if(contents.len)
 				to_chat(user, "<span class='userdanger'>Capture failed!</span>: [src] is full! Free an existing soul to make room.")
@@ -283,7 +280,7 @@
 									makeNewConstruct(/mob/living/simple_animal/hostile/construct/juggernaut/noncult, A, user, FALSE, T.loc)
 					if("Wraith")
 						if(iscultist(user))
-							makeNewConstruct(/mob/living/simple_animal/hostile/construct/juggernaut, A, user, FALSE, T.loc)
+							makeNewConstruct(/mob/living/simple_animal/hostile/construct/wraith, A, user, FALSE, T.loc)
 						else
 							switch(theme)
 								if(THEME_WIZARD)

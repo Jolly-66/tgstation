@@ -58,7 +58,6 @@ There are several things that need to be remembered:
 
 
 /mob/living/carbon/human/update_body()
-	remove_overlay(BODY_LAYER)
 	dna.species.handle_body(src)
 	..()
 
@@ -143,6 +142,7 @@ There are several things that need to be remembered:
 
 /mob/living/carbon/human/update_inv_wear_id()
 	remove_overlay(ID_LAYER)
+	remove_overlay(ID_CARD_LAYER)
 
 	if(client && hud_used)
 		var/atom/movable/screen/inventory/inv = hud_used.inv_slots[TOBITSHIFT(ITEM_SLOT_ID) + 1]
@@ -157,13 +157,24 @@ There are several things that need to be remembered:
 		update_observer_view(wear_id)
 
 		//TODO: add an icon file for ID slot stuff, so it's less snowflakey
-		id_overlay = wear_id.build_worn_icon(default_layer = ID_LAYER, default_icon_file = 'icons/mob/mob.dmi')
+		id_overlay = wear_id.build_worn_icon(default_layer = ID_LAYER, default_icon_file = 'icons/mob/clothing/id.dmi')
 		if(OFFSET_ID in dna.species.offset_features)
 			id_overlay.pixel_x += dna.species.offset_features[OFFSET_ID][1]
 			id_overlay.pixel_y += dna.species.offset_features[OFFSET_ID][2]
 		overlays_standing[ID_LAYER] = id_overlay
 
+		var/obj/item/card/id/shown_id = wear_id.GetID()
+		if(shown_id)
+			var/mutable_appearance/id_card_overlay = overlays_standing[ID_CARD_LAYER]
+			id_card_overlay = shown_id.build_worn_icon(default_layer = ID_CARD_LAYER, default_icon_file = 'icons/mob/clothing/id_card.dmi')
+			if(OFFSET_ID in dna.species.offset_features)
+				id_card_overlay.pixel_x += dna.species.offset_features[OFFSET_ID][1]
+				id_card_overlay.pixel_y += dna.species.offset_features[OFFSET_ID][2]
+
+			overlays_standing[ID_CARD_LAYER] = id_card_overlay
+
 	apply_overlay(ID_LAYER)
+	apply_overlay(ID_CARD_LAYER)
 
 
 /mob/living/carbon/human/update_inv_gloves()
@@ -173,7 +184,7 @@ There are several things that need to be remembered:
 		var/atom/movable/screen/inventory/inv = hud_used.inv_slots[TOBITSHIFT(ITEM_SLOT_GLOVES) + 1]
 		inv.update_appearance()
 
-	if(!gloves && blood_in_hands && !(NOBLOODOVERLAY in dna.species.species_traits))
+	if(!gloves && blood_in_hands && (num_hands > 0) && !(NOBLOODOVERLAY in dna.species.species_traits))
 		var/mutable_appearance/bloody_overlay = mutable_appearance('icons/effects/blood.dmi', "bloodyhands", -GLOVES_LAYER)
 		if(num_hands < 2)
 			if(has_left_hand(FALSE))
@@ -517,27 +528,29 @@ generate/load female uniform sprites matching all previously decided variables
 
 	standing = center_image(standing, isinhands ? inhand_x_dimension : worn_x_dimension, isinhands ? inhand_y_dimension : worn_y_dimension)
 
-	//Handle held offsets
-	var/mob/M = loc
-	if(istype(M))
-		var/list/L = get_held_offsets()
-		if(L)
-			standing.pixel_x += L["x"] //+= because of center()ing
-			standing.pixel_y += L["y"]
+	//Worn offsets
+	var/list/offsets = get_worn_offsets(isinhands)
+	standing.pixel_x += offsets[1]
+	standing.pixel_y += offsets[2]
 
 	standing.alpha = alpha
 	standing.color = color
 
 	return standing
 
-
-/obj/item/proc/get_held_offsets()
-	var/list/L
-	if(ismob(loc))
-		var/mob/M = loc
-		L = M.get_item_offsets_for_index(M.get_held_index_of_item(src))
-	return L
-
+/// Returns offsets used for equipped item overlays in list(px_offset,py_offset) form.
+/obj/item/proc/get_worn_offsets(isinhands)
+	. = list(0,0) //(px,py)
+	if(isinhands)
+		//Handle held offsets
+		var/mob/holder = loc
+		if(istype(holder))
+			var/list/offsets = holder.get_item_offsets_for_index(holder.get_held_index_of_item(src))
+			if(offsets)
+				.[1] = offsets["x"]
+				.[2] = offsets["y"]
+	else
+		.[2] = worn_y_offset
 
 //Can't think of a better way to do this, sadly
 /mob/proc/get_item_offsets_for_index(i)

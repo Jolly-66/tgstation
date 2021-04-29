@@ -19,7 +19,7 @@
 /obj/structure/statue/Initialize()
 	. = ..()
 	AddElement(art_type, impressiveness)
-	AddComponent(/datum/component/beauty, impressiveness * 75)
+	AddElement(/datum/element/beauty, impressiveness * 75)
 	AddComponent(/datum/component/simple_rotation, ROTATION_ALTCLICK | ROTATION_CLOCKWISE, CALLBACK(src, .proc/can_user_rotate), CALLBACK(src, .proc/can_be_rotated), null)
 
 /obj/structure/statue/proc/can_be_rotated(mob/user)
@@ -28,7 +28,7 @@
 	to_chat(user, "<span class='warning'>It's bolted to the floor, you'll need to unwrench it first.</span>")
 
 /obj/structure/statue/proc/can_user_rotate(mob/user)
-	return !user.canUseTopic(src, BE_CLOSE, NO_DEXTERITY, FALSE, !iscyborg(user))
+	return user.canUseTopic(src, BE_CLOSE, NO_DEXTERITY, FALSE, !iscyborg(user))
 
 /obj/structure/statue/attackby(obj/item/W, mob/living/user, params)
 	add_fingerprint(user)
@@ -311,7 +311,6 @@
 	usesound = list('sound/items/screwdriver.ogg', 'sound/items/screwdriver2.ogg')
 	drop_sound = 'sound/items/handling/screwdriver_drop.ogg'
 	pickup_sound =  'sound/items/handling/screwdriver_pickup.ogg'
-	item_flags = EYE_STAB
 	sharpness = SHARP_POINTY
 
 	/// Block we're currently carving in
@@ -320,6 +319,10 @@
 	var/mob/living/tracked_user
 	/// Currently sculpting
 	var/sculpting = FALSE
+
+/obj/item/chisel/Initialize()
+	. = ..()
+	AddElement(/datum/element/eyestab)
 
 /obj/item/chisel/Destroy()
 	prepared_block = null

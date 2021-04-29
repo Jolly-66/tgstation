@@ -90,8 +90,6 @@
 
 
 /mob/living/carbon/human/can_track(mob/living/user)
-	if(wear_id && istype(wear_id.GetID(), /obj/item/card/id/syndicate))
-		return 0
 	if(istype(head, /obj/item/clothing/head))
 		var/obj/item/clothing/head/hat = head
 		if(hat.blockTracking)
@@ -233,3 +231,10 @@
 	else
 		return "<span class='deadsay'>[t_He] [t_is] limp and unresponsive; there are no signs of life and [t_his] soul has departed...</span>"
 
+///copies over clothing preferences like underwear to another human
+/mob/living/carbon/human/proc/copy_clothing_prefs(mob/living/carbon/human/destination)
+	destination.underwear = underwear
+	destination.underwear_color = underwear_color
+	destination.undershirt = undershirt
+	destination.socks = socks
+	destination.jumpsuit_style = jumpsuit_style

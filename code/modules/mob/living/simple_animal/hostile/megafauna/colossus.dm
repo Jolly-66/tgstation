@@ -77,14 +77,14 @@
 
 /datum/action/innate/megafauna_attack/shotgun
 	name = "Shotgun Fire"
-	icon_icon = 'icons/obj/guns/projectile.dmi'
+	icon_icon = 'icons/obj/guns/ballistic.dmi'
 	button_icon_state = "shotgun"
 	chosen_message = "<span class='colossus'>You are now firing shotgun shots where you aim.</span>"
 	chosen_attack_num = 3
 
 /datum/action/innate/megafauna_attack/alternating_cardinals
 	name = "Alternating Shots"
-	icon_icon = 'icons/obj/guns/projectile.dmi'
+	icon_icon = 'icons/obj/guns/ballistic.dmi'
 	button_icon_state = "pistol"
 	chosen_message = "<span class='colossus'>You are now firing in alternating cardinal directions.</span>"
 	chosen_attack_num = 4
@@ -502,12 +502,12 @@
 
 	switch(terrain_theme)
 		if("lavaland")//Depressurizes the place... and free cult metal, I guess.
-			NewTerrainFloors = /turf/open/floor/grass/snow/basalt
+			NewTerrainFloors = /turf/open/floor/grass/snow/basalt/safe
 			NewTerrainWalls = /turf/closed/wall/mineral/cult
 			NewFlora = list(/mob/living/simple_animal/hostile/asteroid/goldgrub)
 			florachance = 1
 		if("winter") //Snow terrain is slow to move in and cold! Get the assistants to shovel your driveway.
-			NewTerrainFloors = /turf/open/floor/grass/snow
+			NewTerrainFloors = /turf/open/floor/grass/snow/safe
 			NewTerrainWalls = /turf/closed/wall/mineral/wood
 			NewTerrainChairs = /obj/structure/chair/wood
 			NewTerrainTables = /obj/structure/table/glass
@@ -534,7 +534,7 @@
 				if(isturf(Stuff))
 					var/turf/T = Stuff
 					if((isspaceturf(T) || isfloorturf(T)) && NewTerrainFloors)
-						var/turf/open/O = T.ChangeTurf(NewTerrainFloors, flags = CHANGETURF_INHERIT_AIR)
+						var/turf/open/O = T.ChangeTurf(NewTerrainFloors, flags = CHANGETURF_IGNORE_AIR)
 						if(prob(florachance) && NewFlora.len && !O.is_blocked_turf(TRUE))
 							var/atom/Picked = pick(NewFlora)
 							new Picked(O)

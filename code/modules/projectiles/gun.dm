@@ -5,7 +5,7 @@
 /obj/item/gun
 	name = "gun"
 	desc = "It's a gun. It's pretty terrible, though."
-	icon = 'icons/obj/guns/projectile.dmi'
+	icon = 'icons/obj/guns/ballistic.dmi'
 	icon_state = "detective"
 	inhand_icon_state = "gun"
 	worn_icon_state = "gun"
@@ -76,8 +76,6 @@
 	var/zoom_amt = 3 //Distance in TURFs to move the user's screen forward (the "zoom" effect)
 	var/zoom_out_amt = 0
 	var/datum/action/toggle_scope_zoom/azoom
-
-	var/automatic = 0 //can gun use it, 0 is no, anything above 0 is the delay between clicks in ds
 	var/pb_knockback = 0
 
 /obj/item/gun/Initialize()
@@ -305,7 +303,7 @@
 				to_chat(user, "<span class='warning'>[src] is lethally chambered! You don't want to risk harming anyone...</span>")
 				return
 		if(randomspread)
-			sprd = round((rand() - 0.5) * DUALWIELD_PENALTY_EXTRA_MULTIPLIER * (randomized_gun_spread + randomized_bonus_spread))
+			sprd = round((rand(0, 1) - 0.5) * DUALWIELD_PENALTY_EXTRA_MULTIPLIER * (randomized_gun_spread + randomized_bonus_spread))
 		else //Smart spread
 			sprd = round((((rand_spr/burst_size) * iteration) - (0.5 + (rand_spr * 0.25))) * (randomized_gun_spread + randomized_bonus_spread))
 		before_firing(target,user)
@@ -330,7 +328,7 @@
 
 /obj/item/gun/proc/process_fire(atom/target, mob/living/user, message = TRUE, params = null, zone_override = "", bonus_spread = 0)
 	if(user)
-		SEND_SIGNAL(user, COMSIG_MOB_FIRED_GUN, user, target, params, zone_override)
+		SEND_SIGNAL(user, COMSIG_MOB_FIRED_GUN, src, target, params, zone_override)
 
 	SEND_SIGNAL(src, COMSIG_GUN_FIRED, user, target, params, zone_override)
 
@@ -339,15 +337,18 @@
 	if(semicd)
 		return
 
+	//Vary by at least this much
+	var/base_bonus_spread = 0
 	var/sprd = 0
 	var/randomized_gun_spread = 0
 	var/rand_spr = rand()
+	if(user && HAS_TRAIT(user, TRAIT_POOR_AIM)) //Nice job hotshot
+		bonus_spread += 35
+		base_bonus_spread += 10
+
 	if(spread)
-		randomized_gun_spread = rand(0,spread)
-	if(HAS_TRAIT(user, TRAIT_POOR_AIM)) //nice shootin' tex
-		user.blind_eyes(1)
-		bonus_spread += 25
-	var/randomized_bonus_spread = rand(0, bonus_spread)
+		randomized_gun_spread =	rand(0,spread)
+	var/randomized_bonus_spread = rand(base_bonus_spread, bonus_spread)
 
 	if(burst_size > 1)
 		firing_burst = TRUE
@@ -359,7 +360,7 @@
 				if(chambered.harmful) // Is the bullet chambered harmful?
 					to_chat(user, "<span class='warning'>[src] is lethally chambered! You don't want to risk harming anyone...</span>")
 					return
-			sprd = round((rand() - 0.5) * DUALWIELD_PENALTY_EXTRA_MULTIPLIER * (randomized_gun_spread + randomized_bonus_spread))
+			sprd = round((rand(0, 1) - 0.5) * DUALWIELD_PENALTY_EXTRA_MULTIPLIER * (randomized_gun_spread + randomized_bonus_spread))
 			before_firing(target,user)
 			if(!chambered.fire_casing(target, user, params, , suppressed, zone_override, sprd, src))
 				shoot_with_empty_chamber(user)
@@ -395,7 +396,7 @@
 			return ..()
 	return
 
-/obj/item/gun/attack_obj(obj/O, mob/living/user)
+/obj/item/gun/attack_obj(obj/O, mob/living/user, params)
 	if(user.combat_mode)
 		if(bayonet)
 			O.attackby(bayonet, user)

@@ -4,7 +4,7 @@
 
 /obj/projectile
 	name = "projectile"
-	icon = 'icons/obj/projectiles.dmi'
+	icon = 'icons/obj/guns/projectiles.dmi'
 	icon_state = "bullet"
 	density = FALSE
 	anchored = TRUE
@@ -129,6 +129,8 @@
 	var/flag = BULLET //Defines what armor to use when it hits things.  Must be set to bullet, laser, energy,or bomb
 	///How much armor this projectile pierces.
 	var/armour_penetration = 0
+	///Whether or not our bullet lacks penetrative power, and is easily stopped by armor.
+	var/weak_against_armour = FALSE
 	var/projectile_type = /obj/projectile
 	var/range = 50 //This will de-increment every step. When 0, it will deletze the projectile.
 	var/decayedRange //stores original range
@@ -716,7 +718,7 @@
 		transform = matrix
 	if(trajectory)
 		trajectory.set_angle(new_angle)
-	
+
 	var/list/coordinates = trajectory.return_coordinates()
 	trajectory.set_location(coordinates[1], coordinates[2], coordinates[3]) // Sets the trajectory to the center of the tile it bounced at
 
@@ -726,7 +728,7 @@
 		point_cache.initialize_location(coordinates[1], coordinates[2], coordinates[3]) // Take the center of the hitscan collision tile
 		store_hitscan_collision(point_cache)
 	return TRUE
-		
+
 
 
 /obj/projectile/forceMove(atom/target)
@@ -849,7 +851,10 @@
 		homing_offset_y = -homing_offset_y
 
 //Spread is FORCED!
-/obj/projectile/proc/preparePixelProjectile(atom/target, atom/source, params, spread = 0)
+/obj/projectile/proc/preparePixelProjectile(atom/target, atom/source, modifiers, spread = 0)
+	if(!isnull(modifiers) && !islist(modifiers))
+		stack_trace("WARNING: Projectile [type] fired with non-list modifiers, likely was passed click params.")
+
 	var/turf/curloc = get_turf(source)
 	var/turf/targloc = get_turf(target)
 	trajectory_ignore_forcemove = TRUE
@@ -857,13 +862,13 @@
 	trajectory_ignore_forcemove = FALSE
 	starting = get_turf(source)
 	original = target
-	if(targloc || !params)
+	if(targloc || !length(modifiers))
 		yo = targloc.y - curloc.y
 		xo = targloc.x - curloc.x
 		set_angle(Get_Angle(src, targloc) + spread)
 
-	if(isliving(source) && params)
-		var/list/calculated = calculate_projectile_angle_and_pixel_offsets(source, params)
+	if(isliving(source) && length(modifiers))
+		var/list/calculated = calculate_projectile_angle_and_pixel_offsets(source, modifiers)
 		p_x = calculated[2]
 		p_y = calculated[3]
 
@@ -876,8 +881,7 @@
 		stack_trace("WARNING: Projectile [type] fired without either mouse parameters, or a target atom to aim at!")
 		qdel(src)
 
-/proc/calculate_projectile_angle_and_pixel_offsets(mob/user, params)
-	var/list/modifiers = params2list(params)
+/proc/calculate_projectile_angle_and_pixel_offsets(mob/user, modifiers)
 	var/p_x = 0
 	var/p_y = 0
 	var/angle = 0

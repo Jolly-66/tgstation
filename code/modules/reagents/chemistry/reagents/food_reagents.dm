@@ -11,13 +11,13 @@
 	name = "Consumable"
 	taste_description = "generic food"
 	taste_mult = 4
-	/// How much nutrition this reagent supplies
-	var/nutriment_factor = 1 * REAGENTS_METABOLISM
-	var/quality = 0 //affects mood, typically higher for mixed drinks with more complex recipes
 	impure_chem = /datum/reagent/water
 	inverse_chem_val = 0.1
-	inverse_chem = /datum/reagent/water
+	inverse_chem = null
 	failed_chem = /datum/reagent/consumable/nutriment
+	/// How much nutrition this reagent supplies
+	var/nutriment_factor = 1 * REAGENTS_METABOLISM
+	var/quality = 0 //affects mood, typically higher for mixed drinks with more complex recipes'
 
 /datum/reagent/consumable/on_mob_life(mob/living/carbon/M, delta_time, times_fired)
 	current_cycle++
@@ -808,7 +808,10 @@
 	taste_description = "pure electricity"
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
 
-/datum/reagent/consumable/liquidelectricity/expose_mob(mob/living/exposed_mob, methods=TOUCH, reac_volume) //can't be on life because of the way blood works.
+/datum/reagent/consumable/liquidelectricity/enriched
+	name = "Enriched Liquid Electricity"
+
+/datum/reagent/consumable/liquidelectricity/enriched/expose_mob(mob/living/exposed_mob, methods=TOUCH, reac_volume) //can't be on life because of the way blood works.
 	. = ..()
 	if(!(methods & (INGEST|INJECT|PATCH)) || !iscarbon(exposed_mob))
 		return
@@ -818,9 +821,11 @@
 	if(istype(stomach))
 		stomach.adjust_charge(reac_volume * REM * 20)
 
-/datum/reagent/consumable/liquidelectricity/on_mob_life(mob/living/carbon/M, delta_time, times_fired)
-	if(DT_PROB(13, delta_time) && !isethereal(M)) //lmao at the newbs who eat energy bars
-		M.electrocute_act(rand(10,15), "Liquid Electricity in their body", 1, SHOCK_NOGLOVES) //the shock is coming from inside the house
+/datum/reagent/consumable/liquidelectricity/enriched/on_mob_life(mob/living/carbon/M, delta_time, times_fired)
+	if(isethereal(M))
+		M.blood_volume += 1 * delta_time
+	else if(DT_PROB(10, delta_time)) //lmao at the newbs who eat energy bars
+		M.electrocute_act(rand(5,10), "Liquid Electricity in their body", 1, SHOCK_NOGLOVES) //the shock is coming from inside the house
 		playsound(M, "sparks", 50, TRUE, SHORT_RANGE_SOUND_EXTRARANGE)
 	return ..()
 
@@ -860,6 +865,8 @@
 	nutriment_factor = 10 * REAGENTS_METABOLISM // 33% less than nutriment to reduce weight gain
 	brute_heal = 3
 	burn_heal = 1
+	inverse_chem = /datum/reagent/peptides_failed//should be impossible, but it's so it appears in the chemical lookup gui
+	inverse_chem_val = 0.2
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
 
 /datum/reagent/consumable/caramel
@@ -909,6 +916,7 @@
 	glass_name = "chocolate pudding"
 	glass_desc = "Tasty."
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
+	glass_price = DRINK_PRICE_EASY
 
 /datum/reagent/consumable/vanillapudding
 	name = "Vanilla Pudding"

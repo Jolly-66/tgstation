@@ -15,21 +15,8 @@
 	exp_type_department = EXP_TYPE_SERVICE
 
 	outfit = /datum/outfit/job/bo
+	plasmaman_outfit = /datum/outfit/plasmaman/head_of_security
 
-	access = list(
-						ACCESS_MEDICAL, ACCESS_PSYCHOLOGY, ACCESS_ENGINE, ACCESS_EVA, ACCESS_HEADS, ACCESS_BRIG, ACCESS_COURT, ACCESS_ARMORY, ACCESS_SEC_DOORS, ACCESS_SECURITY,
-						ACCESS_MAINT_TUNNELS, ACCESS_BAR, ACCESS_JANITOR, ACCESS_CONSTRUCTION, ACCESS_MORGUE,
-						ACCESS_CREMATORIUM, ACCESS_KITCHEN, ACCESS_CARGO, ACCESS_MAILSORTING, ACCESS_LAWYER,
-						ACCESS_CHAPEL_OFFICE, ACCESS_RESEARCH,
-						ACCESS_MECH_ENGINE, ACCESS_MECH_SCIENCE, ACCESS_MECH_MEDICAL, ACCESS_MECH_SECURITY,
-						ACCESS_RC_ANNOUNCE, ACCESS_KEYCARD_AUTH, ACCESS_MINERAL_STOREROOM, ACCESS_AUX_BASE)
-	minimal_access = list(ACCESS_COURT, ACCESS_BRIG, ACCESS_ARMORY, ACCESS_SEC_DOORS, ACCESS_SECURITY,
-						ACCESS_MEDICAL, ACCESS_PSYCHOLOGY, ACCESS_ENGINE, ACCESS_EVA, ACCESS_HEADS,
-						ACCESS_MAINT_TUNNELS, ACCESS_BAR, ACCESS_CONSTRUCTION, ACCESS_MORGUE,
-						ACCESS_CREMATORIUM, ACCESS_KITCHEN, ACCESS_CARGO, ACCESS_MAILSORTING, ACCESS_LAWYER,
-						ACCESS_MECH_ENGINE, ACCESS_MECH_SCIENCE, ACCESS_MECH_SECURITY, ACCESS_MECH_MEDICAL,
-						ACCESS_CHAPEL_OFFICE, ACCESS_RESEARCH,
-						ACCESS_RC_ANNOUNCE, ACCESS_MINERAL_STOREROOM, ACCESS_AUX_BASE)
 	paycheck = PAYCHECK_COMMAND
 	paycheck_department = ACCOUNT_SEC
 	bounty_types = CIV_JOB_RANDOM
@@ -38,18 +25,29 @@
 
 	display_order = JOB_DISPLAY_ORDER_BRIDGE_OFFICER
 
+	family_heirlooms = list(/obj/item/book/manual/wiki/security_space_law)
+
 /datum/outfit/job/bo
 	name = "Bridge Officer"
 	jobtype = /datum/job/bo
 
-	id = /obj/item/card/id/silver
+	id = /obj/item/card/id/advanced/silver
 	belt = /obj/item/pda/heads/hos
 	ears = /obj/item/radio/headset/heads/bo/alt
-	glasses = /obj/item/clothing/glasses/hud/security/sunglasses
+	glasses = /obj/item/clothing/glasses/sunglasses
 	gloves = /obj/item/clothing/gloves/color/black
-	uniform = /obj/item/clothing/under/rank/civilian/bo/black
+	uniform = /obj/item/clothing/under/rank/security/bridge_officer/black
 	shoes = /obj/item/clothing/shoes/laceup
-	suit = /obj/item/clothing/suit/armor/vest
-	backpack_contents = list(
-		/obj/item/melee/classic_baton/telescopic=1, /obj/item/gun/energy/disabler=1)
+	head = /obj/item/clothing/head/beret/black
+	suit = /obj/item/clothing/suit/armor/vest/blueshirt
+	suit_store = /obj/item/gun/energy/disabler
+	id_trim = /datum/id_trim/job/bridge_officer
 
+	implants = list(/obj/item/implant/mindshield)
+
+	backpack_contents = list(/obj/item/melee/classic_baton/telescopic = 1, /obj/item/modular_computer/tablet/preset/advanced/command = 1)
+
+/datum/outfit/job/bo/pre_equip(mob/living/carbon/human/H)
+	..()
+	if(prob(0.1))
+		r_pocket = /obj/item/assembly/flash/memorizer

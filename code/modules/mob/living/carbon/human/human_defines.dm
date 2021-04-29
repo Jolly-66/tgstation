@@ -32,6 +32,7 @@
 
 	var/age = 30 //Player's age
 
+	//consider updating /mob/living/carbon/human/copy_clothing_prefs() if adding more of these
 	var/underwear = "Nude" //Which underwear the player wants
 	var/underwear_color = "000"
 	var/undershirt = "Nude" //Which undershirt the player wants
@@ -74,3 +75,8 @@
 
 	///Exposure to damaging heat levels increases stacks, stacks clean over time when temperatures are lower. Stack is consumed to add a wound.
 	var/heat_exposure_stacks = 0
+
+	///human specific screwyhuds from hallucinations (define key (bodypart) to int value (severity)) - see /datum/hallucination/fake_health_doll
+	var/hal_screwydoll
+	/// When an braindead player has their equipment fiddled with, we log that info here for when they come back so they know who took their ID while they were DC'd for 30 seconds
+	var/list/afk_thefts
