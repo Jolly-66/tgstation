@@ -279,7 +279,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 
 	// NON-MODULE CHANGES: sanitization
 	hear_speech_sounds = sanitize_integer(hear_speech_sounds, FALSE, TRUE, initial(hear_speech_sounds))
-	hear_radio_sounds = sanitize_integer(hear_radio_sounds, FALSE, TRUE, initial(hear_radio_sounds))
+	hear_radio_sounds = sanitize_integer(hear_speech_sounds, FALSE, TRUE, initial(hear_radio_sounds))
 
 	if(needs_update >= 0) //save the updated version
 		var/old_default_slot = default_slot
@@ -361,6 +361,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 
 	// NON-MODULE CHANGES: client prefs
 	WRITE_FILE(S["hear_speech_sounds"] , hear_speech_sounds)
+	WRITE_FILE(S["hear_radio_sounds"] , hear_radio_sounds)
 
 	return TRUE
 
