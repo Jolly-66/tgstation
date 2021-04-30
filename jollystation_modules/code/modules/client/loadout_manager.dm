@@ -1,4 +1,3 @@
-#define LOADOUT_ITEM_BACK "back"
 #define LOADOUT_ITEM_BELT "belt"
 #define LOADOUT_ITEM_EARS "ears"
 #define LOADOUT_ITEM_GLASSES "glasses"
@@ -7,8 +6,15 @@
 #define LOADOUT_ITEM_MASK "mask"
 #define LOADOUT_ITEM_NECK "neck"
 #define LOADOUT_ITEM_SHOES "shoes"
+#define LOADOUT_ITEM_SUIT "suit"
 #define LOADOUT_ITEM_UNIFORM "under"
+#define LOADOUT_ITEM_INHAND "inhand_items"
+#define LOADOUT_ITEM_LEFT_HAND "left_hand"
+#define LOADOUT_ITEM_RIGHT_HAND "right_hand"
 #define LOADOUT_ITEM_MISC "pocket_items"
+#define LOADOUT_ITEM_BACKPACK_1 "backpack_1"
+#define LOADOUT_ITEM_BACKPACK_2 "backpack_2"
+#define LOADOUT_ITEM_BACKPACK_3 "backpack_3"
 
 /mob/verb/debug_open_loadout_manager()
 	set name = "(DEBUG) Open Loadouts"
@@ -47,16 +53,20 @@
 /datum/loadout_manager
 	/// The key of the dummy we use to generate sprites
 	var/dummy_key
+	/// The dir the dummy is facing.
+	var/list/dummy_dir = list(SOUTH)
 	/// The client of the person using the UI
 	var/client/owner
 	/// A ref to the dummy outfit we use
 	var/datum/outfit/player_loadout/custom_loadout
+
 
 /datum/loadout_manager/New(user)
 	owner = CLIENT_FROM_VAR(user)
 	custom_loadout = new()
 	if(!owner.prefs.loadout_list)
 		owner.prefs.loadout_list = list()
+	loadout_to_outfit()
 
 /datum/loadout_manager/ui_close(mob/user)
 	clear_human_dummy(dummy_key)
@@ -85,9 +95,68 @@
 
 	switch(action)
 		if("select_item")
-			owner.prefs.loadout_list[params["category"]] = params["path"]
-			loadout_to_outfit()
+			var/category_slot = params["category"]
+			if(params["doReset"])
+				if(category_slot == LOADOUT_ITEM_MISC || category_slot == LOADOUT_ITEM_INHAND)
+					for(var/slot_key in owner.prefs.loadout_list)
+						if(owner.prefs.loadout_list[slot_key] == params["path"])
+							category_slot = slot_key
+							break
 
+				owner.prefs.loadout_list[category_slot] = null
+				loadout_to_outfit()
+				owner.prefs.loadout_list -= category_slot
+			else
+				if(category_slot == LOADOUT_ITEM_MISC)
+					if(!owner.prefs.loadout_list[LOADOUT_ITEM_BACKPACK_1])
+						category_slot = LOADOUT_ITEM_BACKPACK_1
+					else if(!owner.prefs.loadout_list[LOADOUT_ITEM_BACKPACK_2])
+						category_slot = LOADOUT_ITEM_BACKPACK_2
+					else
+						category_slot = LOADOUT_ITEM_BACKPACK_3
+				if(category_slot == LOADOUT_ITEM_INHAND)
+					if(!owner.prefs.loadout_list[LOADOUT_ITEM_LEFT_HAND])
+						category_slot = LOADOUT_ITEM_LEFT_HAND
+					else
+						category_slot = LOADOUT_ITEM_RIGHT_HAND
+
+				owner.prefs.loadout_list[category_slot] = params["path"]
+
+		if("clear_all_items")
+			owner.prefs.loadout_list.Cut()
+
+		if("rotate_dummy")
+			if(dummy_dir.len > 1)
+				dummy_dir = list(SOUTH)
+			else
+				if(params["dir"] == "left")
+					switch(dummy_dir[1])
+						if(SOUTH)
+							dummy_dir[1] = WEST
+						if(EAST)
+							dummy_dir[1] = SOUTH
+						if(NORTH)
+							dummy_dir[1] = EAST
+						if(WEST)
+							dummy_dir[1] = NORTH
+				else
+					switch(dummy_dir[1])
+						if(SOUTH)
+							dummy_dir[1] = EAST
+						if(EAST)
+							dummy_dir[1] = NORTH
+						if(NORTH)
+							dummy_dir[1] = WEST
+						if(WEST)
+							dummy_dir[1] = SOUTH
+
+		if("show_all_dirs")
+			if(dummy_dir.len > 1)
+				dummy_dir = list(SOUTH)
+			else
+				dummy_dir = GLOB.cardinals
+
+	loadout_to_outfit()
 	return TRUE
 
 /datum/loadout_manager/ui_data(mob/user)
@@ -98,10 +167,16 @@
 	var/icon/dummysprite = get_flat_human_icon(null,
 		dummy_key = dummy_key,
 		outfit_override = custom_loadout,
-		showDirs = list(SOUTH),
+		showDirs = dummy_dir,
 		)
 	data["icon64"] = icon2base64(dummysprite)
-	data["selected_loadout"] = owner.prefs.loadout_list
+
+	var/list/all_selected_paths = list()
+	for(var/path_id in owner.prefs.loadout_list)
+		all_selected_paths += owner.prefs.loadout_list[path_id]
+
+	data["selected_loadout"] = all_selected_paths
+	data["mob_name"] = owner.prefs.real_name
 
 	return data
 
@@ -114,7 +189,6 @@
 	//  - [contents.name] is the key of the item in the global assoc list.
 	//  - [contents.path] is the typepath of the item in the global assoc list.
 	var/list/loadout_tabs = list()
-	loadout_tabs += list(list("id" = "Back", "slot" = LOADOUT_ITEM_BACK, "contents" = list_to_data(GLOB.loadout_backs)))
 	loadout_tabs += list(list("id" = "Belt", "slot" = LOADOUT_ITEM_BELT, "contents" = list_to_data(GLOB.loadout_belts)))
 	loadout_tabs += list(list("id" = "Ears", "slot" = LOADOUT_ITEM_EARS, "contents" = list_to_data(GLOB.loadout_ears)))
 	loadout_tabs += list(list("id" = "Glasses", "slot" = LOADOUT_ITEM_GLASSES, "contents" = list_to_data(GLOB.loadout_glasses)))
@@ -123,7 +197,9 @@
 	loadout_tabs += list(list("id" = "Mask", "slot" = LOADOUT_ITEM_MASK, "contents" = list_to_data(GLOB.loadout_masks)))
 	loadout_tabs += list(list("id" = "Neck", "slot" = LOADOUT_ITEM_NECK, "contents" = list_to_data(GLOB.loadout_necks)))
 	loadout_tabs += list(list("id" = "Shoes", "slot" = LOADOUT_ITEM_SHOES, "contents" = list_to_data(GLOB.loadout_shoes)))
+	loadout_tabs += list(list("id" = "Suits", "slot" = LOADOUT_ITEM_SUIT, "contents" = list_to_data(GLOB.loadout_suits)))
 	loadout_tabs += list(list("id" = "Uniform", "slot" = LOADOUT_ITEM_UNIFORM, "contents" = list_to_data(GLOB.loadout_unders)))
+	loadout_tabs += list(list("id" = "Inhand Items", "slot" = LOADOUT_ITEM_INHAND, "contents" = list_to_data(GLOB.loadout_inhand_items)))
 	loadout_tabs += list(list("id" = "Misc. Items", "slot" = LOADOUT_ITEM_MISC, "contents" = list_to_data(GLOB.loadout_pocket_items)))
 
 	data["loadout_tabs"] = loadout_tabs
@@ -134,12 +210,12 @@
 /datum/loadout_manager/proc/loadout_to_outfit()
 	var/list/loadout = owner.prefs.loadout_list
 	if(!LAZYLEN(loadout))
-		return null
+		qdel(custom_loadout)
+		custom_loadout = new()
+		return
 
 	for(var/slot in loadout)
 		switch(slot)
-			if(LOADOUT_ITEM_BACK)
-				custom_loadout.back = loadout[slot]
 			if(LOADOUT_ITEM_BELT)
 				custom_loadout.belt = loadout[slot]
 			if(LOADOUT_ITEM_EARS)
@@ -156,10 +232,11 @@
 				custom_loadout.neck = loadout[slot]
 			if(LOADOUT_ITEM_SHOES)
 				custom_loadout.shoes = loadout[slot]
+			if(LOADOUT_ITEM_SUIT)
+				custom_loadout.suit = loadout[slot]
 			if(LOADOUT_ITEM_UNIFORM)
 				custom_loadout.uniform = loadout[slot]
-			if(LOADOUT_ITEM_MISC)
-				if(custom_loadout.backpack_contents)
-					custom_loadout.backpack_contents += loadout[slot]
-				else
-					custom_loadout.backpack_contents = list(loadout[slot])
+			if(LOADOUT_ITEM_LEFT_HAND)
+				custom_loadout.l_hand = loadout[slot]
+			if(LOADOUT_ITEM_RIGHT_HAND)
+				custom_loadout.r_hand = loadout[slot]
