@@ -60,6 +60,7 @@
 	/// A ref to the dummy outfit we use
 	var/datum/outfit/player_loadout/custom_loadout
 
+	var/tutorial_status = FALSE
 
 /datum/loadout_manager/New(user)
 	owner = CLIENT_FROM_VAR(user)
@@ -94,6 +95,9 @@
 		return
 
 	switch(action)
+		if("toggle_tutorial")
+			tutorial_status = !tutorial_status
+
 		if("select_item")
 			var/category_slot = params["category"]
 			if(params["doReset"])
@@ -156,6 +160,10 @@
 			else
 				dummy_dir = GLOB.cardinals
 
+		if("close_ui")
+			ui_close()
+			return
+
 	loadout_to_outfit()
 	return TRUE
 
@@ -177,6 +185,9 @@
 
 	data["selected_loadout"] = all_selected_paths
 	data["mob_name"] = owner.prefs.real_name
+	data["tutorial_status"] = tutorial_status
+	if(tutorial_status)
+		data["tutorial_text"] = get_tutorial_text()
 
 	return data
 
@@ -199,12 +210,28 @@
 	loadout_tabs += list(list("id" = "Shoes", "slot" = LOADOUT_ITEM_SHOES, "contents" = list_to_data(GLOB.loadout_shoes)))
 	loadout_tabs += list(list("id" = "Suits", "slot" = LOADOUT_ITEM_SUIT, "contents" = list_to_data(GLOB.loadout_suits)))
 	loadout_tabs += list(list("id" = "Uniform", "slot" = LOADOUT_ITEM_UNIFORM, "contents" = list_to_data(GLOB.loadout_unders)))
-	loadout_tabs += list(list("id" = "Inhand Items", "slot" = LOADOUT_ITEM_INHAND, "contents" = list_to_data(GLOB.loadout_inhand_items)))
-	loadout_tabs += list(list("id" = "Misc. Items", "slot" = LOADOUT_ITEM_MISC, "contents" = list_to_data(GLOB.loadout_pocket_items)))
+	loadout_tabs += list(list("id" = "Inhand (2 max)", "slot" = LOADOUT_ITEM_INHAND, "contents" = list_to_data(GLOB.loadout_inhand_items)))
+	loadout_tabs += list(list("id" = "Misc. (3 max)", "slot" = LOADOUT_ITEM_MISC, "contents" = list_to_data(GLOB.loadout_pocket_items)))
 
 	data["loadout_tabs"] = loadout_tabs
 
 	return data
+
+/datum/loadout_manager/proc/get_tutorial_text()
+	return {"This is the Loadout Manager.
+It allows you to customize what your character will wear on shift start in addition to their job's uniform.
+
+Only one item can be selected per tab, with some exceptions.
+Inhand items (one item is allowed per hand)
+Miscellaneous items (three items are allowed in total - they will spawn in your backpack).
+
+Your loadout items will override the corresponding item in your job's outfit,
+with the exception being BELT, EAR, and GLASSES items,
+which will be placed in your backpack to prevent important items being deleted.
+
+Additionally, UNDERSUITS, HELMETS, MASKS, and GLOVES loadout items
+selected by plasmamen will spawn in their backpack instead of overriding their clothes
+to avoid an untimely and sudden death by fire or suffocation at the start of the shift."}
 
 /// Turns our client's assoc list of loadout items into actual items on our dummy outfit.
 /datum/loadout_manager/proc/loadout_to_outfit()
@@ -240,3 +267,78 @@
 				custom_loadout.l_hand = loadout[slot]
 			if(LOADOUT_ITEM_RIGHT_HAND)
 				custom_loadout.r_hand = loadout[slot]
+
+/mob/living/carbon/human/proc/equip_outfit_and_loadout(outfit, visuals_only = FALSE, client/preference_source)
+	var/datum/outfit/equipped_outfit
+
+	if(ispath(outfit))
+		equipped_outfit = new outfit()
+	else if(outfit)
+		equipped_outfit = outfit
+		if(!istype(equipped_outfit))
+			return FALSE
+
+	if(!outfit)
+		return FALSE
+
+	if(LAZYLEN(preference_source?.prefs?.loadout_list))
+		var/list/loadout = preference_source?.prefs?.loadout_list
+		for(var/slot in loadout)
+			var/move_to_backpack = null
+			switch(slot)
+				if(LOADOUT_ITEM_BELT)
+					if(equipped_outfit.belt)
+						move_to_backpack = equipped_outfit.belt
+					equipped_outfit.belt = loadout[slot]
+				if(LOADOUT_ITEM_EARS)
+					if(equipped_outfit.ears)
+						move_to_backpack = equipped_outfit.ears
+					equipped_outfit.ears = loadout[slot]
+				if(LOADOUT_ITEM_GLASSES)
+					if(equipped_outfit.glasses)
+						move_to_backpack = equipped_outfit.glasses
+					equipped_outfit.glasses = loadout[slot]
+				if(LOADOUT_ITEM_GLOVES)
+					if(isplasmaman(src))
+						to_chat(src, "Your loadout gloves were not equipped due to your envirosuit gloves.")
+						move_to_backpack = loadout[slot]
+					else
+						equipped_outfit.gloves = loadout[slot]
+				if(LOADOUT_ITEM_HEAD)
+					if(isplasmaman(src))
+						to_chat(src, "Your loadout helmet was not equipped due to your envirosuit helmet.")
+						move_to_backpack = loadout[slot]
+					else
+						equipped_outfit.head = loadout[slot]
+				if(LOADOUT_ITEM_MASK)
+					if(isplasmaman(src))
+						move_to_backpack = loadout[slot]
+						to_chat(src, "Your loadout mask was not equipped due to your envirosuit mask.")
+					else
+						equipped_outfit.mask = loadout[slot]
+				if(LOADOUT_ITEM_NECK)
+					equipped_outfit.neck = loadout[slot]
+				if(LOADOUT_ITEM_SHOES)
+					equipped_outfit.shoes = loadout[slot]
+				if(LOADOUT_ITEM_SUIT)
+					equipped_outfit.suit = loadout[slot]
+				if(LOADOUT_ITEM_UNIFORM)
+					if(isplasmaman(src))
+						to_chat(src, "Your loadout jumpsuit was not equipped due to your envirosuit.")
+						move_to_backpack = loadout[slot]
+					else
+						equipped_outfit.uniform = loadout[slot]
+				if(LOADOUT_ITEM_LEFT_HAND)
+					if(equipped_outfit.l_hand)
+						move_to_backpack = equipped_outfit.l_hand
+					equipped_outfit.l_hand = loadout[slot]
+				if(LOADOUT_ITEM_RIGHT_HAND)
+					if(equipped_outfit.r_hand)
+						move_to_backpack = equipped_outfit.r_hand
+					equipped_outfit.r_hand = loadout[slot]
+				else
+					move_to_backpack = loadout[slot]
+			if(move_to_backpack)
+				LAZYADD(equipped_outfit.backpack_contents, move_to_backpack)
+
+	return equipped_outfit.equip(src, visuals_only)

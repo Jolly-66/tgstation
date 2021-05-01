@@ -3560,6 +3560,7 @@
 #include "jollystation_modules\code\modules\clothing\shoes\loadout_shoes.dm"
 #include "jollystation_modules\code\modules\clothing\suits\labcoat.dm"
 #include "jollystation_modules\code\modules\clothing\under\digi_under.dm"
+#include "jollystation_modules\code\modules\clothing\under\loadout_under.dm"
 #include "jollystation_modules\code\modules\clothing\under\jobs\medical.dm"
 #include "jollystation_modules\code\modules\clothing\under\jobs\rnd.dm"
 #include "jollystation_modules\code\modules\clothing\under\jobs\security.dm"

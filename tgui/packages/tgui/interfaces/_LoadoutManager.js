@@ -1,5 +1,5 @@
 import { useBackend, useSharedState } from '../backend';
-import { Box, Stack, Tabs, Section, LabeledList, Button} from '../components';
+import { Box, Button, Dimmer, Divider, Section, Stack, Tabs } from '../components';
 import { Window } from '../layouts';
 
 export const _LoadoutManager = (props, context) => {
@@ -8,7 +8,9 @@ export const _LoadoutManager = (props, context) => {
     icon64,
     selected_loadout,
     loadout_tabs,
-    mob_name
+    mob_name,
+    tutorial_status,
+    tutorial_text,
   } = data;
 
   const [selectedTabID, setSelectedTab] = useSharedState(
@@ -23,11 +25,43 @@ export const _LoadoutManager = (props, context) => {
       width={900}
       height={650}>
       <Window.Content>
+        { !!tutorial_status && (
+          <Dimmer>
+            <Stack
+              vertical
+              align="center">
+              <Stack.Item
+                textAlign="center"
+                fontSize="14px"
+                style={{
+                  'white-space': 'pre-wrap',
+                }}>
+                {tutorial_text}
+              </Stack.Item>
+              <Stack.Item>
+                <Button
+                  mt={1}
+                  align="center"
+                  fontSize="20px"
+                  onClick={() => act('toggle_tutorial')}>
+                    Okay.
+                </Button>
+              </Stack.Item>
+            </Stack>
+          </Dimmer>
+        )}
         <Stack grow vertical>
           <Stack.Item>
             <Section
               title="Loadout Categories"
-              align="center" >
+              align="center"
+              buttons={(
+                <Button
+                  icon="info"
+                  align="center"
+                  content="Tutorial"
+                  onClick={() => act('toggle_tutorial')}/>
+                )}>
               <Tabs fluid align="center">
                 {loadout_tabs.map(curTab => (
                   <Tabs.Tab
@@ -91,8 +125,15 @@ export const _LoadoutManager = (props, context) => {
               <Stack.Item width="50%" align="center">
                 <Section
                   title={`Preview: ${mob_name}`}
-                  align="center"
-                  fill>
+                  fill
+                  buttons={(
+                    <Button
+                      icon="check-double"
+                      color="good"
+                      align="center"
+                      content="Confirm and Close"
+                      onClick={() => act('close_ui')}/>
+                    )}>
                   <Stack vertical>
                     <Stack.Item>
                       <Box
@@ -103,27 +144,37 @@ export const _LoadoutManager = (props, context) => {
                         style={{
                           '-ms-interpolation-mode': 'nearest-neighbor',
                         }} />
+                        <Divider/>
                     </Stack.Item>
-                    <Stack.Item>
-                      <Button
-                        icon="chevron-left"
-                        tooltip="Turn model left."
-                        tooltipPosition="top"
-                        onClick={() => act('rotate_dummy', {
-                          dir: "left",
-                        })}/>
-                      <Button
-                        icon="sync"
-                        tooltip="Enable all directions."
-                        tooltipPosition="top"
-                        onClick={() => act('show_all_dirs')}/>
-                      <Button
-                        icon="chevron-right"
-                        tooltip="Turn model right."
-                        tooltipPosition="top"
-                        onClick={() => act('rotate_dummy', {
-                          dir: "right",
-                        })}/>
+                    <Stack.Item align="center">
+                      <Stack>
+                        <Stack.Item>
+                          <Button
+                            icon="chevron-left"
+                            tooltip="Turn model preview to the left."
+                            tooltipPosition="top"
+                            onClick={() => act('rotate_dummy', {
+                              dir: "left",
+                            })}/>
+                        </Stack.Item>
+                        <Stack.Item>
+                          <Button
+                            icon="sync"
+                            tooltip="Toggle viewing all \
+                              preview directions at once."
+                            tooltipPosition="top"
+                            onClick={() => act('show_all_dirs')}/>
+                        </Stack.Item>
+                        <Stack.Item>
+                          <Button
+                            icon="chevron-right"
+                            tooltip="Turn model preview to the right."
+                            tooltipPosition="top"
+                            onClick={() => act('rotate_dummy', {
+                              dir: "right",
+                            })}/>
+                        </Stack.Item>
+                      </Stack>
                     </Stack.Item>
                   </Stack>
                 </Section>
