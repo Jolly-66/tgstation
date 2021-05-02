@@ -1369,8 +1369,11 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 				//NON-MODULE CHANGES:
 
 				if("enter_loadout_manager")
-					var/datum/loadout_manager/tgui = new(usr)
-					tgui.ui_interact(usr)
+					if(parent.open_loadout_ui)
+						parent.open_loadout_ui.ui_interact(usr)
+					else
+						var/datum/loadout_manager/tgui = new(usr)
+						tgui.ui_interact(usr)
 
 				if("rune_chat_text")
 					var/new_chatcolor = input(user, "Choose your runechat color:", "Character Preference",runechat_color) as color|null
