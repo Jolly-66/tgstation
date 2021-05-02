@@ -9,6 +9,8 @@ export const _LoadoutManager = (props, context) => {
     selected_loadout,
     loadout_tabs,
     mob_name,
+    ismoth,
+    job_clothes,
     tutorial_status,
     tutorial_text,
   } = data;
@@ -88,6 +90,8 @@ export const _LoadoutManager = (props, context) => {
                       color="red"
                       align="center"
                       content="Clear All Items"
+                      tooltip="Clears ALL selected items from all categories."
+                      tooltipPosition="bottom-left"
                       width={10}
                       onClick={() => act('clear_all_items')}/>
                     )}>
@@ -127,12 +131,14 @@ export const _LoadoutManager = (props, context) => {
                   title={`Preview: ${mob_name}`}
                   fill
                   buttons={(
-                    <Button
-                      icon="check-double"
-                      color="good"
+                    <Button.Checkbox
                       align="center"
-                      content="Confirm and Close"
-                      onClick={() => act('close_ui')}/>
+                      content="Toggle Job Clothes"
+                      tooltip="Shown job clothes do not respect \
+                        skirt and backpack preference."
+                      tooltipPosition="bottom-left"
+                      checked={job_clothes}
+                      onClick={() => act('toggle_job_clothes')}/>
                     )}>
                   <Stack vertical>
                     <Stack.Item>
@@ -141,6 +147,7 @@ export const _LoadoutManager = (props, context) => {
                         m={0}
                         src={`data:image/jpeg;base64,${icon64}`}
                         width="100%"
+                        minWidth={(ismoth ? 48 : 0)}
                         style={{
                           '-ms-interpolation-mode': 'nearest-neighbor',
                         }} />
@@ -148,6 +155,14 @@ export const _LoadoutManager = (props, context) => {
                     </Stack.Item>
                     <Stack.Item align="center">
                       <Stack>
+                        <Stack.Item>
+                          <Button
+                            icon="check-double"
+                            color="good"
+                            tooltip="Confirm loadout and exit UI."
+                            tooltipPosition="top"
+                            onClick={() => act('close_ui', {revert: 0,})}/>
+                        </Stack.Item>
                         <Stack.Item>
                           <Button
                             icon="chevron-left"
@@ -173,6 +188,14 @@ export const _LoadoutManager = (props, context) => {
                             onClick={() => act('rotate_dummy', {
                               dir: "right",
                             })}/>
+                        </Stack.Item>
+                        <Stack.Item>
+                          <Button
+                            icon="times"
+                            color="bad"
+                            tooltip="Revert loadout and exit UI."
+                            tooltipPosition="top"
+                            onClick={() => act('close_ui', {revert: 1,})}/>
                         </Stack.Item>
                       </Stack>
                     </Stack.Item>

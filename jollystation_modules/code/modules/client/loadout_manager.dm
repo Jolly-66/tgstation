@@ -57,9 +57,13 @@
 	var/list/dummy_dir = list(SOUTH)
 	/// The client of the person using the UI
 	var/client/owner
+	/// The loadout list we had when we opened the UI.
+	var/list/loadout_on_open
 	/// A ref to the dummy outfit we use
 	var/datum/outfit/player_loadout/custom_loadout
-
+	/// Whether we see our favorite job's clothes or not
+	var/view_job_clothes = TRUE
+	/// Tutorial UI status
 	var/tutorial_status = FALSE
 
 /datum/loadout_manager/New(user)
@@ -67,6 +71,7 @@
 	custom_loadout = new()
 	if(!owner.prefs.loadout_list)
 		owner.prefs.loadout_list = list()
+	loadout_on_open = owner.prefs.loadout_list.Copy()
 	loadout_to_outfit()
 
 /datum/loadout_manager/ui_close(mob/user)
@@ -129,6 +134,9 @@
 		if("clear_all_items")
 			owner.prefs.loadout_list.Cut()
 
+		if("toggle_job_clothes")
+			view_job_clothes = !view_job_clothes
+
 		if("rotate_dummy")
 			if(dummy_dir.len > 1)
 				dummy_dir = list(SOUTH)
@@ -161,7 +169,9 @@
 				dummy_dir = GLOB.cardinals
 
 		if("close_ui")
-			ui_close()
+			if(params["revert"])
+				owner.prefs.loadout_list = loadout_on_open
+			SStgui.close_uis(src)
 			return
 
 	loadout_to_outfit()
@@ -185,6 +195,8 @@
 
 	data["selected_loadout"] = all_selected_paths
 	data["mob_name"] = owner.prefs.real_name
+	data["ismoth"] = istype(owner.prefs.pref_species, /datum/species/moth) // Moth's humanflaticcon isn't the same dimensions for some reason
+	data["job_clothes"] = view_job_clothes
 	data["tutorial_status"] = tutorial_status
 	if(tutorial_status)
 		data["tutorial_text"] = get_tutorial_text()
@@ -204,12 +216,14 @@
 	loadout_tabs += list(list("id" = "Ears", "slot" = LOADOUT_ITEM_EARS, "contents" = list_to_data(GLOB.loadout_ears)))
 	loadout_tabs += list(list("id" = "Glasses", "slot" = LOADOUT_ITEM_GLASSES, "contents" = list_to_data(GLOB.loadout_glasses)))
 	loadout_tabs += list(list("id" = "Gloves", "slot" = LOADOUT_ITEM_GLOVES, "contents" = list_to_data(GLOB.loadout_gloves)))
-	loadout_tabs += list(list("id" = "Headgear", "slot" = LOADOUT_ITEM_HEAD, "contents" = list_to_data(GLOB.loadout_helmets)))
+	loadout_tabs += list(list("id" = "Head", "slot" = LOADOUT_ITEM_HEAD, "contents" = list_to_data(GLOB.loadout_helmets)))
 	loadout_tabs += list(list("id" = "Mask", "slot" = LOADOUT_ITEM_MASK, "contents" = list_to_data(GLOB.loadout_masks)))
 	loadout_tabs += list(list("id" = "Neck", "slot" = LOADOUT_ITEM_NECK, "contents" = list_to_data(GLOB.loadout_necks)))
 	loadout_tabs += list(list("id" = "Shoes", "slot" = LOADOUT_ITEM_SHOES, "contents" = list_to_data(GLOB.loadout_shoes)))
-	loadout_tabs += list(list("id" = "Suits", "slot" = LOADOUT_ITEM_SUIT, "contents" = list_to_data(GLOB.loadout_suits)))
-	loadout_tabs += list(list("id" = "Uniform", "slot" = LOADOUT_ITEM_UNIFORM, "contents" = list_to_data(GLOB.loadout_unders)))
+	loadout_tabs += list(list("id" = "Suit", "slot" = LOADOUT_ITEM_SUIT, "contents" = list_to_data(GLOB.loadout_exosuits)))
+	loadout_tabs += list(list("id" = "Jumpsuit", "slot" = LOADOUT_ITEM_UNIFORM, "contents" = list_to_data(GLOB.loadout_jumpsuits)))
+	loadout_tabs += list(list("id" = "Formal", "slot" = LOADOUT_ITEM_UNIFORM, "contents" = list_to_data(GLOB.loadout_undersuits)))
+	loadout_tabs += list(list("id" = "Misc. Under", "slot" = LOADOUT_ITEM_UNIFORM, "contents" = list_to_data(GLOB.loadout_miscunders)))
 	loadout_tabs += list(list("id" = "Inhand (2 max)", "slot" = LOADOUT_ITEM_INHAND, "contents" = list_to_data(GLOB.loadout_inhand_items)))
 	loadout_tabs += list(list("id" = "Misc. (3 max)", "slot" = LOADOUT_ITEM_MISC, "contents" = list_to_data(GLOB.loadout_pocket_items)))
 
@@ -235,10 +249,26 @@ to avoid an untimely and sudden death by fire or suffocation at the start of the
 
 /// Turns our client's assoc list of loadout items into actual items on our dummy outfit.
 /datum/loadout_manager/proc/loadout_to_outfit()
+	var/datum/outfit/default_outfit
+	if(view_job_clothes)
+		var/datum/job/fav_job = SSjob.GetJob("Assistant")
+		for(var/selected_job in owner.prefs.job_preferences)
+			if(owner.prefs.job_preferences[selected_job] == JP_HIGH)
+				fav_job = SSjob.GetJob(selected_job)
+				break
+
+		if(istype(owner.prefs.pref_species, /datum/species/plasmaman) && fav_job.plasmaman_outfit)
+			default_outfit = new fav_job.plasmaman_outfit()
+		else
+			default_outfit = new fav_job.outfit()
+	else
+		default_outfit = new()
+
+	custom_loadout.copy_from(default_outfit)
+	qdel(default_outfit)
+
 	var/list/loadout = owner.prefs.loadout_list
 	if(!LAZYLEN(loadout))
-		qdel(custom_loadout)
-		custom_loadout = new()
 		return
 
 	for(var/slot in loadout)
@@ -268,6 +298,14 @@ to avoid an untimely and sudden death by fire or suffocation at the start of the
 			if(LOADOUT_ITEM_RIGHT_HAND)
 				custom_loadout.r_hand = loadout[slot]
 
+/* Actually equip our mob with our job outfit and our loadout items.
+ * Loadout items override the pre-existing item in the corresponding slot of the job outfit.
+ * Some job items are preserved after being overridden - belt items, ear items, and glasses.
+ * The rest of the slots, the items are overridden completely and deleted.
+ *
+ * Plasmamen are snowflaked to not have any envirosuit pieces removed just in case.
+ * Their loadout items for those slots will be added to their backpack on spawn.
+ */
 /mob/living/carbon/human/proc/equip_outfit_and_loadout(outfit, visuals_only = FALSE, client/preference_source)
 	var/datum/outfit/equipped_outfit
 
@@ -300,20 +338,20 @@ to avoid an untimely and sudden death by fire or suffocation at the start of the
 					equipped_outfit.glasses = loadout[slot]
 				if(LOADOUT_ITEM_GLOVES)
 					if(isplasmaman(src))
-						to_chat(src, "Your loadout gloves were not equipped due to your envirosuit gloves.")
+						to_chat(src, "Your loadout gloves were not equipped directly due to your envirosuit gloves.")
 						move_to_backpack = loadout[slot]
 					else
 						equipped_outfit.gloves = loadout[slot]
 				if(LOADOUT_ITEM_HEAD)
 					if(isplasmaman(src))
-						to_chat(src, "Your loadout helmet was not equipped due to your envirosuit helmet.")
+						to_chat(src, "Your loadout helmet was not equipped directly due to your envirosuit helmet.")
 						move_to_backpack = loadout[slot]
 					else
 						equipped_outfit.head = loadout[slot]
 				if(LOADOUT_ITEM_MASK)
 					if(isplasmaman(src))
 						move_to_backpack = loadout[slot]
-						to_chat(src, "Your loadout mask was not equipped due to your envirosuit mask.")
+						to_chat(src, "Your loadout mask was not equipped directly due to your envirosuit mask.")
 					else
 						equipped_outfit.mask = loadout[slot]
 				if(LOADOUT_ITEM_NECK)
@@ -324,7 +362,7 @@ to avoid an untimely and sudden death by fire or suffocation at the start of the
 					equipped_outfit.suit = loadout[slot]
 				if(LOADOUT_ITEM_UNIFORM)
 					if(isplasmaman(src))
-						to_chat(src, "Your loadout jumpsuit was not equipped due to your envirosuit.")
+						to_chat(src, "Your loadout jumpsuit was not equipped directly due to your envirosuit.")
 						move_to_backpack = loadout[slot]
 					else
 						equipped_outfit.uniform = loadout[slot]
