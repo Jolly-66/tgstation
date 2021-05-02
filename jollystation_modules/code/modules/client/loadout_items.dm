@@ -1,4 +1,5 @@
-
+/// -- A ton of global lists that dictate the name and typepaths of all loadout items. --
+/// Belt Slot Items (Moves overrided items to backpack)
 GLOBAL_LIST_INIT(loadout_belts, list(
 	"Black Fannypack" = /obj/item/storage/belt/fannypack/black,
 	"Blue Fannypack" = /obj/item/storage/belt/fannypack/blue,
@@ -13,11 +14,13 @@ GLOBAL_LIST_INIT(loadout_belts, list(
 	"White Fannypack" = /obj/item/storage/belt/fannypack/white,
 ))
 
+/// Ear Slot Items (Moves overrided items to backpack)
 GLOBAL_LIST_INIT(loadout_ears, list(
 	"Earmuffs" = /obj/item/clothing/ears/earmuffs,
 	"Headphones" = /obj/item/instrument/piano_synth/headphones,
 ))
 
+/// Glasses Slot Items (Moves overrided items to backpack)
 GLOBAL_LIST_INIT(loadout_glasses, list(
 	"\[Prescription\] Glasses" = /obj/item/clothing/glasses/regular,
 	"\[Prescription\] Circle Glasses" = /obj/item/clothing/glasses/regular/circle,
@@ -34,6 +37,7 @@ GLOBAL_LIST_INIT(loadout_glasses, list(
 	"Welding Goggles" = /obj/item/clothing/glasses/welding,
 ))
 
+/// Glove Slot Items (Deletes overrided items)
 GLOBAL_LIST_INIT(loadout_gloves, list(
 	"Fingerless Gloves" = /obj/item/clothing/gloves/fingerless,
 	"Bone Bracers (Unarmored)" = /obj/item/clothing/gloves/armorless_bracer,
@@ -51,6 +55,7 @@ GLOBAL_LIST_INIT(loadout_gloves, list(
 	"White Gloves" = /obj/item/clothing/gloves/color/white,
 ))
 
+/// Head Slot Items (Deletes overrided items)
 GLOBAL_LIST_INIT(loadout_helmets, list(
 	"Black Beanie" = /obj/item/clothing/head/beanie/black,
 	"Christmas Beanie" = /obj/item/clothing/head/beanie/christmas,
@@ -90,6 +95,7 @@ GLOBAL_LIST_INIT(loadout_helmets, list(
 	"Red Hardhat" = /obj/item/clothing/head/hardhat/red,
 	"White Hardhat" = /obj/item/clothing/head/hardhat/white,
 	"Yellow Hardhat" = /obj/item/clothing/head/hardhat,
+	"Gladiator Helmet" = /obj/item/clothing/head/helmet/gladiator/loadout,
 	"Mail Cap" = /obj/item/clothing/head/mailman,
 	"Nurse Hat" = /obj/item/clothing/head/nursehat,
 	"Kitty Ears" = /obj/item/clothing/head/kitty,
@@ -104,6 +110,7 @@ GLOBAL_LIST_INIT(loadout_helmets, list(
 	"Wedding Veil" = /obj/item/clothing/head/weddingveil,
 ))
 
+/// Mask Slot Items (Deletes overrided items)
 GLOBAL_LIST_INIT(loadout_masks, list(
 	"Balaclava" = /obj/item/clothing/mask/balaclava,
 	"Gas Mask" = /obj/item/clothing/mask/gas,
@@ -113,6 +120,7 @@ GLOBAL_LIST_INIT(loadout_masks, list(
 	"Green Bandana" = /obj/item/clothing/mask/bandana/green,
 	"Red Bandana" = /obj/item/clothing/mask/bandana/red,
 	"Skull Bandana" = /obj/item/clothing/mask/bandana/skull,
+	"Face Mask" = /obj/item/clothing/mask/surgical,
 	"Fake Moustache" = /obj/item/clothing/mask/fakemoustache,
 	"Pipe" = /obj/item/clothing/mask/cigarette/pipe,
 	"Corn Cob Pipe" = /obj/item/clothing/mask/cigarette/pipe/cobpipe,
@@ -122,6 +130,7 @@ GLOBAL_LIST_INIT(loadout_masks, list(
 	//"Gum" = /obj/item/food/bubblegum,
 ))
 
+/// Neck Slot Items (Deletes overrided items)
 GLOBAL_LIST_INIT(loadout_necks, list(
 	"Black Scarf" = /obj/item/clothing/neck/scarf/black,
 	"Christmas Scarf" = /obj/item/clothing/neck/scarf/christmas,
@@ -146,6 +155,7 @@ GLOBAL_LIST_INIT(loadout_necks, list(
 	"Stethoscope" = /obj/item/clothing/neck/stethoscope,
 ))
 
+/// Shoe Slot Items (Deletes overrided items)
 GLOBAL_LIST_INIT(loadout_shoes, list(
 	"Jackboots" = /obj/item/clothing/shoes/jackboots/loadout,
 	"Winter Boots" = /obj/item/clothing/shoes/winterboots,
@@ -168,6 +178,7 @@ GLOBAL_LIST_INIT(loadout_shoes, list(
 	"Sandals" = /obj/item/clothing/shoes/sandal,
 ))
 
+/// Exosuit / Outersuit Slot Items (Deletes overrided items)
 GLOBAL_LIST_INIT(loadout_exosuits, list(
 	"Winter Coat" = /obj/item/clothing/suit/hooded/wintercoat,
 	"Black Suit Jacket" = /obj/item/clothing/suit/toggle/lawyer/black,
@@ -194,11 +205,12 @@ GLOBAL_LIST_INIT(loadout_exosuits, list(
 	"Leather Coat" = /obj/item/clothing/suit/jacket/leather/overcoat,
 	"Brown Letterman" = /obj/item/clothing/suit/jacket/letterman,
 	"Red Letterman" = /obj/item/clothing/suit/jacket/letterman_red,
-	"\"N\" Letterman" = /obj/item/clothing/suit/jacket/letterman_nanotrasen,
+	"Blue Letterman" = /obj/item/clothing/suit/jacket/letterman_nanotrasen,
 	"Bee Outfit" = /obj/item/clothing/suit/hooded/bee_costume,
 	"Plague Doctor Suit" = /obj/item/clothing/suit/bio_suit/plaguedoctorsuit,
 ))
 
+/// Underslot - Jumpsuit Items (Deletes overrided items)
 GLOBAL_LIST_INIT(loadout_jumpsuits, list(
 	"Random Jumpsuit" = /obj/item/clothing/under/color/random,
 	"Random Jumpskirt" = /obj/item/clothing/under/color/jumpskirt/random,
@@ -238,6 +250,7 @@ GLOBAL_LIST_INIT(loadout_jumpsuits, list(
 	"White Jumpskirt" = /obj/item/clothing/under/color/jumpskirt/white,
 ))
 
+/// Underslot - Formal Suit Items (Deletes overrided items)
 GLOBAL_LIST_INIT(loadout_undersuits, list(
 	"Amish Suit" = /obj/item/clothing/under/suit/sl,
 	"Beige Suit" = /obj/item/clothing/under/suit/beige,
@@ -293,6 +306,7 @@ GLOBAL_LIST_INIT(loadout_undersuits, list(
 	"White Suitskirt" = /obj/item/clothing/under/suit/white/skirt,
 ))
 
+/// Underslot - Misc. Under Items (Deletes overrided items)
 GLOBAL_LIST_INIT(loadout_miscunders, list(
 	"Camo Pants" = /obj/item/clothing/under/pants/camo,
 	"Classic Jeans" = /obj/item/clothing/under/pants/classicjeans,
@@ -314,10 +328,12 @@ GLOBAL_LIST_INIT(loadout_miscunders, list(
 	"White Pants" = /obj/item/clothing/under/pants/white,
 	"Assistant Formal" = /obj/item/clothing/under/misc/assistantformal,
 	"Kilt" = /obj/item/clothing/under/costume/kilt,
+	"Gladiator Armor" = /obj/item/clothing/under/costume/gladiator/loadout,
 	"Treasure Hunter" = /obj/item/clothing/under/rank/civilian/curator/treasure_hunter,
 	"Overalls" = /obj/item/clothing/under/misc/overalls,
 ))
 
+/// Inhand Items (2 allowed, placed in hand)
 GLOBAL_LIST_INIT(loadout_inhand_items, list(
 	"Cane" = /obj/item/cane,
 	"Briefcase" = /obj/item/storage/briefcase,
@@ -325,6 +341,7 @@ GLOBAL_LIST_INIT(loadout_inhand_items, list(
 	"Bone Spear (Ceremonial)" = /obj/item/spear/bonespear/ceremonial,
 ))
 
+/// Pocket / Backpack / Accessory Slot Items (3 allowed, placed in backpack)
 GLOBAL_LIST_INIT(loadout_pocket_items, list(
 	"Maid Apron" = /obj/item/clothing/accessory/maidapron,
 	"Waistcoat" = /obj/item/clothing/accessory/waistcoat,
@@ -339,6 +356,7 @@ GLOBAL_LIST_INIT(loadout_pocket_items, list(
 	"White and Blue Armband" = /obj/item/clothing/accessory/armband/medblue_cosmetic,
 	"Name-Inscribed Dogtags" = /obj/item/clothing/accessory/cosmetic_dogtag,
 	"Bone Talismin (Unarmored)" = /obj/item/clothing/accessory/armorless_talisman,
+	"Skull Codpiece (Unarmored)" = /obj/item/clothing/accessory/armorless_skullcodpiece,
 	"Pack of Gum" = /obj/item/storage/box/gum,
 	"Pack of Nicotine Gum" = /obj/item/storage/box/gum/nicotine,
 	"Pack of HP+ Gum" = /obj/item/storage/box/gum/happiness,

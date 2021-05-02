@@ -4,6 +4,13 @@
 	icon_state = "talisman"
 	attachment_slot = null
 
+/obj/item/clothing/accessory/armorless_skullcodpiece
+	name = "heirloom skull codpiece"
+	desc = "A cracked skull ornament, intended to protect the crotch and groin. It's old, yellowing and offers no protection anymore."
+	icon_state = "skull"
+	above_suit = TRUE
+	attachment_slot = GROIN
+
 /obj/item/clothing/accessory/armband/deputy_cosmetic
 	name = "red armband"
 	desc = "A red armband."

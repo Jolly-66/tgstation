@@ -1,3 +1,4 @@
+/// Defines for what loadout slot a corresponding item belongs to.
 #define LOADOUT_ITEM_BELT "belt"
 #define LOADOUT_ITEM_EARS "ears"
 #define LOADOUT_ITEM_GLASSES "glasses"
@@ -8,20 +9,13 @@
 #define LOADOUT_ITEM_SHOES "shoes"
 #define LOADOUT_ITEM_SUIT "suit"
 #define LOADOUT_ITEM_UNIFORM "under"
-#define LOADOUT_ITEM_INHAND "inhand_items"
+#define LOADOUT_ITEM_INHAND "inhand_items" //Divides into the two below slots
 #define LOADOUT_ITEM_LEFT_HAND "left_hand"
 #define LOADOUT_ITEM_RIGHT_HAND "right_hand"
-#define LOADOUT_ITEM_MISC "pocket_items"
+#define LOADOUT_ITEM_MISC "pocket_items" //Divides into the three below slots
 #define LOADOUT_ITEM_BACKPACK_1 "backpack_1"
 #define LOADOUT_ITEM_BACKPACK_2 "backpack_2"
 #define LOADOUT_ITEM_BACKPACK_3 "backpack_3"
-
-/mob/verb/debug_open_loadout_manager()
-	set name = "(DEBUG) Open Loadouts"
-	set category = "OOC"
-
-	var/datum/loadout_manager/tgui = new(usr)
-	tgui.ui_interact(usr)
 
 /* Takes an assoc list of [string]s to [typepaths]s
  * (Such as the global assoc lists of loadout items)
@@ -49,36 +43,44 @@
 /datum/outfit/player_loadout
 	name = "Player Loadout"
 
+/// Tracking when a client has an open loadout manager, to prevent funky stuff.
+/client
+	/// A ref to loadout_manager datum.
+	var/datum/loadout_manager/open_loadout_ui = null
+
 /// Datum holder for the loadout manager UI.
 /datum/loadout_manager
-	/// The key of the dummy we use to generate sprites
-	var/dummy_key
-	/// The dir the dummy is facing.
-	var/list/dummy_dir = list(SOUTH)
 	/// The client of the person using the UI
 	var/client/owner
 	/// The loadout list we had when we opened the UI.
 	var/list/loadout_on_open
-	/// A ref to the dummy outfit we use
+	/// The key of the dummy we use to generate sprites
+	var/dummy_key
+	/// The dir the dummy is facing.
+	var/list/dummy_dir = list(SOUTH)
+	/// A ref to the dummy outfit we're using
 	var/datum/outfit/player_loadout/custom_loadout
-	/// Whether we see our favorite job's clothes or not
+	/// Whether we see our favorite job's clothes on the dummy
 	var/view_job_clothes = TRUE
-	/// Tutorial UI status
+	/// Whether we see tutorial text in the UI
 	var/tutorial_status = FALSE
 
 /datum/loadout_manager/New(user)
 	owner = CLIENT_FROM_VAR(user)
 	custom_loadout = new()
+	owner.open_loadout_ui = src
 	if(!owner.prefs.loadout_list)
 		owner.prefs.loadout_list = list()
 	loadout_on_open = owner.prefs.loadout_list.Copy()
 	loadout_to_outfit()
 
 /datum/loadout_manager/ui_close(mob/user)
+	owner.open_loadout_ui = null
 	clear_human_dummy(dummy_key)
 	qdel(custom_loadout)
 	qdel(src)
 
+/// Initialize our dummy and dummy_key.
 /datum/loadout_manager/proc/init_dummy()
 	dummy_key = "loadoutmanagerUI_[owner.mob]"
 	generate_dummy_lookalike(dummy_key, owner.mob)
@@ -100,9 +102,11 @@
 		return
 
 	switch(action)
+		// Turns the tutorial on and off.
 		if("toggle_tutorial")
 			tutorial_status = !tutorial_status
 
+		// Either equips or de-equips the params["path"] item into params["category"]
 		if("select_item")
 			var/category_slot = params["category"]
 			if(params["doReset"])
@@ -131,12 +135,15 @@
 
 				owner.prefs.loadout_list[category_slot] = params["path"]
 
+		// Clears the loadout list entirely.
 		if("clear_all_items")
 			owner.prefs.loadout_list.Cut()
 
+		// Toggles between viewing favorite job clothes on the dummy.
 		if("toggle_job_clothes")
 			view_job_clothes = !view_job_clothes
 
+		// Rotates the dummy left or right depending on params["dir"]
 		if("rotate_dummy")
 			if(dummy_dir.len > 1)
 				dummy_dir = list(SOUTH)
@@ -162,18 +169,21 @@
 						if(WEST)
 							dummy_dir[1] = SOUTH
 
+		// Toggles between showing all dirs of the dummy at once.
 		if("show_all_dirs")
 			if(dummy_dir.len > 1)
 				dummy_dir = list(SOUTH)
 			else
 				dummy_dir = GLOB.cardinals
 
+		// Closes the UI, reverting our loadout to before edits if params["revert"] is set
 		if("close_ui")
 			if(params["revert"])
 				owner.prefs.loadout_list = loadout_on_open
 			SStgui.close_uis(src)
 			return
 
+	// Always update our loadout after we do something.
 	loadout_to_outfit()
 	return TRUE
 
@@ -231,6 +241,7 @@
 
 	return data
 
+/// Returns a formatted string for use in the UI.
 /datum/loadout_manager/proc/get_tutorial_text()
 	return {"This is the Loadout Manager.
 It allows you to customize what your character will wear on shift start in addition to their job's uniform.
@@ -248,6 +259,7 @@ selected by plasmamen will spawn in their backpack instead of overriding their c
 to avoid an untimely and sudden death by fire or suffocation at the start of the shift."}
 
 /// Turns our client's assoc list of loadout items into actual items on our dummy outfit.
+/// Also loads job clothes into our custom list to show what gets overriden.
 /datum/loadout_manager/proc/loadout_to_outfit()
 	var/datum/outfit/default_outfit
 	if(view_job_clothes)
@@ -305,6 +317,10 @@ to avoid an untimely and sudden death by fire or suffocation at the start of the
  *
  * Plasmamen are snowflaked to not have any envirosuit pieces removed just in case.
  * Their loadout items for those slots will be added to their backpack on spawn.
+ *
+ * outfit - the job outfit we're equipping
+ * visuals_only - whether we call special equipped procs, or if we just look like we equipped it
+ * preference_source - the client belonging to the thing we're equipping
  */
 /mob/living/carbon/human/proc/equip_outfit_and_loadout(outfit, visuals_only = FALSE, client/preference_source)
 	var/datum/outfit/equipped_outfit
@@ -380,3 +396,21 @@ to avoid an untimely and sudden death by fire or suffocation at the start of the
 				LAZYADD(equipped_outfit.backpack_contents, move_to_backpack)
 
 	return equipped_outfit.equip(src, visuals_only)
+
+#undef LOADOUT_ITEM_BELT
+#undef LOADOUT_ITEM_EARS
+#undef LOADOUT_ITEM_GLASSES
+#undef LOADOUT_ITEM_GLOVES
+#undef LOADOUT_ITEM_HEAD
+#undef LOADOUT_ITEM_MASK
+#undef LOADOUT_ITEM_NECK
+#undef LOADOUT_ITEM_SHOES
+#undef LOADOUT_ITEM_SUIT
+#undef LOADOUT_ITEM_UNIFORM
+#undef LOADOUT_ITEM_INHAND
+#undef LOADOUT_ITEM_LEFT_HAND
+#undef LOADOUT_ITEM_RIGHT_HAND
+#undef LOADOUT_ITEM_MISC
+#undef LOADOUT_ITEM_BACKPACK_1
+#undef LOADOUT_ITEM_BACKPACK_2
+#undef LOADOUT_ITEM_BACKPACK_3
