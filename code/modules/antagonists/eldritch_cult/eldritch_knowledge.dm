@@ -265,10 +265,10 @@
 	var/mob/living/carbon/carbon_user = user
 	for(var/obj/item/living_heart/heart in atoms)
 
-		if(heart.target && heart.target.stat == DEAD)
+		if(heart.target && heart.target.stat != CONSCIOUS) // NON-MODULE CHANGE
 			to_chat(carbon_user,"<span class='danger'>Your patrons accepts your offer..</span>")
 			var/mob/living/carbon/human/current_target = heart.target
-			current_target.gib()
+			sacrifice_process(current_target, user) // NON-MODULE CHANGE
 			heart.target = null
 			var/datum/antagonist/heretic/heretic_datum = carbon_user.mind.has_antag_datum(/datum/antagonist/heretic)
 
