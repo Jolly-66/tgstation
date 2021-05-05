@@ -74,6 +74,10 @@ ENABLE_LOCALHOST_RANK
 #USE_EXP_RESTRICTIONS_OTHER
 ## Allows admins to bypass job playtime requirements.
 #USE_EXP_RESTRICTIONS_ADMIN_BYPASS
+## Unhash this to have intern tags automatically added to ID cards for station roles depending on the living hours of the player holding them.
+#USE_LOW_LIVING_HOUR_INTERN
+## If USE_LOW_LIVING_HOUR_INTERN is unhashed, players under this number of living hours have [Intern] added to their ID card. If this isn't set, uses USE_EXP_RESTRICTIONS_HEADS_HOURS instead. If that isn't set, it finally defaults to a hardcoded fallback of 15 hours.
+#USE_LOW_LIVING_HOUR_INTERN_HOURS 50
 
 ## log OOC channel
 LOG_OOC
@@ -173,13 +177,13 @@ ALLOW_ADMIN_ASAYCOLOR
 ID_CONSOLE_JOBSLOT_DELAY 30
 
 ## allow players to initiate a restart vote
-#ALLOW_VOTE_RESTART
+ALLOW_VOTE_RESTART
 
 ## allow players to initiate a mode-change vote
 #ALLOW_VOTE_MODE
 
 ## allow players to initiate a map-change vote
-#ALLOW_VOTE_MAP
+ALLOW_VOTE_MAP
 
 ## min delay (deciseconds) between voting sessions (default 10 minutes)
 VOTE_DELAY 6000
@@ -227,7 +231,7 @@ CHECK_RANDOMIZER
 #WEBCLIENT_ONLY_BYOND_MEMBERS
 
 ## Set to prevent anyone but those ckeys listed in config/whitelist.txt and config/admins.txt from joining your server
-#USEWHITELIST
+USEWHITELIST
 
 ## set a server location for world reboot. Don't include the byond://, just give the address and port.
 ## Don't set this to the same server, BYOND will automatically restart players to the server when it has restarted.
@@ -532,3 +536,20 @@ DEFAULT_VIEW_SQUARE 15x15
 
 ## Add the ID of the role you want assigning here
 #DISCORD_ROLEID 000000000000000000
+
+
+
+#############################
+#### MODULE CONFIG STUFF ####
+
+## allow players to OOCly vote for a shuttle call after a certain amount of time
+#ALLOW_VOTE_TRANSFER
+
+## whether or not transfer votes are automatically called at [TRANSFER_TIME_MIN_ALLOWED] and every [TRANSFER_TIME_BETWEEN_AUTO_VOTES] after.
+TRANSFER_AUTO_VOTE_ENABLED
+
+## minimum shift length allowed before transfer votes are enabled. Also when auto transfer votes begin, if enabled. (default 54000 = 1.5 hours)
+TRANSFER_TIME_MIN_ALLOWED 54000
+
+## amount of time between automatic transfer votes. (default 18000 = 30 minutes)
+TRANSFER_TIME_BETWEEN_AUTO_VOTES 18000

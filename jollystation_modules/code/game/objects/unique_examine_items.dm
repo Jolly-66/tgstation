@@ -155,7 +155,7 @@
 	. = ..()
 	AddElement(/datum/element/unique_examine, "The Chief Engineer's spotless advanced hardsuit - a sleek white design of the standard engineering and atmospheric hardsuits with improved resistance to fire and radiation.", EXAMINE_CHECK_JOB, GLOB.engineering_positions)
 
-/obj/item/card/id/captains_spare/Initialize()
+/obj/item/card/id/advanced/gold/captains_spare/Initialize()
 	. = ..()
 	AddElement(/datum/element/unique_examine, "The captain's spare ID card - the backup all-access ID card assigned to the care of the captain themselves. Standard-issue golden ID cards supplied to all Nanotrasen operated space stations, to allow \
 											for normal operation of every aspect of the station in the absence of the captain... assuming it doesn't end up in the hands of certain gas-masked individuals, of course.", EXAMINE_CHECK_JOB, list("Captain", "Head of Personnel"))
@@ -258,6 +258,10 @@
 	. = ..()
 	if(e_name == "rune")
 		AddElement(/datum/element/unique_examine, "A rune of blood inscribed by the followers of the Geometer Nar'sie to channel powerful blood magics through the invoker. Except this one is crayon and not blood - a mockery.", EXAMINE_CHECK_FACTION, list("cult"))
+
+/obj/item/spear/bonespear/ceremonial/Initialize()
+	. = ..()
+	AddElement(/datum/element/unique_examine, "It's common tradition for Ash-kin to build and carry their own spear or axe as their weapon of choice for most of their lives. While most have abandoned this practice since, some are still allowed by the company to carry a ceremonial or traiditional weapon - provided they aren't used for attacking others, of course.", EXAMINE_CHECK_SPECIES, LIZARD_LIST)
 
 #undef SECURITY_JOBS_PLUS_CAP
 #undef TRAITOR_LIST

@@ -61,11 +61,6 @@ SUBSYSTEM_DEF(vote)
 				choices["Continue Playing"] += non_voters.len
 				if(choices["Continue Playing"] >= greatest_votes)
 					greatest_votes = choices["Continue Playing"]
-			else if(mode == "gamemode")
-				if(GLOB.master_mode in choices)
-					choices[GLOB.master_mode] += non_voters.len
-					if(choices[GLOB.master_mode] >= greatest_votes)
-						greatest_votes = choices[GLOB.master_mode]
 			else if(mode == "map")
 				for (var/non_voter_ckey in non_voters)
 					var/client/C = non_voters[non_voter_ckey]
@@ -76,6 +71,14 @@ SUBSYSTEM_DEF(vote)
 						preferred_map = global.config.defaultmap.map_name
 					choices[preferred_map] += 1
 					greatest_votes = max(greatest_votes, choices[preferred_map])
+			/// NON-MODULE CHANGE: AUTOTRANSFER
+			else if(mode == "transfer")
+				/// multipler applied to non-voters. non-voters count for 1/3rd of a vote, then past two votes they count for 1/4th, 1/5th, and so on.
+				var/non_voters_multiplier = clamp(SScrewtransfer.transfer_votes_attempted + 1, 3, 50)
+				choices["Continue Shift"] += round(non_voters.len / non_voters_multiplier)
+				if(choices["Continue Shift"] >= greatest_votes)
+					greatest_votes = choices["Continue Shift"]
+			/// NON-MODULE CHANGE END
 	. = list()
 	if(greatest_votes)
 		for(var/option in choices)
@@ -109,7 +112,7 @@ SUBSYSTEM_DEF(vote)
 		text += "<b>Vote Result: Inconclusive - No Votes!</b>"
 	log_vote(text)
 	remove_action_buttons()
-	to_chat(world, "\n<font color='purple'>[text]</font>")
+	to_chat(world, "\n<span class='infoplain'><font color='purple'>[text]</font></span>")
 	return .
 
 /datum/controller/subsystem/vote/proc/result()
@@ -120,16 +123,14 @@ SUBSYSTEM_DEF(vote)
 			if("restart")
 				if(. == "Restart Round")
 					restart = TRUE
-			if("gamemode")
-				if(GLOB.master_mode != .)
-					SSticker.save_mode(.)
-					if(SSticker.HasRoundStarted())
-						restart = TRUE
-					else
-						GLOB.master_mode = .
 			if("map")
 				SSmapping.changemap(global.config.maplist[.])
 				SSmapping.map_voted = TRUE
+			/// NON-MODULE CHANGE: AUTOTRANSFER
+			if("transfer")
+				if(. == "Initiate Crew Transfer")
+					SScrewtransfer.initiate_crew_transfer()
+			// NON-MODULE CHANGE END
 	if(restart)
 		var/active_admins = FALSE
 		for(var/client/C in GLOB.admins + GLOB.deadmins)
@@ -161,14 +162,14 @@ SUBSYSTEM_DEF(vote)
 	choices[choices[vote]]++
 	return vote
 
-/datum/controller/subsystem/vote/proc/initiate_vote(vote_type, initiator_key)
+/datum/controller/subsystem/vote/proc/initiate_vote(vote_type, initiator_key, forced = FALSE) // NON-MODULE CHANGE: AUTOTRANSFER
 	//Server is still intializing.
 	if(!Master.current_runlevel)
 		to_chat(usr, "<span class='warning'>Cannot start vote, server is not done initializing.</span>")
 		return FALSE
 	var/lower_admin = FALSE
 	var/ckey = ckey(initiator_key)
-	if(GLOB.admin_datums[ckey])
+	if(GLOB.admin_datums[ckey] || forced) //NON-MODULE CHANGE: AUTOTRANSFER
 		lower_admin = TRUE
 
 	if(!mode)
@@ -185,8 +186,6 @@ SUBSYSTEM_DEF(vote)
 		switch(vote_type)
 			if("restart")
 				choices.Add("Restart Round","Continue Playing")
-			if("gamemode")
-				choices.Add(config.votable_modes)
 			if("map")
 				if(!lower_admin && SSmapping.map_voted)
 					to_chat(usr, "<span class='warning'>The next map has already been selected.</span>")
@@ -210,6 +209,17 @@ SUBSYSTEM_DEF(vote)
 					if(!option || mode || !usr.client)
 						break
 					choices.Add(option)
+			/// NON-MODULE CHANGE: AUTOTRANSFER
+			if("transfer")
+				var/mob/dead/observer/caller = usr
+				//Observers/ghosts don't get to decide when a shuttle-call vote happens
+				if(!lower_admin && istype(caller))
+					to_chat(usr, "<span class='warning'>[caller.started_as_observer? "You are not taking part in the round." : "You have died in the round."] If you think it should end, call a restart vote instead.</span>")
+					return FALSE
+
+				SScrewtransfer.transfer_votes_attempted++
+				choices.Add("Initiate Crew Transfer", "Continue Shift")
+			/// NON-MODULE CHANGE END
 			else
 				return FALSE
 		mode = vote_type
@@ -220,7 +230,7 @@ SUBSYSTEM_DEF(vote)
 			text += "\n[question]"
 		log_vote(text)
 		var/vp = CONFIG_GET(number/vote_period)
-		to_chat(world, "\n<font color='purple'><b>[text]</b>\nType <b>vote</b> or click <a href='byond://winset?command=vote'>here</a> to place your votes.\nYou have [DisplayTimeText(vp)] to vote.</font>")
+		to_chat(world, "\n<span class='infoplain'><font color='purple'><b>[text]</b>\nType <b>vote</b> or click <a href='byond://winset?command=vote'>here</a> to place your votes.\nYou have [DisplayTimeText(vp)] to vote.</font></span>")
 		time_remaining = round(vp/10)
 		for(var/c in GLOB.clients)
 			var/client/C = c
@@ -255,7 +265,6 @@ SUBSYSTEM_DEF(vote)
 /datum/controller/subsystem/vote/ui_data(mob/user)
 	var/list/data = list(
 		"allow_vote_map" = CONFIG_GET(flag/allow_vote_map),
-		"allow_vote_mode" = CONFIG_GET(flag/allow_vote_mode),
 		"allow_vote_restart" = CONFIG_GET(flag/allow_vote_restart),
 		"choices" = list(),
 		"lower_admin" = !!user.client?.holder,
@@ -268,7 +277,7 @@ SUBSYSTEM_DEF(vote)
 	)
 
 	if(!!user.client?.holder)
-		data["voting"] += list(voting)
+		data["voting"] = voting
 
 	for(var/key in choices)
 		data["choices"] += list(list(
@@ -297,18 +306,12 @@ SUBSYSTEM_DEF(vote)
 		if("toggle_restart")
 			if(usr.client.holder && upper_admin)
 				CONFIG_SET(flag/allow_vote_restart, !CONFIG_GET(flag/allow_vote_restart))
-		if("toggle_gamemode")
-			if(usr.client.holder && upper_admin)
-				CONFIG_SET(flag/allow_vote_mode, !CONFIG_GET(flag/allow_vote_mode))
 		if("toggle_map")
 			if(usr.client.holder && upper_admin)
 				CONFIG_SET(flag/allow_vote_map, !CONFIG_GET(flag/allow_vote_map))
 		if("restart")
 			if(CONFIG_GET(flag/allow_vote_restart) || usr.client.holder)
 				initiate_vote("restart",usr.key)
-		if("gamemode")
-			if(CONFIG_GET(flag/allow_vote_mode) || usr.client.holder)
-				initiate_vote("gamemode",usr.key)
 		if("map")
 			if(CONFIG_GET(flag/allow_vote_map) || usr.client.holder)
 				initiate_vote("map",usr.key)

@@ -194,7 +194,7 @@
 			user.put_in_hands(stored_pda)
 		else
 			stored_pda.forceMove(drop_location())
-
+		stored_pda.update_appearance() // NON-MODULE CHANGE
 		stored_pda = null
 		update_icon()
 
@@ -335,6 +335,13 @@
 					return TRUE
 
 				to_chat(usr, "<span class='warning'>The trim you selected could not be added to \the [stored_id_card]. You will need a rarer ID card to imprint that trim data.</span>")
+
+			return TRUE
+		if("reset_card")
+			if((machine_stat & BROKEN) || !stored_id_card)
+				return TRUE
+
+			stored_id_card.clear_account()
 
 			return TRUE
 

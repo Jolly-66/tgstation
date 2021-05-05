@@ -63,7 +63,7 @@ GLOBAL_LIST_INIT(dye_registry, list(
 		DYE_CAPTAIN = /obj/item/clothing/gloves/color/captain,
 		DYE_HOP = /obj/item/clothing/gloves/color/grey,
 		DYE_HOS = /obj/item/clothing/gloves/color/black,
-		DYE_CE = /obj/item/clothing/gloves/color/black,
+		DYE_CE = /obj/item/clothing/gloves/color/chief_engineer,
 		DYE_RD = /obj/item/clothing/gloves/color/grey,
 		DYE_CMO = /obj/item/clothing/gloves/color/latex/nitrile,
 		DYE_REDCOAT = /obj/item/clothing/gloves/color/white,
@@ -351,6 +351,9 @@ GLOBAL_LIST_INIT(dye_registry, list(
 	addtimer(CALLBACK(src, .proc/wash_cycle), 20 SECONDS)
 	START_PROCESSING(SSfastprocess, src)
 	return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
+
+/obj/machinery/washing_machine/attack_ai_secondary(mob/user, modifiers)
+	return attack_hand_secondary(user, modifiers)
 
 /obj/machinery/washing_machine/deconstruct(disassembled = TRUE)
 	if (!(flags_1 & NODECONSTRUCT_1))

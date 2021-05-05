@@ -150,17 +150,6 @@
 	vehicle_entered_target.set_light_on(vehicle_entered_target.headlights_toggle)
 	playsound(owner, vehicle_entered_target.headlights_toggle ? 'sound/weapons/magin.ogg' : 'sound/weapons/magout.ogg', 40, TRUE)
 
-/datum/action/vehicle/sealed/headlights
-	name = "Toggle Headlights"
-	desc = "Turn on your brights!"
-	button_icon_state = "car_headlights"
-
-/datum/action/vehicle/sealed/headlights/Trigger()
-	to_chat(owner, "<span class='notice'>You flip the switch for the vehicle's headlights.</span>")
-	vehicle_entered_target.headlights_toggle = !vehicle_entered_target.headlights_toggle
-	vehicle_entered_target.set_light_on(vehicle_entered_target.headlights_toggle)
-	playsound(owner, vehicle_entered_target.headlights_toggle ? 'sound/weapons/magin.ogg' : 'sound/weapons/magout.ogg', 40, TRUE)
-
 /datum/action/vehicle/sealed/dump_kidnapped_mobs
 	name = "Dump Kidnapped Mobs"
 	desc = "Dump all objects and people in your car on the floor."
@@ -249,8 +238,8 @@
 			passtable_off(rider, VEHICLE_TRAIT)
 			vehicle.pass_flags &= ~PASSTABLE
 		if((locate(/obj/structure/table) in vehicle.loc.contents) || (locate(/obj/structure/fluff/tram_rail) in vehicle.loc.contents))
-			/*if(locate(/obj/structure/fluff/tram_rail) in vehicle.loc.contents)
-				rider.client.give_award(/datum/award/achievement/misc/tram_surfer, rider)*/
+			if(locate(/obj/structure/fluff/tram_rail) in vehicle.loc.contents)
+				rider.client.give_award(/datum/award/achievement/misc/tram_surfer, rider)
 			vehicle.grinding = TRUE
 			vehicle.icon_state = "[initial(vehicle.icon_state)]-grind"
 			addtimer(CALLBACK(vehicle, /obj/vehicle/ridden/scooter/skateboard/.proc/grind), 2)
