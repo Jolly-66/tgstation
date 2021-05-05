@@ -13,5 +13,5 @@
 /obj/item/radio/headset/heads/headset_qm
 	name = "\proper the quartermaster's headset"
 	desc = "A headset used by the QM, to pretend to have authority and order people around."
-	icon_state = "cargo_headset"
+	icon_state = "com_headset"
 	keyslot = new /obj/item/encryptionkey/heads/qm
