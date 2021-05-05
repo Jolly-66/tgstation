@@ -21,7 +21,7 @@
 	paycheck_department = ACCOUNT_SEC
 	bounty_types = CIV_JOB_RANDOM
 
-	liver_traits = list(TRAIT_PRETENDER_ROYAL_METABOLISM) // QM normally has this. C'est la vie.
+	liver_traits = list(TRAIT_PRETENDER_ROYAL_METABOLISM) // QM normally has this, but since they're a head of staff now I put it here. C'est la vie.
 
 	display_order = JOB_DISPLAY_ORDER_BRIDGE_OFFICER
 
