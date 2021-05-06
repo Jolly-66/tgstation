@@ -47,7 +47,7 @@
 		typing_indicator = image('jollystation_modules/icons/mob/talk.dmi', src, "emoting", FLY_LAYER)
 		typing_indicator.appearance_flags = APPEARANCE_UI_IGNORE_ALPHA
 
-		if(stat != CONSCIOUS || is_muzzled())
+		if(stat != CONSCIOUS)
 			QDEL_NULL(typing_indicator)
 
 		if(typing_indicator)
