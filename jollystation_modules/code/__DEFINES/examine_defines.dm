@@ -1,4 +1,4 @@
-/// --- Defines for the unique-examine element. ---
+/// -- Defines for the unique-examine element. --
 /// Displays the special_desc regardless if it's set.
 #define EXAMINE_CHECK_NONE "none"
 /// For displaying descriptors for those with a certain antag datum. Pass a list of type "datum/antagonist/"
