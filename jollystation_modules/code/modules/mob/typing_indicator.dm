@@ -1,4 +1,4 @@
-/// Typing indicator wrappers, for the say hotkey and the emote hotkey.
+/// -- Typing indicator wrappers, for the say hotkey and the emote hotkey. --
 
 /mob/verb/say_wrapper()
 	set name = ".say"
