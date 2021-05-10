@@ -1,3 +1,4 @@
+// -- Modular minor gadgets/devices that go in the uplink. --
 /// A small beacon / controller that can be used to send centcom reports IC.
 /obj/item/item_announcer
 	name = "FK-\"Deception\" Falty Announcement Device"

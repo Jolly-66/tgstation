@@ -12,6 +12,7 @@
 	if(istype(spawned_device) && user)
 		spawned_device.owner = user
 
+/// -- Modular/additional uplink items --
 /datum/uplink_item/device_tools/announcement/fake_ionstorm
 	name = "Fake Ion Storm Announcement"
 	desc = "Ai, state flaws. A beacon with one use that triggers a fake ion storm, \
