@@ -47,15 +47,17 @@
 	if(owner && owner != user)
 		to_chat(user, "<span class='warning'>Identity check failed.</span>")
 	else
-		if(trigger_announcement() && uses <= 0)
+		if(trigger_announcement(user) && uses <= 0)
 			break_item(user)
 
-/obj/item/item_announcer/preset/proc/trigger_announcement()
+/obj/item/item_announcer/preset/proc/trigger_announcement(mob/user)
 	var/datum/round_event_control/falsealarm/triggered_event = new()
 	if(!fake_event)
 		return FALSE
 	triggered_event.forced_type = fake_event
 	triggered_event.runEvent(FALSE)
+	to_chat(user, "<span class='notice'>You press the [src], triggering a false alarm for [fake_event_name].</span>")
+	message_admins("[ADMIN_LOOKUPFLW(user)] triggered a false alarm using a syndicate device: \"[fake_event_name]\".")
 	uses--
 
 	return TRUE
@@ -136,12 +138,13 @@
 	if(announce_contents)
 		priority_announce(command_report_content, null, SSstation.announcer.get_rand_report_sound(), has_important_message = TRUE)
 	print_command_report(command_report_content, "[announce_contents ? "" : "Classified "][fake_command_name] Update", !announce_contents)
-	uses--
 
 	change_command_name(original_command_name)
 
 	log_admin("[key_name(user)] has sent a fake command report: \"[command_report_content]\", sent from \"[fake_command_name]\".")
-	message_admins("[ADMIN_LOOKUPFLW(user)] has sent a fake command report.")
+	message_admins("[ADMIN_LOOKUPFLW(user)] has sent a fake command report using a syndicate device: \"[command_report_content]\".")
+	to_chat(user, "<span class='notice'>You tap on the [src], sending a [announce_contents ? "" : "classified "]report from [fake_command_name].</span>")
+	uses--
 
 	return TRUE
 
