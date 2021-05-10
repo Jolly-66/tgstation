@@ -14,17 +14,17 @@
 
 /datum/uplink_item/device_tools/announcement/fake_ionstorm
 	name = "Fake Ion Storm Announcement"
-	desc = "Need to cause some chaos in the AI's realm? \
-		A beacon with one use that triggers a fake ion storm over the station, \
+	desc = "Ai, state flaws. A beacon with one use that triggers a fake ion storm, \
 		sending the crew clammering to investigate their nearest silicon."
 	item = /obj/item/item_announcer/preset/ion
 	cost = 4
 
 /datum/uplink_item/device_tools/announcement/fake_radstorm
 	name = "Fake Radiation Storm Announcement"
-	desc = "Radiation storm! Turn on emergency maintenance access! \
-		A beacon with one use that triggers a fake radiation storm over the station, \
-		causing mild panic and a mad dash for maintenance. Does not come with warm air."
+	desc = "Radiation storm! Turn on emergency maint! \
+		A beacon with one use that triggers a fake radiation storm, \
+		causing mild panic and a mad dash for maintenance. \
+		Does not come with warm air."
 	item = /obj/item/item_announcer/preset/rad
 	cost = 5
 
@@ -39,7 +39,7 @@
 
 /datum/uplink_item/device_tools/announcement/syndicate_announcement
 	name = "Syndicate Announcement"
-	desc = "Forgoing any semblence of stealth and security? Need to make yourself known? \
+	desc = "Forgoing any semblance of stealth and security? Need to make yourself known? \
 		A beacon with two uses that sends reports directly from The Syndicate to the station, classified or announced."
 	item = /obj/item/item_announcer/input/syndicate
 	cost = 8
