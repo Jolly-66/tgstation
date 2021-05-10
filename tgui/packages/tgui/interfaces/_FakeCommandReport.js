@@ -22,7 +22,7 @@ export const _FakeCommandReport = (props, context) => {
               <Dropdown
                 width="100%"
                 selected={command_name}
-                disabled={1}/>
+                disabled={1} />
             </Section>
           </Stack.Item>
           <Stack.Item>
