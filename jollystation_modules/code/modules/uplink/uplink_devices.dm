@@ -57,7 +57,9 @@
 	triggered_event.forced_type = fake_event
 	triggered_event.runEvent(FALSE)
 	to_chat(user, "<span class='notice'>You press the [src], triggering a false alarm for [fake_event_name].</span>")
-	message_admins("[ADMIN_LOOKUPFLW(user)] triggered a false alarm using a syndicate device: \"[fake_event_name]\".")
+	deadchat_broadcast("<span class='bold'>[user] has triggered a false alarm using a syndicate device!</span>", follow_target = user)
+	message_admins("[ADMIN_LOOKUPFLW(user)] has triggered a false alarm using a syndicate device: \"[fake_event_name]\".")
+	log_game("[key_name(user)] has triggered a false alarm using a syndicate device: \"[fake_event_name]\".")
 	uses--
 
 	return TRUE
@@ -141,9 +143,10 @@
 
 	change_command_name(original_command_name)
 
-	log_admin("[key_name(user)] has sent a fake command report: \"[command_report_content]\", sent from \"[fake_command_name]\".")
-	message_admins("[ADMIN_LOOKUPFLW(user)] has sent a fake command report using a syndicate device: \"[command_report_content]\".")
 	to_chat(user, "<span class='notice'>You tap on the [src], sending a [announce_contents ? "" : "classified "]report from [fake_command_name].</span>")
+	deadchat_broadcast("<span class='bold'>[user] has triggered an announcement using a syndicate device!</span>", follow_target = user)
+	message_admins("[ADMIN_LOOKUPFLW(user)] has sent a fake command report using a syndicate device: \"[command_report_content]\".")
+	log_game("[key_name(user)] has sent a fake command report using a syndicate device: \"[command_report_content]\", sent from \"[fake_command_name]\".")
 	uses--
 
 	return TRUE
