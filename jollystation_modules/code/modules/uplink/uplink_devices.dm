@@ -19,7 +19,8 @@
 /// Deletes the item when it's used up.
 /obj/item/item_announcer/proc/break_item(mob/user)
 	to_chat(user, "<span class='notice'>The [src] breaks down into unrecognizable scrap and ash after being used.</span>")
-	new /obj/effect/decal/cleanable/ash(drop_location())
+	var/obj/effect/decal/cleanable/ash/spawned_ash = new(drop_location())
+	spawned_ash.desc = "Ashes to ashes, dust to dust. There's a few pieces of scrap in this pile."
 	qdel(src)
 
 /// User sends a preset false alarm.
