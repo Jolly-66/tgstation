@@ -36,10 +36,6 @@
 	linked_advanced_datum.possible_objectives = objectives_to_choose
 	return ..()
 
-/datum/antagonist/traitor/traitor_plus/on_removal()
-	qdel(linked_advanced_datum)
-	return ..()
-
 /// Greet the antag with big menacing text.
 /datum/antagonist/traitor/traitor_plus/greet()
 	linked_advanced_datum.greet_message(owner.current)
@@ -95,12 +91,17 @@
 	. = ..()
 	. += "<a href='?_src_=holder;[HrefToken()];admin_check_goals=[REF(src)]'>Show Goals</a>"
 
+/// The advanced antag datum for traitor.
 /datum/advanced_antag_datum/traitor
 	name = "Advanced Traitor"
 	employer = "The Syndicate"
 	style = "jolly-syndicate"
 	starting_points = 8
-	var/datum/antagonist/traitor/traitor_plus/our_traitor
+	/// Our antag datum linked to our advanced antag.
+	var/datum/antagonist/traitor/our_traitor
+	/// Hijack speed = (starting telecrystals * this modifier)
+	var/hijack_speed_modifier = 0.025
+	/// The type of antag we are. (TRAITOR_AI vs TRAITOR_HUMAN)
 	var/antag_type
 
 /datum/advanced_antag_datum/traitor/New(datum/antagonist/linked_antag)
@@ -121,7 +122,7 @@
 
 			starting_points = get_antag_points_from_goals()
 			made_uplink.telecrystals = starting_points
-			linked_antagonist.hijack_speed = (20 / starting_points) // 20 tc traitor = 0.5 (default traitor hijack speed)
+			linked_antagonist.hijack_speed = (starting_points * hijack_speed_modifier) // 20 tc traitor = 0.5 (default traitor hijack speed)
 		if(TRAITOR_AI)
 			var/mob/living/silicon/ai/traitor_ai = linked_antagonist.owner.current
 			var/datum/module_picker/traitor_ai_uplink = traitor_ai.malf_picker

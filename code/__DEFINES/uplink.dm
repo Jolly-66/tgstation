@@ -8,3 +8,6 @@
 
 /// This item is purchasable to clown ops
 #define UPLINK_CLOWN_OPS (1 << 2)
+
+/// NON-MODULE: Infiltrator uplink
+#define UPLINK_INFILTRATOR (1 << 3)
