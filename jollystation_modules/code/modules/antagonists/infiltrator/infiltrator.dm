@@ -3,6 +3,18 @@
 	name = "Infiltrator"
 	hijack_speed = 1
 	advanced_antag_path = /datum/advanced_antag_datum/traitor/infiltrator
+	antag_hud_type = ANTAG_HUD_OPS
+	antag_hud_name = "synd"
+
+/datum/antagonist/traitor/traitor_plus/intiltrator/apply_innate_effects(mob/living/mob_override)
+	var/mob/living/living_antag = mob_override || owner.current
+	add_antag_hud(antag_hud_type, antag_hud_name, living_antag)
+	living_antag.faction |= ROLE_SYNDICATE
+
+/datum/antagonist/traitor/traitor_plus/intiltrator/remove_innate_effects(mob/living/mob_override)
+	var/mob/living/living_antag = mob_override || owner.current
+	remove_antag_hud(antag_hud_type, living_antag)
+	living_antag.faction -= ROLE_SYNDICATE
 
 /datum/antagonist/traitor/traitor_plus/intiltrator/on_removal()
 	var/obj/item/implant/uplink/infiltrator/infiltrator_implant = locate() in owner.current
@@ -13,8 +25,6 @@
 	if(weapons_implant)
 		to_chat(owner.current, "<span class='danger'>You hear a click in your [prob(50) ? "right" : "left"] arm as your [weapons_implant.name] deactivates and becomes non-functional!</span>")
 		qdel(weapons_implant)
-	if(ROLE_SYNDICATE in owner.current.faction)
-		owner.current.faction -= ROLE_SYNDICATE
 	. = ..()
 
 /datum/antagonist/traitor/traitor_plus/intiltrator/roundend_report()
@@ -68,8 +78,6 @@
 	if(!silent)
 		to_chat(traitor_mob, "<span class='boldnotice'>[employer] has cunningly implanted you with an [infiltrator_implant] to assist in your infiltration. You can trigger the uplink to stealthily access it.</span>")
 		to_chat(traitor_mob, "<span class='boldnotice'>[employer] has wisely implanted you with a [weapons_implant] to allow you to use syndicate weaponry. You can now fire weapons with Syndicate firing pins.</span>")
-
-	traitor_mob.faction |= ROLE_SYNDICATE
 
 /// infiltrator uplink implant.
 /obj/item/implant/uplink/infiltrator
