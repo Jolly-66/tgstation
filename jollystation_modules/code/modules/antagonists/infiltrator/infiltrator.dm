@@ -1,28 +1,23 @@
-/datum/antagonist/traitor/intiltrator
+/// -- Infiltrator antag. Advanced traitors but they get some nukops gear in their uplink. --
+/datum/antagonist/traitor/traitor_plus/intiltrator
 	name = "Infiltrator"
 	hijack_speed = 1
-	employer = "The Syndicate"
-	give_objectives = FALSE
-	should_give_codewords = FALSE
-	should_equip = FALSE
-	finalize_antag = FALSE
+	advanced_antag_path = /datum/advanced_antag_datum/traitor/infiltrator
 
-/datum/antagonist/traitor/intiltrator/on_gain()
-	if(!GLOB.admin_objective_list)
-		generate_admin_objective_list()
+/datum/antagonist/traitor/traitor_plus/intiltrator/on_removal()
+	var/obj/item/implant/uplink/infiltrator/infiltrator_implant = locate() in owner.current
+	var/obj/item/implant/weapons_auth/weapons_implant = locate() in owner.current
+	if(infiltrator_implant)
+		to_chat(owner.current, "<span class='danger'>You hear a whirring in your ear as your [infiltrator_implant.name] deactivates and becomes non-functional!</span>")
+		qdel(infiltrator_implant)
+	if(weapons_implant)
+		to_chat(owner.current, "<span class='danger'>You hear a click in your [prob(50) ? "right" : "left"] arm as your [weapons_implant.name] deactivates and becomes non-functional!</span>")
+		qdel(weapons_implant)
+	if(ROLE_SYNDICATE in owner.current.faction)
+		owner.current.faction -= ROLE_SYNDICATE
+	. = ..()
 
-	var/list/objectives_to_choose = GLOB.admin_objective_list.Copy() - blacklisted_similar_objectives
-
-	linked_advanced_datum = new /datum/advanced_antag_datum/traitor/infiltrator(src)
-	linked_advanced_datum.setup_advanced_antag()
-	linked_advanced_datum.possible_objectives = objectives_to_choose
-	return ..()
-
-/// Greet the antag with big menacing text.
-/datum/antagonist/traitor/intiltrator/greet()
-	linked_advanced_datum.greet_message(owner.current)
-
-/datum/antagonist/traitor/intiltrator/roundend_report()
+/datum/antagonist/traitor/traitor_plus/intiltrator/roundend_report()
 	var/list/result = list()
 
 	result += printplayer(owner)
@@ -58,25 +53,25 @@
 
 	return result.Join("<br>")
 
-/datum/antagonist/traitor/intiltrator/roundend_report_footer()
+/datum/antagonist/traitor/traitor_plus/intiltrator/roundend_report_footer()
 	return "<br>And thus ends another attempted Syndicate infiltration on board [station_name()]."
 
-/// An extra button for the TP, to open the goal panel
-/datum/antagonist/traitor/intiltrator/get_admin_commands()
-	. = ..()
-	.["View Goals"] = CALLBACK(src, .proc/show_advanced_traitor_panel, usr)
-
-/// An extra button for check_antagonists, to open the goal panel
-/datum/antagonist/traitor/intiltrator/antag_listing_commands()
-	. = ..()
-	. += "<a href='?_src_=holder;[HrefToken()];admin_check_goals=[REF(src)]'>Show Goals</a>"
-
-/datum/antagonist/traitor/intiltrator/equip(silent = FALSE)
+/datum/antagonist/traitor/traitor_plus/intiltrator/equip(silent = FALSE)
 	var/mob/living/carbon/human/traitor_mob = owner.current
 	if (!istype(traitor_mob))
 		return
 
-	var/obj/item/implant/uplink/infiltrator_implant = new(traitor_mob)
-	infiltrator_implant.implant(traitor_mob, null, silent = TRUE)
+	var/obj/item/implant/uplink/infiltrator/infiltrator_implant = new(traitor_mob)
+	var/obj/item/implant/weapons_auth/weapons_implant = new(traitor_mob)
+	infiltrator_implant.implant(traitor_mob, traitor_mob, TRUE)
+	weapons_implant.implant(traitor_mob, traitor_mob, TRUE)
 	if(!silent)
-		to_chat(traitor_mob, "<span class='boldnotice'>[employer] has cunningly implanted you with a Syndicate Uplink to assist in your infiltration. Simply trigger the uplink to access it.</span>")
+		to_chat(traitor_mob, "<span class='boldnotice'>[employer] has cunningly implanted you with an [infiltrator_implant] to assist in your infiltration. You can trigger the uplink to stealthily access it.</span>")
+		to_chat(traitor_mob, "<span class='boldnotice'>[employer] has wisely implanted you with a [weapons_implant] to allow you to use syndicate weaponry. You can now fire weapons with Syndicate firing pins.</span>")
+
+	traitor_mob.faction |= ROLE_SYNDICATE
+
+/// infiltrator uplink implant.
+/obj/item/implant/uplink/infiltrator
+	name = "infiltrator uplink implant"
+	uplink_type = UPLINK_INFILTRATOR

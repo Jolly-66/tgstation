@@ -17,6 +17,8 @@
 	finalize_antag = FALSE
 	/// List of objectives AIs can get, because apparently they're not initialized anywhere like normal objectives.
 	var/static/list/ai_objectives = list("no organics on shuttle" = /datum/objective/block, "no mutants on shuttle" = /datum/objective/purge, "robot army" = /datum/objective/robot_army, "survive AI" = /datum/objective/survive/malf)
+	/// Typepath of what advanced antag datum gets instantiated to this antag.
+	var/advanced_antag_path = /datum/advanced_antag_datum/traitor
 
 /datum/antagonist/traitor/traitor_plus/on_gain()
 	if(!GLOB.admin_objective_list)
@@ -29,9 +31,10 @@
 			objectives_to_choose -= blacklisted_ai_objectives
 			objectives_to_choose += ai_objectives
 		if(TRAITOR_HUMAN)
-			name = "Traitor"
+			if(findtext(name, "Advanced"))
+				name = "Traitor"
 
-	linked_advanced_datum = new /datum/advanced_antag_datum/traitor(src)
+	linked_advanced_datum = new advanced_antag_path(src)
 	linked_advanced_datum.setup_advanced_antag()
 	linked_advanced_datum.possible_objectives = objectives_to_choose
 	return ..()

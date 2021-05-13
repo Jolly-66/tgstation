@@ -3526,7 +3526,6 @@
 #include "jollystation_modules\code\datums\quirks\good.dm"
 #include "jollystation_modules\code\datums\quirks\negative.dm"
 #include "jollystation_modules\code\datums\quirks\neutral.dm"
-#include "jollystation_modules\code\game\gamemodes\traitorplus\traitorplus.dm"
 #include "jollystation_modules\code\game\objects\unique_examine_items.dm"
 #include "jollystation_modules\code\game\objects\items\card_ids.dm"
 #include "jollystation_modules\code\game\objects\items\devices\PDA\PDA_types.dm"
@@ -3600,6 +3599,7 @@
 #include "jollystation_modules\code\modules\research\techweb\all_nodes.dm"
 #include "jollystation_modules\code\modules\skrell\flavor_misc_js.dm"
 #include "jollystation_modules\code\modules\uplink\uplink_devices.dm"
+#include "jollystation_modules\code\modules\uplink\uplink_infiltrator.dm"
 #include "jollystation_modules\code\modules\uplink\uplink_items.dm"
 #include "jollystation_modules\code\modules\vending\_vending.dm"
 // END_INCLUDE
