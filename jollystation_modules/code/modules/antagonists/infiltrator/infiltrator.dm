@@ -91,6 +91,7 @@
 
 /datum/antagonist/traitor/traitor_plus/intiltrator/pod_spawn
 	name = "Infiltrator (Pod spawn)"
+	advanced_antag_path = /datum/advanced_antag_datum/traitor/infiltrator/podspawn
 
 /datum/antagonist/traitor/traitor_plus/intiltrator/pod_spawn/on_gain()
 	name = "Infiltrator"
@@ -109,7 +110,7 @@
 	if(!istype(infiltrator))
 		return FALSE
 
-	// Spawns us somewhere in maintenance via drop-pod.
+	// Spawns us somewhere in maintenance via drop pod.
 	var/list/possible_spawns = list()
 	for(var/turf/found_turf in GLOB.xeno_spawn)
 		if(istype(get_area(found_turf), /area/maintenance))
@@ -125,7 +126,7 @@
 	var/turf/randomized_picked_turf = find_obstruction_free_location(3, picked_turf) || picked_turf
 
 	if(!silent)
-		to_chat(infiltrator, "\n<span class='alertwarning'>You are being deployed via drop-pod into [get_area_name(randomized_picked_turf, TRUE)] to begin your infiltration of [station_name()].</span>")
+		to_chat(infiltrator, "\n<span class='alertwarning'>You are being deployed via drop pod into [get_area_name(randomized_picked_turf, TRUE)] to begin your infiltration of [station_name()].</span>")
 	infiltrator.forceMove(infiltrator_pod)
 	return new /obj/effect/pod_landingzone(randomized_picked_turf, infiltrator_pod)
 
