@@ -32,7 +32,7 @@
 	var/list/result = list()
 
 	result += printplayer(owner)
-	result += "<b>[owner]</b> was \a <b>[linked_advanced_datum.name], sent to infiltrate [station_name()]</b>[employer? ", employed by <b>[employer]</b>":""]."
+	result += "<b>[owner]</b> was \a <b>[linked_advanced_datum.name]</b>, sent to infiltrate [station_name()][employer? ", employed by <b>[employer]</b>":""]."
 	if(linked_advanced_datum.backstory)
 		result += "<b>[owner]'s</b> backstory was the following: <br>[linked_advanced_datum.backstory]"
 

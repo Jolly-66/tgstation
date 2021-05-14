@@ -205,7 +205,7 @@
 	if(!istype(A, /obj/machinery/door/airlock) && !istype(A, /obj/machinery/door/window))
 		return
 	var/obj/machinery/door/hacked_door = A
-	if(!hacked_door.operating || !hacked_door.density)
+	if(hacked_door.operating || !hacked_door.density)
 		return
 
 	INVOKE_ASYNC(src, .proc/start_hacking, hacked_door, user)
@@ -223,6 +223,10 @@
 		if(hacked_door.autoclose)
 			hacked_door.autoclose = FALSE
 			addtimer(VARSET_CALLBACK(hacked_door, autoclose, TRUE), (DOORHACKER_AUTOCLOSE_TIME - 5 SECONDS))
+		if(istype(hacked_door, /obj/machinery/door/airlock))
+			var/obj/machinery/door/airlock/hacked_airlock = hacked_door
+			hacked_airlock.aiDisabledIdScanner = TRUE
+			addtimer(VARSET_CALLBACK(hacked_airlock, aiDisabledIdScanner, FALSE), (DOORHACKER_AUTOCLOSE_TIME - 5 SECONDS))
 		addtimer(CALLBACK(hacked_door, /obj/machinery/door/.proc/close), DOORHACKER_AUTOCLOSE_TIME)
 	else
 		to_chat(user, "<span class='danger'>You attempt to nullify the access requirements of \the [hacked_door], but the door fails to open.</span>")
