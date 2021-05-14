@@ -31,7 +31,7 @@
 
 	for(var/panel_user in open_panels)
 		var/datum/adv_traitor_panel/tgui_panel = open_panels[panel_user]
-		tgui_panel?.ui_close(panel_user)
+		SStgui.close_uis(tgui_panel)
 
 	linked_antagonist = null
 	QDEL_LIST(our_goals)

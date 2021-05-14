@@ -3,6 +3,7 @@
 	name = "Infiltrator"
 	hijack_speed = 1
 	advanced_antag_path = /datum/advanced_antag_datum/traitor/infiltrator
+	special_role = "Infiltrator"
 	antag_hud_type = ANTAG_HUD_OPS
 	antag_hud_name = "synd"
 
@@ -76,10 +77,84 @@
 	infiltrator_implant.implant(traitor_mob, traitor_mob, TRUE)
 	weapons_implant.implant(traitor_mob, traitor_mob, TRUE)
 	if(!silent)
-		to_chat(traitor_mob, "<span class='boldnotice'>[employer] has cunningly implanted you with an [infiltrator_implant] to assist in your infiltration. You can trigger the uplink to stealthily access it.</span>")
-		to_chat(traitor_mob, "<span class='boldnotice'>[employer] has wisely implanted you with a [weapons_implant] to allow you to use syndicate weaponry. You can now fire weapons with Syndicate firing pins.</span>")
+		to_chat(traitor_mob, "<span class='boldnotice'>[employer] has cunningly implanted you with an [infiltrator_implant.name] to assist in your infiltration. You can trigger the uplink to stealthily access it.</span>")
+		to_chat(traitor_mob, "<span class='boldnotice'>[employer] has wisely implanted you with a [weapons_implant.name] to allow you to use syndicate weaponry. You can now fire weapons with Syndicate firing pins.</span>")
+
+/datum/antagonist/traitor/traitor_plus/intiltrator/proc/equip_infiltrator_outfit(strip = FALSE)
+	if(!ishuman(owner.current))
+		return FALSE
+	var/mob/living/carbon/human/human_current = owner.current
+	if(strip)
+		human_current.delete_equipment()
+	human_current.equipOutfit(/datum/outfit/syndicate_infiltrator)
+	return TRUE
+
+/datum/antagonist/traitor/traitor_plus/intiltrator/pod_spawn
+	name = "Infiltrator (Pod spawn)"
+
+/datum/antagonist/traitor/traitor_plus/intiltrator/pod_spawn/on_gain()
+	name = "Infiltrator"
+	owner.assigned_role = "Infiltrator"
+	equip_infiltrator_outfit(TRUE)
+	return ..()
+
+/datum/antagonist/traitor/traitor_plus/intiltrator/pod_spawn/equip(silent = FALSE)
+	. = ..()
+	if(linked_advanced_datum.open_panels[owner.current])
+		SStgui.close_uis(linked_advanced_datum.open_panels[owner.current])
+	if(!spawn_infiltrator_pod(owner.current, silent))
+		message_admins("Cannot pod-spawn [owner.current] as infiltrator.")
+
+/datum/antagonist/traitor/traitor_plus/intiltrator/pod_spawn/proc/spawn_infiltrator_pod(mob/living/infiltrator, silent)
+	if(!istype(infiltrator))
+		return FALSE
+
+	// Spawns us somewhere in maintenance via drop-pod.
+	var/list/possible_spawns = list()
+	for(var/turf/found_turf in GLOB.xeno_spawn)
+		if(istype(get_area(found_turf), /area/maintenance))
+			possible_spawns += found_turf
+	if(!possible_spawns.len)
+		return FALSE
+
+	var/obj/structure/closet/supplypod/infiltrator_pod = new(null, STYLE_SYNDICATE)
+	infiltrator_pod.explosionSize = list(0,0,1,1)
+	infiltrator_pod.bluespace = TRUE
+
+	var/turf/picked_turf = pick(possible_spawns)
+	var/turf/randomized_picked_turf = find_obstruction_free_location(3, picked_turf) || picked_turf
+
+	if(!silent)
+		to_chat(infiltrator, "\n<span class='alertwarning'>You are being deployed via drop-pod into [get_area_name(randomized_picked_turf, TRUE)] to begin your infiltration of [station_name()].</span>")
+	infiltrator.forceMove(infiltrator_pod)
+	return new /obj/effect/pod_landingzone(randomized_picked_turf, infiltrator_pod)
 
 /// infiltrator uplink implant.
 /obj/item/implant/uplink/infiltrator
 	name = "infiltrator uplink implant"
 	uplink_type = UPLINK_INFILTRATOR
+
+/datum/outfit/syndicate_infiltrator
+	name = "Syndicate Infiltrator"
+
+	uniform = /obj/item/clothing/under/syndicate
+	shoes = /obj/item/clothing/shoes/combat
+	gloves =  /obj/item/clothing/gloves/color/black
+	back = /obj/item/storage/backpack/fireproof
+	ears = /obj/item/radio/headset
+	id = /obj/item/card/id/advanced/black
+	id_trim = /datum/id_trim/syndicom/infiltrator
+	skillchips = list(/obj/item/skillchip/disk_verifier)
+	backpack_contents = list(/obj/item/storage/box/survival/syndie = 1, /obj/item/kitchen/knife/combat/survival)
+
+/datum/outfit/syndicate_infiltrator/post_equip(mob/living/carbon/human/human_equipper, visualsOnly)
+	. = ..()
+	var/obj/item/card/id/worn_id = human_equipper.wear_id
+	if(worn_id)
+		worn_id.registered_name = human_equipper.real_name
+		worn_id.update_label()
+		worn_id.update_icon()
+
+/datum/id_trim/syndicom/infiltrator
+	assignment = "Syndicate Infiltrator"
+	access = list(ACCESS_MAINT_TUNNELS, ACCESS_SYNDICATE, ACCESS_SYNDICATE_LEADER)

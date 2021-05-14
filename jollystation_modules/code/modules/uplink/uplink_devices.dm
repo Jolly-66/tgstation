@@ -158,3 +158,85 @@
 /obj/item/item_announcer/input/syndicate
 	fake_command_name = "The Syndicate"
 	uses = 2
+
+/obj/item/megaphone/synd
+	name = "syndicate megaphone"
+	icon_state = "megaphone-sec"
+	inhand_icon_state = "megaphone-sec"
+
+/// The time it takes per hacking charge to open a door.
+#define DOORHACKER_HACK_TIME 2.5 SECONDS
+/// The time it takes for the door to close.
+#define DOORHACKER_AUTOCLOSE_TIME 45 SECONDS
+/// The time it takes for the hacking charges to decrease.
+#define DOORHACKER_HACK_COOLDOWN 1 MINUTES
+/// The min amount of hacking charges
+#define DOORHACKER_MIN_HACKS 0
+/// The max amount of hacking charges
+#define DOORHACKER_MAX_HACKS 20
+/// Interaction key for the doorhacker, only one door can be hacked at a time.
+#define DOAFTER_SOURCE_DOORHACKER "doafter_doorhacker"
+
+/obj/item/card/doorhacker
+	name = "automatic door bypassing card"
+	desc = "It's an average ID card, modified with a magnetic strip and wired multitool attached to some circuitry."
+	icon_state = "doorjack"
+	worn_icon_state = "doorjack"
+	lefthand_file = 'icons/mob/inhands/equipment/idcards_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/equipment/idcards_righthand.dmi'
+	item_flags = NO_MAT_REDEMPTION | NOBLUDGEON
+	slot_flags = ITEM_SLOT_ID
+	worn_icon_state = "emag"
+	var/recent_hacks = 0
+
+/obj/item/card/doorhacker/attack_self(mob/user)
+	if(Adjacent(user))
+		user.visible_message("<span class='notice'>[user] shows you: [icon2html(src, viewers(user))] [name].</span>", "<span class='notice'>You show [src].</span>")
+	add_fingerprint(user)
+
+/obj/item/card/doorhacker/examine(mob/user)
+	. = ..()
+	. += "<span class='notice'>Hacking the next door will take [(DOORHACKER_HACK_TIME/10) * (1 + recent_hacks)] seconds."
+
+/obj/item/card/doorhacker/pre_attack(atom/A, mob/living/user, params)
+	. = ..()
+	if(DOING_INTERACTION(user, DOAFTER_SOURCE_DOORHACKER))
+		return
+	if(!istype(A, /obj/machinery/door/airlock) && !istype(A, /obj/machinery/door/window))
+		return
+	var/obj/machinery/door/hacked_door = A
+	if(!hacked_door.operating || !hacked_door.density)
+		return
+
+	INVOKE_ASYNC(src, .proc/start_hacking, hacked_door, user)
+	return TRUE
+
+/obj/item/card/doorhacker/proc/start_hacking(obj/machinery/door/hacked_door, mob/living/user)
+	to_chat(user, "<span class='notice'>You start bypassing the access requirements of \the [hacked_door]...</span>")
+	if(do_after(user, (DOORHACKER_HACK_TIME * (1 + recent_hacks)), hacked_door, interaction_key = DOAFTER_SOURCE_DOORHACKER))
+		hack_door(hacked_door, user)
+
+/obj/item/card/doorhacker/proc/hack_door(obj/machinery/door/hacked_door, mob/living/user)
+	if(hacked_door.open())
+		to_chat(user, "<span class='notice'>You nullify the access requirements of \the [hacked_door], opening it temporarily.</span>")
+		playsound(drop_location(), 'sound/machines/ding.ogg', 50, TRUE, extrarange = SILENCED_SOUND_EXTRARANGE, ignore_walls = FALSE)
+		if(hacked_door.autoclose)
+			hacked_door.autoclose = FALSE
+			addtimer(VARSET_CALLBACK(hacked_door, autoclose, TRUE), (DOORHACKER_AUTOCLOSE_TIME - 5 SECONDS))
+		addtimer(CALLBACK(hacked_door, /obj/machinery/door/.proc/close), DOORHACKER_AUTOCLOSE_TIME)
+	else
+		to_chat(user, "<span class='danger'>You attempt to nullify the access requirements of \the [hacked_door], but the door fails to open.</span>")
+		playsound(drop_location(), 'sound/machines/buzz-sigh.ogg', 50, TRUE, extrarange = SILENCED_SOUND_EXTRARANGE, ignore_walls = FALSE)
+
+	recent_hacks = min(DOORHACKER_MAX_HACKS, recent_hacks + 1)
+	addtimer(CALLBACK(src, .proc/lower_hacks), DOORHACKER_HACK_COOLDOWN)
+
+/obj/item/card/doorhacker/proc/lower_hacks()
+	recent_hacks = max(DOORHACKER_MIN_HACKS, recent_hacks - 1)
+
+#undef DOORHACKER_HACK_TIME
+#undef DOORHACKER_AUTOCLOSE_TIME
+#undef DOORHACKER_HACK_COOLDOWN
+#undef DOORHACKER_MIN_HACKS
+#undef DOORHACKER_MAX_HACKS
+#undef DOAFTER_SOURCE_DOORHACKER
