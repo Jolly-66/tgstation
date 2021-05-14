@@ -230,7 +230,7 @@
 		addtimer(CALLBACK(hacked_door, /obj/machinery/door/.proc/close), DOORHACKER_AUTOCLOSE_TIME)
 	else
 		to_chat(user, "<span class='danger'>You attempt to nullify the access requirements of \the [hacked_door], but the door fails to open.</span>")
-		playsound(drop_location(), 'sound/machines/buzz-sigh.ogg', 50, TRUE, extrarange = SILENCED_SOUND_EXTRARANGE, ignore_walls = FALSE)
+		playsound(drop_location(), 'sound/machines/buzz-sigh.ogg', 20, TRUE, extrarange = SILENCED_SOUND_EXTRARANGE, ignore_walls = FALSE)
 
 	recent_hacks = min(DOORHACKER_MAX_HACKS, recent_hacks + 1)
 	addtimer(CALLBACK(src, .proc/lower_hacks), DOORHACKER_HACK_COOLDOWN)
