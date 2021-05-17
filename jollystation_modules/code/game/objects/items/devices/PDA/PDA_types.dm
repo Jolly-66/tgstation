@@ -10,13 +10,5 @@
 /obj/item/pda/heads/bridge_officer
 	name = "bridge officer PDA"
 	default_cartridge = /obj/item/cartridge/hos
-	icon_state = "pda-bo"
-
-/// Somewhat hacky way of swapping between modular DMI and base DMI. This needs to be defined for all modular PDAs.
-/obj/item/pda/heads/bridge_officer/update_appearance()
-	if(icon_state == initial(icon_state))
-		icon = alt_icon
-	else
-		icon = initial(icon)
-
-	. = ..()
+	greyscale_config = /datum/greyscale_config/pda/head
+	greyscale_colors = "#99ccff#000099"
