@@ -59,6 +59,8 @@ var/epic_variable = 3 // NON-MODULE CHANGE
 NON-MODULE CHANGE END /*
 ```
 
+- It doesn't matter if you use Non-Module Change/Changes. Try to keep the ending part 'Module Change/s' consistent. DO NOT USE 'MODULAR'. 
+
 ## ...custom things to vendors:
 
 Go to `jollystation_modules/code/modules/vending/_vending.dm` and use the template provided to add or remove items from vendors. Follow the provided template there.
