@@ -22,9 +22,8 @@
 	if(give_objectives)
 		forge_ai_objectives()
 
-	add_law_zero()
-	owner.current.playsound_local(get_turf(owner.current), 'sound/ambience/antag/malf.ogg', 100, FALSE, pressure_affected = FALSE, use_reverb = FALSE)
-	owner.current.grant_language(/datum/language/codespeak, TRUE, TRUE, LANGUAGE_MALF)
+	if(finalize_antag) // NON-MODULE CHANGE
+		finalize_antag()
 
 	return ..()
 

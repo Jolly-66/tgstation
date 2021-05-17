@@ -31,26 +31,17 @@
 
 	var/datum/contractor_hub/contractor_hub
 
-	var/finalize_antag = TRUE /// NON-MODULE CHANGE
-
 /datum/antagonist/traitor/on_gain()
-	if(owner.current && isAI(owner.current))
-		traitor_kind = TRAITOR_AI
-
-	owner.special_role = special_role
+	owner.special_role = job_rank
 	if(give_objectives)
 		forge_traitor_objectives()
-	if(finalize_antag) /// NON-MODULE CHANGE
-		finalize_traitor()
+
+	if(finalize_antag) // NON-MODULE CHANGE
+		finalize_antag()
+
 	return ..()
 
 /datum/antagonist/traitor/on_removal()
-	//Remove malf powers.
-	if(traitor_kind == TRAITOR_AI && owner.current && isAI(owner.current))
-		var/mob/living/silicon/ai/A = owner.current
-		A.set_zeroth_law("")
-		A.remove_malf_abilities()
-		QDEL_NULL(A.malf_picker)
 	if(!silent && owner.current)
 		to_chat(owner.current,"<span class='userdanger'>You are no longer the [job_rank]!</span>")
 
