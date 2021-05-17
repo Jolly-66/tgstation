@@ -906,9 +906,6 @@
 				. += "[R.volume] units of [R.name]"
 		else
 			. += "Nothing."
-		
-		. += "<span class='notice'> <i>Right-clicking</i> will splash the beaker on the ground.</span>"
-	. += "<span class='notice'> <i>Alt-click</i> will drop the currently stored beaker. </span>"
 
 		. += "<span class='notice'> <i>Right-clicking</i> will splash the beaker on the ground.</span>"
 	. += "<span class='notice'> <i>Alt-click</i> will drop the currently stored beaker. </span>"

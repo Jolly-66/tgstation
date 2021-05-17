@@ -133,7 +133,6 @@ In my current plan for it, 'solid' will be defined as anything with density == 1
 		if((to_bump != src) && !QDELETED(to_bump) && (to_bump.density || isliving(to_bump)))
 			Bump(to_bump)
 
-/obj/effect/immovablerod/Moved()
 	// If we have a special target, we should definitely make an effort to go find them.
 	if(special_target)
 		var/turf/target_turf = get_turf(special_target)
