@@ -85,6 +85,8 @@ The time has come for doom. Pull from upstream and pray. Things will probably be
 
 Everything should be set to try to compile. If there are errors, try to solve them. If it compiles and the game itself seems wonky, then probably call your local coder and cry.
 
+- Make sure that (to maintainers and Jolly) the commit message is not the garbled mess that it is. Change it. Please.
+
 # Files that have 'non-module' comments in the main code:
 
 To prevent me from accidentally accept incoming on files with module changes, I'm doing this for the future.
