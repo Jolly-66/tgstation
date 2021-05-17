@@ -5,6 +5,9 @@
 /tmp/**/*
 /data/logs/*
 data/next_map.json
+data/npc_saves/*
+data/player_saves/*
+data/roundend_reports/*
 
 #Ignore byond config folder.
 /cfg/**/*
