@@ -20,13 +20,20 @@
 	display_order = JOB_DISPLAY_ORDER_SCIENTIST
 	bounty_types = CIV_JOB_SCI
 
-	family_heirlooms = list(/obj/item/toy/plush/slimeplushie)
+	family_heirlooms = list()
 
 	mail_goodies = list(
-		/obj/item/reagent_containers/glass/beaker/meta = 10,
-		/obj/item/reagent_containers/glass/beaker/bluespace = 5,
-		/obj/item/storage/box/monkeycubes = 25,
-		/obj/item/slime_extract = 1
+		/obj/item/toy/plush/slimeplushie = 25,
+		/obj/item/reagent_containers/glass/beaker/bluespace = 20,
+		/obj/item/slimepotion/slime/sentience = 15,
+		/obj/item/slimepotion/slime/docility = 15,
+		/obj/item/slimepotion/slime/steroid = 10,
+		/obj/item/slime_extract/yellow = 10,
+		/obj/item/slime_extract/darkblue = 10,
+		/obj/item/slime_extract/green = 5,
+		/obj/item/slime_extract/bluespace = 1,
+		/obj/item/slime_extract/adamantine = 1,
+		/obj/item/slime_extract/oil = 1
 	)
 
 /datum/outfit/job/scientist/xenobiologist

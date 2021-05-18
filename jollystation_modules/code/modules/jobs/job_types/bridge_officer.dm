@@ -29,17 +29,18 @@
 	family_heirlooms = list(/obj/item/book/manual/wiki/security_space_law)
 
 	mail_goodies = list(
-		/obj/item/food/donut/choco = 25,
-		/obj/item/food/donut/apple = 20,
-		/obj/item/food/donut/caramel = 10,
-		/obj/item/food/donut/berry = 10,
-		/obj/item/food/donut/matcha = 10,
+		
+		/obj/item/clothing/mask/cigarette/cigar/havana = 10,
+		/obj/item/reagent_containers/food/drinks/bottle/champagne = 10,
+		/obj/item/food/donut/choco = 10,
+		/obj/item/food/donut/apple = 10,
 		/obj/item/food/donut/blumpkin = 5,
+		/obj/item/food/donut/caramel = 5,
+		/obj/item/food/donut/berry = 5,
+		/obj/item/food/donut/matcha = 5,
+		/obj/item/storage/fancy/cigarettes/cigars/havana = 5,
 		/obj/item/clothing/mask/whistle = 5,
-		/obj/item/melee/baton/boomerang/loaded = 1,
 		/obj/item/storage/fancy/donut_box = 1,
-		/obj/item/food/donut/chaos = 1,
-		/obj/item/food/donut/meat = 1,
 	)
 
 /datum/outfit/job/bridge_officer
