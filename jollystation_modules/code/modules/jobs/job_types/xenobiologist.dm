@@ -25,7 +25,7 @@
 	mail_goodies = list(
 		/obj/item/reagent_containers/glass/beaker/meta = 10,
 		/obj/item/reagent_containers/glass/beaker/bluespace = 5,
-		/obj/item/storage/box/monkeycube = 25,
+		/obj/item/storage/box/monkeycubes = 25,
 		/obj/item/slime_extract = 1
 	)
 
