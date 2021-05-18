@@ -20,7 +20,7 @@
 	display_order = JOB_DISPLAY_ORDER_SCIENTIST
 	bounty_types = CIV_JOB_SCI
 
-	family_heirlooms = list()
+	family_heirlooms = list(/obj/item/toy/plush/slimeplushie)
 
 	mail_goodies = list(
 		/obj/item/toy/plush/slimeplushie = 25,
