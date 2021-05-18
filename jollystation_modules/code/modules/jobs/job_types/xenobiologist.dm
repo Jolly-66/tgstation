@@ -30,6 +30,7 @@
 		/obj/item/slimepotion/slime/steroid = 10,
 		/obj/item/slime_extract/yellow = 10,
 		/obj/item/slime_extract/darkblue = 10,
+		/obj/item/reagent_containers/syringe/bluespace = 5,
 		/obj/item/slime_extract/green = 5,
 		/obj/item/slime_extract/bluespace = 1,
 		/obj/item/slime_extract/adamantine = 1,

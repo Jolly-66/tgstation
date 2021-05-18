@@ -29,6 +29,7 @@
 		/obj/item/hot_potato/harmless/toy = 10,
 		/obj/item/tank/internals/plasma = 5,
 		/obj/item/tank/internals/oxygen = 5,
+		/obj/item/toy/nuke = 5,
 		/obj/item/transfer_valve = 1,
 	)
 
