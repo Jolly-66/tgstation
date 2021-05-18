@@ -24,7 +24,7 @@
 	family_heirlooms = list(/obj/item/toy/nuke)
 
 	mail_goodies = list(
-		/obj/item/analyzer = 50
+		/obj/item/analyzer = 50,
 		/obj/item/raw_anomaly_core/random = 15,
 		/obj/item/hot_potato/harmless/toy = 10,
 		/obj/item/tank/internals/plasma = 5,
