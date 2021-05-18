@@ -36,7 +36,7 @@
 		/obj/item/food/donut/matcha = 10,
 		/obj/item/food/donut/blumpkin = 5,
 		/obj/item/clothing/mask/whistle = 5,
-		/obj/item/melee/baton/boomerang/loaded = 1
+		/obj/item/melee/baton/boomerang/loaded = 1,
 		/obj/item/storage/fancy = 1,
 		/obj/item/food/donut/chaos = 1,
 		/obj/item/food/donut/meat = 1,
