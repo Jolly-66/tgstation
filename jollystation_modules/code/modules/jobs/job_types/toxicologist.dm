@@ -23,6 +23,14 @@
 
 	family_heirlooms = list(/obj/item/toy/nuke)
 
+	mail_goodies = list(
+		/obj/item/raw_anomaly_core/random = 15,
+		/obj/item/transfer_valve = 1,
+		/obj/item/tank/internals/plasma = 5,
+		/obj/item/tank/internals/oxygen = 25,
+		/obj/item/analyzer = 50
+	)
+
 /datum/outfit/job/scientist/toxicologist
 	name = "Toxicologist"
 	suit = /obj/item/clothing/suit/toggle/labcoat/toxic
