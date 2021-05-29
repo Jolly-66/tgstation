@@ -2,13 +2,12 @@
     name = "Hyperthermia"
     max_stages = 3
     spread_text = "None"
-    spread_flags = 
-    cure_text = "Cryoxadone"
-    cures = 
+    spread_flags = DISEASE_SPREAD_NON_CONTAGIOUS
+    cure_text = "Cool down of the body and careful monitoring."
     agent = "Long exposure to hot conditions."
     viable_mobtypes = list(/mob/living/carbon/human)
     spread_flags = DISEASE_SPREAD_NON_CONTAGIOUS
-    desc = "Sever heat exposure and possible dehydration. Monitoring is required in case of vomiting and sudden collapses. If left untreated and in hot conditions for too long, brain damage may occur."
+    desc = "Sever heat exposure. Monitoring is required in case of vomiting and sudden collapses. If left untreated and in hot conditions for too long, brain damage may occur."
     severity = DISEASE_SEVERITY_HARMFUL
     bypasses_immunity = TRUE
 
@@ -17,7 +16,7 @@
     if(!.)
         return
     switch(stage)
-        if(2)
+        if(1 to 2)
             if(DT_PROB(1, delta_time))
             to_chat(affected_mob, "<span class='danger'>You feel exceptionally hot.</span>")
             if(DT_PROB(2, delta_time))
@@ -27,12 +26,12 @@
             if(DT_PROB(2.5, delta_time))
             affected_mob.vomit
         if(3)
-        if(DT_PROB(3, delta_time))
-				to_chat(affected_mob, "<span class='danger'>You lose consciousness...</span>")
-				affected_mob.visible_message("<span class='warning'>[affected_mob] suddenly collapses!</span>", \
+            if(DT_PROB(3, delta_time))
+			to_chat(affected_mob, "<span class='danger'>You lose consciousness...</span>")
+			affected_mob.visible_message("<span class='warning'>[affected_mob] suddenly collapses!</span>", \
 											"<span class='userdanger'>You suddenly collapse!</span>")
-                affected_mob.adjustOrganLoss(ORGAN_SLOT_BRAIN, 5, 170)
-				affected_mob.Unconscious(rand(100, 200))
-				if(prob(1))
-					affected_mob.emote("snore")
+            affected_mob.adjustOrganLoss(ORGAN_SLOT_BRAIN, 5, 170)
+			affected_mob.Unconscious(rand(100, 200))
+			if(prob(1))
+			    affected_mob.emote("snore")
 

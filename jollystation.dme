@@ -3620,5 +3620,6 @@
 #include "jollystation_modules\code\modules\uplink\uplink_infiltrator.dm"
 #include "jollystation_modules\code\modules\uplink\uplink_items.dm"
 #include "jollystation_modules\code\modules\vending\_vending.dm"
+#include "jollystation_modules\event_modules\beachepisode\hyperthermia.dm"
 #include "jollystation_modules\event_modules\beachepisode\sunburn.dm"
 // END_INCLUDE
