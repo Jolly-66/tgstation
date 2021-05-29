@@ -24,14 +24,14 @@
             if(DT_PROB(0.5, delta_time))
             to_chat(affected_mob, "<span class='danger'>You're sweating profusely.</span>")
             if(DT_PROB(2.5, delta_time))
-            affected_mob.vomit
+            affected_mob.vomit(95)
         if(3)
             if(DT_PROB(3, delta_time))
-			to_chat(affected_mob, "<span class='danger'>You lose consciousness...</span>")
-			affected_mob.visible_message("<span class='warning'>[affected_mob] suddenly collapses!</span>", \
-											"<span class='userdanger'>You suddenly collapse!</span>")
+            to_chat(affected_mob, "<span class='danger'>You lose consciousness...</span>")
+            affected_mob.visible_message("<span class='warning'>[affected_mob] suddenly collapses!</span>", \
+                                        "<span class='userdanger'>You suddenly collapse!</span>")
             affected_mob.adjustOrganLoss(ORGAN_SLOT_BRAIN, 5, 170)
-			affected_mob.Unconscious(rand(100, 200))
-			if(prob(1))
-			    affected_mob.emote("snore")
+            affected_mob.Unconscious(rand(100, 200))
+            if(prob(1))
+                affected_mob.emote("snore")
 
