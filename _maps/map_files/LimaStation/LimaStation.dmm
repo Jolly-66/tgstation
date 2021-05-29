@@ -3609,10 +3609,12 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
 	},
-/obj/machinery/status_display/evac/directional/north,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/light/cold/directional/north,
+/obj/structure/sink/kitchen{
+	pixel_y = 22
+	},
 /turf/open/floor/iron/cafeteria,
 /area/commons/dorms)
 "aBp" = (
@@ -13060,7 +13062,7 @@
 	},
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
 /turf/open/floor/iron/showroomfloor,
-/area/tcommsat/computer)
+/area/ai_monitored/turret_protected/aisat/foyer)
 "dZv" = (
 /obj/structure/flora/junglebush/b,
 /obj/item/toy/plush/snakeplushie,
@@ -13380,6 +13382,16 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/green,
 /turf/open/floor/engine,
 /area/engineering/main)
+"ejX" = (
+/obj/effect/turf_decal/tile/blue{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/blue{
+	dir = 8
+	},
+/obj/machinery/status_display/evac/directional/east,
+/turf/open/floor/iron/cafeteria,
+/area/commons/dorms)
 "ekh" = (
 /obj/machinery/light{
 	dir = 4
@@ -13535,7 +13547,7 @@
 "eqS" = (
 /obj/structure/sign/warning,
 /turf/closed/wall/r_wall,
-/area/tcommsat/computer)
+/area/ai_monitored/turret_protected/aisat/foyer)
 "eqU" = (
 /obj/item/radio/intercom{
 	pixel_x = -29
@@ -15665,7 +15677,7 @@
 "fwg" = (
 /obj/machinery/status_display/evac/directional/east,
 /turf/open/floor/iron/showroomfloor,
-/area/tcommsat/computer)
+/area/ai_monitored/turret_protected/aisat/foyer)
 "fwj" = (
 /obj/machinery/camera{
 	c_tag = "Experimentor Lab";
@@ -15775,7 +15787,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/holopad/secure,
 /turf/open/floor/iron/showroomfloor,
-/area/tcommsat/computer)
+/area/ai_monitored/turret_protected/aisat/foyer)
 "fxU" = (
 /obj/effect/turf_decal/tile/yellow{
 	dir = 8
@@ -16100,7 +16112,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/iron/showroomfloor,
-/area/tcommsat/computer)
+/area/ai_monitored/turret_protected/aisat/foyer)
 "fKe" = (
 /obj/effect/landmark/start/scientist,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
@@ -16426,7 +16438,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron/showroomfloor,
-/area/tcommsat/computer)
+/area/ai_monitored/turret_protected/aisat/foyer)
 "fVr" = (
 /obj/effect/turf_decal/tile/yellow{
 	dir = 1
@@ -16507,7 +16519,7 @@
 	dir = 1
 	},
 /turf/open/floor/plating,
-/area/tcommsat/computer)
+/area/ai_monitored/turret_protected/aisat/foyer)
 "fWF" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on{
 	dir = 1
@@ -16715,7 +16727,7 @@
 	dir = 8
 	},
 /turf/open/floor/plating,
-/area/tcommsat/computer)
+/area/ai_monitored/turret_protected/aisat/foyer)
 "gaE" = (
 /obj/machinery/portable_atmospherics/canister/toxins,
 /turf/open/floor/plating,
@@ -18360,7 +18372,7 @@
 "gYL" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
 /turf/open/floor/iron/showroomfloor,
-/area/tcommsat/computer)
+/area/ai_monitored/turret_protected/aisat/foyer)
 "gZh" = (
 /obj/machinery/atmospherics/pipe/smart/simple/brown/visible,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/violet/visible,
@@ -20296,7 +20308,7 @@
 /area/medical/exam_room)
 "iiy" = (
 /turf/open/floor/iron/showroomfloor,
-/area/tcommsat/computer)
+/area/ai_monitored/turret_protected/aisat/foyer)
 "ijy" = (
 /obj/machinery/door/window/northleft{
 	base_state = "right";
@@ -23330,7 +23342,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/plating,
-/area/tcommsat/computer)
+/area/ai_monitored/turret_protected/aisat/foyer)
 "kal" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -23875,7 +23887,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron/showroomfloor,
-/area/tcommsat/computer)
+/area/ai_monitored/turret_protected/aisat/foyer)
 "kqh" = (
 /obj/structure/reagent_dispensers/watertank,
 /turf/open/floor/iron/dark,
@@ -28034,6 +28046,12 @@
 /obj/machinery/bounty_board/directional/west,
 /turf/open/floor/iron,
 /area/hallway/primary/central)
+"mJl" = (
+/obj/structure/cable/layer1,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/turf/open/floor/iron/showroomfloor,
+/area/ai_monitored/turret_protected/aisat/foyer)
 "mJy" = (
 /obj/machinery/atmospherics/pipe/smart/simple/brown/visible,
 /obj/effect/turf_decal/tile/yellow{
@@ -28252,7 +28270,7 @@
 "mQu" = (
 /obj/structure/closet/emcloset/anchored,
 /turf/open/floor/iron/showroomfloor,
-/area/tcommsat/computer)
+/area/ai_monitored/turret_protected/aisat/foyer)
 "mQA" = (
 /obj/structure/table/wood,
 /turf/open/floor/wood,
@@ -29282,7 +29300,7 @@
 /obj/structure/cable/layer1,
 /obj/structure/cable,
 /turf/open/floor/iron/showroomfloor,
-/area/tcommsat/computer)
+/area/ai_monitored/turret_protected/aisat/foyer)
 "nsU" = (
 /obj/machinery/door/airlock/engineering/glass{
 	name = "Supermatter Engine Room";
@@ -32681,7 +32699,7 @@
 /obj/structure/lattice/catwalk,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/space/basic,
-/area/tcommsat/computer)
+/area/ai_monitored/turret_protected/aisat/foyer)
 "ppj" = (
 /obj/effect/mapping_helpers/ianbirthday,
 /turf/open/floor/carpet/royalblue,
@@ -35886,7 +35904,7 @@
 /obj/structure/transit_tube/horizontal,
 /obj/structure/window/reinforced/fulltile,
 /turf/open/floor/plating,
-/area/tcommsat/computer)
+/area/ai_monitored/turret_protected/aisat/foyer)
 "rpt" = (
 /turf/closed/wall/r_wall,
 /area/science/robotics/lab)
@@ -43311,7 +43329,7 @@
 	network = list("minisat")
 	},
 /turf/open/floor/iron/showroomfloor,
-/area/tcommsat/computer)
+/area/ai_monitored/turret_protected/aisat/foyer)
 "vqK" = (
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/iron,
@@ -44842,7 +44860,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/iron/showroomfloor,
-/area/tcommsat/computer)
+/area/ai_monitored/turret_protected/aisat/foyer)
 "wdx" = (
 /obj/structure/table/reinforced,
 /obj/machinery/door/window/northleft{
@@ -45080,7 +45098,7 @@
 	dir = 4
 	},
 /turf/open/floor/plating,
-/area/tcommsat/computer)
+/area/ai_monitored/turret_protected/aisat/foyer)
 "wkU" = (
 /obj/machinery/airalarm{
 	dir = 4;
@@ -45156,7 +45174,7 @@
 "wmO" = (
 /obj/structure/transit_tube/station/reverse/flipped,
 /turf/open/floor/iron/showroomfloor,
-/area/tcommsat/computer)
+/area/ai_monitored/turret_protected/aisat/foyer)
 "wnE" = (
 /turf/closed/wall/r_wall,
 /area/science/server)
@@ -47053,7 +47071,7 @@
 "xoM" = (
 /obj/structure/closet/firecloset,
 /turf/open/floor/iron/showroomfloor,
-/area/tcommsat/computer)
+/area/ai_monitored/turret_protected/aisat/foyer)
 "xoP" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 8
@@ -47187,7 +47205,7 @@
 	dir = 1
 	},
 /turf/open/floor/plating,
-/area/tcommsat/computer)
+/area/ai_monitored/turret_protected/aisat/foyer)
 "xsd" = (
 /turf/closed/wall,
 /area/maintenance/starboard/aft)
@@ -48395,7 +48413,7 @@
 "xZa" = (
 /obj/structure/transit_tube/horizontal,
 /turf/open/floor/iron/showroomfloor,
-/area/tcommsat/computer)
+/area/ai_monitored/turret_protected/aisat/foyer)
 "xZv" = (
 /obj/machinery/power/solar{
 	id = "foreportsolar";
@@ -85576,7 +85594,7 @@ nOA
 oQL
 xNm
 ljc
-aLc
+ejX
 aLi
 hUx
 hUx
@@ -92080,13 +92098,13 @@ gfQ
 gfQ
 gfQ
 gfQ
-xBZ
+khn
 fWC
 jZO
 rpp
 eqS
-xBZ
-xBZ
+khn
+khn
 gfQ
 khn
 khn
@@ -92337,13 +92355,13 @@ gfQ
 gfQ
 gfQ
 gfQ
-xBZ
+khn
 gay
 jZO
 xZa
 mQu
 xoM
-xBZ
+khn
 gfQ
 khn
 cbo
@@ -92594,7 +92612,7 @@ gfQ
 gfQ
 xAV
 gfQ
-xBZ
+khn
 iiy
 fJZ
 wmO
@@ -92851,7 +92869,7 @@ fsz
 gfQ
 gfQ
 gfQ
-xBZ
+khn
 dZb
 nsS
 fxT
@@ -93108,9 +93126,9 @@ gfQ
 gfQ
 gfQ
 gfQ
-xBZ
+khn
 gYL
-hLU
+mJl
 iiy
 fwg
 iiy
@@ -93365,13 +93383,13 @@ fsz
 gfQ
 gfQ
 gfQ
-xBZ
+khn
 eqS
 fUT
 eqS
-xBZ
-xBZ
-xBZ
+khn
+khn
+khn
 gfQ
 khn
 vlR
