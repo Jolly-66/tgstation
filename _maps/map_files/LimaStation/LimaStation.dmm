@@ -8208,6 +8208,11 @@
 /obj/structure/flora/ausbushes/ppflowers,
 /turf/open/floor/grass,
 /area/service/chapel/main)
+"bnk" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/visible,
+/obj/machinery/firealarm/directional/north,
+/turf/open/floor/iron,
+/area/engineering/main)
 "bnq" = (
 /obj/machinery/door/poddoor/shutters/preopen{
 	id = "engsm";
@@ -10366,6 +10371,7 @@
 	},
 /obj/structure/cable,
 /obj/machinery/status_display/evac/directional/north,
+/obj/machinery/firealarm/directional/north,
 /turf/open/floor/iron,
 /area/engineering/atmos)
 "czj" = (
@@ -10659,6 +10665,15 @@
 /obj/structure/cable,
 /turf/open/floor/iron,
 /area/command/bridge)
+"cKA" = (
+/obj/structure/chair,
+/obj/effect/turf_decal/tile/red{
+	dir = 8
+	},
+/obj/effect/turf_decal/tile/red,
+/obj/machinery/firealarm/directional/west,
+/turf/open/floor/iron,
+/area/security/courtroom)
 "cKG" = (
 /obj/structure/table,
 /obj/item/storage/box/prisoner{
@@ -20450,6 +20465,12 @@
 	},
 /turf/open/floor/iron,
 /area/engineering/atmos)
+"idR" = (
+/obj/machinery/portable_atmospherics/canister/nitrogen,
+/obj/effect/turf_decal/bot,
+/obj/machinery/firealarm/directional/north,
+/turf/open/floor/iron/dark/textured,
+/area/engineering/break_room)
 "idW" = (
 /obj/effect/turf_decal/tile/red{
 	dir = 1
@@ -23303,6 +23324,7 @@
 /obj/effect/turf_decal/tile/yellow{
 	dir = 8
 	},
+/obj/machinery/firealarm/directional/north,
 /turf/open/floor/iron,
 /area/engineering/atmos)
 "jND" = (
@@ -24158,6 +24180,11 @@
 /obj/machinery/door/firedoor,
 /turf/open/floor/iron/showroomfloor,
 /area/science/xenobiology)
+"knw" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/yellow/visible,
+/obj/machinery/firealarm/directional/south,
+/turf/open/floor/iron,
+/area/engineering/main)
 "knB" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -25256,6 +25283,7 @@
 /obj/effect/turf_decal/tile/red{
 	dir = 8
 	},
+/obj/machinery/firealarm/directional/west,
 /turf/open/floor/iron,
 /area/security/courtroom)
 "kQT" = (
@@ -27461,6 +27489,7 @@
 	dir = 8
 	},
 /obj/structure/reagent_dispensers/fueltank/large,
+/obj/machinery/firealarm/directional/north,
 /turf/open/floor/iron,
 /area/engineering/atmos)
 "mgE" = (
@@ -30473,6 +30502,7 @@
 	},
 /obj/item/clothing/glasses/meson,
 /obj/item/clothing/glasses/meson,
+/obj/machinery/firealarm/directional/south,
 /turf/open/floor/iron/dark/smooth_corner,
 /area/engineering/main)
 "nOv" = (
@@ -38534,6 +38564,7 @@
 /obj/effect/turf_decal/tile/yellow{
 	dir = 8
 	},
+/obj/machinery/firealarm/directional/north,
 /turf/open/floor/iron,
 /area/engineering/atmos)
 "sAF" = (
@@ -44191,6 +44222,7 @@
 /area/tcommsat/server)
 "vsX" = (
 /obj/machinery/suit_storage_unit/engine,
+/obj/machinery/firealarm/directional/south,
 /turf/open/floor/iron/dark,
 /area/engineering/engine_smes)
 "vtp" = (
@@ -45308,6 +45340,7 @@
 	},
 /obj/effect/turf_decal/tile/red,
 /obj/item/kirbyplants/random,
+/obj/machinery/firealarm/directional/east,
 /turf/open/floor/iron,
 /area/security/brig)
 "vUW" = (
@@ -47161,6 +47194,13 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/cyan/visible,
 /turf/open/floor/iron/white,
 /area/medical/cryo)
+"wVF" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/obj/machinery/firealarm/directional/north,
+/turf/open/floor/engine,
+/area/engineering/main)
 "wVI" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 4
@@ -47887,6 +47927,7 @@
 /area/ai_monitored/security/armory)
 "xpv" = (
 /obj/structure/closet/radiation,
+/obj/machinery/firealarm/directional/south,
 /turf/open/floor/iron,
 /area/engineering/main)
 "xpx" = (
@@ -48037,6 +48078,7 @@
 /obj/structure/cable,
 /obj/structure/filingcabinet/medical,
 /obj/effect/turf_decal/bot_white,
+/obj/machinery/firealarm/directional/north,
 /turf/open/floor/vault,
 /area/ai_monitored/command/nuke_storage)
 "xst" = (
@@ -48636,6 +48678,10 @@
 /obj/effect/spawner/lootdrop/glowstick,
 /turf/open/floor/plating,
 /area/maintenance/starboard)
+"xFp" = (
+/obj/machinery/firealarm/directional/west,
+/turf/open/floor/iron/smooth,
+/area/engineering/main)
 "xFq" = (
 /obj/machinery/light{
 	dir = 4
@@ -64100,13 +64146,13 @@ czP
 ezE
 sIj
 aUj
-aUj
+knw
 aWw
 rmU
 aUr
 rmU
 aWw
-aUI
+bnk
 aUI
 czP
 aXk
@@ -64867,7 +64913,7 @@ gfQ
 wVb
 wVb
 wVb
-czP
+wVF
 xEh
 sIj
 bFQ
@@ -68213,7 +68259,7 @@ jky
 uOp
 xWP
 uXv
-fkV
+xFp
 fkV
 plT
 ydM
@@ -71013,7 +71059,7 @@ eoI
 vJh
 fSK
 gDZ
-fve
+cKA
 xun
 jIE
 kQw
@@ -72325,7 +72371,7 @@ rqv
 aGg
 cwr
 nhw
-nZJ
+idR
 nZJ
 uOm
 wGg
