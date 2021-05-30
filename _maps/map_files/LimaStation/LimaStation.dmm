@@ -304,7 +304,7 @@
 /obj/machinery/mech_bay_recharge_port{
 	dir = 2
 	},
-/turf/open/floor/iron,
+/turf/open/floor/iron/textured,
 /area/cargo/storage)
 "acp" = (
 /obj/structure/disposalpipe/segment{
@@ -10183,7 +10183,7 @@
 "csh" = (
 /obj/machinery/conveyor{
 	dir = 10;
-	id = "cargodelivery2";
+	id = "cargodelivery";
 	name = "Cargo Belt"
 	},
 /turf/open/floor/iron/dark,
@@ -10482,7 +10482,7 @@
 	dir = 8
 	},
 /obj/item/radio/intercom/directional/north,
-/turf/open/floor/iron,
+/turf/open/floor/iron/textured,
 /area/cargo/storage)
 "cAP" = (
 /obj/machinery/door/airlock/maintenance{
@@ -13080,15 +13080,6 @@
 	},
 /turf/open/floor/iron/cafeteria,
 /area/service/kitchen)
-"dRd" = (
-/obj/effect/turf_decal/stripes/line{
-	dir = 8
-	},
-/obj/machinery/conveyor_switch/oneway{
-	id = "cargodelivery2"
-	},
-/turf/open/floor/iron,
-/area/cargo/storage)
 "dRA" = (
 /obj/structure/rack,
 /obj/effect/spawner/lootdrop/techstorage/service,
@@ -18414,10 +18405,6 @@
 /turf/open/floor/circuit/telecomms/mainframe,
 /area/tcommsat/server)
 "gIl" = (
-/obj/machinery/conveyor_switch/oneway{
-	id = "Cargo Belt";
-	name = "CargoLoading"
-	},
 /obj/effect/turf_decal/stripes/corner{
 	dir = 1
 	},
@@ -27911,7 +27898,7 @@
 	},
 /obj/machinery/atmospherics/pipe/smart/simple/dark/visible,
 /obj/machinery/door/firedoor/heavy,
-/turf/open/floor/iron,
+/turf/open/floor/engine,
 /area/engineering/main)
 "mcK" = (
 /obj/machinery/atmospherics/pipe/smart/simple/brown/visible,
@@ -28154,6 +28141,9 @@
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/conveyor_switch/oneway{
+	id = "cargodelivery2"
+	},
 /turf/open/floor/iron,
 /area/cargo/storage)
 "mhS" = (
@@ -29807,7 +29797,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/structure/cable,
 /obj/machinery/door/firedoor,
-/turf/open/floor/plating,
+/turf/open/floor/iron,
 /area/maintenance/port/aft)
 "naC" = (
 /obj/machinery/light/small{
@@ -30227,6 +30217,9 @@
 	dir = 9
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/conveyor_switch/oneway{
+	id = "cargodelivery"
+	},
 /turf/open/floor/iron,
 /area/cargo/storage)
 "noH" = (
@@ -32303,6 +32296,11 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/plating,
 /area/maintenance/port/aft)
+"otR" = (
+/turf/open/floor/iron/dark/side{
+	dir = 1
+	},
+/area/cargo/storage)
 "oub" = (
 /obj/structure/cable,
 /turf/open/floor/iron,
@@ -48476,7 +48474,7 @@
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/turf/open/floor/plating,
+/turf/open/floor/iron,
 /area/engineering/storage/tech)
 "wXl" = (
 /turf/closed/wall,
@@ -77032,7 +77030,7 @@ noi
 nft
 mhN
 nft
-dRd
+tGx
 fch
 eCe
 eCe
@@ -79084,7 +79082,7 @@ mzq
 oql
 aHm
 ybc
-acD
+otR
 vFy
 acD
 acD
