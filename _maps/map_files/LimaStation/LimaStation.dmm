@@ -3895,9 +3895,6 @@
 "aEq" = (
 /turf/open/floor/iron/dark,
 /area/security/courtroom)
-"aEw" = (
-/turf/closed/wall,
-/area/ai_monitored/command/storage/eva)
 "aED" = (
 /obj/structure/displaycase/trophy{
 	pixel_y = 5
@@ -12024,9 +12021,6 @@
 /obj/machinery/atmospherics/pipe/smart/simple/pink/visible{
 	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/smart/simple/pink/visible{
-	dir = 4
-	},
 /turf/closed/wall/r_wall,
 /area/engineering/atmos)
 "dwf" = (
@@ -13843,9 +13837,9 @@
 /area/command/heads_quarters/hop)
 "epn" = (
 /obj/machinery/atmospherics/pipe/smart/simple/scrubbers/visible,
-/obj/machinery/atmospherics/components/binary/pump{
+/obj/machinery/atmospherics/components/binary/pump/on{
 	dir = 8;
-	name = "Air Output to Air Supply"
+	name = "Air Outlet to Air Supply"
 	},
 /turf/open/floor/iron,
 /area/engineering/atmos)
@@ -14518,7 +14512,9 @@
 /area/ai_monitored/turret_protected/aisat/foyer)
 "eJJ" = (
 /obj/structure/disposalpipe/segment,
-/obj/structure/tank_holder/extinguisher/advanced,
+/obj/structure/tank_holder/extinguisher/advanced{
+	anchored = 1
+	},
 /turf/open/floor/iron/showroomfloor,
 /area/engineering/atmos/upper)
 "eJQ" = (
@@ -20922,6 +20918,9 @@
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/structure/sign/poster/official/random{
+	pixel_x = 32
+	},
 /turf/open/floor/iron,
 /area/command/bridge)
 "ieR" = (
@@ -35896,13 +35895,6 @@
 "qtf" = (
 /turf/closed/indestructible/riveted,
 /area/science/test_area)
-"qtt" = (
-/obj/structure/cable,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/machinery/duct,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/visible/layer4,
-/turf/open/floor/iron,
-/area/security/prison)
 "qtz" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/effect/turf_decal/stripes/line{
@@ -36480,8 +36472,8 @@
 	dir = 1
 	},
 /obj/machinery/meter,
-/obj/machinery/atmospherics/pipe/smart/manifold4w/brown/visible,
 /obj/machinery/status_display/evac/directional/east,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/general/visible,
 /turf/open/floor/iron/dark,
 /area/science/mixing)
 "qNv" = (
@@ -37801,6 +37793,7 @@
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/door/firedoor,
 /turf/open/floor/iron,
 /area/command/gateway)
 "rEm" = (
@@ -39634,6 +39627,15 @@
 "sEy" = (
 /turf/closed/wall,
 /area/medical/morgue)
+"sEE" = (
+/obj/structure/cable/layer1,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/open/floor/iron/showroomfloor,
+/area/tcommsat/computer)
 "sES" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
@@ -43612,6 +43614,7 @@
 	id = "stationawaygate";
 	name = "Gateway Access Shutters"
 	},
+/obj/machinery/door/firedoor,
 /turf/open/floor/iron,
 /area/command/gateway)
 "uBW" = (
@@ -68467,7 +68470,7 @@ mrT
 mrT
 xyS
 sIv
-qtt
+xyS
 spv
 osZ
 wBx
@@ -84219,7 +84222,7 @@ gpl
 vHG
 gpl
 gpl
-aEw
+puT
 puT
 puT
 fYR
@@ -84478,7 +84481,7 @@ rAx
 mXI
 mZo
 hGr
-aEw
+puT
 mXt
 fBA
 tiI
@@ -84735,7 +84738,7 @@ pxP
 rAx
 rAx
 rAx
-aEw
+puT
 pwa
 vcp
 lzQ
@@ -84992,7 +84995,7 @@ mRS
 pFR
 qiG
 mXI
-aEw
+puT
 pOe
 wTv
 kJn
@@ -96059,7 +96062,7 @@ gfQ
 gfQ
 mfS
 oiJ
-hLU
+sEE
 oiJ
 gfQ
 gfQ
