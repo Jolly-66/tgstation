@@ -3550,6 +3550,7 @@
 #include "jollystation_modules\code\game\objects\items\devices\PDA\PDA_types.dm"
 #include "jollystation_modules\code\game\objects\items\devices\radio\encryptionkey.dm"
 #include "jollystation_modules\code\game\objects\items\devices\radio\headset.dm"
+#include "jollystation_modules\code\game\objects\items\structures\static_plaques.dm"
 #include "jollystation_modules\code\game\objects\items\structures\crate_lockers\crates.dm"
 #include "jollystation_modules\code\modules\antagonists\_common\advanced_antag.dm"
 #include "jollystation_modules\code\modules\antagonists\_common\advanced_objective.dm"
