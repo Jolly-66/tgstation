@@ -9324,7 +9324,6 @@
 	name = "Perma Camera";
 	network = list("ss13","prison")
 	},
-/obj/machinery/firealarm/directional/south,
 /turf/open/floor/iron,
 /area/security/prison/rec)
 "bRx" = (
@@ -14873,7 +14872,7 @@
 /turf/open/floor/circuit,
 /area/ai_monitored/turret_protected/ai)
 "eRN" = (
-/obj/structure/transit_tube/station/dispenser/flipped,
+/obj/structure/transit_tube/station/dispenser/reverse/flipped,
 /turf/open/floor/iron/showroomfloor,
 /area/engineering/transit_tube)
 "eSn" = (
@@ -20987,9 +20986,6 @@
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/structure/sign/poster/official/random{
-	pixel_x = 32
-	},
 /turf/open/floor/iron,
 /area/command/bridge)
 "ieR" = (
@@ -26511,6 +26507,7 @@
 /area/hallway/primary/starboard)
 "lkI" = (
 /obj/machinery/light,
+/obj/machinery/bounty_board/directional/south,
 /turf/open/floor/iron,
 /area/command/bridge)
 "lkK" = (
@@ -31228,6 +31225,15 @@
 /obj/effect/turf_decal/tile/blue,
 /turf/open/floor/iron,
 /area/hallway/primary/aft)
+"nNX" = (
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/structure/sign/poster/official/random{
+	pixel_x = 32
+	},
+/turf/open/floor/iron,
+/area/command/bridge)
 "nOj" = (
 /obj/machinery/door/poddoor/preopen{
 	id = "Biohazard";
@@ -33000,6 +33006,9 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/structure/cable,
+/obj/structure/sign/poster/official/random{
+	pixel_x = 32
+	},
 /turf/open/floor/iron,
 /area/command/bridge)
 "oJq" = (
@@ -42084,12 +42093,6 @@
 "tJp" = (
 /turf/closed/wall,
 /area/command/heads_quarters/rd)
-"tJq" = (
-/obj/machinery/light{
-	dir = 1
-	},
-/turf/open/floor/carpet/royalblue,
-/area/command/bridge)
 "tJA" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -44609,7 +44612,7 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/door/window/westleft{
 	dir = 4;
-	name = "Hydroponics Desk";
+	name = "Hydroponics Biogenerator";
 	req_one_access_txt = "30;35"
 	},
 /obj/structure/window{
@@ -50295,6 +50298,13 @@
 	},
 /turf/open/floor/plating,
 /area/maintenance/central/secondary)
+"xMl" = (
+/obj/effect/turf_decal/delivery,
+/obj/structure/sign/poster/official/random{
+	pixel_x = 32
+	},
+/turf/open/floor/iron,
+/area/command/bridge)
 "xMu" = (
 /obj/structure/cable,
 /turf/open/floor/iron/dark,
@@ -86156,7 +86166,7 @@ rLe
 uio
 aob
 tjx
-buL
+xMl
 jje
 buL
 ljl
@@ -87194,7 +87204,7 @@ pyp
 tTH
 cND
 qAe
-cND
+blU
 tJB
 fun
 gCI
@@ -90789,13 +90799,13 @@ gQg
 cKk
 qAe
 ieQ
-qAe
+nNX
 qAe
 qAe
 cND
 ezH
 erg
-tJq
+jaa
 dIV
 jaa
 dfA
