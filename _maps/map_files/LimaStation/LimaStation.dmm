@@ -14872,7 +14872,9 @@
 /turf/open/floor/circuit,
 /area/ai_monitored/turret_protected/ai)
 "eRN" = (
-/obj/structure/transit_tube/station/dispenser/reverse/flipped,
+/obj/structure/transit_tube/station/dispenser{
+	dir = 1
+	},
 /turf/open/floor/iron/showroomfloor,
 /area/engineering/transit_tube)
 "eSn" = (
@@ -32270,6 +32272,7 @@
 	},
 /obj/machinery/power/apc/auto_name/south,
 /obj/structure/cable,
+/obj/structure/closet/firecloset,
 /turf/open/floor/iron/showroomfloor,
 /area/engineering/transit_tube)
 "ooZ" = (
