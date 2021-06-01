@@ -139,9 +139,7 @@ export const LoadoutTutorialDimmer = (props, context) => {
         <Stack.Item
           textAlign="center"
           fontSize="14px"
-          style={{
-            'white-space': 'pre-wrap',
-          }}>
+          preserveWhitespace>
           {tutorial_text}
         </Stack.Item>
         <Stack.Item>
