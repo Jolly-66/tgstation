@@ -66,7 +66,6 @@ export const _LoadoutManager = (props, context) => {
                         align="center"
                         content="Clear All Items"
                         tooltip="Clears ALL selected items from all categories."
-                        tooltipPosition="bottom-left"
                         width={10}
                         onClick={() => act('clear_all_items')} />
                     )}>
@@ -111,7 +110,6 @@ export const _LoadoutManager = (props, context) => {
                       content="Toggle Job Clothes"
                       tooltip="Shown job clothes do not respect \
                         skirt and backpack preference."
-                      tooltipPosition="bottom-left"
                       checked={job_clothes}
                       onClick={() => act('toggle_job_clothes')} />
                   )}>
@@ -183,14 +181,12 @@ export const LoadoutPreview = (props, context) => {
               icon="check-double"
               color="good"
               tooltip="Confirm loadout and exit UI."
-              tooltipPosition="top"
               onClick={() => act('close_ui', { revert: 0 })} />
           </Stack.Item>
           <Stack.Item>
             <Button
               icon="chevron-left"
               tooltip="Turn model preview to the left."
-              tooltipPosition="top"
               onClick={() => act('rotate_dummy', {
                 dir: "left",
               })} />
@@ -200,14 +196,12 @@ export const LoadoutPreview = (props, context) => {
               icon="sync"
               tooltip="Toggle viewing all \
               preview directions at once."
-              tooltipPosition="top"
               onClick={() => act('show_all_dirs')} />
           </Stack.Item>
           <Stack.Item>
             <Button
               icon="chevron-right"
               tooltip="Turn model preview to the right."
-              tooltipPosition="top"
               onClick={() => act('rotate_dummy', {
                 dir: "right",
               })} />
@@ -217,7 +211,6 @@ export const LoadoutPreview = (props, context) => {
               icon="times"
               color="bad"
               tooltip="Revert loadout and exit UI."
-              tooltipPosition="top"
               onClick={() => act('close_ui', { revert: 1 })} />
           </Stack.Item>
         </Stack>
