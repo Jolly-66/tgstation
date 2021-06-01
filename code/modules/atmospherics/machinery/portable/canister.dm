@@ -520,7 +520,6 @@ GLOBAL_LIST_INIT(gas_id_to_canister, init_gas_id_to_canister())
 /obj/machinery/portable_atmospherics/canister/proc/canister_break()
 	disconnect()
 	var/datum/gas_mixture/expelled_gas = air_contents.remove(air_contents.total_moles())
-	var/expelled_pressure = expelled_gas?.return_pressure()
 	var/turf/T = get_turf(src)
 	T.assume_air(expelled_gas)
 
@@ -554,24 +553,13 @@ GLOBAL_LIST_INIT(gas_id_to_canister, init_gas_id_to_canister())
 		valve_open = !valve_open
 		timing = FALSE
 
-	var/turf/location = get_turf(src)
-
-	var/mix_air = FALSE
-	var/pressure = release_pressure
-	var/gas_mix = holding?.return_air()
-	var/air_update = FALSE
-
+	// Handle gas transfer.
 	if(valve_open)
 		var/turf/location = get_turf(src)
 		var/datum/gas_mixture/target_air = holding?.return_air() || location.return_air()
 		excited = TRUE
 
-	// Handle gas transfer.
-	if(mix_air)
-		var/datum/gas_mixture/target_air = gas_mix || location.return_air()
-		excited = TRUE
-
-		if(air_contents.release_gas_to(target_air, pressure) && (!holding || air_update))
+		if(air_contents.release_gas_to(target_air, release_pressure) && !holding)
 			air_update_turf(FALSE, FALSE)
 
 	var/our_pressure = air_contents.return_pressure()
