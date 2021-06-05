@@ -16,6 +16,7 @@
 /data/npc_saves/Ian.json
 /data/npc_saves/Poly.json
 /data/npc_saves/Punpun.json
+/data/roundend_reports/
 
 #Ignore byond config folder.
 /cfg/**/*
