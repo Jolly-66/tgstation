@@ -35,3 +35,29 @@
 			popup.set_content(text("<HTML><HEAD><TITLE>[]</TITLE></HEAD><BODY><TT>[]</TT></BODY></HTML>", "[name]'s exploitable information", replacetext(client.prefs.exploitable_info, "\n", "<BR>")))
 			popup.open()
 			return
+
+//Extends body temp datum
+/datum/species/handle_body_temperature(mob/living/carbon/human/humi, delta_time, times_fired)
+	. = ..()
+	if(humi.bodytemperature > BODYTEMP_HEAT_DAMAGE_LIMIT && !HAS_TRAIT(humi, TRAIT_RESISTHEAT))
+		switch(humi.bodytemperature)
+			if(0 to 460)
+				temp_disease_counter += 1
+			if(461 to 700)
+				temp_disease_counter += 2
+			else
+				temp_disease_counter += 3
+	if(humi.temp_disease_counter >= DISEASE_HEATSTROKE_MIN)
+		var/datum/disease/new_disease = new /datum/disease/hyperthermia()
+		new_hyperthermia.ForceContractDisease(humi, FALSE, TRUE)
+	else if (humi.bodytemperature < BODYTEMP_COLD_DAMAGE_LIMIT && !HAS_TRAIT(humi, TRAIT_RESISTCOLD))
+	if(humi.temp_disease_counter <= DISEASE_HYPOTHERMIA_MIN)
+	  switch(humi.bodytemperature)
+            if(201 to bodytemp_cold_damage_limit)
+                humi.temp_disease_counter -=1
+            if(120 to 200)
+                humi.temp_disease_counter -=2
+            else
+                humi.temp_disease_counter -=3
+		var/datum/disease/new_hyperthermia = new /datum/disease/hyperthermia()
+		new_hypothermia.ForceContractDisease(humi, FALSE, TRUE)
