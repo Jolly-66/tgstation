@@ -4,7 +4,7 @@
 	spread_text = "None"
 	spread_flags = DISEASE_SPREAD_NON_CONTAGIOUS
 	cure_text = "Cool down of the body and careful monitoring."
-	agent = "Long exposure to hot conditions."
+	agent = "Long exposure to extremely hot conditions."
 	viable_mobtypes = list(/mob/living/carbon/human)
 	spread_flags = DISEASE_SPREAD_NON_CONTAGIOUS
 	desc = "Sever heat exposure. Monitoring is required in case of vomiting and sudden collapses. If left untreated and in hot conditions for too long, brain damage may occur."
