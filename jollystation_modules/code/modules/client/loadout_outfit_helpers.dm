@@ -24,7 +24,7 @@
 	else if(istype(outfit))
 		equipped_outfit = outfit
 	else
-		CRASH("Outfit passed to equip_outfit_and_loadout was neither an path nor an instantiated type!")
+		CRASH("Outfit passed to equip_outfit_and_loadout was neither a path nor an instantiated type!")
 
 	var/list/loadout = preference_source?.loadout_list
 	for(var/slot in loadout)
@@ -103,6 +103,11 @@
 	equip_greyscale(visuals_only, preference_source)
 	return TRUE
 
+/* Equip our greyscales in our greyscale loadout config to the respective slots.
+ *
+ * visuals_only - whether we bother greyscaling our backpack items
+ * preference_source - the client belonging to the thing we're greyscaling
+ */
 /mob/living/carbon/human/proc/equip_greyscale(visuals_only = FALSE, datum/preferences/preference_source)
 	var/list/items = preference_source?.loadout_list
 	var/list/colors = preference_source?.greyscale_loadout_list
@@ -155,7 +160,10 @@
 	regenerate_icons()
 	return TRUE
 
-/// Removes all nulls, invalid paths, and bad slots from loadout lists.
+/* Removes all nulls, invalid paths, and bad slots from loadout lists.
+ *
+ * list_to_clean - the loadout list we're sanitizing.
+ */
 /proc/sanitize_loadout_list(list/list_to_clean)
 	if(!istype(list_to_clean))
 		return
