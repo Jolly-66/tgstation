@@ -49,9 +49,9 @@
 /obj/structure/table/proc/deconstruction_hints(mob/user)
 	return "<span class='notice'>The top is <b>screwed</b> on, but the main <b>bolts</b> are also visible.</span>"
 
-/obj/structure/table/update_icon()
+/obj/structure/table/update_icon(updates=ALL)
 	. = ..()
-	if(smoothing_flags & (SMOOTH_CORNERS|SMOOTH_BITMASK))
+	if((updates & UPDATE_SMOOTHING) && (smoothing_flags & (SMOOTH_CORNERS|SMOOTH_BITMASK)))
 		QUEUE_SMOOTH(src)
 		QUEUE_SMOOTH_NEIGHBORS(src)
 
@@ -591,10 +591,21 @@
 	var/mob/living/carbon/M = locate(/mob/living/carbon) in loc
 	if(M)
 		if(M.resting)
-			patient = M
+			set_patient(M)
 	else
-		patient = null
+		set_patient(null)
 
+/obj/structure/table/optable/proc/set_patient(new_patient)
+	if(patient)
+		UnregisterSignal(patient, COMSIG_PARENT_QDELETING)
+	patient = new_patient
+	if(patient)
+		RegisterSignal(patient, COMSIG_PARENT_QDELETING, .proc/patient_deleted)
+
+/obj/structure/table/optable/proc/patient_deleted(datum/source)
+	SIGNAL_HANDLER
+	set_patient(null)
+	
 /obj/structure/table/optable/proc/check_eligible_patient()
 	get_patient()
 	if(!patient)

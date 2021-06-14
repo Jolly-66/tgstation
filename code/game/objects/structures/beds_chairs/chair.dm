@@ -99,6 +99,11 @@
 		user.put_in_active_hand(input_shock_kit)
 		to_chat(user, "<span class='notice'> You cannot fit the shock kit onto the [name]!")
 
+/obj/structure/chair/wrench_act(mob/living/user, obj/item/I)
+	. = ..()
+	I.play_tool_sound(src)
+	deconstruct()
+	return TRUE
 
 /obj/structure/chair/wrench_act(mob/living/user, obj/item/I)
 	. = ..()
@@ -260,6 +265,20 @@
 	buildstackamount = 1
 	item_chair = /obj/item/chair/stool
 
+/obj/structure/chair/stool/directional/north
+	dir = SOUTH
+	pixel_y = 6
+
+/obj/structure/chair/stool/directional/south
+	dir = NORTH
+	pixel_y = 6
+
+/obj/structure/chair/stool/directional/east
+	dir = WEST
+
+/obj/structure/chair/stool/directional/west
+	dir = EAST
+
 /obj/structure/chair/stool/narsie_act()
 	return
 
@@ -285,6 +304,18 @@
 	desc = "It has some unsavory stains on it..."
 	icon_state = "bar"
 	item_chair = /obj/item/chair/stool/bar
+
+/obj/structure/chair/stool/bar/directional/north
+	dir = SOUTH
+
+/obj/structure/chair/stool/bar/directional/south
+	dir = NORTH
+
+/obj/structure/chair/stool/bar/directional/east
+	dir = WEST
+
+/obj/structure/chair/stool/bar/directional/west
+	dir = EAST
 
 /obj/item/chair
 	name = "chair"

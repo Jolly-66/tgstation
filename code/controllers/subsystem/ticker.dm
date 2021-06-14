@@ -26,11 +26,6 @@ SUBSYSTEM_DEF(ticker)
 	var/admin_delay_notice = "" //a message to display to anyone who tries to restart the world after a delay
 	var/ready_for_reboot = FALSE //all roundend preparation done with, all that's left is reboot
 
-	///If set to an anonymous theme datum then people spawn with said themed anon name (see anonymousnames.dm)
-	var/datum/anonymous_theme/anonymousnames
-	///Boolean to see if the game needs to set up a triumvirate ai (see tripAI.dm)
-	var/triai = FALSE
-
 	var/tipped = FALSE //Did we broadcast the tip of the day yet?
 	var/selected_tip // What will be the tip of the day?
 
@@ -393,7 +388,7 @@ SUBSYSTEM_DEF(ticker)
 			if(player_assigned_role != new_player_human.mind.special_role)
 				SSjob.EquipRank(new_player_mob, player_assigned_role, FALSE, player_is_captain)
 				if(CONFIG_GET(flag/roundstart_traits) && ishuman(new_player_human))
-					SSquirks.AssignQuirks(new_player_human, new_player_mob.client, TRUE)
+					SSquirks.AssignQuirks(new_player_human, new_player_mob.client)
 		CHECK_TICK
 
 	if(captainless)
@@ -522,8 +517,6 @@ SUBSYSTEM_DEF(ticker)
 
 	delay_end = SSticker.delay_end
 
-	anonymousnames = SSticker.anonymousnames
-	triai = SSticker.triai
 	tipped = SSticker.tipped
 	selected_tip = SSticker.selected_tip
 

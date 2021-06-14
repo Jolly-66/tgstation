@@ -301,8 +301,11 @@
 	addiction_types = list(/datum/addiction/hallucinogens = 18)  //7.2 per 2 seconds
 
 /datum/reagent/toxin/mindbreaker/on_mob_life(mob/living/carbon/M, delta_time, times_fired)
-	if(!HAS_TRAIT(M, TRAIT_INSANITY))
+	if(HAS_TRAIT(M, TRAIT_INSANITY))
+		M.hallucination = 0
+	else
 		M.hallucination += 5 * REM * delta_time
+
 	return ..()
 
 /datum/reagent/toxin/plantbgone
@@ -491,6 +494,16 @@
 	toxpwr = 0.1
 	taste_description = "green tea"
 	ph = 4.9
+	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
+
+/datum/reagent/toxin/mushroom_powder
+	name = "Mushroom Powder"
+	description = "Finely ground polypore mushrooms, ready to be steeped in water to make mushroom tea."
+	reagent_state = SOLID
+	color = "#67423A" // rgb: 127, 132, 0
+	toxpwr = 0.1
+	taste_description = "mushrooms"
+	ph = 8.0
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
 
 /datum/reagent/toxin/mutetoxin //the new zombie powder.
@@ -842,7 +855,8 @@
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
 
 /datum/reagent/toxin/coniine/on_mob_life(mob/living/carbon/M, delta_time, times_fired)
-	M.losebreath += 5 * REM * delta_time
+	if(M.losebreath < 5)
+		M.losebreath = min(M.losebreath + 5 * REM * delta_time, 5)
 	return ..()
 
 /datum/reagent/toxin/spewium

@@ -89,7 +89,8 @@
 	say(slogan)
 	COOLDOWN_START(src, next_slogan_tick, COOLDOWN_SLOGAN)
 
-/obj/machinery/pinpointer_dispenser/Destroy()
+//Do this when someone breaks you/blows you up. The bombs are funny
+/obj/machinery/pinpointer_dispenser/deconstruct()
 	for(var/i in 1 to rand(3, 9)) //Doesn't synthesise them in real time and instead stockpiles completed ones (though this is not how the cooldown works)
 		new /obj/item/pinpointer/wayfinding (loc)
 	say("Ouch.")
@@ -168,7 +169,7 @@
 			itsmypinpointer = FALSE
 
 		var/is_a_thing = "are [refund_amt] credit\s."
-		if(refund_amt > 0 && synth_acc.has_money(refund_amt) && !attacking_pinpointer.roundstart)
+		if(refund_amt > 0 && synth_acc.has_money(refund_amt) && !attacking_pinpointer.from_quirk)
 			synth_acc.adjust_money(-refund_amt)
 			var/obj/item/holochip/holochip = new (user.loc)
 			holochip.credits = refund_amt
@@ -240,7 +241,7 @@
 	worn_icon_state = "pinpointer_way"
 	var/owner = null
 	var/list/beacons = list()
-	var/roundstart = FALSE
+	var/from_quirk = FALSE
 
 /obj/item/pinpointer/wayfinding/attack_self(mob/living/user)
 	if(active)

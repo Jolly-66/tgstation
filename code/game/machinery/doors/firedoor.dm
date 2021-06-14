@@ -160,6 +160,7 @@
 
 	if(density)
 		being_held_open = TRUE
+		user.balloon_alert_to_viewers("holding [src] open", "holding [src] open")
 		open()
 		if(QDELETED(user))
 			being_held_open = FALSE
@@ -241,7 +242,7 @@
 				F.constructionStep = CONSTRUCTION_PANEL_OPEN
 			else
 				F.constructionStep = CONSTRUCTION_NO_CIRCUIT
-				F.obj_integrity = F.max_integrity * 0.5
+				F.update_integrity(F.max_integrity * 0.5)
 			F.update_appearance()
 		else
 			new /obj/item/electronics/firelock (T)

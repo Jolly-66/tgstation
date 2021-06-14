@@ -214,14 +214,14 @@
 	eye.on = TRUE
 	eye.forceMove(victim)
 	eye.update_brightness(victim)
-	victim.become_blind("flashlight_eyes")
+	victim.become_blind(FLASHLIGHT_EYES)
 
 
 /obj/item/organ/eyes/robotic/flashlight/Remove(mob/living/carbon/victim, special = 0)
 	eye.on = FALSE
 	eye.update_brightness(victim)
 	eye.forceMove(src)
-	victim.cure_blind("flashlight_eyes")
+	victim.cure_blind(FLASHLIGHT_EYES)
 	..()
 
 // Welding shield implant
@@ -465,9 +465,6 @@
 	eye_icon_state = "eyes_glow"
 	overlay_ignore_lighting = TRUE
 	var/obj/item/flashlight/eyelight/adapted/adapt_light
-
-/obj/item/organ/eyes/night_vision/maintenance_adapted/Initialize()
-	. = ..()
 
 /obj/item/organ/eyes/night_vision/maintenance_adapted/Insert(mob/living/carbon/adapted, special = FALSE)
 	. = ..()

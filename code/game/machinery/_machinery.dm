@@ -95,6 +95,7 @@
 
 	anchored = TRUE
 	interaction_flags_atom = INTERACT_ATOM_ATTACK_HAND | INTERACT_ATOM_UI_INTERACT
+	blocks_emissive = EMISSIVE_BLOCK_GENERIC
 
 	var/machine_stat = NONE
 	var/use_power = IDLE_POWER_USE
@@ -317,9 +318,9 @@
 /obj/machinery/proc/auto_use_power()
 	if(!powered(power_channel))
 		return FALSE
-	if(use_power == 1)
+	if(use_power == IDLE_POWER_USE)
 		use_power(idle_power_usage,power_channel)
-	else if(use_power >= 2)
+	else if(use_power >= ACTIVE_POWER_USE)
 		use_power(active_power_usage,power_channel)
 	return TRUE
 
@@ -568,7 +569,7 @@
 	. = new_frame
 	new_frame.set_anchored(anchored)
 	if(!disassembled)
-		new_frame.obj_integrity = new_frame.max_integrity * 0.5 //the frame is already half broken
+		new_frame.update_integrity(new_frame.max_integrity * 0.5) //the frame is already half broken
 	transfer_fingerprints_to(new_frame)
 
 

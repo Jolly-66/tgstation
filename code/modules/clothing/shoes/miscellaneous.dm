@@ -288,33 +288,6 @@
 	jumpdistance = 20 //great for throwing yourself into walls and people at high speeds
 	jumpspeed = 5
 
-/obj/item/clothing/shoes/bhop/rocket
-	name = "rocket boots"
-	desc = "Very special boots with built-in rocket thrusters! SHAZBOT!"
-	icon_state = "rocketboots"
-	inhand_icon_state = "rocketboots"
-	actions_types = list(/datum/action/item_action/bhop/brocket)
-	jumpdistance = 20 //great for throwing yourself into walls and people at high speeds
-	jumpspeed = 5
-
-/obj/item/clothing/shoes/bhop/rocket
-	name = "rocket boots"
-	desc = "Very special boots with built-in rocket thrusters! SHAZBOT!"
-	icon_state = "rocketboots"
-	inhand_icon_state = "rocketboots"
-	actions_types = list(/datum/action/item_action/bhop/brocket)
-	jumpdistance = 20 //great for throwing yourself into walls and people at high speeds
-	jumpspeed = 5
-
-/obj/item/clothing/shoes/bhop/rocket
-	name = "rocket boots"
-	desc = "Very special boots with built-in rocket thrusters! SHAZBOT!"
-	icon_state = "rocketboots"
-	inhand_icon_state = "rocketboots"
-	actions_types = list(/datum/action/item_action/bhop/brocket)
-	jumpdistance = 20 //great for throwing yourself into walls and people at high speeds
-	jumpspeed = 5
-
 /obj/item/clothing/shoes/singery
 	name = "yellow performer's boots"
 	desc = "These boots were made for dancing."
