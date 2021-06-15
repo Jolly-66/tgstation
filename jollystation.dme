@@ -3599,7 +3599,7 @@
 #include "interface\interface.dm"
 #include "interface\menu.dm"
 #include "interface\stylesheet.dm"
-#include "interface\skin.dmf"#include "jollystation_modules\code\__DEFINES\_module_defines.dm"
+#include "interface\skin.dmf"
 #include "jollystation_modules\code\__DEFINES\_module_defines.dm"
 #include "jollystation_modules\code\__DEFINES\antag_defines.dm"
 #include "jollystation_modules\code\__DEFINES\examine_defines.dm"
