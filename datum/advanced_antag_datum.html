@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <base href="../" />
+    <link rel="stylesheet" href="dmdoc.css" />
+    <title>&#x2F;datum&#x2F;advanced_antag_datum - &#x2F;tg&#x2F; Station 13</title>
+</head>
+<body>
+<header>
+    <a href="index.html">&#x2F;tg&#x2F; Station 13</a> -
+    <a href="index.html#modules">Modules</a> -
+    <a href="index.html#types">Types</a>
+ &mdash; <a href="datum/advanced_antag_datum.html#var">Var Details</a> - <a href="datum/advanced_antag_datum.html#proc">Proc Details</a></header>
+<main>
+<h1>advanced_antag_datum <aside>/<a href="datum.html">datum</a>/<a href="datum/advanced_antag_datum.html">advanced_antag_datum</a></aside>
+        
+    
+            <a href="https://github.com/Jolly-66/JollyStation/blob/2a76d5e432d97c9c91e36e378dc4963140fed4fa/jollystation_modules/code/modules/antagonists/_common/advanced_antag.dm#L3">
+        <img src="git.png" width="16" height="16" title="jollystation_modules&#x2F;code&#x2F;modules&#x2F;antagonists&#x2F;_common&#x2F;advanced_antag.dm 3"/></a></h1>
+
+<p>-- Base advanced antag datum --
+The advanced antag datum - the datum that runs our advanced antags.</p><table class="summary" cellspacing="0"><tr><td colspan="2"><h2>Vars</h2></td></tr>
+            <tr><th><a href="datum/advanced_antag_datum.html#var/backstory">backstory</a></th><td>This player's backstory for their antag - optional, can be empty/null</td></tr>
+            <tr><th><a href="datum/advanced_antag_datum.html#var/employer">employer</a></th><td>Can be changed by the player.</td></tr>
+            <tr><th><a href="datum/advanced_antag_datum.html#var/finalized">finalized</a></th><td>Whether our goals are finalized.</td></tr>
+            <tr><th><a href="datum/advanced_antag_datum.html#var/linked_antagonist">linked_antagonist</a></th><td>The antagonist this datum is linked to.</td></tr>
+            <tr><th><a href="datum/advanced_antag_datum.html#var/name">name</a></th><td>Changed to &quot;Traitor&quot; on spawn, but can be changed by the player.</td></tr>
+            <tr><th><a href="datum/advanced_antag_datum.html#var/open_panels">open_panels</a></th><td>All advanced traitor panels we have open (assoc list user to panel)</td></tr>
+            <tr><th><a href="datum/advanced_antag_datum.html#var/our_goals">our_goals</a></th><td>Lazylist of our goals datums linked to this antag.</td></tr>
+            <tr><th><a href="datum/advanced_antag_datum.html#var/possible_objectives">possible_objectives</a></th><td>List of objectives we can add to similar objectives.</td></tr>
+            <tr><th><a href="datum/advanced_antag_datum.html#var/starting_points">starting_points</a></th><td>The starting &quot;traitor fun points&quot; for our antag. TC, processing power, etc.</td></tr>
+            <tr><th><a href="datum/advanced_antag_datum.html#var/style">style</a></th><td>The style of this antag's UI.</td></tr><tr><td colspan="2"><h2>Procs</h2></td></tr>
+            <tr><th><a href="datum/advanced_antag_datum.html#proc/add_advanced_goal">add_advanced_goal</a></th><td>Initialize a new goal and append it to our lazylist</td></tr>
+            <tr><th><a href="datum/advanced_antag_datum.html#proc/cleanup_advanced_traitor_panel">cleanup_advanced_traitor_panel</a></th><td>This proc cleans up the open_panels list after a panel viewer closes the UI.
+viewer - the mob that just closed the panel.</td></tr>
+            <tr><th><a href="datum/advanced_antag_datum.html#proc/get_antag_points_from_goals">get_antag_points_from_goals</a></th><td>Calculate the traitor's starting points (TC, processing power, etc) based on their goals's intensity levels.
+Returns a number (the number of points calculated)</td></tr>
+            <tr><th><a href="datum/advanced_antag_datum.html#proc/get_finalize_text">get_finalize_text</a></th><td>Get the text that shows up in the tooltip of the finalize button.
+Returns a string (The formatted text)</td></tr>
+            <tr><th><a href="datum/advanced_antag_datum.html#proc/greet_message">greet_message</a></th><td>Only giving them one objective as a reminder - &quot;Set your goals&quot;. Only shows up in their memory.
+Greet the antagonist with some text after spawning.
+antagonist - the mob being greeted, the antagonist.</td></tr>
+            <tr><th><a href="datum/advanced_antag_datum.html#proc/greet_message_three">greet_message_three</a></th><td>Give them a short guide on how to use the goal panel, and what all the buttons do.
+antagonist - the mob being greeted, the antagonist.</td></tr>
+            <tr><th><a href="datum/advanced_antag_datum.html#proc/greet_message_two">greet_message_two</a></th><td>Give them details on what their role actually means to them, then move to greet_three after 3 seconds.
+antagonist - the mob being greeted, the antagonist.</td></tr>
+            <tr><th><a href="datum/advanced_antag_datum.html#proc/log_goals_on_finalize">log_goals_on_finalize</a></th><td>Miscellaneous logging for the antagonist's goals after they finalize them.
+Extend this proc for adding in extra logging to an antagonist.</td></tr>
+            <tr><th><a href="datum/advanced_antag_datum.html#proc/modify_antag_points">modify_antag_points</a></th><td>Modify the traitor's starting_points (TC, processing points, etc) based on their goals's intensity levels.</td></tr>
+            <tr><th><a href="datum/advanced_antag_datum.html#proc/post_finalize_actions">post_finalize_actions</a></th><td>Actions to do after the antag finalizes their goals.</td></tr>
+            <tr><th><a href="datum/advanced_antag_datum.html#proc/remove_advanced_goal">remove_advanced_goal</a></th><td>Remove a goal from our lazylist and qdel it
+old_goal - reference to the goal we're removing</td></tr>
+            <tr><th><a href="datum/advanced_antag_datum.html#proc/set_backstory">set_backstory</a></th><td>Sanitize and set our backstory
+backstory - the backstory we're changing this to</td></tr>
+            <tr><th><a href="datum/advanced_antag_datum.html#proc/set_employer">set_employer</a></th><td>Sanitize and set our employer
+employer - the employer we're changing this to</td></tr>
+            <tr><th><a href="datum/advanced_antag_datum.html#proc/set_name">set_name</a></th><td>Saniztize and set our name.
+name - the name we're changing this to</td></tr>
+            <tr><th><a href="datum/advanced_antag_datum.html#proc/setup_advanced_antag">setup_advanced_antag</a></th><td>Give the antagonist the verb to open their goal panel.</td></tr></table>
+    <h2 id="var">Var Details</h2><h3 id="var/backstory"><aside class="declaration">var </aside>backstory
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Jolly-66/JollyStation/blob/2a76d5e432d97c9c91e36e378dc4963140fed4fa/jollystation_modules/code/modules/antagonists/_common/advanced_antag.dm#L11">
+        <img src="git.png" width="16" height="16" title="jollystation_modules&#x2F;code&#x2F;modules&#x2F;antagonists&#x2F;_common&#x2F;advanced_antag.dm 11"/></a></h3>
+        <p>This player's backstory for their antag - optional, can be empty/null</p><h3 id="var/employer"><aside class="declaration">var </aside>employer
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Jolly-66/JollyStation/blob/2a76d5e432d97c9c91e36e378dc4963140fed4fa/jollystation_modules/code/modules/antagonists/_common/advanced_antag.dm#L9">
+        <img src="git.png" width="16" height="16" title="jollystation_modules&#x2F;code&#x2F;modules&#x2F;antagonists&#x2F;_common&#x2F;advanced_antag.dm 9"/></a></h3>
+        <p>Can be changed by the player.</p><h3 id="var/finalized"><aside class="declaration">var </aside>finalized
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Jolly-66/JollyStation/blob/2a76d5e432d97c9c91e36e378dc4963140fed4fa/jollystation_modules/code/modules/antagonists/_common/advanced_antag.dm#L21">
+        <img src="git.png" width="16" height="16" title="jollystation_modules&#x2F;code&#x2F;modules&#x2F;antagonists&#x2F;_common&#x2F;advanced_antag.dm 21"/></a></h3>
+        <p>Whether our goals are finalized.</p><h3 id="var/linked_antagonist"><aside class="declaration">var </aside>linked_antagonist
+            <aside>&ndash; /<a href="datum.html">datum</a>/<a href="datum/antagonist.html">antagonist</a></aside>
+        
+    
+            <a href="https://github.com/Jolly-66/JollyStation/blob/2a76d5e432d97c9c91e36e378dc4963140fed4fa/jollystation_modules/code/modules/antagonists/_common/advanced_antag.dm#L5">
+        <img src="git.png" width="16" height="16" title="jollystation_modules&#x2F;code&#x2F;modules&#x2F;antagonists&#x2F;_common&#x2F;advanced_antag.dm 5"/></a></h3>
+        <p>The antagonist this datum is linked to.</p><h3 id="var/name"><aside class="declaration">var </aside>name
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Jolly-66/JollyStation/blob/2a76d5e432d97c9c91e36e378dc4963140fed4fa/jollystation_modules/code/modules/antagonists/_common/advanced_antag.dm#L7">
+        <img src="git.png" width="16" height="16" title="jollystation_modules&#x2F;code&#x2F;modules&#x2F;antagonists&#x2F;_common&#x2F;advanced_antag.dm 7"/></a></h3>
+        <p>Changed to &quot;Traitor&quot; on spawn, but can be changed by the player.</p><h3 id="var/open_panels"><aside class="declaration">var </aside>open_panels
+            <aside>&ndash; /list</aside>
+        
+    
+            <a href="https://github.com/Jolly-66/JollyStation/blob/2a76d5e432d97c9c91e36e378dc4963140fed4fa/jollystation_modules/code/modules/antagonists/_common/advanced_antag.dm#L25">
+        <img src="git.png" width="16" height="16" title="jollystation_modules&#x2F;code&#x2F;modules&#x2F;antagonists&#x2F;_common&#x2F;advanced_antag.dm 25"/></a></h3>
+        <p>All advanced traitor panels we have open (assoc list user to panel)</p><h3 id="var/our_goals"><aside class="declaration">var </aside>our_goals
+            <aside>&ndash; /list/datum/advanced_antag_goal</aside>
+        
+    
+            <a href="https://github.com/Jolly-66/JollyStation/blob/2a76d5e432d97c9c91e36e378dc4963140fed4fa/jollystation_modules/code/modules/antagonists/_common/advanced_antag.dm#L17">
+        <img src="git.png" width="16" height="16" title="jollystation_modules&#x2F;code&#x2F;modules&#x2F;antagonists&#x2F;_common&#x2F;advanced_antag.dm 17"/></a></h3>
+        <p>Lazylist of our goals datums linked to this antag.</p><h3 id="var/possible_objectives"><aside class="declaration">var </aside>possible_objectives
+            <aside>&ndash; /static/list</aside>
+        
+    
+            <a href="https://github.com/Jolly-66/JollyStation/blob/2a76d5e432d97c9c91e36e378dc4963140fed4fa/jollystation_modules/code/modules/antagonists/_common/advanced_antag.dm#L19">
+        <img src="git.png" width="16" height="16" title="jollystation_modules&#x2F;code&#x2F;modules&#x2F;antagonists&#x2F;_common&#x2F;advanced_antag.dm 19"/></a></h3>
+        <p>List of objectives we can add to similar objectives.</p><h3 id="var/starting_points"><aside class="declaration">var </aside>starting_points
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Jolly-66/JollyStation/blob/2a76d5e432d97c9c91e36e378dc4963140fed4fa/jollystation_modules/code/modules/antagonists/_common/advanced_antag.dm#L15">
+        <img src="git.png" width="16" height="16" title="jollystation_modules&#x2F;code&#x2F;modules&#x2F;antagonists&#x2F;_common&#x2F;advanced_antag.dm 15"/></a></h3>
+        <p>The starting &quot;traitor fun points&quot; for our antag. TC, processing power, etc.</p><h3 id="var/style"><aside class="declaration">var </aside>style
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Jolly-66/JollyStation/blob/2a76d5e432d97c9c91e36e378dc4963140fed4fa/jollystation_modules/code/modules/antagonists/_common/advanced_antag.dm#L13">
+        <img src="git.png" width="16" height="16" title="jollystation_modules&#x2F;code&#x2F;modules&#x2F;antagonists&#x2F;_common&#x2F;advanced_antag.dm 13"/></a></h3>
+        <p>The style of this antag's UI.</p><h2 id="proc">Proc Details</h2><h3 id="proc/add_advanced_goal"><aside class="declaration">proc </aside>add_advanced_goal<aside>() 
+        
+    
+            <a href="https://github.com/Jolly-66/JollyStation/blob/2a76d5e432d97c9c91e36e378dc4963140fed4fa/jollystation_modules/code/modules/antagonists/_common/advanced_antag.dm#L173">
+        <img src="git.png" width="16" height="16" title="jollystation_modules&#x2F;code&#x2F;modules&#x2F;antagonists&#x2F;_common&#x2F;advanced_antag.dm 173"/></a></aside>
+        </h3>
+        <p>Initialize a new goal and append it to our lazylist</p><h3 id="proc/cleanup_advanced_traitor_panel"><aside class="declaration">proc </aside>cleanup_advanced_traitor_panel<aside>(/<a href="mob.html">mob</a>/viewer) 
+        
+    
+            <a href="https://github.com/Jolly-66/JollyStation/blob/2a76d5e432d97c9c91e36e378dc4963140fed4fa/jollystation_modules/code/modules/antagonists/_common/advanced_antag.dm#L99">
+        <img src="git.png" width="16" height="16" title="jollystation_modules&#x2F;code&#x2F;modules&#x2F;antagonists&#x2F;_common&#x2F;advanced_antag.dm 99"/></a></aside>
+        </h3>
+        <p>This proc cleans up the open_panels list after a panel viewer closes the UI.
+viewer - the mob that just closed the panel.</p><h3 id="proc/get_antag_points_from_goals"><aside class="declaration">proc </aside>get_antag_points_from_goals<aside>() 
+        
+    
+            <a href="https://github.com/Jolly-66/JollyStation/blob/2a76d5e432d97c9c91e36e378dc4963140fed4fa/jollystation_modules/code/modules/antagonists/_common/advanced_antag.dm#L112">
+        <img src="git.png" width="16" height="16" title="jollystation_modules&#x2F;code&#x2F;modules&#x2F;antagonists&#x2F;_common&#x2F;advanced_antag.dm 112"/></a></aside>
+        </h3>
+        <p>Calculate the traitor's starting points (TC, processing power, etc) based on their goals's intensity levels.
+Returns a number (the number of points calculated)</p><h3 id="proc/get_finalize_text"><aside class="declaration">proc </aside>get_finalize_text<aside>() 
+        
+    
+            <a href="https://github.com/Jolly-66/JollyStation/blob/2a76d5e432d97c9c91e36e378dc4963140fed4fa/jollystation_modules/code/modules/antagonists/_common/advanced_antag.dm#L117">
+        <img src="git.png" width="16" height="16" title="jollystation_modules&#x2F;code&#x2F;modules&#x2F;antagonists&#x2F;_common&#x2F;advanced_antag.dm 117"/></a></aside>
+        </h3>
+        <p>Get the text that shows up in the tooltip of the finalize button.
+Returns a string (The formatted text)</p><h3 id="proc/greet_message"><aside class="declaration">proc </aside>greet_message<aside>(/<a href="mob.html">mob</a>/antagonist) 
+        
+    
+            <a href="https://github.com/Jolly-66/JollyStation/blob/2a76d5e432d97c9c91e36e378dc4963140fed4fa/jollystation_modules/code/modules/antagonists/_common/advanced_antag.dm#L56">
+        <img src="git.png" width="16" height="16" title="jollystation_modules&#x2F;code&#x2F;modules&#x2F;antagonists&#x2F;_common&#x2F;advanced_antag.dm 56"/></a></aside>
+        </h3>
+        <p>Only giving them one objective as a reminder - &quot;Set your goals&quot;. Only shows up in their memory.
+Greet the antagonist with some text after spawning.
+antagonist - the mob being greeted, the antagonist.</p><h3 id="proc/greet_message_three"><aside class="declaration">proc </aside>greet_message_three<aside>(/<a href="mob.html">mob</a>/antagonist) 
+        
+    
+            <a href="https://github.com/Jolly-66/JollyStation/blob/2a76d5e432d97c9c91e36e378dc4963140fed4fa/jollystation_modules/code/modules/antagonists/_common/advanced_antag.dm#L69">
+        <img src="git.png" width="16" height="16" title="jollystation_modules&#x2F;code&#x2F;modules&#x2F;antagonists&#x2F;_common&#x2F;advanced_antag.dm 69"/></a></aside>
+        </h3>
+        <p>Give them a short guide on how to use the goal panel, and what all the buttons do.
+antagonist - the mob being greeted, the antagonist.</p><h3 id="proc/greet_message_two"><aside class="declaration">proc </aside>greet_message_two<aside>(/<a href="mob.html">mob</a>/antagonist) 
+        
+    
+            <a href="https://github.com/Jolly-66/JollyStation/blob/2a76d5e432d97c9c91e36e378dc4963140fed4fa/jollystation_modules/code/modules/antagonists/_common/advanced_antag.dm#L63">
+        <img src="git.png" width="16" height="16" title="jollystation_modules&#x2F;code&#x2F;modules&#x2F;antagonists&#x2F;_common&#x2F;advanced_antag.dm 63"/></a></aside>
+        </h3>
+        <p>Give them details on what their role actually means to them, then move to greet_three after 3 seconds.
+antagonist - the mob being greeted, the antagonist.</p><h3 id="proc/log_goals_on_finalize"><aside class="declaration">proc </aside>log_goals_on_finalize<aside>() 
+        
+    
+            <a href="https://github.com/Jolly-66/JollyStation/blob/2a76d5e432d97c9c91e36e378dc4963140fed4fa/jollystation_modules/code/modules/antagonists/_common/advanced_antag.dm#L132">
+        <img src="git.png" width="16" height="16" title="jollystation_modules&#x2F;code&#x2F;modules&#x2F;antagonists&#x2F;_common&#x2F;advanced_antag.dm 132"/></a></aside>
+        </h3>
+        <p>Miscellaneous logging for the antagonist's goals after they finalize them.
+Extend this proc for adding in extra logging to an antagonist.</p><h3 id="proc/modify_antag_points"><aside class="declaration">proc </aside>modify_antag_points<aside>() 
+        
+    
+            <a href="https://github.com/Jolly-66/JollyStation/blob/2a76d5e432d97c9c91e36e378dc4963140fed4fa/jollystation_modules/code/modules/antagonists/_common/advanced_antag.dm#L107">
+        <img src="git.png" width="16" height="16" title="jollystation_modules&#x2F;code&#x2F;modules&#x2F;antagonists&#x2F;_common&#x2F;advanced_antag.dm 107"/></a></aside>
+        </h3>
+        <p>Modify the traitor's starting_points (TC, processing points, etc) based on their goals's intensity levels.</p><h3 id="proc/post_finalize_actions"><aside class="declaration">proc </aside>post_finalize_actions<aside>() 
+        
+    
+            <a href="https://github.com/Jolly-66/JollyStation/blob/2a76d5e432d97c9c91e36e378dc4963140fed4fa/jollystation_modules/code/modules/antagonists/_common/advanced_antag.dm#L121">
+        <img src="git.png" width="16" height="16" title="jollystation_modules&#x2F;code&#x2F;modules&#x2F;antagonists&#x2F;_common&#x2F;advanced_antag.dm 121"/></a></aside>
+        </h3>
+        <p>Actions to do after the antag finalizes their goals.</p><h3 id="proc/remove_advanced_goal"><aside class="declaration">proc </aside>remove_advanced_goal<aside>(/<a href="datum.html">datum</a>/<a href="datum/advanced_antag_goal.html">advanced_antag_goal</a>/old_goal) 
+        
+    
+            <a href="https://github.com/Jolly-66/JollyStation/blob/2a76d5e432d97c9c91e36e378dc4963140fed4fa/jollystation_modules/code/modules/antagonists/_common/advanced_antag.dm#L179">
+        <img src="git.png" width="16" height="16" title="jollystation_modules&#x2F;code&#x2F;modules&#x2F;antagonists&#x2F;_common&#x2F;advanced_antag.dm 179"/></a></aside>
+        </h3>
+        <p>Remove a goal from our lazylist and qdel it
+old_goal - reference to the goal we're removing</p><h3 id="proc/set_backstory"><aside class="declaration">proc </aside>set_backstory<aside>(backstory) 
+        
+    
+            <a href="https://github.com/Jolly-66/JollyStation/blob/2a76d5e432d97c9c91e36e378dc4963140fed4fa/jollystation_modules/code/modules/antagonists/_common/advanced_antag.dm#L169">
+        <img src="git.png" width="16" height="16" title="jollystation_modules&#x2F;code&#x2F;modules&#x2F;antagonists&#x2F;_common&#x2F;advanced_antag.dm 169"/></a></aside>
+        </h3>
+        <p>Sanitize and set our backstory
+backstory - the backstory we're changing this to</p><h3 id="proc/set_employer"><aside class="declaration">proc </aside>set_employer<aside>(employer) 
+        
+    
+            <a href="https://github.com/Jolly-66/JollyStation/blob/2a76d5e432d97c9c91e36e378dc4963140fed4fa/jollystation_modules/code/modules/antagonists/_common/advanced_antag.dm#L164">
+        <img src="git.png" width="16" height="16" title="jollystation_modules&#x2F;code&#x2F;modules&#x2F;antagonists&#x2F;_common&#x2F;advanced_antag.dm 164"/></a></aside>
+        </h3>
+        <p>Sanitize and set our employer
+employer - the employer we're changing this to</p><h3 id="proc/set_name"><aside class="declaration">proc </aside>set_name<aside>(name) 
+        
+    
+            <a href="https://github.com/Jolly-66/JollyStation/blob/2a76d5e432d97c9c91e36e378dc4963140fed4fa/jollystation_modules/code/modules/antagonists/_common/advanced_antag.dm#L159">
+        <img src="git.png" width="16" height="16" title="jollystation_modules&#x2F;code&#x2F;modules&#x2F;antagonists&#x2F;_common&#x2F;advanced_antag.dm 159"/></a></aside>
+        </h3>
+        <p>Saniztize and set our name.
+name - the name we're changing this to</p><h3 id="proc/setup_advanced_antag"><aside class="declaration">proc </aside>setup_advanced_antag<aside>() 
+        
+    
+            <a href="https://github.com/Jolly-66/JollyStation/blob/2a76d5e432d97c9c91e36e378dc4963140fed4fa/jollystation_modules/code/modules/antagonists/_common/advanced_antag.dm#L41">
+        <img src="git.png" width="16" height="16" title="jollystation_modules&#x2F;code&#x2F;modules&#x2F;antagonists&#x2F;_common&#x2F;advanced_antag.dm 41"/></a></aside>
+        </h3>
+        <p>Give the antagonist the verb to open their goal panel.</p></main>
+<footer>
+    jollystation.dme
+    <a href="https://github.com/Jolly-66/JollyStation/tree/2a76d5e432d97c9c91e36e378dc4963140fed4fa">2a76d5e</a>
+        (master) &mdash; <a href="https://github.com/SpaceManiac/SpacemanDMM/blob/master/src/dmdoc/README.md">dmdoc 1.4.0</a></footer>
+</body>
+</html>

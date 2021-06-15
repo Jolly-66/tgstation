@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <base href="../../../" />
+    <link rel="stylesheet" href="dmdoc.css" />
+    <title>&#x2F;datum&#x2F;eldritch_knowledge&#x2F;spell&#x2F;basic - &#x2F;tg&#x2F; Station 13</title>
+</head>
+<body>
+<header>
+    <a href="index.html">&#x2F;tg&#x2F; Station 13</a> -
+    <a href="index.html#modules">Modules</a> -
+    <a href="index.html#types">Types</a>
+ &mdash; <a href="datum/eldritch_knowledge/spell/basic.html#proc">Proc Details</a></header>
+<main>
+<h1>basic <aside>/<a href="datum.html">datum</a>/<a href="datum/eldritch_knowledge.html">eldritch_knowledge</a>/<a href="datum/eldritch_knowledge/spell/basic.html">spell/basic</a></aside>
+        
+    
+            <a href="https://github.com/Jolly-66/JollyStation/blob/2a76d5e432d97c9c91e36e378dc4963140fed4fa/code/modules/antagonists/eldritch_cult/eldritch_knowledge.dm#L236">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;antagonists&#x2F;eldritch_cult&#x2F;eldritch_knowledge.dm 236"/></a></h1>
+
+<p>Base lore</p><table class="summary" cellspacing="0"><tr><td colspan="2"><h2>Procs</h2></td></tr>
+            <tr><th><a href="datum/eldritch_knowledge/spell/basic.html#proc/after_helgrasp_ends">after_helgrasp_ends</a></th><td>This proc is called after helgrasp exits the target's system.</td></tr>
+            <tr><th><a href="datum/eldritch_knowledge/spell/basic.html#proc/after_return_dead_target">after_return_dead_target</a></th><td>This proc is called from [return_target] if the target returns dead.</td></tr>
+            <tr><th><a href="datum/eldritch_knowledge/spell/basic.html#proc/after_return_live_target">after_return_live_target</a></th><td>Teleport them to a random z level
+This proc is called from [return_target] if the target returns alive.</td></tr>
+            <tr><th><a href="datum/eldritch_knowledge/spell/basic.html#proc/after_target_awaken">after_target_awaken</a></th><td>This proc is called after the target wakes up from the initial sleep.</td></tr>
+            <tr><th><a href="datum/eldritch_knowledge/spell/basic.html#proc/after_target_sleep">after_target_sleep</a></th><td>This proc is called after the target falls asleep.
+Teleport them to the facility</td></tr>
+            <tr><th><a href="datum/eldritch_knowledge/spell/basic.html#proc/cleanup_atoms">cleanup_atoms</a></th><td>NON-MODULE CHANGE
+NON-MODULE CHANGE END</td></tr>
+            <tr><th><a href="datum/eldritch_knowledge/spell/basic.html#proc/return_target">return_target</a></th><td>This proc is called after a set time OR after they die, to return the target to the station.</td></tr>
+            <tr><th><a href="datum/eldritch_knowledge/spell/basic.html#proc/sacrifice_process">sacrifice_process</a></th><td>This string of procs below is what replaces sacrificing to be something more interesting than a gib.
+Basically: You get sent to the shadow realm and are forced to dodge shadow-hands to not die.</td></tr></table><h2 id="proc">Proc Details</h2><h3 id="proc/after_helgrasp_ends"><aside class="declaration">proc </aside>after_helgrasp_ends<aside>(/<a href="mob.html">mob</a>/<a href="mob/living.html">living</a>/<a href="mob/living/carbon.html">carbon</a>/<a href="mob/living/carbon/human.html">human</a>/sac_target) 
+        
+    
+            <a href="https://github.com/Jolly-66/JollyStation/blob/2a76d5e432d97c9c91e36e378dc4963140fed4fa/jollystation_modules/code/modules/antagonists/advanced_heretic/eldritch_knowledge.dm#L91">
+        <img src="git.png" width="16" height="16" title="jollystation_modules&#x2F;code&#x2F;modules&#x2F;antagonists&#x2F;advanced_heretic&#x2F;eldritch_knowledge.dm 91"/></a></aside>
+        </h3>
+        <p>This proc is called after helgrasp exits the target's system.</p><h3 id="proc/after_return_dead_target"><aside class="declaration">proc </aside>after_return_dead_target<aside>(/<a href="mob.html">mob</a>/<a href="mob/living.html">living</a>/<a href="mob/living/carbon.html">carbon</a>/<a href="mob/living/carbon/human.html">human</a>/sac_target, /<a href="turf.html">turf</a>/landing_turf) 
+        
+    
+            <a href="https://github.com/Jolly-66/JollyStation/blob/2a76d5e432d97c9c91e36e378dc4963140fed4fa/jollystation_modules/code/modules/antagonists/advanced_heretic/eldritch_knowledge.dm#L149">
+        <img src="git.png" width="16" height="16" title="jollystation_modules&#x2F;code&#x2F;modules&#x2F;antagonists&#x2F;advanced_heretic&#x2F;eldritch_knowledge.dm 149"/></a></aside>
+        </h3>
+        <p>This proc is called from [return_target] if the target returns dead.</p><h3 id="proc/after_return_live_target"><aside class="declaration">proc </aside>after_return_live_target<aside>(/<a href="mob.html">mob</a>/<a href="mob/living.html">living</a>/<a href="mob/living/carbon.html">carbon</a>/<a href="mob/living/carbon/human.html">human</a>/sac_target, /<a href="turf.html">turf</a>/landing_turf) 
+        
+    
+            <a href="https://github.com/Jolly-66/JollyStation/blob/2a76d5e432d97c9c91e36e378dc4963140fed4fa/jollystation_modules/code/modules/antagonists/advanced_heretic/eldritch_knowledge.dm#L130">
+        <img src="git.png" width="16" height="16" title="jollystation_modules&#x2F;code&#x2F;modules&#x2F;antagonists&#x2F;advanced_heretic&#x2F;eldritch_knowledge.dm 130"/></a></aside>
+        </h3>
+        <p>Teleport them to a random z level
+This proc is called from [return_target] if the target returns alive.</p><h3 id="proc/after_target_awaken"><aside class="declaration">proc </aside>after_target_awaken<aside>(/<a href="mob.html">mob</a>/<a href="mob/living.html">living</a>/<a href="mob/living/carbon.html">carbon</a>/<a href="mob/living/carbon/human.html">human</a>/sac_target) 
+        
+    
+            <a href="https://github.com/Jolly-66/JollyStation/blob/2a76d5e432d97c9c91e36e378dc4963140fed4fa/jollystation_modules/code/modules/antagonists/advanced_heretic/eldritch_knowledge.dm#L64">
+        <img src="git.png" width="16" height="16" title="jollystation_modules&#x2F;code&#x2F;modules&#x2F;antagonists&#x2F;advanced_heretic&#x2F;eldritch_knowledge.dm 64"/></a></aside>
+        </h3>
+        <p>This proc is called after the target wakes up from the initial sleep.</p><h3 id="proc/after_target_sleep"><aside class="declaration">proc </aside>after_target_sleep<aside>(/<a href="mob.html">mob</a>/<a href="mob/living.html">living</a>/<a href="mob/living/carbon.html">carbon</a>/<a href="mob/living/carbon/human.html">human</a>/sac_target) 
+        
+    
+            <a href="https://github.com/Jolly-66/JollyStation/blob/2a76d5e432d97c9c91e36e378dc4963140fed4fa/jollystation_modules/code/modules/antagonists/advanced_heretic/eldritch_knowledge.dm#L44">
+        <img src="git.png" width="16" height="16" title="jollystation_modules&#x2F;code&#x2F;modules&#x2F;antagonists&#x2F;advanced_heretic&#x2F;eldritch_knowledge.dm 44"/></a></aside>
+        </h3>
+        <p>This proc is called after the target falls asleep.
+Teleport them to the facility</p><h3 id="proc/cleanup_atoms"><aside class="parent"><a title="/datum/eldritch_knowledge" href="datum/eldritch_knowledge.html#proc/cleanup_atoms">&uarr;</a></aside>cleanup_atoms<aside>(/list/atoms) 
+        
+    
+            <a href="https://github.com/Jolly-66/JollyStation/blob/2a76d5e432d97c9c91e36e378dc4963140fed4fa/code/modules/antagonists/eldritch_cult/eldritch_knowledge.dm#L308">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;antagonists&#x2F;eldritch_cult&#x2F;eldritch_knowledge.dm 308"/></a></aside>
+        </h3>
+        <p>NON-MODULE CHANGE
+NON-MODULE CHANGE END</p><h3 id="proc/return_target"><aside class="declaration">proc </aside>return_target<aside>(/<a href="mob.html">mob</a>/<a href="mob/living.html">living</a>/<a href="mob/living/carbon.html">carbon</a>/<a href="mob/living/carbon/human.html">human</a>/sac_target, gibbed, /<a href="mob.html">mob</a>/<a href="mob/living.html">living</a>/heretic) 
+        
+    
+            <a href="https://github.com/Jolly-66/JollyStation/blob/2a76d5e432d97c9c91e36e378dc4963140fed4fa/jollystation_modules/code/modules/antagonists/advanced_heretic/eldritch_knowledge.dm#L96">
+        <img src="git.png" width="16" height="16" title="jollystation_modules&#x2F;code&#x2F;modules&#x2F;antagonists&#x2F;advanced_heretic&#x2F;eldritch_knowledge.dm 96"/></a></aside>
+        </h3>
+        <p>This proc is called after a set time OR after they die, to return the target to the station.</p><h3 id="proc/sacrifice_process"><aside class="declaration">proc </aside>sacrifice_process<aside>(/<a href="mob.html">mob</a>/<a href="mob/living.html">living</a>/<a href="mob/living/carbon.html">carbon</a>/<a href="mob/living/carbon/human.html">human</a>/sac_target, /<a href="mob.html">mob</a>/<a href="mob/living.html">living</a>/heretic) 
+        
+    
+            <a href="https://github.com/Jolly-66/JollyStation/blob/2a76d5e432d97c9c91e36e378dc4963140fed4fa/jollystation_modules/code/modules/antagonists/advanced_heretic/eldritch_knowledge.dm#L17">
+        <img src="git.png" width="16" height="16" title="jollystation_modules&#x2F;code&#x2F;modules&#x2F;antagonists&#x2F;advanced_heretic&#x2F;eldritch_knowledge.dm 17"/></a></aside>
+        </h3>
+        <p>This string of procs below is what replaces sacrificing to be something more interesting than a gib.
+Basically: You get sent to the shadow realm and are forced to dodge shadow-hands to not die.</p></main>
+<footer>
+    jollystation.dme
+    <a href="https://github.com/Jolly-66/JollyStation/tree/2a76d5e432d97c9c91e36e378dc4963140fed4fa">2a76d5e</a>
+        (master) &mdash; <a href="https://github.com/SpaceManiac/SpacemanDMM/blob/master/src/dmdoc/README.md">dmdoc 1.4.0</a></footer>
+</body>
+</html>

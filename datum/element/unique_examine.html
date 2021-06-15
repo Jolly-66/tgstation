@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <base href="../../" />
+    <link rel="stylesheet" href="dmdoc.css" />
+    <title>&#x2F;datum&#x2F;element&#x2F;unique_examine - &#x2F;tg&#x2F; Station 13</title>
+</head>
+<body>
+<header>
+    <a href="index.html">&#x2F;tg&#x2F; Station 13</a> -
+    <a href="index.html#modules">Modules</a> -
+    <a href="index.html#types">Types</a>
+ &mdash; <a href="datum/element/unique_examine.html#var">Var Details</a> - <a href="datum/element/unique_examine.html#proc">Proc Details</a></header>
+<main>
+<h1>unique_examine <aside>/<a href="datum.html">datum</a>/<a href="datum/element.html">element</a>/<a href="datum/element/unique_examine.html">unique_examine</a></aside>
+        
+    
+            <a href="https://github.com/Jolly-66/JollyStation/blob/2a76d5e432d97c9c91e36e378dc4963140fed4fa/jollystation_modules/code/datums/elements/unique_examine.dm#L18">
+        <img src="git.png" width="16" height="16" title="jollystation_modules&#x2F;code&#x2F;datums&#x2F;elements&#x2F;unique_examine.dm 18"/></a></h1>
+
+<p>The multiplier on the shuttle's timer
+Security level (for timer multiplier)
+Unique examine element. Refactored from the skyrat module by Gandalf2k15.
+Attach to an atom with some parameters to give it unique text when examined.</p><table class="summary" cellspacing="0"><tr><td colspan="2"><h2>Vars</h2></td></tr>
+            <tr><th><a href="datum/element/unique_examine.html#var/special_desc">special_desc</a></th><td>The special description that is triggered when special_desc_requirements are met. Make sure you set the correct EXAMINE_CHECK!</td></tr>
+            <tr><th><a href="datum/element/unique_examine.html#var/special_desc_affiliation">special_desc_affiliation</a></th><td>The special affiliation type, basically overrides the &quot;Syndicate Affiliation&quot; for SYNDICATE check types. It will show whatever organisation you put here instead of &quot;Syndicate Affiliation&quot;</td></tr>
+            <tr><th><a href="datum/element/unique_examine.html#var/special_desc_list">special_desc_list</a></th><td>A list of everything we may want to check based on an examine check.
+This can be a list of ROLES, JOBS, FACTIONS, SKILL CHIPS, or TRAITS.</td></tr>
+            <tr><th><a href="datum/element/unique_examine.html#var/special_desc_requirement">special_desc_requirement</a></th><td>The requirement setting for special descriptions. See examine_defines.dm for more info.</td></tr>
+            <tr><th><a href="datum/element/unique_examine.html#var/toy">toy</a></th><td>If this is a toy. Toys display a message if you don't succeed the check.</td></tr><tr><td colspan="2"><h2>Procs</h2></td></tr>
+            <tr><th><a href="datum/element/unique_examine.html#proc/Detach">Detach</a></th><td>Init our vars
+If we were passed a examine check that checks the special list, make sure the special list is filled too</td></tr></table>
+    <h2 id="var">Var Details</h2><h3 id="var/special_desc"><aside class="declaration">var </aside>special_desc
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Jolly-66/JollyStation/blob/2a76d5e432d97c9c91e36e378dc4963140fed4fa/jollystation_modules/code/datums/elements/unique_examine.dm#L24">
+        <img src="git.png" width="16" height="16" title="jollystation_modules&#x2F;code&#x2F;datums&#x2F;elements&#x2F;unique_examine.dm 24"/></a></h3>
+        <p>The special description that is triggered when special_desc_requirements are met. Make sure you set the correct EXAMINE_CHECK!</p><h3 id="var/special_desc_affiliation"><aside class="declaration">var </aside>special_desc_affiliation
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Jolly-66/JollyStation/blob/2a76d5e432d97c9c91e36e378dc4963140fed4fa/jollystation_modules/code/datums/elements/unique_examine.dm#L26">
+        <img src="git.png" width="16" height="16" title="jollystation_modules&#x2F;code&#x2F;datums&#x2F;elements&#x2F;unique_examine.dm 26"/></a></h3>
+        <p>The special affiliation type, basically overrides the &quot;Syndicate Affiliation&quot; for SYNDICATE check types. It will show whatever organisation you put here instead of &quot;Syndicate Affiliation&quot;</p><h3 id="var/special_desc_list"><aside class="declaration">var </aside>special_desc_list
+            <aside>&ndash; /list</aside>
+        
+    
+            <a href="https://github.com/Jolly-66/JollyStation/blob/2a76d5e432d97c9c91e36e378dc4963140fed4fa/jollystation_modules/code/datums/elements/unique_examine.dm#L29">
+        <img src="git.png" width="16" height="16" title="jollystation_modules&#x2F;code&#x2F;datums&#x2F;elements&#x2F;unique_examine.dm 29"/></a></h3>
+        <p>A list of everything we may want to check based on an examine check.
+This can be a list of ROLES, JOBS, FACTIONS, SKILL CHIPS, or TRAITS.</p><h3 id="var/special_desc_requirement"><aside class="declaration">var </aside>special_desc_requirement
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Jolly-66/JollyStation/blob/2a76d5e432d97c9c91e36e378dc4963140fed4fa/jollystation_modules/code/datums/elements/unique_examine.dm#L22">
+        <img src="git.png" width="16" height="16" title="jollystation_modules&#x2F;code&#x2F;datums&#x2F;elements&#x2F;unique_examine.dm 22"/></a></h3>
+        <p>The requirement setting for special descriptions. See examine_defines.dm for more info.</p><h3 id="var/toy"><aside class="declaration">var </aside>toy
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Jolly-66/JollyStation/blob/2a76d5e432d97c9c91e36e378dc4963140fed4fa/jollystation_modules/code/datums/elements/unique_examine.dm#L31">
+        <img src="git.png" width="16" height="16" title="jollystation_modules&#x2F;code&#x2F;datums&#x2F;elements&#x2F;unique_examine.dm 31"/></a></h3>
+        <p>If this is a toy. Toys display a message if you don't succeed the check.</p><h2 id="proc">Proc Details</h2><h3 id="proc/Detach"><aside class="parent"><a title="/datum/element" href="datum/element.html#proc/Detach">&uarr;</a></aside>Detach<aside>(/<a href="atom.html">atom</a>/thing) 
+        
+    
+            <a href="https://github.com/Jolly-66/JollyStation/blob/2a76d5e432d97c9c91e36e378dc4963140fed4fa/jollystation_modules/code/datums/elements/unique_examine.dm#L58">
+        <img src="git.png" width="16" height="16" title="jollystation_modules&#x2F;code&#x2F;datums&#x2F;elements&#x2F;unique_examine.dm 58"/></a></aside>
+        </h3>
+        <p>Init our vars
+If we were passed a examine check that checks the special list, make sure the special list is filled too</p></main>
+<footer>
+    jollystation.dme
+    <a href="https://github.com/Jolly-66/JollyStation/tree/2a76d5e432d97c9c91e36e378dc4963140fed4fa">2a76d5e</a>
+        (master) &mdash; <a href="https://github.com/SpaceManiac/SpacemanDMM/blob/master/src/dmdoc/README.md">dmdoc 1.4.0</a></footer>
+</body>
+</html>
