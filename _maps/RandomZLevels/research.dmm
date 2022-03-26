@@ -2993,8 +2993,10 @@
 /turf/open/floor/iron,
 /area/awaymission/research/interior/dorm)
 "ln" = (
+/obj/effect/turf_decal/tile/red/fourcorners,
+/obj/structure/chair/stool/directional/north,
 /turf/open/floor/iron,
-/area/space/nearstation)
+/area/awaymission/research/interior/security)
 "lo" = (
 /obj/structure/table/wood,
 /obj/structure/bedsheetbin,
@@ -3651,6 +3653,10 @@
 /obj/structure/cable,
 /turf/open/floor/iron/white,
 /area/awaymission/research/interior)
+"pF" = (
+/obj/structure/chair/stool/directional/north,
+/turf/open/floor/iron,
+/area/awaymission/research/interior/dorm)
 "pS" = (
 /obj/item/shard{
 	icon_state = "small"
@@ -3949,10 +3955,6 @@
 /mob/living/simple_animal/hostile/nanotrasen,
 /turf/open/floor/iron,
 /area/awaymission/research/interior/cryo)
-"yY" = (
-/obj/structure/chair/stool/directional/north,
-/turf/open/floor/iron,
-/area/awaymission/research/interior/dorm)
 "zn" = (
 /obj/machinery/door/airlock/maintenance_hatch{
 	req_access_txt = "12"
@@ -4180,15 +4182,15 @@
 /obj/effect/turf_decal/tile/red/fourcorners,
 /turf/open/floor/iron/white,
 /area/awaymission/research/interior/security)
-"GX" = (
-/obj/structure/chair/stool/directional/east,
-/turf/open/floor/iron,
-/area/awaymission/research/interior/dorm)
 "Ha" = (
 /obj/machinery/light/directional/west,
 /obj/effect/turf_decal/tile/purple/fourcorners,
 /turf/open/floor/iron,
 /area/awaymission/research/interior/genetics)
+"Hp" = (
+/obj/structure/chair/stool/directional/east,
+/turf/open/floor/iron,
+/area/awaymission/research/interior/dorm)
 "HD" = (
 /obj/effect/turf_decal/tile/purple/fourcorners,
 /turf/open/floor/iron/white,
@@ -4743,11 +4745,6 @@
 /obj/effect/turf_decal/tile/purple/fourcorners,
 /turf/open/floor/iron/dark,
 /area/awaymission/research/interior/genetics)
-"Ys" = (
-/obj/effect/turf_decal/tile/red/fourcorners,
-/obj/structure/chair/stool/directional/north,
-/turf/open/floor/iron,
-/area/awaymission/research/interior/security)
 "Yx" = (
 /obj/effect/mob_spawn/corpse/human/doctor{
 	brute_damage = 200
@@ -38070,7 +38067,7 @@ iX
 jn
 Jp
 kR
-yY
+pF
 kc
 iX
 lP
@@ -38841,7 +38838,7 @@ kr
 jn
 jF
 jF
-ln
+jF
 kc
 lL
 jk
@@ -39869,7 +39866,7 @@ ks
 jn
 jF
 jF
-yY
+pF
 kc
 lM
 jk
@@ -41157,8 +41154,8 @@ jF
 jF
 jF
 jF
-GX
-GX
+Hp
+Hp
 kc
 iX
 hD
@@ -46525,7 +46522,7 @@ aO
 do
 Yz
 jp
-Ys
+ln
 hF
 fr
 LX
@@ -47553,7 +47550,7 @@ aO
 do
 Yz
 jp
-Ys
+ln
 hF
 fr
 BQ
