@@ -903,7 +903,7 @@
 	},
 /area/awaymission/caves/northblock)
 "er" = (
-/obj/structure/chair/stool/directional/south,
+/obj/structure/chair/stool/directional/north,
 /turf/open/floor/plating,
 /area/awaymission/caves/bmp_asteroid)
 "es" = (
@@ -1226,7 +1226,7 @@
 	},
 /area/awaymission/caves/bmp_asteroid)
 "go" = (
-/obj/structure/chair/stool/directional/west,
+/obj/structure/chair/stool/directional/east,
 /turf/open/floor/plating{
 	initial_gas_mix = "n2=23;o2=14;TEMP=2.7"
 	},
@@ -1234,6 +1234,12 @@
 "gp" = (
 /obj/structure/table_frame,
 /turf/open/floor/plating{
+	initial_gas_mix = "n2=23;o2=14;TEMP=2.7"
+	},
+/area/awaymission/caves/bmp_asteroid)
+"gq" = (
+/obj/structure/chair/stool/directional/east,
+/turf/open/floor/iron{
 	initial_gas_mix = "n2=23;o2=14;TEMP=2.7"
 	},
 /area/awaymission/caves/bmp_asteroid)
@@ -16515,7 +16521,7 @@ fy
 gh
 bM
 go
-gI
+gq
 gw
 fH
 BK
@@ -17285,9 +17291,9 @@ bM
 fy
 dW
 fy
-gI
+gq
 gu
-gI
+gq
 dX
 bL
 bL
