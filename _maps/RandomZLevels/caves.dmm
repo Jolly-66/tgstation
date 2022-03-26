@@ -1109,7 +1109,9 @@
 /area/awaymission/caves/bmp_asteroid)
 "fJ" = (
 /obj/structure/grille,
-/turf/open/floor/plating,
+/turf/open/floor/plating{
+	initial_gas_mix = "n2=23;o2=14;TEMP=2.7"
+	},
 /area/awaymission/caves/bmp_asteroid)
 "fK" = (
 /obj/effect/decal/cleanable/cobweb,
@@ -1273,7 +1275,9 @@
 /area/awaymission/caves/bmp_asteroid)
 "gC" = (
 /obj/vehicle/sealed/mecha/working/ripley/mining,
-/turf/open/floor/iron/recharge_floor,
+/turf/open/floor/iron/recharge_floor{
+	initial_gas_mix = "n2=23;o2=14;TEMP=2.7"
+	},
 /area/awaymission/caves/bmp_asteroid)
 "gF" = (
 /obj/structure/table,
@@ -1285,7 +1289,9 @@
 /area/awaymission/caves/bmp_asteroid)
 "gG" = (
 /obj/structure/mecha_wreckage/durand,
-/turf/open/floor/iron/recharge_floor,
+/turf/open/floor/iron/recharge_floor{
+	initial_gas_mix = "n2=23;o2=14;TEMP=2.7"
+	},
 /area/awaymission/caves/bmp_asteroid)
 "gH" = (
 /obj/structure/table,
@@ -1304,17 +1310,11 @@
 	initial_gas_mix = "n2=23;o2=14;TEMP=2.7"
 	},
 /area/awaymission/caves/bmp_asteroid)
-"gK" = (
-/obj/structure/girder,
-/turf/open/floor/plating,
-/area/awaymission/caves/bmp_asteroid)
-"gL" = (
-/obj/item/stack/rods,
-/turf/open/floor/plating,
-/area/awaymission/caves/bmp_asteroid)
 "gM" = (
 /obj/structure/mecha_wreckage/ripley,
-/turf/open/floor/iron/recharge_floor,
+/turf/open/floor/iron/recharge_floor{
+	initial_gas_mix = "n2=23;o2=14;TEMP=2.7"
+	},
 /area/awaymission/caves/bmp_asteroid)
 "gN" = (
 /obj/structure/holohoop,
@@ -1531,7 +1531,9 @@
 /area/awaymission/caves/bmp_asteroid/level_four)
 "rF" = (
 /obj/machinery/light/small/directional/east,
-/turf/open/floor/plating,
+/turf/open/floor/plating{
+	initial_gas_mix = "n2=23;o2=14;TEMP=2.7"
+	},
 /area/awaymission/caves/bmp_asteroid)
 "sl" = (
 /obj/structure/spawner/mining/hivelord,
@@ -10332,13 +10334,13 @@ bL
 bL
 bL
 cx
-ej
+fy
 BK
 bM
 bM
 BK
 BK
-ej
+fy
 bM
 bM
 bM
@@ -10590,7 +10592,7 @@ bL
 bL
 cx
 cx
-ej
+fy
 BK
 bM
 BK
@@ -10847,7 +10849,7 @@ bL
 dW
 gN
 cx
-ej
+fy
 BK
 bM
 bM
@@ -11105,11 +11107,11 @@ bL
 cx
 gP
 cx
-ej
+fy
 BK
 BK
 BK
-ej
+fy
 cx
 cx
 bL
@@ -13397,7 +13399,7 @@ BK
 BK
 BK
 dW
-Aj
+fJ
 cx
 cx
 fJ
@@ -17528,8 +17530,8 @@ bL
 BK
 BK
 fH
-ej
-ej
+fy
+fy
 fH
 bM
 bM
@@ -17782,7 +17784,7 @@ bL
 bL
 bL
 dW
-gK
+fW
 dW
 dX
 fN
@@ -18039,11 +18041,11 @@ BK
 dW
 dX
 dW
-gL
-ej
-ej
+gc
+fy
+fy
 BK
-ej
+fy
 dX
 bM
 bM
@@ -18296,8 +18298,8 @@ BK
 fy
 gF
 gH
-ej
-ej
+fy
+fy
 BK
 BK
 BK
@@ -19329,7 +19331,7 @@ fy
 bM
 BK
 BL
-ej
+fy
 BK
 BK
 bL
@@ -19585,7 +19587,7 @@ gM
 gJ
 gO
 dX
-gK
+fW
 dW
 BK
 BK
