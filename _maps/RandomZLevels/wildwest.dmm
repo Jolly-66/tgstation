@@ -196,9 +196,6 @@
 /mob/living/simple_animal/hostile/syndicate/ranged/smg,
 /turf/open/misc/ironsand,
 /area/awaymission/wildwest/mines)
-"bg" = (
-/turf/closed/wall/mineral/sandstone,
-/area/space/nearstation)
 "bh" = (
 /obj/structure/closet/crate/large,
 /turf/open/floor/plating,
@@ -31937,8 +31934,8 @@ aG
 aG
 aG
 aG
-bg
-bg
+aW
+aW
 aW
 bh
 di
@@ -35251,8 +35248,8 @@ ac
 ac
 ac
 ah
-aF
-aF
+aJ
+aJ
 ah
 ah
 ah
