@@ -3269,11 +3269,11 @@
 	},
 /area/awaymission/undergroundoutpost45/crew_quarters)
 "hL" = (
-/obj/structure/chair/stool/directional/south,
 /obj/effect/turf_decal/tile/bar,
 /obj/effect/turf_decal/tile/bar{
 	dir = 1
 	},
+/obj/structure/chair/stool/directional/north,
 /turf/open/floor/iron{
 	heat_capacity = 1e+006
 	},
@@ -3503,12 +3503,12 @@
 	},
 /area/awaymission/undergroundoutpost45/crew_quarters)
 "in" = (
-/obj/structure/chair/stool/directional/west,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/turf_decal/tile/bar,
 /obj/effect/turf_decal/tile/bar{
 	dir = 1
 	},
+/obj/structure/chair/stool/directional/east,
 /turf/open/floor/iron{
 	heat_capacity = 1e+006
 	},
@@ -12439,11 +12439,11 @@
 	},
 /area/awaymission/undergroundoutpost45/central)
 "YK" = (
-/obj/structure/chair/stool/directional/west,
 /obj/effect/turf_decal/tile/bar,
 /obj/effect/turf_decal/tile/bar{
 	dir = 1
 	},
+/obj/structure/chair/stool/directional/east,
 /turf/open/floor/iron{
 	heat_capacity = 1e+006
 	},
@@ -46032,7 +46032,7 @@ YK
 in
 in
 YK
-iH
+in
 jU
 kq
 lh
