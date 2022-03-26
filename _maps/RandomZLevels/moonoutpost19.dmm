@@ -327,7 +327,7 @@
 /area/awaymission/moonoutpost19/syndicate)
 "bA" = (
 /obj/machinery/light/directional/west,
-/obj/structure/chair/stool/directional/south,
+/obj/structure/chair/stool/directional/north,
 /turf/open/floor/iron{
 	heat_capacity = 1e+006
 	},
@@ -697,7 +697,7 @@
 	},
 /area/awaymission/moonoutpost19/syndicate)
 "cj" = (
-/obj/structure/chair/stool/directional/south,
+/obj/structure/chair/stool/directional/north,
 /turf/open/floor/plating{
 	heat_capacity = 1e+006;
 	icon_state = "platingdmg3"
@@ -3755,7 +3755,7 @@
 	},
 /area/awaymission/moonoutpost19/arrivals)
 "jl" = (
-/obj/structure/chair/stool/directional/west,
+/obj/structure/chair/stool/directional/east,
 /turf/open/floor/carpet{
 	heat_capacity = 1e+006
 	},
@@ -6026,8 +6026,8 @@
 	},
 /area/awaymission/moonoutpost19/syndicate)
 "zF" = (
-/obj/structure/chair/stool/directional/west,
 /obj/machinery/computer/security/telescreen/entertainment/directional/north,
+/obj/structure/chair/stool/directional/east,
 /turf/open/floor/carpet{
 	heat_capacity = 1e+006
 	},
