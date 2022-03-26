@@ -2853,10 +2853,10 @@
 /turf/open/floor/iron/white,
 /area/awaymission/research/interior/medbay)
 "kQ" = (
-/obj/structure/chair/stool/directional/west,
 /obj/effect/turf_decal/siding/yellow{
 	dir = 8
 	},
+/obj/structure/chair/stool/directional/east,
 /turf/open/floor/iron,
 /area/awaymission/research/interior/dorm)
 "kR" = (
@@ -3059,8 +3059,8 @@
 /turf/open/floor/iron,
 /area/awaymission/research/interior/dorm)
 "lA" = (
-/obj/structure/chair/stool/directional/south,
 /obj/effect/turf_decal/siding/yellow,
+/obj/structure/chair/stool/directional/north,
 /turf/open/floor/iron,
 /area/awaymission/research/interior/dorm)
 "lB" = (
@@ -3709,8 +3709,8 @@
 /turf/open/floor/iron/white,
 /area/awaymission/research/interior/security)
 "qZ" = (
-/obj/structure/chair/stool/directional/west,
 /obj/effect/turf_decal/tile/blue/fourcorners,
+/obj/structure/chair/stool/directional/east,
 /turf/open/floor/iron/white,
 /area/awaymission/research/interior/medbay)
 "rh" = (
@@ -3949,6 +3949,10 @@
 /mob/living/simple_animal/hostile/nanotrasen,
 /turf/open/floor/iron,
 /area/awaymission/research/interior/cryo)
+"yY" = (
+/obj/structure/chair/stool/directional/north,
+/turf/open/floor/iron,
+/area/awaymission/research/interior/dorm)
 "zn" = (
 /obj/machinery/door/airlock/maintenance_hatch{
 	req_access_txt = "12"
@@ -4176,6 +4180,10 @@
 /obj/effect/turf_decal/tile/red/fourcorners,
 /turf/open/floor/iron/white,
 /area/awaymission/research/interior/security)
+"GX" = (
+/obj/structure/chair/stool/directional/east,
+/turf/open/floor/iron,
+/area/awaymission/research/interior/dorm)
 "Ha" = (
 /obj/machinery/light/directional/west,
 /obj/effect/turf_decal/tile/purple/fourcorners,
@@ -4735,6 +4743,11 @@
 /obj/effect/turf_decal/tile/purple/fourcorners,
 /turf/open/floor/iron/dark,
 /area/awaymission/research/interior/genetics)
+"Ys" = (
+/obj/effect/turf_decal/tile/red/fourcorners,
+/obj/structure/chair/stool/directional/north,
+/turf/open/floor/iron,
+/area/awaymission/research/interior/security)
 "Yx" = (
 /obj/effect/mob_spawn/corpse/human/doctor{
 	brute_damage = 200
@@ -38057,7 +38070,7 @@ iX
 jn
 Jp
 kR
-zs
+yY
 kc
 iX
 lP
@@ -39856,7 +39869,7 @@ ks
 jn
 jF
 jF
-zs
+yY
 kc
 lM
 jk
@@ -41144,8 +41157,8 @@ jF
 jF
 jF
 jF
-wa
-wa
+GX
+GX
 kc
 iX
 hD
@@ -46512,7 +46525,7 @@ aO
 do
 Yz
 jp
-si
+Ys
 hF
 fr
 LX
@@ -47540,7 +47553,7 @@ aO
 do
 Yz
 jp
-si
+Ys
 hF
 fr
 BQ
