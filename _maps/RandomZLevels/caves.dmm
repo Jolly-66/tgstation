@@ -1153,7 +1153,9 @@
 "fY" = (
 /obj/structure/table,
 /obj/machinery/microwave,
-/turf/open/floor/iron,
+/turf/open/floor/iron{
+	initial_gas_mix = "n2=23;o2=14;TEMP=2.7"
+	},
 /area/awaymission/caves/bmp_asteroid)
 "ga" = (
 /obj/structure/ladder/unbreakable{
@@ -1166,7 +1168,9 @@
 /area/awaymission/caves/bmp_asteroid)
 "gb" = (
 /obj/structure/closet/secure_closet/freezer/kitchen,
-/turf/open/floor/iron,
+/turf/open/floor/iron{
+	initial_gas_mix = "n2=23;o2=14;TEMP=2.7"
+	},
 /area/awaymission/caves/bmp_asteroid)
 "gc" = (
 /obj/item/stack/rods,
@@ -1177,7 +1181,9 @@
 "gf" = (
 /obj/structure/table/reinforced,
 /obj/item/reagent_containers/food/drinks/drinkingglass,
-/turf/open/floor/iron,
+/turf/open/floor/iron{
+	initial_gas_mix = "n2=23;o2=14;TEMP=2.7"
+	},
 /area/awaymission/caves/bmp_asteroid)
 "gg" = (
 /obj/structure/table/reinforced,
@@ -1203,15 +1209,21 @@
 /obj/machinery/door/airlock/mining{
 	name = "Kitchen"
 	},
-/turf/open/floor/iron,
+/turf/open/floor/iron{
+	initial_gas_mix = "n2=23;o2=14;TEMP=2.7"
+	},
 /area/awaymission/caves/bmp_asteroid)
 "gl" = (
 /obj/item/plate,
-/turf/open/floor/iron,
+/turf/open/floor/iron{
+	initial_gas_mix = "n2=23;o2=14;TEMP=2.7"
+	},
 /area/awaymission/caves/bmp_asteroid)
 "gm" = (
 /obj/effect/decal/cleanable/blood/old,
-/turf/open/floor/iron,
+/turf/open/floor/iron{
+	initial_gas_mix = "n2=23;o2=14;TEMP=2.7"
+	},
 /area/awaymission/caves/bmp_asteroid)
 "go" = (
 /obj/structure/chair/stool/directional/west,
@@ -1225,41 +1237,51 @@
 	initial_gas_mix = "n2=23;o2=14;TEMP=2.7"
 	},
 /area/awaymission/caves/bmp_asteroid)
-"gq" = (
-/obj/structure/chair/stool/directional/west,
-/turf/open/floor/iron,
-/area/awaymission/caves/bmp_asteroid)
 "gr" = (
 /obj/structure/table,
 /obj/item/kitchen/fork,
-/turf/open/floor/iron,
+/turf/open/floor/iron{
+	initial_gas_mix = "n2=23;o2=14;TEMP=2.7"
+	},
 /area/awaymission/caves/bmp_asteroid)
 "gt" = (
 /obj/structure/table_frame,
 /obj/item/stack/sheet/iron,
-/turf/open/floor/iron,
+/turf/open/floor/iron{
+	initial_gas_mix = "n2=23;o2=14;TEMP=2.7"
+	},
 /area/awaymission/caves/bmp_asteroid)
 "gu" = (
 /obj/item/stack/rods,
-/turf/open/floor/iron,
+/turf/open/floor/iron{
+	initial_gas_mix = "n2=23;o2=14;TEMP=2.7"
+	},
 /area/awaymission/caves/bmp_asteroid)
 "gv" = (
 /obj/structure/table_frame,
-/turf/open/floor/iron,
+/turf/open/floor/iron{
+	initial_gas_mix = "n2=23;o2=14;TEMP=2.7"
+	},
 /area/awaymission/caves/bmp_asteroid)
 "gw" = (
 /obj/structure/reagent_dispensers/beerkeg,
-/turf/open/floor/iron,
+/turf/open/floor/iron{
+	initial_gas_mix = "n2=23;o2=14;TEMP=2.7"
+	},
 /area/awaymission/caves/bmp_asteroid)
 "gx" = (
 /obj/structure/table,
 /obj/item/kitchen/fork,
 /obj/item/plate,
-/turf/open/floor/iron,
+/turf/open/floor/iron{
+	initial_gas_mix = "n2=23;o2=14;TEMP=2.7"
+	},
 /area/awaymission/caves/bmp_asteroid)
 "gy" = (
 /obj/item/reagent_containers/food/drinks/drinkingglass,
-/turf/open/floor/iron,
+/turf/open/floor/iron{
+	initial_gas_mix = "n2=23;o2=14;TEMP=2.7"
+	},
 /area/awaymission/caves/bmp_asteroid)
 "gz" = (
 /obj/machinery/door/airlock/external/ruin{
@@ -1283,7 +1305,7 @@
 /obj/structure/table,
 /obj/item/storage/toolbox/mechanical,
 /obj/item/clothing/glasses/material,
-/turf/open/floor/iron{
+/turf/open/floor/plating{
 	initial_gas_mix = "n2=23;o2=14;TEMP=2.7"
 	},
 /area/awaymission/caves/bmp_asteroid)
@@ -1297,7 +1319,9 @@
 /obj/structure/table,
 /obj/item/mecha_parts/mecha_equipment/drill/diamonddrill,
 /obj/item/paper/fluff/awaymissions/caves/mech_notice,
-/turf/open/floor/plating,
+/turf/open/floor/plating{
+	initial_gas_mix = "n2=23;o2=14;TEMP=2.7"
+	},
 /area/awaymission/caves/bmp_asteroid)
 "gI" = (
 /obj/structure/chair/stool/directional/west,
@@ -15719,8 +15743,8 @@ fY
 gb
 dX
 gl
-ev
-ev
+gJ
+gJ
 fN
 ej
 gz
@@ -15973,11 +15997,11 @@ bM
 bM
 fW
 fy
-ev
+gJ
 gf
 gm
-ev
-ev
+gJ
+gJ
 fN
 ej
 gz
@@ -16233,7 +16257,7 @@ fy
 gc
 gg
 fy
-ev
+gJ
 gm
 dW
 dX
@@ -16491,7 +16515,7 @@ fy
 gh
 bM
 go
-gq
+gI
 gw
 fH
 BK
@@ -17005,7 +17029,7 @@ fy
 gi
 fy
 fy
-gq
+gI
 gy
 fH
 Mq
@@ -17261,9 +17285,9 @@ bM
 fy
 dW
 fy
-gq
+gI
 gu
-gq
+gI
 dX
 bL
 bL
@@ -17517,7 +17541,7 @@ bM
 bM
 fy
 gj
-ev
+gJ
 gr
 gv
 gt
@@ -17774,10 +17798,10 @@ bM
 bM
 fy
 fW
-ev
-gq
+gJ
+gI
 gm
-gq
+gI
 dW
 bL
 bL
