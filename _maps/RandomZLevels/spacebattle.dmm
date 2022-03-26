@@ -216,7 +216,7 @@
 	installation = /obj/item/gun/energy/lasercannon;
 	set_obj_flags = "EMAGGED"
 	},
-/turf/open/floor/plating,
+/turf/open/floor/plating/airless,
 /area/awaymission/spacebattle/syndicate2)
 "bd" = (
 /obj/machinery/door/unpowered/shuttle,
@@ -306,7 +306,7 @@
 	installation = /obj/item/gun/energy/lasercannon;
 	set_obj_flags = "EMAGGED"
 	},
-/turf/open/floor/plating,
+/turf/open/floor/plating/airless,
 /area/awaymission/spacebattle/syndicate3)
 "bA" = (
 /obj/structure/chair,
@@ -324,7 +324,7 @@
 	installation = /obj/item/gun/energy/lasercannon;
 	set_obj_flags = "EMAGGED"
 	},
-/turf/open/floor/plating,
+/turf/open/floor/plating/airless,
 /area/awaymission/spacebattle/syndicate1)
 "bH" = (
 /turf/closed/wall/mineral/plastitanium{
