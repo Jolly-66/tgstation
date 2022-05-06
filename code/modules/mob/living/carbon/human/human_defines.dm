@@ -64,12 +64,11 @@
 	/// What types of mobs are allowed to ride/buckle to this mob
 	var/static/list/can_ride_typecache = typecacheof(list(/mob/living/carbon/human, /mob/living/simple_animal/slime, /mob/living/simple_animal/parrot))
 	var/lastpuke = 0
-	var/last_fire_update
 	var/account_id
 
 	var/hardcore_survival_score = 0
 	/// Which body type to use
-	var/body_type = MALE
+	var/physique = MALE
 
 	/// How many "units of blood" we have on our hands
 	var/blood_in_hands = 0

@@ -215,7 +215,7 @@
 	if(. & EMP_PROTECT_SELF)
 		return
 	if(!COOLDOWN_FINISHED(src, severe_cooldown)) //So we cant just spam emp to kill people.
-		owner.Dizzy(10)
+		owner.set_timed_status_effect(20 SECONDS, /datum/status_effect/dizziness, only_if_higher = TRUE)
 		owner.losebreath += 10
 		COOLDOWN_START(src, severe_cooldown, 20 SECONDS)
 	if(prob(emp_vulnerability/severity)) //Chance of permanent effects
@@ -250,7 +250,7 @@
 	if(owner.health < 5 && COOLDOWN_FINISHED(src, adrenaline_cooldown))
 		COOLDOWN_START(src, adrenaline_cooldown, rand(25 SECONDS, 1 MINUTES))
 		to_chat(owner, span_userdanger("You feel yourself dying, but you refuse to give up!"))
-		owner.heal_overall_damage(15, 15, 0, BODYPART_ORGANIC)
+		owner.heal_overall_damage(15, 15, 0, BODYTYPE_ORGANIC)
 		if(owner.reagents.get_reagent_amount(/datum/reagent/medicine/ephedrine) < 20)
 			owner.reagents.add_reagent(/datum/reagent/medicine/ephedrine, 10)
 

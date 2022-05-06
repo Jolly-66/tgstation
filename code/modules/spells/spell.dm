@@ -124,7 +124,10 @@ GLOBAL_LIST_INIT(spells, typesof(/obj/effect/proc_holder/spell)) //needed for th
 	var/nonabstract_req = FALSE //spell can only be cast by mobs that are physical entities
 	var/stat_allowed = FALSE //see if it requires being conscious/alive, need to set to 1 for ghostpells
 	var/phase_allowed = FALSE // If true, the spell can be cast while phased, eg. blood crawling, ethereal jaunting
-	var/antimagic_allowed = FALSE // If false, the spell cannot be cast while under the effect of antimagic
+
+	/// This determines what type of antimagic is needed to block the spell (MAGIC_RESISTANCE, MAGIC_RESISTANCE_MIND, MAGIC_RESISTANCE_HOLY)
+	var/antimagic_flags = MAGIC_RESISTANCE
+
 	var/invocation = "HURP DURP" //what is uttered when the wizard casts the spell
 	var/invocation_emote_self = null
 	var/invocation_type = INVOCATION_NONE //can be none, whisper, emote and shout
@@ -178,16 +181,10 @@ GLOBAL_LIST_INIT(spells, typesof(/obj/effect/proc_holder/spell)) //needed for th
 		to_chat(user, span_warning("Not when you're incapacitated!"))
 		return FALSE
 
-	if(!antimagic_allowed)
-		var/antimagic = user.anti_magic_check(TRUE, FALSE, FALSE, 0, TRUE)
-		if(antimagic)
-			if(isitem(antimagic))
-				to_chat(user, span_notice("[antimagic] is interfering with your magic."))
-			else
-				to_chat(user, span_warning("Magic seems to flee from you, you can't gather enough power to cast this spell."))
-			return FALSE
+	if(!user.can_cast_magic(antimagic_flags))
+		return FALSE
 
-	if(!phase_allowed && istype(user.loc, /obj/effect/dummy))
+	if(!phase_allowed && istype(user.loc, /obj/effect/dummy) || HAS_TRAIT(user, TRAIT_ROD_FORM))
 		to_chat(user, span_warning("[name] cannot be cast unless you are completely manifested in the material plane!"))
 		return FALSE
 
@@ -200,17 +197,11 @@ GLOBAL_LIST_INIT(spells, typesof(/obj/effect/proc_holder/spell)) //needed for th
 
 		var/mob/living/carbon/human/H = user
 
-		var/static/list/casting_clothes = typecacheof(list(/obj/item/clothing/suit/wizrobe, /obj/item/clothing/head/wizard))
-		if(clothes_req) //clothes check
-			var/passes_req = FALSE
-			if(istype(H.back, /obj/item/mod/control))
-				var/obj/item/mod/control/mod = H.back
-				if(istype(mod.theme, /datum/mod_theme/enchanted))
-					passes_req = TRUE
-			if(!passes_req && !is_type_in_typecache(H.wear_suit, casting_clothes))
+		if(clothes_req)
+			if(!(H.wear_suit?.clothing_flags & CASTING_CLOTHES))
 				to_chat(H, span_warning("You don't feel strong enough without your robe!"))
 				return FALSE
-			if(!passes_req && !is_type_in_typecache(H.head, casting_clothes))
+			if(!(H.head?.clothing_flags & CASTING_CLOTHES))
 				to_chat(H, span_warning("You don't feel strong enough without your hat!"))
 				return FALSE
 	else
@@ -548,7 +539,7 @@ GLOBAL_LIST_INIT(spells, typesof(/obj/effect/proc_holder/spell)) //needed for th
 	if(user.stat && !stat_allowed)
 		return FALSE
 
-	if(!antimagic_allowed && user.anti_magic_check(TRUE, FALSE, FALSE, 0, TRUE))
+	if(!user.can_cast_magic(antimagic_flags))
 		return FALSE
 
 	if(!ishuman(user))

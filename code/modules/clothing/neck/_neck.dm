@@ -24,7 +24,7 @@
 	icon_state = "bluetie"
 	inhand_icon_state = "" //no inhands
 	w_class = WEIGHT_CLASS_SMALL
-	custom_price = PAYCHECK_EASY
+	custom_price = PAYCHECK_CREW
 
 /obj/item/clothing/neck/tie/blue
 	name = "blue tie"
@@ -101,7 +101,7 @@
 	desc = "A stylish scarf. The perfect winter accessory for those with a keen fashion sense, and those who just can't handle a cold breeze on their necks."
 	w_class = WEIGHT_CLASS_TINY
 	dog_fashion = /datum/dog_fashion/head
-	custom_price = PAYCHECK_EASY
+	custom_price = PAYCHECK_CREW
 
 /obj/item/clothing/neck/scarf/black
 	name = "black scarf"
@@ -165,17 +165,17 @@
 /obj/item/clothing/neck/stripedredscarf
 	name = "striped red scarf"
 	icon_state = "stripedredscarf"
-	custom_price = PAYCHECK_ASSISTANT * 0.2
+	custom_price = PAYCHECK_CREW * 0.2
 
 /obj/item/clothing/neck/stripedgreenscarf
 	name = "striped green scarf"
 	icon_state = "stripedgreenscarf"
-	custom_price = PAYCHECK_ASSISTANT * 0.2
+	custom_price = PAYCHECK_CREW * 0.2
 
 /obj/item/clothing/neck/stripedbluescarf
 	name = "striped blue scarf"
 	icon_state = "stripedbluescarf"
-	custom_price = PAYCHECK_ASSISTANT * 0.2
+	custom_price = PAYCHECK_CREW * 0.2
 
 /obj/item/clothing/neck/petcollar
 	name = "pet collar"
@@ -231,43 +231,13 @@
 	else
 		to_chat(user, span_warning("There is no export value for [I] or any items within it."))
 
-
-/obj/item/clothing/neck/neckerchief
-	icon = 'icons/obj/clothing/masks.dmi' //In order to reuse the bandana sprite
-	w_class = WEIGHT_CLASS_TINY
-	var/sourceBandanaType
-
-/obj/item/clothing/neck/neckerchief/worn_overlays(mutable_appearance/standing, isinhands)
-	. = ..()
-	if(!isinhands)
-		var/mutable_appearance/realOverlay = mutable_appearance('icons/mob/clothing/mask.dmi', icon_state)
-		realOverlay.pixel_y = -3
-		. += realOverlay
-
-/obj/item/clothing/neck/neckerchief/AltClick(mob/user)
-	. = ..()
-	if(iscarbon(user))
-		var/mob/living/carbon/C = user
-		if(C.get_item_by_slot(ITEM_SLOT_NECK) == src)
-			to_chat(user, span_warning("You can't untie [src] while wearing it!"))
-			return
-		if(user.is_holding(src))
-			var/obj/item/clothing/mask/bandana/newBand = new sourceBandanaType(user)
-			var/currentHandIndex = user.get_held_index_of_item(src)
-			var/oldName = src.name
-			qdel(src)
-			user.put_in_hand(newBand, currentHandIndex)
-			user.visible_message(span_notice("You untie [oldName] back into a [newBand.name]."), span_notice("[user] unties [oldName] back into a [newBand.name]."))
-		else
-			to_chat(user, span_warning("You must be holding [src] in order to untie it!"))
-
 /obj/item/clothing/neck/beads
 	name = "plastic bead necklace"
 	desc = "A cheap, plastic bead necklace. Show team spirit! Collect them! Throw them away! The posibilites are endless!"
 	icon = 'icons/obj/clothing/neck.dmi'
 	icon_state = "beads"
 	color = "#ffffff"
-	custom_price = PAYCHECK_ASSISTANT * 0.2
+	custom_price = PAYCHECK_CREW * 0.2
 	custom_materials = (list(/datum/material/plastic = 500))
 
 /obj/item/clothing/neck/beads/Initialize(mapload)

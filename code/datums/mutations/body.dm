@@ -293,7 +293,7 @@
 /datum/mutation/human/fire/on_life(delta_time, times_fired)
 	if(DT_PROB((0.05+(100-dna.stability)/19.5) * GET_MUTATION_SYNCHRONIZER(src), delta_time))
 		owner.adjust_fire_stacks(2 * GET_MUTATION_POWER(src))
-		owner.IgniteMob()
+		owner.ignite_mob()
 
 /datum/mutation/human/fire/on_acquiring(mob/living/carbon/human/owner)
 	if(..())
@@ -506,7 +506,7 @@
 	if(brain) //so this doesn't instantly kill you. we could delete the brain, but it lets people cure brain issues they /really/ shouldn't be
 		brain.zone = BODY_ZONE_HEAD
 	UnregisterSignal(owner, COMSIG_CARBON_ATTACH_LIMB)
-	var/successful = owner.regenerate_limb(BODY_ZONE_HEAD, noheal = TRUE) //noheal needs to be TRUE to prevent weird adding and removing mutation healing
+	var/successful = owner.regenerate_limb(BODY_ZONE_HEAD)
 	if(!successful)
 		stack_trace("HARS mutation head regeneration failed! (usually caused by headless syndrome having a head)")
 		return TRUE

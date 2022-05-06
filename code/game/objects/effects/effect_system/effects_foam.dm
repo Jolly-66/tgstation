@@ -69,7 +69,7 @@
 /obj/effect/particle_effect/foam/firefighting/foam_mob(mob/living/L)
 	if(!istype(L))
 		return
-	L.adjust_fire_stacks(-2)
+	L.adjust_wet_stacks(2)
 
 /obj/effect/particle_effect/foam/metal
 	name = "aluminium foam"
@@ -278,6 +278,7 @@
 	gender = PLURAL
 	max_integrity = 20
 	can_atmos_pass = ATMOS_PASS_DENSITY
+	obj_flags = CAN_BE_HIT | BLOCK_Z_IN_DOWN | BLOCK_Z_IN_UP
 	///Var used to prevent spamming of the construction sound
 	var/next_beep = 0
 
