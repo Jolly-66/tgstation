@@ -15538,7 +15538,7 @@
 /area/maintenance/starboard)
 "htv" = (
 /obj/machinery/power/apc/auto_name/directional/west,
-/obj/machinery/atmospherics/components/binary/thermomachine/freezer{
+/obj/machinery/atmospherics/components/unary/thermomachine/freezer{
 	dir = 4
 	},
 /turf/open/floor/iron/dark/textured,
@@ -30108,7 +30108,7 @@
 /turf/open/floor/plating,
 /area/maintenance/port/fore)
 "ose" = (
-/obj/machinery/atmospherics/components/binary/thermomachine/freezer,
+/obj/machinery/atmospherics/components/unary/thermomachine/freezer,
 /turf/open/floor/iron,
 /area/space/nearstation)
 "osh" = (
@@ -32720,7 +32720,7 @@
 /turf/open/floor/iron,
 /area/hallway/primary/central)
 "pKz" = (
-/obj/machinery/atmospherics/components/binary/thermomachine/freezer/on/coldroom,
+/obj/machinery/atmospherics/components/unary/thermomachine/freezer/on/coldroom,
 /turf/open/floor/iron/kitchen_coldroom/freezerfloor,
 /area/space/nearstation)
 "pKD" = (
