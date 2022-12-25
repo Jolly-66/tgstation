@@ -70,7 +70,7 @@
 /obj/machinery/camera/exosuit
 	c_tag = "Exosuit: unspecified"
 	desc = "This camera belongs in a mecha. If you see this, tell a coder!"
-	network = list("ss13", "rd")
+	network = list("public", "research")
 	short_range = 1 //used when the camera gets EMPd
 	///Number of the camera and thus the name of the mech
 	var/number = 0
@@ -128,8 +128,6 @@
 	RemoveElement(/datum/element/empprotection, EMP_PROTECT_SELF | EMP_PROTECT_WIRES | EMP_PROTECT_CONTENTS)
 	upgrades &= ~CAMERA_UPGRADE_EMP_PROOF
 
-
-
 /obj/machinery/camera/proc/isXRay(ignore_malf_upgrades)
 	var/obj/structure/camera_assembly/assembly = assembly_ref?.resolve()
 	return (upgrades & CAMERA_UPGRADE_XRAY) && (!(ignore_malf_upgrades && assembly.malf_xray_firmware_active))
@@ -154,8 +152,6 @@
 	if(!ignore_malf_upgrades) //don't downgrade it if malf software is forced onto it.
 		upgrades &= ~CAMERA_UPGRADE_XRAY
 	update_appearance()
-
-
 
 /obj/machinery/camera/proc/isMotion()
 	return upgrades & CAMERA_UPGRADE_MOTION

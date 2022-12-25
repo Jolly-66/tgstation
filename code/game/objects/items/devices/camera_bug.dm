@@ -80,7 +80,7 @@
 		for(var/obj/machinery/camera/camera as anything in GLOB.cameranet.cameras)
 			if(camera.machine_stat || !camera.can_use())
 				continue
-			if(length(list("ss13","mine", "rd", "labor", "ordnance", "minisat") & camera.network))
+			if(length(list("public","mine", "research", "labor", "ordnance", "minisat") & camera.network))
 				var/datum/weakref/camera_ref = WEAKREF(camera)
 				if(!camera_ref || !camera.c_tag)
 					continue

@@ -17,8 +17,8 @@
 	max_integrity = 100
 	integrity_failure = 0.5
 	var/default_camera_icon = "camera" //the camera's base icon used by update_appearance - icon_state is primarily used for mapping display purposes.
-	var/list/network = list("ss13")
-	var/c_tag = null
+	var/list/network = list("public")
+	var/c_tag = null // The name of the camera that'll appear in camera consoles
 	var/status = TRUE
 	var/start_active = FALSE //If it ignores the random chance to start broken on round start
 	var/invuln = null
@@ -61,16 +61,6 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/camera/xray, 0)
 	energy = 20
 	fire = 90
 	acid = 50
-
-/obj/machinery/camera/preset/ordnance //Bomb test site in space
-	name = "Hardened Bomb-Test Camera"
-	desc = "A specially-reinforced camera with a long lasting battery, used to monitor the bomb testing site. An external light is attached to the top."
-	c_tag = "Bomb Testing Site"
-	network = list("rd","ordnance")
-	use_power = NO_POWER_USE //Test site is an unpowered area
-	invuln = TRUE
-	light_range = 10
-	start_active = TRUE
 
 /obj/machinery/camera/Initialize(mapload, obj/structure/camera_assembly/old_assembly)
 	. = ..()

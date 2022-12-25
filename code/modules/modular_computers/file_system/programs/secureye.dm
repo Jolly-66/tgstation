@@ -14,7 +14,7 @@
 	tgui_id = "NtosSecurEye"
 	program_icon = "eye"
 
-	var/list/network = list("ss13")
+	var/list/network = list("public")
 	/// Weakref to the active camera
 	var/datum/weakref/camera_ref
 	/// The turf where the camera was last updated.

@@ -13,7 +13,7 @@
 
 	var/list/valid_network_trees = list(
 		list(
-			"SS13",
+			"PUBLIC",
 			"ATMOS",
 			"SCRUBBERS",
 			"SM",

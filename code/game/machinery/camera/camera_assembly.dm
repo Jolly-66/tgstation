@@ -218,7 +218,8 @@
 		return FALSE
 
 	tool.play_tool_sound(src)
-	var/input = tgui_input_text(user, "Which networks would you like to connect this camera to? Separate networks with a comma. No Spaces!\nFor example: SS13,Security,Secret", "Set Network", "SS13")
+	var/input = tgui_input_text(user, "Which networks would you like to connect this camera to? Separate networks with a comma.\
+						 No Spaces!\nFor example: Public, Security, Secret", "Set Network", "Public")
 	if(isnull(input))
 		return
 	var/list/tempnetwork = splittext(input, ",")

@@ -28,7 +28,7 @@
 /obj/machinery/computer/camera_advanced/xenobio
 	name = "Slime management console"
 	desc = "A computer used for remotely handling slimes."
-	networks = list("ss13")
+	networks = list("public")
 	circuit = /obj/item/circuitboard/computer/xenobiology
 
 	var/obj/machinery/monkey_recycler/connected_recycler

@@ -14,7 +14,7 @@
 #define NETWORK_NAME_COMBINE(L,R) ((L) + "." + (R))
 
 /// Station network names.  Used as the root networks for main parts of the station
-#define __STATION_NETWORK_ROOT "SS13"
+#define __STATION_NETWORK_ROOT "PUBLIC"
 #define __CENTCOM_NETWORK_ROOT "CENTCOM"
 #define __SYNDICATE_NETWORK_ROOT "SYNDI"
 #define __LIMBO_NETWORK_ROOT "LIMBO" // Limbo is a dead network
