@@ -246,10 +246,7 @@
 /obj/effect/turf_decal/siding/wood/corner{
 	dir = 4
 	},
-/obj/machinery/firealarm{
-	dir = 4;
-	pixel_x = 18
-	},
+/obj/machinery/firealarm/directional/east,
 /turf/open/floor/wood/parquet)
 "aiP" = (
 /obj/effect/landmark/blobstart,
@@ -673,9 +670,7 @@
 /area/station/science/xenobiology)
 "awV" = (
 /obj/machinery/computer/records/security,
-/obj/machinery/newscaster{
-	pixel_y = 32
-	},
+/obj/machinery/newscaster/directional/north,
 /obj/effect/turf_decal/trimline/red/filled/line{
 	dir = 5
 	},
@@ -1147,10 +1142,7 @@
 	})
 "aJQ" = (
 /obj/effect/turf_decal/trimline/brown/filled/line,
-/obj/machinery/firealarm{
-	dir = 1;
-	pixel_y = -24
-	},
+/obj/machinery/firealarm/directional/south,
 /obj/structure/disposalpipe/segment,
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -1838,10 +1830,7 @@
 /area/station/science/lab)
 "bdH" = (
 /obj/structure/cable,
-/obj/machinery/firealarm{
-	dir = 1;
-	pixel_y = -28
-	},
+/obj/machinery/firealarm/directional/south,
 /turf/open/floor/iron/dark,
 /area/station/science/breakroom)
 "bdK" = (
@@ -2369,10 +2358,7 @@
 "bwE" = (
 /obj/machinery/atmospherics/pipe/heat_exchanging/junction,
 /obj/machinery/light/small/directional/east,
-/obj/machinery/firealarm{
-	dir = 8;
-	pixel_x = 30
-	},
+/obj/machinery/firealarm/directional/east,
 /turf/open/floor/iron/kitchen_coldroom/freezerfloor,
 /area/station/service/kitchen/coldroom)
 "bwS" = (
@@ -3489,10 +3475,7 @@
 "ccK" = (
 /obj/effect/turf_decal/trimline/red/filled/line,
 /obj/structure/cable,
-/obj/machinery/firealarm{
-	dir = 1;
-	pixel_y = -27
-	},
+/obj/machinery/firealarm/directional/south,
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -3744,9 +3727,7 @@
 /area/station/science/genetics)
 "cjr" = (
 /obj/effect/turf_decal/trimline/brown/filled/line,
-/obj/machinery/newscaster{
-	pixel_y = -30
-	},
+/obj/machinery/newscaster/directional/south,
 /obj/machinery/light/directional/south,
 /turf/open/floor/iron,
 /area/station/cargo/lobby)
@@ -5343,9 +5324,7 @@
 /obj/effect/turf_decal/trimline/brown/filled/line{
 	dir = 1
 	},
-/obj/machinery/firealarm{
-	pixel_y = 25
-	},
+/obj/machinery/firealarm/directional/north,
 /obj/effect/turf_decal/delivery,
 /obj/machinery/navbeacon{
 	codes_txt = "delivery;dir=2";
@@ -5490,10 +5469,7 @@
 /turf/closed/wall/r_wall,
 /area/station/ai_monitored/turret_protected/aisat/foyer)
 "dll" = (
-/obj/machinery/firealarm{
-	dir = 4;
-	pixel_x = -26
-	},
+/obj/machinery/firealarm/directional/west,
 /obj/structure/disposalpipe/segment,
 /obj/effect/turf_decal/tile/blue{
 	dir = 1
@@ -6002,9 +5978,7 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
 	},
-/obj/machinery/newscaster{
-	pixel_x = -30
-	},
+/obj/machinery/newscaster/directional/west,
 /turf/open/floor/iron,
 /area/station/command/heads_quarters/cmo)
 "dzU" = (
@@ -6702,9 +6676,7 @@
 	dir = 10
 	},
 /obj/structure/cable,
-/obj/machinery/newscaster{
-	pixel_y = 32
-	},
+/obj/machinery/newscaster/directional/north,
 /turf/open/floor/iron/dark,
 /area/station/service/chapel/office)
 "dOD" = (
@@ -6940,9 +6912,7 @@
 /obj/effect/turf_decal/tile/yellow{
 	dir = 8
 	},
-/obj/machinery/firealarm{
-	pixel_y = 25
-	},
+/obj/machinery/firealarm/directional/north,
 /turf/open/floor/iron/white,
 /area/station/medical/pharmacy)
 "dSY" = (
@@ -8070,9 +8040,7 @@
 	@SKIP = None
 	})
 "exc" = (
-/obj/machinery/newscaster{
-	pixel_y = -30
-	},
+/obj/machinery/newscaster/directional/south,
 /turf/open/floor/iron,
 /area/station/hallway/secondary/entry)
 "exx" = (
@@ -8424,9 +8392,7 @@
 /obj/machinery/computer/security/hos{
 	dir = 8
 	},
-/obj/machinery/keycard_auth{
-	pixel_x = 27
-	},
+/obj/machinery/keycard_auth/directional/east,
 /turf/open/floor/wood/parquet,
 /area/station/command/heads_quarters/hos)
 "eGJ" = (
@@ -8785,9 +8751,7 @@
 	specialfunctions = 4
 	},
 /obj/machinery/recharge_station,
-/obj/machinery/newscaster{
-	pixel_y = -32
-	},
+/obj/machinery/newscaster/directional/south,
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/iron,
 /area/station/commons/toilet/restrooms)
@@ -9136,9 +9100,7 @@
 /obj/effect/turf_decal/trimline/white/filled/line{
 	dir = 4
 	},
-/obj/machinery/newscaster{
-	pixel_x = 32
-	},
+/obj/machinery/newscaster/directional/east,
 /obj/machinery/light/directional/east,
 /turf/open/floor/iron,
 /area/station/security/courtroom)
@@ -10656,9 +10618,7 @@
 /area/station/service/janitor)
 "fMc" = (
 /obj/effect/turf_decal/trimline/red/filled/line,
-/obj/machinery/newscaster{
-	pixel_y = -30
-	},
+/obj/machinery/newscaster/directional/south,
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -10750,9 +10710,7 @@
 /obj/effect/turf_decal/trimline/blue/filled/line{
 	dir = 8
 	},
-/obj/machinery/newscaster{
-	pixel_x = -30
-	},
+/obj/machinery/newscaster/directional/west,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
 /turf/open/floor/iron/white,
 /area/station/medical/medbay/central)
@@ -10885,9 +10843,7 @@
 	@SKIP = None
 	})
 "fRe" = (
-/obj/machinery/newscaster{
-	pixel_x = -30
-	},
+/obj/machinery/newscaster/directional/west,
 /turf/open/floor/iron,
 /area/station/hallway/secondary/entry)
 "fRh" = (
@@ -10932,10 +10888,7 @@
 /obj/effect/turf_decal/trimline/blue/filled/line{
 	dir = 10
 	},
-/obj/machinery/firealarm{
-	dir = 1;
-	pixel_y = -28
-	},
+/obj/machinery/firealarm/directional/south,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
 /turf/open/floor/iron/dark,
 /area/station/ai_monitored/security/armory)
@@ -10946,9 +10899,7 @@
 /turf/open/floor/plating,
 /area/station/maintenance/starboard/fore)
 "fTa" = (
-/obj/machinery/newscaster{
-	pixel_x = -30
-	},
+/obj/machinery/newscaster/directional/west,
 /obj/effect/turf_decal/tile/blue{
 	dir = 1
 	},
@@ -11776,10 +11727,6 @@
 "gqZ" = (
 /obj/effect/mapping_helpers/requests_console/announcement,
 /obj/effect/mapping_helpers/requests_console/information,
-/obj/machinery/keycard_auth{
-	pixel_x = 25;
-	pixel_y = -25
-	},
 /obj/machinery/requests_console/auto_name/directional/north{
 	department = "Chief Engineer's Desk"
 	},
@@ -13449,9 +13396,7 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
 	},
-/obj/machinery/newscaster{
-	pixel_x = -30
-	},
+/obj/machinery/newscaster/directional/west,
 /turf/open/floor/iron/dark,
 /area/station/command/bridge{
 	@SKIP = None
@@ -13593,10 +13538,7 @@
 	dir = 4
 	},
 /obj/structure/cable,
-/obj/machinery/firealarm{
-	dir = 4;
-	pixel_x = -29
-	},
+/obj/machinery/firealarm/directional/west,
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/iron/white,
 /area/station/science/research)
@@ -14013,9 +13955,7 @@
 /turf/open/floor/iron/white,
 /area/station/medical/medbay/central)
 "hzw" = (
-/obj/machinery/newscaster{
-	pixel_x = -30
-	},
+/obj/machinery/newscaster/directional/west,
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -14716,6 +14656,7 @@
 	pixel_y = -5
 	},
 /obj/machinery/camera/autoname/directional/east,
+/obj/machinery/keycard_auth/directional/east,
 /turf/open/floor/wood/parquet,
 /area/station/command/heads_quarters/ce)
 "hWQ" = (
@@ -15022,9 +14963,7 @@
 /turf/open/floor/plating,
 /area/station/science/xenobiology)
 "igx" = (
-/obj/machinery/newscaster{
-	pixel_x = -30
-	},
+/obj/machinery/newscaster/directional/west,
 /obj/structure/disposalpipe/segment{
 	dir = 6
 	},
@@ -15129,9 +15068,7 @@
 	})
 "ijz" = (
 /obj/machinery/computer/records/security,
-/obj/machinery/newscaster{
-	pixel_y = 32
-	},
+/obj/machinery/newscaster/directional/north,
 /obj/effect/turf_decal/trimline/red/filled/line{
 	dir = 9
 	},
@@ -16575,9 +16512,7 @@
 /obj/structure/toilet{
 	dir = 8
 	},
-/obj/machinery/newscaster{
-	pixel_y = -32
-	},
+/obj/machinery/newscaster/directional/south,
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/iron,
 /area/station/commons/toilet/restrooms)
@@ -16760,9 +16695,7 @@
 /turf/open/floor/iron,
 /area/station/hallway/primary/port)
 "jaw" = (
-/obj/machinery/newscaster{
-	pixel_x = -32
-	},
+/obj/machinery/newscaster/directional/west,
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/wood,
 /area/station/commons/lounge)
@@ -17144,10 +17077,7 @@
 /obj/effect/turf_decal/trimline/red/filled/line{
 	dir = 10
 	},
-/obj/machinery/firealarm{
-	dir = 1;
-	pixel_y = -27
-	},
+/obj/machinery/firealarm/directional/south,
 /obj/machinery/light/directional/south,
 /obj/machinery/camera/autoname/directional/south,
 /obj/machinery/light_switch{
@@ -17157,9 +17087,7 @@
 /turf/open/floor/iron,
 /area/station/security/checkpoint/supply)
 "jlo" = (
-/obj/machinery/newscaster{
-	pixel_y = -30
-	},
+/obj/machinery/newscaster/directional/south,
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -18502,10 +18430,7 @@
 	pixel_y = 6
 	},
 /obj/item/clothing/gloves/color/fyellow,
-/obj/machinery/firealarm{
-	dir = 4;
-	pixel_x = -26
-	},
+/obj/machinery/firealarm/directional/west,
 /turf/open/floor/iron,
 /area/station/commons/storage/primary{
 	@SKIP = None
@@ -20415,10 +20340,7 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 9
 	},
-/obj/machinery/firealarm{
-	dir = 1;
-	pixel_y = -27
-	},
+/obj/machinery/firealarm/directional/south,
 /turf/open/floor/iron/dark,
 /area/station/medical/storage)
 "kTk" = (
@@ -20548,9 +20470,7 @@
 /turf/open/floor/iron,
 /area/station/security/brig)
 "kXq" = (
-/obj/machinery/firealarm{
-	pixel_y = 25
-	},
+/obj/machinery/firealarm/directional/north,
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -20793,10 +20713,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 5
 	},
-/obj/machinery/firealarm{
-	dir = 4;
-	pixel_x = -30
-	},
+/obj/machinery/firealarm/directional/west,
 /turf/open/floor/iron,
 /area/station/cargo/miningoffice)
 "lcH" = (
@@ -20962,9 +20879,7 @@
 /turf/open/floor/iron/dark,
 /area/station/ai_monitored/turret_protected/aisat/teleporter)
 "lgw" = (
-/obj/machinery/newscaster{
-	pixel_y = -30
-	},
+/obj/machinery/newscaster/directional/south,
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -21600,10 +21515,7 @@
 /area/station/service/hydroponics/garden)
 "lwG" = (
 /obj/effect/turf_decal/trimline/red/filled/line,
-/obj/machinery/firealarm{
-	dir = 1;
-	pixel_y = -27
-	},
+/obj/machinery/firealarm/directional/south,
 /turf/open/floor/iron,
 /area/station/hallway/primary/starboard)
 "lwI" = (
@@ -22026,10 +21938,7 @@
 	@SKIP = None
 	})
 "lHl" = (
-/obj/machinery/firealarm{
-	dir = 4;
-	pixel_x = -26
-	},
+/obj/machinery/firealarm/directional/west,
 /obj/structure/table,
 /obj/item/storage/briefcase,
 /obj/item/storage/briefcase{
@@ -23079,9 +22988,7 @@
 	})
 "mkY" = (
 /obj/machinery/light/small/directional/north,
-/obj/machinery/firealarm{
-	pixel_y = 27
-	},
+/obj/machinery/firealarm/directional/north,
 /turf/open/floor/iron,
 /area/station/commons/fitness/recreation)
 "mlh" = (
@@ -24156,9 +24063,7 @@
 /area/station/science/lab)
 "mOC" = (
 /obj/effect/turf_decal/trimline/red/filled/line,
-/obj/machinery/newscaster{
-	pixel_y = -30
-	},
+/obj/machinery/newscaster/directional/south,
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -24289,10 +24194,6 @@
 /turf/open/floor/iron/dark,
 /area/station/engineering/supermatter)
 "mSQ" = (
-/obj/machinery/keycard_auth{
-	pixel_x = 29;
-	pixel_y = 7
-	},
 /obj/effect/turf_decal/tile/blue{
 	dir = 4
 	},
@@ -24305,6 +24206,9 @@
 	req_access_txt = "19"
 	},
 /obj/machinery/camera/autoname/directional/east,
+/obj/machinery/keycard_auth/directional/east{
+	pixel_y = 8
+	},
 /turf/open/floor/iron/dark,
 /area/station/command/bridge{
 	@SKIP = None
@@ -24805,10 +24709,7 @@
 /area/station/maintenance/port/aft)
 "ngd" = (
 /obj/machinery/rnd/production/circuit_imprinter/department/science,
-/obj/machinery/firealarm{
-	dir = 1;
-	pixel_y = -28
-	},
+/obj/machinery/firealarm/directional/south,
 /turf/open/floor/iron,
 /area/station/science/robotics/lab)
 "nhF" = (
@@ -26026,9 +25927,7 @@
 /area/station/science/ordnance/bomb)
 "nQz" = (
 /obj/structure/filingcabinet,
-/obj/machinery/newscaster{
-	pixel_x = 32
-	},
+/obj/machinery/newscaster/directional/east,
 /turf/open/floor/wood,
 /area/station/security/detectives_office)
 "nQB" = (
@@ -26229,10 +26128,7 @@
 /turf/open/floor/wood/parquet,
 /area/station/command/heads_quarters/hos)
 "nVO" = (
-/obj/machinery/firealarm{
-	dir = 4;
-	pixel_x = -30
-	},
+/obj/machinery/firealarm/directional/west,
 /turf/open/floor/plating,
 /area/station/service/janitor)
 "nWd" = (
@@ -26698,10 +26594,7 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
 	},
-/obj/machinery/firealarm{
-	dir = 1;
-	pixel_y = 30
-	},
+/obj/machinery/firealarm/directional/north,
 /obj/item/kirbyplants,
 /obj/machinery/camera{
 	c_tag = "Medical - Lobby";
@@ -26760,10 +26653,6 @@
 	pixel_x = -7;
 	pixel_y = 27;
 	req_access_txt = "40"
-	},
-/obj/machinery/keycard_auth{
-	pixel_x = 7;
-	pixel_y = 34
 	},
 /obj/machinery/light/directional/north,
 /obj/machinery/light_switch{
@@ -27069,10 +26958,7 @@
 	@SKIP = None
 	})
 "osM" = (
-/obj/machinery/firealarm{
-	dir = 1;
-	pixel_y = -28
-	},
+/obj/machinery/firealarm/directional/south,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
 /turf/open/floor/iron,
 /area/station/ai_monitored/command/storage/eva{
@@ -27131,10 +27017,7 @@
 /turf/open/floor/iron,
 /area/station/hallway/primary/port)
 "otT" = (
-/obj/machinery/firealarm{
-	dir = 8;
-	pixel_x = -18
-	},
+/obj/machinery/firealarm/directional/west,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
 /obj/machinery/camera/autoname/directional/west,
 /turf/open/floor/iron,
@@ -27163,9 +27046,7 @@
 	dir = 1
 	},
 /obj/structure/cable,
-/obj/machinery/firealarm{
-	pixel_y = 25
-	},
+/obj/machinery/firealarm/directional/north,
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -27444,9 +27325,7 @@
 /area/station/science/xenobiology)
 "oCr" = (
 /obj/effect/turf_decal/trimline/brown/filled/line,
-/obj/machinery/newscaster{
-	pixel_y = -30
-	},
+/obj/machinery/newscaster/directional/south,
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -27526,9 +27405,7 @@
 /turf/open/floor/plating,
 /area/station/maintenance/aft)
 "oGi" = (
-/obj/machinery/keycard_auth{
-	pixel_y = 32
-	},
+/obj/machinery/keycard_auth/directional/north,
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/captain)
 "oGj" = (
@@ -27911,9 +27788,7 @@
 	dir = 8
 	},
 /obj/structure/cable,
-/obj/machinery/newscaster{
-	pixel_x = -32
-	},
+/obj/machinery/newscaster/directional/west,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
 /turf/open/floor/iron,
 /area/station/security/brig)
@@ -28859,10 +28734,7 @@
 /obj/effect/turf_decal/trimline/purple/filled/corner{
 	dir = 1
 	},
-/obj/machinery/firealarm{
-	dir = 1;
-	pixel_y = -28
-	},
+/obj/machinery/firealarm/directional/south,
 /obj/machinery/light/directional/south,
 /turf/open/floor/iron/white,
 /area/station/science/ordnance/testlab)
@@ -29157,9 +29029,7 @@
 /turf/open/floor/iron/white,
 /area/station/science/genetics)
 "pun" = (
-/obj/machinery/newscaster{
-	pixel_x = -32
-	},
+/obj/machinery/newscaster/directional/west,
 /turf/open/floor/wood/parquet,
 /area/station/command/heads_quarters/qm)
 "puu" = (
@@ -29740,10 +29610,7 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
 	},
-/obj/machinery/firealarm{
-	dir = 1;
-	pixel_y = -27
-	},
+/obj/machinery/firealarm/directional/south,
 /obj/machinery/light/directional/south,
 /turf/open/floor/iron/white,
 /area/station/medical/medbay/central)
@@ -30568,10 +30435,7 @@
 /turf/open/floor/iron/dark,
 /area/station/science/server)
 "qhM" = (
-/obj/machinery/firealarm{
-	dir = 1;
-	pixel_y = -28
-	},
+/obj/machinery/firealarm/directional/south,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/wood/large,
@@ -30787,10 +30651,7 @@
 /area/station/commons/fitness/locker_room)
 "qnp" = (
 /obj/effect/turf_decal/trimline/brown/filled/line,
-/obj/machinery/firealarm{
-	dir = 1;
-	pixel_y = -27
-	},
+/obj/machinery/firealarm/directional/south,
 /turf/open/floor/iron,
 /area/station/cargo/storage{
 	@SKIP = None
@@ -31234,10 +31095,7 @@
 	uses = 10
 	},
 /obj/structure/cable,
-/obj/machinery/firealarm{
-	dir = 1;
-	pixel_y = -28
-	},
+/obj/machinery/firealarm/directional/south,
 /turf/open/floor/circuit,
 /area/station/ai_monitored/turret_protected/ai)
 "qzj" = (
@@ -31477,9 +31335,7 @@
 /turf/open/floor/iron,
 /area/station/cargo/office)
 "qFw" = (
-/obj/machinery/newscaster{
-	pixel_y = -29
-	},
+/obj/machinery/newscaster/directional/south,
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -31972,10 +31828,7 @@
 /turf/open/floor/iron,
 /area/space/nearstation)
 "qVd" = (
-/obj/machinery/firealarm{
-	dir = 4;
-	pixel_x = -26
-	},
+/obj/machinery/firealarm/directional/west,
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/iron,
 /area/station/hallway/primary/starboard)
@@ -33073,10 +32926,7 @@
 	dir = 8
 	},
 /obj/structure/sink/directional/east,
-/obj/machinery/firealarm{
-	dir = 4;
-	pixel_x = -30
-	},
+/obj/machinery/firealarm/directional/west,
 /turf/open/floor/iron,
 /area/station/service/hydroponics{
 	@SKIP = None
@@ -33116,10 +32966,6 @@
 /obj/machinery/computer/security/telescreen/rd{
 	dir = 8;
 	pixel_x = 32
-	},
-/obj/machinery/keycard_auth{
-	pixel_x = 32;
-	pixel_y = -24
 	},
 /turf/open/floor/wood/parquet,
 /area/station/command/heads_quarters/rd)
@@ -33217,10 +33063,7 @@
 /obj/effect/turf_decal/trimline/yellow/filled/line{
 	dir = 8
 	},
-/obj/machinery/firealarm{
-	dir = 4;
-	pixel_x = -26
-	},
+/obj/machinery/firealarm/directional/west,
 /obj/structure/cable,
 /obj/structure/disposalpipe/segment{
 	dir = 5
@@ -33771,10 +33614,7 @@
 /turf/open/floor/circuit,
 /area/station/ai_monitored/turret_protected/ai)
 "rUA" = (
-/obj/machinery/firealarm{
-	dir = 4;
-	pixel_x = -26
-	},
+/obj/machinery/firealarm/directional/west,
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/iron,
 /area/station/hallway/secondary/entry)
@@ -33889,9 +33729,7 @@
 /area/station/hallway/primary/starboard)
 "rXZ" = (
 /obj/effect/turf_decal/trimline/purple/filled/line,
-/obj/machinery/newscaster{
-	pixel_y = -30
-	},
+/obj/machinery/newscaster/directional/south,
 /obj/machinery/disposal/bin,
 /obj/structure/disposalpipe/trunk{
 	dir = 1
@@ -34560,9 +34398,7 @@
 /obj/effect/turf_decal/tile/purple{
 	dir = 4
 	},
-/obj/machinery/newscaster{
-	pixel_y = -30
-	},
+/obj/machinery/newscaster/directional/south,
 /turf/open/floor/iron/white,
 /area/station/science/research)
 "stv" = (
@@ -35163,6 +34999,7 @@
 	pixel_y = 5;
 	req_access_txt = "47"
 	},
+/obj/machinery/keycard_auth/directional/east,
 /turf/open/floor/wood/parquet,
 /area/station/command/heads_quarters/rd)
 "sHq" = (
@@ -35440,9 +35277,7 @@
 /obj/effect/turf_decal/tile/purple{
 	dir = 4
 	},
-/obj/machinery/newscaster{
-	pixel_x = 32
-	},
+/obj/machinery/newscaster/directional/east,
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/iron/white,
 /area/station/science/research)
@@ -35747,10 +35582,8 @@
 /obj/item/reagent_containers/cup/glass/shaker{
 	pixel_x = -6
 	},
-/obj/machinery/firealarm{
-	pixel_y = -31
-	},
 /obj/structure/cable,
+/obj/machinery/firealarm/directional/south,
 /turf/open/floor/iron,
 /area/station/service/bar/backroom{
 	@SKIP = None
@@ -36329,9 +36162,7 @@
 /turf/open/floor/plating,
 /area/station/science/xenobiology)
 "tmv" = (
-/obj/machinery/newscaster{
-	pixel_x = -30
-	},
+/obj/machinery/newscaster/directional/west,
 /obj/machinery/camera/autoname/directional/west,
 /turf/open/floor/wood,
 /area/station/service/library{
@@ -37276,9 +37107,7 @@
 /turf/open/floor/iron,
 /area/station/security/brig)
 "tPk" = (
-/obj/machinery/newscaster{
-	pixel_y = -30
-	},
+/obj/machinery/newscaster/directional/south,
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -37322,9 +37151,7 @@
 /area/station/cargo/miningoffice)
 "tPC" = (
 /obj/effect/turf_decal/trimline/red/filled/line,
-/obj/machinery/newscaster{
-	pixel_y = -30
-	},
+/obj/machinery/newscaster/directional/south,
 /turf/open/floor/iron,
 /area/station/hallway/primary/starboard)
 "tPP" = (
@@ -37561,9 +37388,7 @@
 /area/station/hallway/primary/starboard)
 "tUO" = (
 /obj/item/kirbyplants/random,
-/obj/machinery/firealarm{
-	pixel_y = -31
-	},
+/obj/machinery/firealarm/directional/south,
 /turf/open/floor/wood,
 /area/station/commons/lounge)
 "tVb" = (
@@ -38433,10 +38258,7 @@
 	@SKIP = None
 	})
 "usf" = (
-/obj/machinery/firealarm{
-	dir = 1;
-	pixel_y = -28
-	},
+/obj/machinery/firealarm/directional/south,
 /obj/machinery/disposal/bin,
 /obj/structure/disposalpipe/trunk{
 	dir = 8
@@ -38615,11 +38437,8 @@
 /turf/open/floor/iron,
 /area/station/commons/fitness/locker_room)
 "uvz" = (
-/obj/machinery/firealarm{
-	pixel_x = 32;
-	pixel_y = 27
-	},
 /obj/structure/sink/directional/south,
+/obj/machinery/firealarm/directional/north,
 /turf/open/floor/iron,
 /area/station/service/hydroponics/garden)
 "uvF" = (
@@ -38695,10 +38514,7 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
 	},
-/obj/machinery/firealarm{
-	dir = 4;
-	pixel_x = -30
-	},
+/obj/machinery/firealarm/directional/west,
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/iron/white,
 /area/station/medical/treatment_center)
@@ -38967,10 +38783,7 @@
 	@SKIP = None
 	})
 "uEJ" = (
-/obj/machinery/firealarm{
-	dir = 4;
-	pixel_x = -26
-	},
+/obj/machinery/firealarm/directional/west,
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/captain/private)
 "uES" = (
@@ -39153,6 +38966,7 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 4
 	},
+/obj/machinery/keycard_auth/directional/east,
 /turf/open/floor/iron/white,
 /area/station/command/heads_quarters/cmo)
 "uKL" = (
@@ -39601,10 +39415,7 @@
 /area/station/security/office)
 "uYS" = (
 /obj/effect/turf_decal/trimline/brown/filled/line,
-/obj/machinery/firealarm{
-	dir = 1;
-	pixel_y = -24
-	},
+/obj/machinery/firealarm/directional/south,
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -39813,10 +39624,7 @@
 	dir = 8
 	},
 /obj/item/kirbyplants,
-/obj/machinery/firealarm{
-	dir = 4;
-	pixel_x = -26
-	},
+/obj/machinery/firealarm/directional/west,
 /obj/machinery/camera{
 	c_tag = "Research Divison - Lobby";
 	dir = 10;
@@ -39903,10 +39711,7 @@
 /turf/open/floor/iron/white,
 /area/station/science/xenobiology)
 "vhJ" = (
-/obj/machinery/firealarm{
-	dir = 4;
-	pixel_x = -26
-	},
+/obj/machinery/firealarm/directional/west,
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/iron/dark,
 /area/station/service/chapel)
@@ -41137,9 +40942,7 @@
 /obj/effect/turf_decal/trimline/red/filled/line{
 	dir = 5
 	},
-/obj/machinery/firealarm{
-	pixel_y = 25
-	},
+/obj/machinery/firealarm/directional/north,
 /turf/open/floor/iron,
 /area/station/security/warden)
 "vMj" = (
@@ -41734,9 +41537,7 @@
 	dir = 8
 	},
 /obj/effect/turf_decal/tile/blue,
-/obj/machinery/newscaster{
-	pixel_y = -30
-	},
+/obj/machinery/newscaster/directional/south,
 /turf/open/floor/iron/dark,
 /area/station/command/bridge{
 	@SKIP = None
@@ -41924,10 +41725,7 @@
 	@SKIP = None
 	})
 "wjv" = (
-/obj/machinery/firealarm{
-	dir = 4;
-	pixel_x = -26
-	},
+/obj/machinery/firealarm/directional/west,
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/captain)
 "wjy" = (
@@ -42563,10 +42361,7 @@
 /turf/open/floor/plating,
 /area/station/service/janitor)
 "wGi" = (
-/obj/machinery/firealarm{
-	dir = 4;
-	pixel_x = -26
-	},
+/obj/machinery/firealarm/directional/west,
 /obj/structure/disposalpipe/segment,
 /obj/machinery/camera/autoname/directional/west,
 /turf/open/floor/iron,
@@ -43005,9 +42800,7 @@
 /turf/open/floor/iron,
 /area/station/service/hydroponics/garden)
 "wTM" = (
-/obj/machinery/newscaster{
-	pixel_x = -32
-	},
+/obj/machinery/newscaster/directional/west,
 /obj/structure/disposalpipe/segment,
 /obj/machinery/light/directional/west,
 /obj/effect/turf_decal/tile/purple{
@@ -43424,9 +43217,7 @@
 /obj/effect/turf_decal/trimline/red/filled/line{
 	dir = 1
 	},
-/obj/machinery/firealarm{
-	pixel_y = 25
-	},
+/obj/machinery/firealarm/directional/north,
 /turf/open/floor/iron,
 /area/station/security/brig)
 "xfq" = (
@@ -44853,9 +44644,7 @@
 /turf/open/floor/iron/white,
 /area/station/science/research)
 "xSH" = (
-/obj/machinery/newscaster{
-	pixel_y = -30
-	},
+/obj/machinery/newscaster/directional/south,
 /turf/open/floor/iron,
 /area/station/security/prison)
 "xSJ" = (
@@ -44941,9 +44730,7 @@
 	dir = 4;
 	pixel_x = -32
 	},
-/obj/machinery/keycard_auth{
-	pixel_y = 28
-	},
+/obj/machinery/keycard_auth/directional/north,
 /turf/open/floor/carpet,
 /area/station/command/heads_quarters/hop)
 "xVO" = (
