@@ -1297,9 +1297,7 @@
 /obj/structure/table/wood,
 /obj/item/taperecorder,
 /obj/item/tape,
-/obj/structure/extinguisher_cabinet{
-	pixel_x = 26
-	},
+/obj/structure/extinguisher_cabinet/directional/east,
 /turf/open/floor/wood,
 /area/station/service/library{
 	@SKIP = None
@@ -8710,9 +8708,7 @@
 /turf/open/floor/wood,
 /area/station/security/detectives_office)
 "eQr" = (
-/obj/structure/extinguisher_cabinet{
-	pixel_x = -26
-	},
+/obj/structure/extinguisher_cabinet/directional/west,
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/captain)
 "eQI" = (
@@ -14322,9 +14318,7 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 4
 	},
-/obj/structure/extinguisher_cabinet{
-	pixel_x = 26
-	},
+/obj/structure/extinguisher_cabinet/directional/east,
 /turf/open/floor/iron/white,
 /area/station/command/heads_quarters/cmo)
 "hNu" = (
@@ -14585,9 +14579,7 @@
 /area/station/engineering/hallway)
 "hUB" = (
 /obj/structure/disposalpipe/segment,
-/obj/structure/extinguisher_cabinet{
-	pixel_x = 26
-	},
+/obj/structure/extinguisher_cabinet/directional/east,
 /turf/open/floor/iron,
 /area/station/hallway/secondary/entry)
 "hUE" = (
@@ -15311,9 +15303,7 @@
 /area/station/science/ordnance)
 "irH" = (
 /obj/structure/disposalpipe/segment,
-/obj/structure/extinguisher_cabinet{
-	pixel_x = 26
-	},
+/obj/structure/extinguisher_cabinet/directional/east,
 /turf/open/floor/iron/cafeteria,
 /area/station/service/kitchen)
 "irM" = (
@@ -15456,9 +15446,7 @@
 /obj/structure/disposalpipe/segment,
 /obj/machinery/light/small/directional/west,
 /obj/effect/landmark/start/psychologist,
-/obj/structure/extinguisher_cabinet{
-	pixel_x = -26
-	},
+/obj/structure/extinguisher_cabinet/directional/west,
 /obj/effect/turf_decal/siding/wood/corner{
 	dir = 1
 	},
@@ -18336,9 +18324,7 @@
 	dir = 4
 	},
 /obj/machinery/camera/autoname/directional/east,
-/obj/structure/extinguisher_cabinet{
-	pixel_x = 26
-	},
+/obj/structure/extinguisher_cabinet/directional/east,
 /turf/open/floor/iron,
 /area/station/cargo/lobby)
 "jUw" = (
@@ -21500,9 +21486,7 @@
 	dir = 8
 	},
 /obj/machinery/light/directional/west,
-/obj/structure/extinguisher_cabinet{
-	pixel_x = -26
-	},
+/obj/structure/extinguisher_cabinet/directional/west,
 /turf/open/floor/iron,
 /area/station/security/brig)
 "lwq" = (
@@ -21639,9 +21623,7 @@
 /obj/effect/turf_decal/caution{
 	dir = 1
 	},
-/obj/structure/extinguisher_cabinet{
-	pixel_x = -26
-	},
+/obj/structure/extinguisher_cabinet/directional/west,
 /turf/open/floor/iron,
 /area/station/security/brig)
 "lAW" = (
@@ -22291,9 +22273,7 @@
 	@SKIP = None
 	})
 "lRo" = (
-/obj/structure/extinguisher_cabinet{
-	pixel_x = 26
-	},
+/obj/structure/extinguisher_cabinet/directional/east,
 /turf/open/floor/iron/dark,
 /area/station/service/chapel/funeral)
 "lRt" = (
@@ -23878,9 +23858,7 @@
 /obj/effect/turf_decal/siding/wood/corner{
 	dir = 1
 	},
-/obj/structure/extinguisher_cabinet{
-	pixel_x = -26
-	},
+/obj/structure/extinguisher_cabinet/directional/west,
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/hop)
 "mKc" = (
@@ -36556,9 +36534,7 @@
 /obj/effect/turf_decal/trimline/green/filled/line{
 	dir = 4
 	},
-/obj/structure/extinguisher_cabinet{
-	pixel_x = 26
-	},
+/obj/structure/extinguisher_cabinet/directional/east,
 /turf/open/floor/iron,
 /area/station/service/hydroponics{
 	@SKIP = None
@@ -41379,9 +41355,7 @@
 	charge = 100;
 	maxcharge = 15000
 	},
-/obj/structure/extinguisher_cabinet{
-	pixel_x = -26
-	},
+/obj/structure/extinguisher_cabinet/directional/west,
 /turf/open/floor/iron,
 /area/station/command/teleporter{
 	@SKIP = None
@@ -41846,9 +41820,7 @@
 	},
 /obj/structure/cable,
 /obj/machinery/light/directional/west,
-/obj/structure/extinguisher_cabinet{
-	pixel_x = -26
-	},
+/obj/structure/extinguisher_cabinet/directional/west,
 /turf/open/floor/iron,
 /area/station/security/brig)
 "wmJ" = (
@@ -42012,9 +41984,7 @@
 /turf/open/floor/iron,
 /area/station/cargo/lobby)
 "wrH" = (
-/obj/structure/extinguisher_cabinet{
-	pixel_x = 26
-	},
+/obj/structure/extinguisher_cabinet/directional/east,
 /obj/structure/rack,
 /obj/effect/spawner/random/clothing/costume,
 /turf/open/floor/iron,
@@ -43562,9 +43532,7 @@
 /turf/open/floor/plating,
 /area/station/maintenance/aft)
 "xoD" = (
-/obj/structure/extinguisher_cabinet{
-	pixel_x = 26
-	},
+/obj/structure/extinguisher_cabinet/directional/east,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
 /turf/open/floor/iron,
 /area/station/hallway/primary/starboard)
