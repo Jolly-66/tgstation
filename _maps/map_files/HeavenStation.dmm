@@ -8212,13 +8212,6 @@
 /area/station/hallway/secondary/entry)
 "eAY" = (
 /obj/structure/table/reinforced,
-/obj/machinery/button/door{
-	id = "xenobio4";
-	layer = 3.3;
-	name = "Xenobio Pen 4 Blast Doors";
-	pixel_y = 4;
-	req_access_txt = "55"
-	},
 /turf/open/floor/iron,
 /area/station/science/xenobiology)
 "eBr" = (
@@ -11464,13 +11457,6 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
 	},
-/obj/machinery/button/door{
-	id = "xenobio1";
-	layer = 3.3;
-	name = "Xenobio Pen 1 Blast Doors";
-	pixel_y = 4;
-	req_access_txt = "55"
-	},
 /turf/open/floor/iron,
 /area/station/science/xenobiology)
 "gkY" = (
@@ -13070,16 +13056,6 @@
 	},
 /turf/open/floor/iron,
 /area/station/hallway/primary/central)
-"het" = (
-/obj/machinery/button/door{
-	id = "Skynet_launch2";
-	name = "Mech Bay Door Control";
-	pixel_x = 23
-	},
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/cable,
-/turf/open/floor/plating,
-/area/station/maintenance/fore)
 "hez" = (
 /obj/item/kirbyplants/random,
 /turf/open/floor/iron/dark,
@@ -14579,12 +14555,6 @@
 /turf/open/floor/iron,
 /area/station/hallway/primary/port)
 "hWH" = (
-/obj/machinery/button/door{
-	id = "ceprivacy";
-	name = "Privacy Shutters Control";
-	pixel_x = 35;
-	pixel_y = -5
-	},
 /obj/machinery/camera/autoname/directional/east,
 /obj/machinery/keycard_auth/directional/east,
 /turf/open/floor/wood/parquet,
@@ -16630,11 +16600,11 @@
 /obj/machinery/camera/directional/north{
 	c_tag = "Lawrence's Office"
 	},
-/obj/machinery/button/door{
+/obj/machinery/button/door/directional/north{
 	id = "hoseprivacy";
 	name = "Privacy Shutters Control";
-	pixel_x = 8;
-	pixel_y = 24
+	req_access = list("hop");
+	pixel_x = 8
 	},
 /turf/open/floor/wood/parquet,
 /area/station/hallway/secondary/service)
@@ -17475,14 +17445,14 @@
 /obj/machinery/button/door/directional/north{
 	id = "Biohazard";
 	name = "Entrance Shutter Control";
-	req_access = list("rd');pixel_x = -8},/obj/machinery/button/door/directional/north{id = "xeno_blastdoor";name = "Secure Lab Shutter Control";req_access = list("rd');
+	req_access = list("rd');pixel_x = -8},/obj/machinery/button/door/directional/north{id = "xeno_blastdoor";name = "SecureLabShutterControl";req_access = list("rd');
 	pixel_x = -8;
 	pixel_y = 36
 	},
 /obj/machinery/button/door/directional/north{
 	id = "toxins_blastdoor";
 	name = "Ordnance Shutter Control";
-	req_access = list("rd');pixel_x = 8},/obj/machinery/button/door/directional/north{id = "rdprivacy";name = "Privacy Shutters Control";req_access = list("rd');
+	req_access = list("rd');pixel_x = 8},/obj/machinery/button/door/directional/north{id = "rdprivacy";name = "PrivacyShuttersControl";req_access = list("rd');
 	pixel_x = 8;
 	pixel_y = 36
 	},
@@ -17498,12 +17468,6 @@
 /obj/effect/turf_decal/trimline/purple/filled/line{
 	dir = 1
 	},
-/obj/machinery/button/door{
-	id = "XenoLock";
-	name = "Lockdown Shutters";
-	pixel_x = -8;
-	pixel_y = 25
-	},
 /obj/machinery/camera/directional/north{
 	c_tag = "Cytology Lab";
 	network = list("ss13","rd")
@@ -17511,6 +17475,12 @@
 /obj/machinery/light_switch{
 	pixel_x = 3;
 	pixel_y = 25
+	},
+/obj/machinery/button/door/directional/north{
+	id = "XenoLock";
+	name = "Lockdown Shutters";
+	req_access = list("xenobiology");
+	pixel_x = -8
 	},
 /turf/open/floor/iron/white,
 /area/station/science/xenobiology)
@@ -20460,6 +20430,7 @@
 	},
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
 /obj/effect/turf_decal/trimline/blue/filled/warning,
+/obj/machinery/airalarm/directional/south,
 /turf/open/floor/iron,
 /area/station/science/xenobiology)
 "kYc" = (
@@ -21729,18 +21700,6 @@
 /obj/structure/window/reinforced/spawner/directional/south,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/general/visible,
 /obj/structure/table/reinforced,
-/obj/machinery/button/door{
-	id = "Cytolab";
-	name = "Test Chamber Blast Doors";
-	pixel_x = 4;
-	pixel_y = -3;
-	req_access_txt = "55"
-	},
-/obj/machinery/button/ignition{
-	id = "cyto";
-	pixel_x = -6;
-	pixel_y = -3
-	},
 /obj/effect/turf_decal/trimline/purple/filled/line{
 	dir = 6
 	},
@@ -23805,13 +23764,6 @@
 	dir = 9
 	},
 /obj/structure/table/reinforced,
-/obj/machinery/button/door{
-	id = "xenobio5";
-	layer = 3.3;
-	name = "Xenobio Pen 5 Blast Doors";
-	pixel_y = 4;
-	req_access_txt = "55"
-	},
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
 	},
@@ -26501,6 +26453,11 @@
 /obj/machinery/modular_computer/preset/id{
 	dir = 4
 	},
+/obj/machinery/button/door/directional/west{
+	id = "ceprivacy";
+	name = "Privacy Shutters Control";
+	req_access = list("ce")
+	},
 /turf/open/floor/iron,
 /area/station/command/heads_quarters/ce)
 "okc" = (
@@ -26784,11 +26741,6 @@
 /turf/open/floor/iron,
 /area/station/engineering/storage/tech)
 "orl" = (
-/obj/machinery/button/door{
-	id = "Skynet_launch2";
-	name = "Mech Bay Door Control";
-	pixel_x = -23
-	},
 /obj/machinery/light/small/directional/west,
 /turf/open/floor/plating,
 /area/station/maintenance/fore)
@@ -27185,7 +27137,6 @@
 /area/station/engineering/hallway)
 "oCn" = (
 /obj/machinery/smartfridge/extract/preloaded,
-/obj/machinery/airalarm/directional/north,
 /turf/closed/wall,
 /area/station/science/xenobiology)
 "oCr" = (
@@ -30032,20 +29983,6 @@
 /obj/item/bedsheet/dorms,
 /turf/open/floor/wood,
 /area/station/commons/dorms)
-"pXc" = (
-/obj/structure/table/reinforced,
-/obj/machinery/button/door{
-	id = "xenobio6";
-	layer = 3.3;
-	name = "Xenobio Pen 6 Blast Doors";
-	pixel_y = 4;
-	req_access_txt = "55"
-	},
-/obj/effect/turf_decal/stripes/line{
-	dir = 4
-	},
-/turf/open/floor/iron,
-/area/station/science/xenobiology)
 "pXo" = (
 /obj/machinery/camera/directional/north,
 /obj/structure/table,
@@ -30105,6 +30042,18 @@
 	},
 /obj/effect/turf_decal/trimline/purple/filled/corner,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
+/obj/machinery/button/door/directional/west{
+	id = "Cytolab";
+	name = "Test Chamber Blast Doors";
+	req_access = list("science");
+	pixel_y = 8
+	},
+/obj/machinery/button/ignition{
+	id = "cyto";
+	pixel_x = -24;
+	pixel_y = -8;
+	req_access = list("science")
+	},
 /turf/open/floor/iron/white,
 /area/station/science/xenobiology)
 "qak" = (
@@ -30121,15 +30070,14 @@
 /obj/machinery/camera/directional/south{
 	c_tag = "Auxiliary Base Construction"
 	},
-/obj/machinery/button/door{
-	id = "aux_base_shutters";
-	name = "Public Shutters Control";
-	pixel_y = -24;
-	req_one_access_txt = "32;47;48"
-	},
 /obj/effect/turf_decal/tile/yellow,
 /obj/effect/turf_decal/tile/yellow{
 	dir = 8
+	},
+/obj/machinery/button/door/directional/south{
+	id = "aux_base_shutters";
+	name = "Public Shutters Control";
+	req_access = list("aux_base")
 	},
 /turf/open/floor/iron,
 /area/station/construction/mining/aux_base)
@@ -30583,19 +30531,18 @@
 "qpI" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/light/directional/west,
-/obj/machinery/button/door{
-	id = "hosprivacy";
-	name = "Privacy Control";
-	pixel_x = -24;
-	pixel_y = 7;
-	req_access_txt = "58"
-	},
 /obj/effect/turf_decal/siding/wood/corner{
 	dir = 1
 	},
 /obj/machinery/light_switch{
 	pixel_x = -23;
 	pixel_y = -8
+	},
+/obj/machinery/button/door/directional/west{
+	id = "hosprivacy";
+	name = "Privacy Control";
+	req_access = list("hos");
+	pixel_y = 8
 	},
 /turf/open/floor/wood/parquet,
 /area/station/command/heads_quarters/hos)
@@ -31131,6 +31078,25 @@
 	dir = 4
 	},
 /obj/machinery/door/firedoor/heavy,
+/obj/machinery/button/door/directional/east{
+	pixel_y = 8;
+	req_access = list("xenobiology");
+	id = "xenobio3";
+	name = "Xenobio Pen 3 Blast Doors"
+	},
+/obj/machinery/button/door/directional/east{
+	pixel_y = -8;
+	req_access = list("xenobiology");
+	id = "xenobio5";
+	name = "Xenobio Pen 5 Blast Doors"
+	},
+/obj/machinery/button/door/directional/east{
+	pixel_y = 8;
+	pixel_x = 36;
+	req_access = list("xenobiology");
+	id = "xenobio7";
+	name = "Xenobio Pen 7 Blast Doors"
+	},
 /turf/open/floor/iron/white,
 /area/station/science/xenobiology)
 "qEE" = (
@@ -32931,18 +32897,6 @@
 "rDy" = (
 /obj/structure/window/reinforced/spawner/directional/east,
 /obj/structure/table/reinforced,
-/obj/machinery/button/door{
-	id = "Xenolab";
-	name = "Test Chamber Blast Doors";
-	pixel_x = 4;
-	pixel_y = -3;
-	req_access_txt = "55"
-	},
-/obj/machinery/button/ignition{
-	id = "Xenobio";
-	pixel_x = -6;
-	pixel_y = -3
-	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/general/visible,
 /obj/effect/turf_decal/stripes/corner{
 	dir = 4
@@ -34361,6 +34315,32 @@
 	dir = 4
 	},
 /obj/machinery/door/firedoor/heavy,
+/obj/machinery/button/door/directional/west{
+	pixel_y = 8;
+	id = "xenobio1";
+	name = "Xenobio Pen 1 Blast Doors";
+	req_access = list("xenobiology")
+	},
+/obj/machinery/button/door/directional/west{
+	pixel_y = -8;
+	req_access = list("xenobiology");
+	id = "xenobio2";
+	name = "Xenobio Pen 2 Blast Doors"
+	},
+/obj/machinery/button/door/directional/west{
+	pixel_y = 8;
+	pixel_x = -36;
+	req_access = list("xenobiology");
+	id = "xenobio4";
+	name = "Xenobio Pen 4 Blast Doors"
+	},
+/obj/machinery/button/door/directional/west{
+	pixel_y = -8;
+	pixel_x = -36;
+	req_access = list("xenobiology");
+	id = "xenobio6";
+	name = "Xenobio Pen 6 Blast Doors"
+	},
 /turf/open/floor/iron/white,
 /area/station/science/xenobiology)
 "sza" = (
@@ -38075,13 +38055,6 @@
 /area/station/security/brig)
 "utg" = (
 /obj/structure/table/reinforced,
-/obj/machinery/button/door{
-	id = "xenobio3";
-	layer = 3.3;
-	name = "Xenobio Pen 3 Blast Doors";
-	pixel_y = 4;
-	req_access_txt = "55"
-	},
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
 	},
@@ -41499,6 +41472,18 @@
 	dir = 8
 	},
 /obj/machinery/light/directional/south,
+/obj/machinery/button/door/directional/south{
+	pixel_x = 8;
+	id = "Xenolab";
+	name = "Test Chamber Blast Doors";
+	req_access = list("xenobiology")
+	},
+/obj/machinery/button/ignition{
+	id = "Xenobio";
+	pixel_x = -8;
+	pixel_y = -24;
+	req_access = list("xenobiology")
+	},
 /turf/open/floor/iron/white,
 /area/station/science/xenobiology)
 "wlU" = (
@@ -42758,6 +42743,11 @@
 /obj/machinery/door/poddoor/shutters{
 	id = "Skynet_launch2";
 	name = "Mech Bay"
+	},
+/obj/machinery/button/door/directional/north{
+	id = "Skynet_launch2";
+	name = "Mech Bay Door Control";
+	req_access = list("robotics")
 	},
 /turf/open/floor/plating,
 /area/station/maintenance/fore)
@@ -44818,13 +44808,6 @@
 /obj/structure/table/reinforced,
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
-	},
-/obj/machinery/button/door{
-	id = "xenobio2";
-	layer = 3.3;
-	name = "Xenobio Pen 2 Blast Doors";
-	pixel_y = 4;
-	req_access_txt = "55"
 	},
 /turf/open/floor/iron,
 /area/station/science/xenobiology)
@@ -67744,7 +67727,7 @@ rsZ
 mCs
 kbY
 aqN
-pXc
+gkW
 xfd
 vCy
 eAY
@@ -72035,7 +72018,7 @@ azc
 rTe
 vrF
 vrF
-het
+vrF
 rTe
 vrF
 vrF
