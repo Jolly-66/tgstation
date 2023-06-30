@@ -2308,6 +2308,12 @@
 	pixel_x = -3;
 	pixel_y = -2
 	},
+/obj/machinery/button/door/directional/north{
+	id = "kitchenside";
+	name = "Kitchen Side Shutters";
+	req_access = list("kitchen");
+	pixel_x = 8
+	},
 /turf/open/floor/iron/cafeteria,
 /area/station/service/kitchen)
 "bvy" = (
@@ -5494,7 +5500,6 @@
 	},
 /obj/structure/closet/l3closet/scientist,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
-/obj/structure/sign/warning/test_chamber/directional/north,
 /turf/open/floor/iron/white,
 /area/station/science/xenobiology)
 "dmg" = (
@@ -7168,6 +7173,7 @@
 	name = "biohazard containment door"
 	},
 /obj/structure/closet/firecloset,
+/obj/structure/sign/warning/test_chamber/directional/north,
 /turf/open/floor/iron,
 /area/station/science/research)
 "eaQ" = (
@@ -7468,11 +7474,11 @@
 /turf/open/floor/plating,
 /area/station/maintenance/port)
 "ehY" = (
-/obj/structure/sign/departments/chemistry/pharmacy/directional/west,
 /obj/structure/disposalpipe/segment,
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
 	},
+/obj/structure/sign/departments/chemistry/pharmacy/directional/west,
 /turf/open/floor/iron,
 /area/station/hallway/primary/port)
 "eia" = (
@@ -13656,12 +13662,10 @@
 /obj/effect/turf_decal/tile/yellow{
 	dir = 8
 	},
-/obj/machinery/button/door{
+/obj/machinery/button/door/directional/north{
 	id = "pharmacy_shutters";
-	name = "pharmacy shutters control";
-	pixel_x = 24;
-	pixel_y = 24;
-	req_access_txt = "5; 69"
+	name = "Pharmacy Shutters Control";
+	req_access = list("pharmacy")
 	},
 /turf/open/floor/iron/white,
 /area/station/medical/pharmacy)
@@ -14720,7 +14724,7 @@
 /area/station/maintenance/central)
 "iaq" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
-/mob/living/carbon/human/species/monkey,
+/mob/living/carbon/human/species/monkey/punpun,
 /obj/structure/cable,
 /turf/open/floor/wood,
 /area/station/commons/lounge)
@@ -15408,13 +15412,6 @@
 /turf/open/floor/iron/dark,
 /area/station/security/execution/education)
 "ivx" = (
-/obj/machinery/button/door{
-	id = "chem_lockdown";
-	name = "chemistry lockdown control";
-	pixel_x = 26;
-	pixel_y = 26;
-	req_access_txt = "5; 69"
-	},
 /obj/effect/turf_decal/trimline/yellow/filled/line{
 	dir = 1
 	},
@@ -15663,37 +15660,35 @@
 /obj/machinery/button/flasher{
 	id = "justiceflash";
 	name = "Justice Flash Control";
-	pixel_x = -7;
+	pixel_x = -8;
 	pixel_y = 36;
-	req_access_txt = "1"
+	req_access = list("armory")
 	},
 /obj/machinery/button/ignition{
 	id = "executionburn";
 	name = "Justice Ignition Switch";
-	pixel_x = 2;
-	pixel_y = 36
-	},
-/obj/machinery/button/door{
-	id = "executionfireblast";
-	name = "Justice Area Lockdown";
-	pixel_x = 4;
-	pixel_y = 26;
-	req_access_txt = "2"
-	},
-/obj/machinery/button/door{
-	id = "SecJusticeChamber";
-	layer = 4;
-	name = "Justice Vent Control";
-	pixel_x = -7;
-	pixel_y = 26;
-	req_access_txt = "3"
+	pixel_x = 8;
+	pixel_y = 36;
+	req_access = list("armory")
 	},
 /obj/structure/closet/secure_closet/injection{
 	name = "educational injections";
 	pixel_x = 2
 	},
 /obj/effect/turf_decal/stripes/corner{
-	dir = 8
+	dir = 1
+	},
+/obj/machinery/button/door/directional/north{
+	id = "SecJusticeChamber";
+	name = "Justice Vent Control";
+	req_access = list("armory");
+	pixel_x = -8
+	},
+/obj/machinery/button/door/directional/north{
+	id = "executionfireblast";
+	name = "Justice Area Lockdown";
+	req_access = list("armory");
+	pixel_x = 8
 	},
 /turf/open/floor/iron,
 /area/station/security/execution/education)
@@ -16869,11 +16864,11 @@
 	@SKIP = None
 	})
 "jgu" = (
-/obj/machinery/button/door{
+/obj/machinery/button/door/directional/south{
 	id = "XenoLock";
 	name = "Lockdown Shutters";
-	pixel_x = -8;
-	pixel_y = -25
+	req_access = list("xenobiology");
+	pixel_x = -8
 	},
 /obj/effect/turf_decal/trimline/purple/filled/line{
 	dir = 6
@@ -16891,12 +16886,11 @@
 	pixel_x = -23;
 	pixel_y = -5
 	},
-/obj/machinery/button/door{
+/obj/machinery/button/door/directional/west{
 	id = "kitchencounter";
 	name = "Kitchen Counter Shutters";
-	pixel_x = -24;
-	pixel_y = 8;
-	req_access_txt = "28"
+	req_access = list("kitchen");
+	pixel_y = 8
 	},
 /turf/open/floor/iron/cafeteria,
 /area/station/service/kitchen)
@@ -22330,11 +22324,10 @@
 /obj/effect/turf_decal/trimline/purple/filled/line{
 	dir = 6
 	},
-/obj/machinery/button/door{
+/obj/machinery/button/door/directional/east{
 	id = "research_shutters";
-	name = "research shutters control";
-	pixel_x = 28;
-	req_access_txt = "7"
+	name = "Research Shutters Control";
+	req_access = list("science")
 	},
 /turf/open/floor/iron/white,
 /area/station/science/lab)
@@ -25445,7 +25438,7 @@
 /area/station/medical/medbay/central)
 "nEv" = (
 /obj/effect/turf_decal/stripes/corner{
-	dir = 1
+	dir = 4
 	},
 /turf/open/floor/iron,
 /area/station/security/execution/education)
@@ -28718,15 +28711,13 @@
 /obj/effect/turf_decal/tile/yellow{
 	dir = 8
 	},
-/obj/machinery/button/door{
-	id = "pharmacy_shutters_2";
-	name = "pharmacy shutters control";
-	pixel_x = -8;
-	pixel_y = 24;
-	req_access_txt = "5; 69"
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
+	},
+/obj/machinery/button/door/directional/north{
+	id = "pharmacy_shutters_2";
+	name = "Pharmacy Shutters Control";
+	req_access = list("pharmacy")
 	},
 /turf/open/floor/iron/white,
 /area/station/medical/pharmacy)
@@ -31660,10 +31651,8 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
 	},
-/obj/machinery/flasher{
-	id = "justiceflash";
-	name = "mounted justice flash";
-	pixel_x = 28
+/obj/machinery/flasher/directional/east{
+	id = "justiceflash"
 	},
 /turf/open/floor/iron/dark,
 /area/station/security/execution/education)
@@ -32356,6 +32345,11 @@
 /obj/machinery/light_switch{
 	pixel_x = 9;
 	pixel_y = 31
+	},
+/obj/machinery/button/door/directional/north{
+	id = "chem_lockdown";
+	name = "Chemistry Lockdown Control";
+	req_access = list("chemistry")
 	},
 /turf/open/floor/iron/white,
 /area/station/medical/chemistry)
@@ -33875,13 +33869,6 @@
 "sjK" = (
 /obj/structure/disposalpipe/segment{
 	dir = 5
-	},
-/obj/machinery/button/door{
-	id = "kitchenside";
-	name = "Kitchen Side Shutters";
-	pixel_x = -24;
-	pixel_y = 24;
-	req_access_txt = "28"
 	},
 /turf/open/floor/iron/cafeteria,
 /area/station/service/kitchen)
@@ -44842,11 +44829,10 @@
 	id = "evashutter";
 	name = "E.V.A. Storage Shutter"
 	},
-/obj/machinery/button/door{
+/obj/machinery/button/door/directional/east{
 	id = "evashutter";
 	name = "E.V.A. Storage Shutter Control";
-	pixel_x = 30;
-	req_access_txt = "19"
+	req_access = list("eva")
 	},
 /turf/open/floor/iron,
 /area/station/ai_monitored/command/storage/eva{
