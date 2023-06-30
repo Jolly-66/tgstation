@@ -405,9 +405,7 @@
 /turf/open/floor/iron,
 /area/station/security/brig)
 "amI" = (
-/obj/item/radio/intercom{
-	pixel_x = -30
-	},
+/obj/item/radio/intercom/directional/west,
 /turf/open/floor/iron/dark,
 /area/station/science/breakroom)
 "amT" = (
@@ -666,9 +664,7 @@
 /obj/effect/turf_decal/trimline/purple/filled/line{
 	dir = 1
 	},
-/obj/item/radio/intercom{
-	pixel_y = 22
-	},
+/obj/item/radio/intercom/directional/north,
 /turf/open/floor/iron/white,
 /area/station/science/xenobiology)
 "awV" = (
@@ -1260,9 +1256,7 @@
 /turf/open/floor/iron/white,
 /area/station/science/xenobiology)
 "aOb" = (
-/obj/structure/fireaxecabinet{
-	pixel_y = -32
-	},
+/obj/structure/fireaxecabinet/directional/south,
 /obj/structure/disposalpipe/segment,
 /obj/machinery/light/directional/south,
 /turf/open/floor/iron,
@@ -1528,9 +1522,7 @@
 /turf/open/floor/iron,
 /area/station/engineering/lobby)
 "aWD" = (
-/obj/item/radio/intercom{
-	pixel_x = -29
-	},
+/obj/item/radio/intercom/directional/west,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
 /turf/open/floor/wood,
 /area/station/service/chapel/office)
@@ -1648,9 +1640,7 @@
 "aZV" = (
 /obj/effect/turf_decal/delivery,
 /obj/structure/closet/radiation,
-/obj/item/radio/intercom{
-	pixel_y = -31
-	},
+/obj/item/radio/intercom/directional/south,
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/iron,
 /area/station/engineering/main{
@@ -2289,9 +2279,7 @@
 /obj/structure/chair/comfy/brown{
 	dir = 1
 	},
-/obj/structure/fireaxecabinet{
-	pixel_y = -32
-	},
+/obj/structure/fireaxecabinet/directional/south,
 /obj/effect/turf_decal/tile/blue,
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
@@ -2330,9 +2318,7 @@
 "bvF" = (
 /obj/structure/bed,
 /obj/item/bedsheet/clown,
-/obj/item/radio/intercom{
-	pixel_x = 27
-	},
+/obj/item/radio/intercom/directional/east,
 /obj/effect/landmark/start/clown,
 /turf/open/floor/carpet/green,
 /area/station/hallway/secondary/service)
@@ -2415,9 +2401,7 @@
 /obj/item/clothing/mask/fakemoustache,
 /obj/item/reagent_containers/cup/soda_cans/canned_laughter,
 /obj/effect/turf_decal/siding/wood,
-/obj/item/radio/intercom{
-	pixel_x = -28
-	},
+/obj/item/radio/intercom/directional/west,
 /obj/machinery/camera/autoname/directional/west,
 /turf/open/floor/iron,
 /area/station/service/theater{
@@ -2979,9 +2963,7 @@
 	dir = 1
 	},
 /obj/effect/turf_decal/tile/green,
-/obj/item/radio/intercom{
-	pixel_y = -31
-	},
+/obj/item/radio/intercom/directional/south,
 /obj/machinery/light/directional/south,
 /turf/open/floor/iron/white,
 /area/station/medical/virology)
@@ -3196,9 +3178,7 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
 	},
-/obj/item/radio/intercom{
-	pixel_y = -30
-	},
+/obj/item/radio/intercom/directional/south,
 /turf/open/floor/iron,
 /area/station/science/ordnance)
 "bVY" = (
@@ -3230,9 +3210,7 @@
 /turf/open/floor/iron/white,
 /area/station/science/ordnance)
 "bWF" = (
-/obj/item/radio/intercom{
-	pixel_y = 26
-	},
+/obj/item/radio/intercom/directional/north,
 /obj/structure/cable,
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -3697,9 +3675,7 @@
 /turf/open/floor/wood/parquet,
 /area/station/hallway/secondary/service)
 "ciS" = (
-/obj/item/radio/intercom{
-	pixel_x = -32
-	},
+/obj/item/radio/intercom/directional/west,
 /obj/machinery/light/directional/west,
 /turf/open/floor/wood,
 /area/station/security/detectives_office)
@@ -4430,9 +4406,7 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
 	},
-/obj/item/radio/intercom{
-	pixel_y = -26
-	},
+/obj/item/radio/intercom/directional/south,
 /turf/open/floor/iron/white,
 /area/station/science/robotics/lab)
 "cFf" = (
@@ -4450,9 +4424,7 @@
 	pixel_x = -7;
 	pixel_y = 12
 	},
-/obj/item/radio/intercom{
-	pixel_y = 26
-	},
+/obj/item/radio/intercom/directional/north,
 /turf/open/floor/plating,
 /area/station/service/janitor)
 "cFg" = (
@@ -4630,9 +4602,7 @@
 /area/station/science/ordnance/bomb)
 "cLF" = (
 /obj/structure/reagent_dispensers/fueltank,
-/obj/item/radio/intercom{
-	pixel_y = -26
-	},
+/obj/item/radio/intercom/directional/south,
 /turf/open/floor/iron,
 /area/station/science/robotics/mechbay)
 "cLY" = (
@@ -5312,9 +5282,7 @@
 /obj/effect/turf_decal/tile/purple{
 	dir = 8
 	},
-/obj/item/radio/intercom{
-	pixel_y = -31
-	},
+/obj/item/radio/intercom/directional/south,
 /turf/open/floor/iron/white,
 /area/station/science/genetics)
 "dis" = (
@@ -5470,9 +5438,7 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
 	},
-/obj/item/radio/intercom{
-	pixel_x = 32
-	},
+/obj/item/radio/intercom/directional/east,
 /obj/structure/cable,
 /turf/open/floor/iron/white,
 /area/station/medical/treatment_center)
@@ -5683,9 +5649,7 @@
 /turf/open/floor/iron,
 /area/station/commons/fitness/locker_room)
 "dpX" = (
-/obj/item/radio/intercom{
-	pixel_x = -29
-	},
+/obj/item/radio/intercom/directional/west,
 /obj/machinery/disposal/bin,
 /obj/structure/disposalpipe/trunk,
 /obj/machinery/airalarm/directional/north,
@@ -5855,9 +5819,7 @@
 /turf/open/floor/iron,
 /area/station/engineering/atmos)
 "duC" = (
-/obj/item/radio/intercom{
-	pixel_y = 26
-	},
+/obj/item/radio/intercom/directional/north,
 /turf/open/floor/iron,
 /area/station/service/theater{
 	@SKIP = None
@@ -5871,9 +5833,7 @@
 "dvF" = (
 /obj/structure/table/wood,
 /obj/machinery/recharger,
-/obj/item/radio/intercom{
-	pixel_x = -32
-	},
+/obj/item/radio/intercom/directional/west,
 /obj/effect/turf_decal/siding/wood,
 /turf/open/floor/carpet,
 /area/station/command/heads_quarters/hop)
@@ -5896,9 +5856,7 @@
 /obj/machinery/camera/directional/south{
 	c_tag = "Holodeck Control"
 	},
-/obj/item/radio/intercom{
-	pixel_y = -28
-	},
+/obj/item/radio/intercom/directional/south,
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/iron,
 /area/station/commons/fitness/recreation)
@@ -6756,7 +6714,7 @@
 /area/station/engineering/lobby)
 "dPM" = (
 /obj/effect/turf_decal/stripes/corner{
-	dir = 8
+	dir = 1
 	},
 /turf/open/floor/iron,
 /area/station/science/robotics/lab)
@@ -7146,9 +7104,7 @@
 /turf/open/floor/iron/white,
 /area/station/science/ordnance)
 "dYw" = (
-/obj/item/radio/intercom{
-	pixel_x = -28
-	},
+/obj/item/radio/intercom/directional/west,
 /obj/structure/disposalpipe/segment,
 /obj/effect/turf_decal/tile/blue{
 	dir = 1
@@ -7757,9 +7713,7 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
 	},
-/obj/item/radio/intercom{
-	pixel_x = -30
-	},
+/obj/item/radio/intercom/directional/west,
 /turf/open/floor/iron/white,
 /area/station/medical/cryo)
 "eqi" = (
@@ -7785,9 +7739,7 @@
 /obj/machinery/power/terminal,
 /obj/structure/cable,
 /obj/machinery/light/small/directional/east,
-/obj/item/radio/intercom{
-	pixel_x = 29
-	},
+/obj/item/radio/intercom/directional/east,
 /turf/open/floor/plating,
 /area/station/maintenance/solars/starboard/fore)
 "era" = (
@@ -9484,9 +9436,7 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
 	},
-/obj/item/radio/intercom{
-	pixel_x = 31
-	},
+/obj/item/radio/intercom/directional/east,
 /obj/structure/cable,
 /turf/open/floor/iron/dark,
 /area/station/medical/storage)
@@ -10472,9 +10422,7 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 4
 	},
-/obj/item/radio/intercom{
-	pixel_y = 32
-	},
+/obj/item/radio/intercom/directional/north,
 /obj/effect/turf_decal/siding/blue{
 	dir = 8
 	},
@@ -10786,9 +10734,7 @@
 /obj/effect/turf_decal/trimline/purple/filled/line{
 	dir = 9
 	},
-/obj/item/radio/intercom{
-	pixel_x = -30
-	},
+/obj/item/radio/intercom/directional/west,
 /obj/machinery/light_switch{
 	pixel_x = -24;
 	pixel_y = -8
@@ -11085,9 +11031,7 @@
 /obj/effect/turf_decal/trimline/brown/filled/line{
 	dir = 6
 	},
-/obj/item/radio/intercom{
-	pixel_x = 30
-	},
+/obj/item/radio/intercom/directional/east,
 /obj/machinery/camera/autoname/directional/east,
 /turf/open/floor/iron,
 /area/station/cargo/sorting)
@@ -11145,9 +11089,7 @@
 /obj/effect/turf_decal/trimline/brown/filled/line{
 	dir = 8
 	},
-/obj/item/radio/intercom{
-	pixel_x = -31
-	},
+/obj/item/radio/intercom/directional/west,
 /obj/machinery/light/directional/west,
 /turf/open/floor/iron,
 /area/station/cargo/miningoffice)
@@ -11255,7 +11197,7 @@
 	dir = 8
 	},
 /obj/effect/turf_decal/stripes/corner{
-	dir = 4
+	dir = 8
 	},
 /turf/open/floor/iron,
 /area/station/cargo/miningoffice)
@@ -12387,7 +12329,7 @@
 	name = "Research Exterior Airlock";
 	normaldoorcontrol = 1;
 	pixel_x = 7;
-	pixel_y = 7
+	pixel_y = 8
 	},
 /obj/machinery/button/door{
 	desc = "A remote control switch for the research division entryway.";
@@ -12401,7 +12343,8 @@
 	id = "Biohazard";
 	name = "Biohazard Shutter Control";
 	pixel_x = -7;
-	req_access_txt = "47"
+	req_access_txt = "47";
+	pixel_y = -2
 	},
 /obj/effect/turf_decal/trimline/red/filled/line{
 	dir = 5
@@ -12456,15 +12399,14 @@
 /turf/open/floor/iron,
 /area/station/cargo/miningoffice)
 "gMH" = (
-/obj/machinery/button/door{
-	id = "Cabin5";
-	name = "Dorm Bolt Control";
-	normaldoorcontrol = 1;
-	pixel_x = -25;
-	specialfunctions = 4
-	},
 /obj/structure/dresser,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
+/obj/machinery/button/door/directional/west{
+	id = "Cabin5";
+	name = "Door Bolt Control";
+	normaldoorcontrol = 1;
+	specialfunctions = 4
+	},
 /turf/open/floor/wood,
 /area/station/commons/dorms)
 "gMR" = (
@@ -13053,12 +12995,8 @@
 "hbo" = (
 /obj/structure/table,
 /obj/item/flashlight/lamp,
-/obj/item/radio/intercom{
-	broadcasting = 1;
-	frequency = 1423;
-	listening = 0;
-	name = "Interrogation Intercom";
-	pixel_y = 24
+/obj/item/radio/intercom/directional/north{
+	name = "Interrogation Intercom"
 	},
 /obj/machinery/camera/directional/north,
 /turf/open/floor/iron/dark,
@@ -13296,9 +13234,7 @@
 /turf/open/floor/iron,
 /area/station/engineering/atmos)
 "hiA" = (
-/obj/item/radio/intercom{
-	pixel_y = 32
-	},
+/obj/item/radio/intercom/directional/north,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
 /turf/open/floor/carpet/cyan,
 /area/station/command/heads_quarters/cmo)
@@ -13739,9 +13675,7 @@
 /turf/open/floor/iron/dark/telecomms,
 /area/station/tcommsat/server)
 "huX" = (
-/obj/item/radio/intercom{
-	pixel_x = 32
-	},
+/obj/item/radio/intercom/directional/east,
 /obj/effect/turf_decal/tile/bar,
 /turf/open/floor/iron,
 /area/station/hallway/primary/port)
@@ -14018,9 +13952,7 @@
 /turf/open/floor/iron,
 /area/station/cargo/miningoffice)
 "hCy" = (
-/obj/item/radio/intercom{
-	pixel_x = 32
-	},
+/obj/item/radio/intercom/directional/east,
 /turf/open/floor/iron,
 /area/station/hallway/primary/port)
 "hCI" = (
@@ -14468,9 +14400,7 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
 	},
-/obj/item/radio/intercom{
-	pixel_y = 22
-	},
+/obj/item/radio/intercom/directional/north,
 /obj/machinery/airalarm/directional/west,
 /turf/open/floor/iron/dark,
 /area/station/science/ordnance/storage)
@@ -15997,10 +15927,10 @@
 "iIe" = (
 /obj/structure/closet/emcloset,
 /obj/effect/turf_decal/bot,
-/obj/effect/turf_decal/stripes/corner{
-	dir = 1
-	},
 /obj/machinery/light/directional/east,
+/obj/effect/turf_decal/stripes/corner{
+	dir = 4
+	},
 /turf/open/floor/iron,
 /area/station/cargo/miningoffice)
 "iIg" = (
@@ -16168,9 +16098,7 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
 	},
-/obj/item/radio/intercom{
-	pixel_x = 31
-	},
+/obj/item/radio/intercom/directional/east,
 /turf/open/floor/iron,
 /area/station/command/heads_quarters/qm)
 "iLE" = (
@@ -16373,9 +16301,7 @@
 /obj/effect/turf_decal/trimline/red/filled/line{
 	dir = 1
 	},
-/obj/item/radio/intercom{
-	pixel_y = 26
-	},
+/obj/item/radio/intercom/directional/north,
 /turf/open/floor/iron,
 /area/station/security/warden)
 "iQX" = (
@@ -16916,9 +16842,7 @@
 /turf/open/floor/engine,
 /area/station/science/xenobiology)
 "jfW" = (
-/obj/item/radio/intercom{
-	pixel_y = -31
-	},
+/obj/item/radio/intercom/directional/south,
 /turf/open/floor/iron,
 /area/station/hallway/secondary/entry)
 "jgf" = (
@@ -17377,15 +17301,14 @@
 	pixel_x = -25;
 	pixel_y = -5
 	},
-/obj/machinery/button/door{
-	id = "sakbed";
-	name = "Shutter Control";
-	pixel_x = -24;
-	pixel_y = 7;
-	req_access_txt = "48"
-	},
 /obj/structure/cable,
 /obj/effect/landmark/start/quartermaster,
+/obj/machinery/button/door/directional/west{
+	id = "sakbed";
+	name = "Shutter Control";
+	req_access = list("qm");
+	pixel_y = 8
+	},
 /turf/open/floor/carpet/red,
 /area/station/command/heads_quarters/qm)
 "jtB" = (
@@ -18558,9 +18481,7 @@
 /obj/effect/turf_decal/trimline/brown/filled/line{
 	dir = 1
 	},
-/obj/item/radio/intercom{
-	pixel_y = 24
-	},
+/obj/item/radio/intercom/directional/north,
 /obj/machinery/light/directional/north,
 /turf/open/floor/iron,
 /area/station/cargo/lobby)
@@ -18830,9 +18751,7 @@
 	@SKIP = None
 	})
 "kfA" = (
-/obj/item/radio/intercom{
-	pixel_x = -28
-	},
+/obj/item/radio/intercom/directional/west,
 /obj/effect/turf_decal/trimline/green/filled/line{
 	dir = 9
 	},
@@ -18885,9 +18804,7 @@
 "kgc" = (
 /obj/structure/frame/computer,
 /obj/item/circuitboard/computer/rdconsole,
-/obj/item/radio/intercom{
-	pixel_y = 24
-	},
+/obj/item/radio/intercom/directional/north,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/iron,
 /area/station/maintenance/fore)
@@ -19038,9 +18955,7 @@
 "kjO" = (
 /obj/structure/bed,
 /obj/item/bedsheet/blue,
-/obj/item/radio/intercom{
-	pixel_y = -31
-	},
+/obj/item/radio/intercom/directional/south,
 /turf/open/floor/carpet/blue,
 /area/station/hallway/secondary/service)
 "kjR" = (
@@ -19073,9 +18988,7 @@
 	@SKIP = None
 	})
 "kln" = (
-/obj/item/radio/intercom{
-	pixel_x = -28
-	},
+/obj/item/radio/intercom/directional/west,
 /obj/effect/turf_decal/tile/blue{
 	dir = 1
 	},
@@ -19734,9 +19647,7 @@
 "kCW" = (
 /obj/machinery/vending/wardrobe/chef_wardrobe,
 /obj/effect/turf_decal/bot,
-/obj/item/radio/intercom{
-	pixel_x = 33
-	},
+/obj/item/radio/intercom/directional/east,
 /obj/structure/disposalpipe/segment,
 /obj/machinery/light/directional/east,
 /turf/open/floor/iron/cafeteria,
@@ -19848,18 +19759,6 @@
 /obj/structure/bookcase/random/fiction,
 /turf/open/floor/wood,
 /area/station/service/library{
-	@SKIP = None
-	})
-"kFW" = (
-/obj/effect/turf_decal/trimline/brown/filled/corner{
-	dir = 8
-	},
-/obj/item/radio/intercom{
-	pixel_x = -28;
-	pixel_y = -32
-	},
-/turf/open/floor/iron,
-/area/station/cargo/storage{
 	@SKIP = None
 	})
 "kGz" = (
@@ -20124,9 +20023,7 @@
 /area/station/medical/psychology)
 "kOd" = (
 /obj/structure/cable,
-/obj/item/radio/intercom{
-	pixel_y = 24
-	},
+/obj/item/radio/intercom/directional/north,
 /obj/machinery/camera/directional/north,
 /obj/effect/landmark/event_spawn,
 /turf/open/floor/iron,
@@ -20789,9 +20686,7 @@
 /turf/open/space/basic,
 /area/space/nearstation)
 "lem" = (
-/obj/item/radio/intercom{
-	pixel_x = 27
-	},
+/obj/item/radio/intercom/directional/east,
 /turf/open/floor/carpet,
 /area/station/service/bar/backroom{
 	@SKIP = None
@@ -21160,26 +21055,28 @@
 /obj/machinery/computer/apc_control{
 	dir = 4
 	},
-/obj/machinery/button/door{
-	id = "atmos";
-	name = "Atmospherics Lockdown";
-	pixel_x = -24;
-	pixel_y = 5;
-	req_access_txt = "24"
-	},
-/obj/machinery/button/door{
-	desc = "A remote control-switch for the engineering security doors.";
-	id = "Engineering";
-	name = "Engineering Lockdown";
-	pixel_x = -24;
-	pixel_y = -5;
-	req_access_txt = "10"
-	},
 /obj/effect/turf_decal/stripes/line{
 	dir = 6
 	},
 /obj/machinery/light_switch{
 	pixel_x = -35
+	},
+/obj/machinery/button/door/directional/west{
+	id = "Engineering";
+	name = "Engineering Lockdown";
+	req_access = list("ce");
+	pixel_y = -8
+	},
+/obj/machinery/button/door/directional/west{
+	id = "atmos";
+	name = "Atmospherics Lockdown";
+	req_access = list("ce")
+	},
+/obj/machinery/button/door/directional/west{
+	id = "Secure Storage";
+	name = "Engineering Secure Storage";
+	req_access = list("ce");
+	pixel_y = 8
 	},
 /turf/open/floor/iron,
 /area/station/command/heads_quarters/ce)
@@ -21247,25 +21144,6 @@
 /turf/open/floor/iron,
 /area/station/security/warden)
 "lpM" = (
-/obj/item/radio/intercom{
-	freerange = 1;
-	listening = 0;
-	name = "Custom Channel";
-	pixel_y = 25
-	},
-/obj/item/radio/intercom{
-	freerange = 1;
-	name = "Common Channel";
-	pixel_x = -27;
-	pixel_y = 4
-	},
-/obj/item/radio/intercom{
-	freerange = 1;
-	frequency = 1447;
-	name = "Private Channel";
-	pixel_x = 27;
-	pixel_y = 4
-	},
 /obj/machinery/door/window{
 	base_state = "leftsecure";
 	icon_state = "leftsecure";
@@ -21276,6 +21154,19 @@
 	req_access_txt = "16"
 	},
 /obj/effect/landmark/start/ai/secondary,
+/obj/item/radio/intercom/directional/north{
+	name = "Custom Channel";
+	freerange = 1;
+	listening = 0
+	},
+/obj/item/radio/intercom/directional/east{
+	name = "Private Channel";
+	freerange = 1;
+	frequency = 1447
+	},
+/obj/item/radio/intercom/directional/west{
+	freerange = 1
+	},
 /turf/open/floor/circuit/green,
 /area/station/ai_monitored/turret_protected/ai)
 "lpQ" = (
@@ -21457,17 +21348,15 @@
 /turf/open/floor/iron/white,
 /area/station/medical/cryo)
 "luA" = (
-/obj/machinery/button/door{
-	id = "maint1";
+/obj/machinery/button/door/directional/west{
 	name = "Blast Door Control A";
-	pixel_x = -28;
-	pixel_y = -6
+	id = "maint1";
+	pixel_y = -8
 	},
-/obj/machinery/button/door{
+/obj/machinery/button/door/directional/west{
 	id = "maint2";
 	name = "Blast Door Control B";
-	pixel_x = -28;
-	pixel_y = 4
+	pixel_y = 8
 	},
 /turf/open/floor/plating,
 /area/station/maintenance/aft)
@@ -21832,9 +21721,6 @@
 	pixel_x = -6;
 	pixel_y = -3
 	},
-/obj/item/radio/intercom{
-	pixel_y = 4
-	},
 /obj/effect/turf_decal/trimline/purple/filled/line{
 	dir = 6
 	},
@@ -22033,9 +21919,7 @@
 /turf/open/floor/iron/dark,
 /area/station/medical/medbay/central)
 "lJS" = (
-/obj/item/radio/intercom{
-	pixel_x = -28
-	},
+/obj/item/radio/intercom/directional/west,
 /obj/structure/cable,
 /obj/structure/disposalpipe/segment{
 	dir = 6
@@ -22588,9 +22472,7 @@
 /turf/open/floor/plating,
 /area/station/maintenance/fore)
 "lYi" = (
-/obj/item/radio/intercom{
-	pixel_x = 32
-	},
+/obj/item/radio/intercom/directional/east,
 /obj/machinery/camera/autoname/directional/east,
 /turf/open/floor/iron,
 /area/station/commons/storage/primary{
@@ -22600,9 +22482,7 @@
 /obj/effect/turf_decal/trimline/red/filled/line{
 	dir = 10
 	},
-/obj/item/radio/intercom{
-	pixel_y = -31
-	},
+/obj/item/radio/intercom/directional/south,
 /obj/machinery/airalarm/directional/south,
 /obj/machinery/light/directional/south,
 /obj/structure/cable,
@@ -23228,9 +23108,7 @@
 /turf/open/floor/iron/freezer,
 /area/station/security/prison)
 "mrO" = (
-/obj/item/radio/intercom{
-	pixel_x = -29
-	},
+/obj/item/radio/intercom/directional/west,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
 /turf/open/floor/wood,
 /area/station/service/library{
@@ -23563,9 +23441,7 @@
 /turf/open/floor/iron/white,
 /area/station/science/research)
 "mzT" = (
-/obj/item/radio/intercom{
-	pixel_x = -28
-	},
+/obj/item/radio/intercom/directional/west,
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/iron,
 /area/station/hallway/primary/starboard)
@@ -24094,9 +23970,7 @@
 /turf/open/floor/plating,
 /area/station/hallway/primary/starboard)
 "mPp" = (
-/obj/item/radio/intercom{
-	pixel_x = 27
-	},
+/obj/item/radio/intercom/directional/east,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
 /turf/open/floor/iron,
 /area/station/service/janitor)
@@ -24180,7 +24054,7 @@
 	dir = 10
 	},
 /obj/effect/turf_decal/stripes/corner{
-	dir = 8
+	dir = 1
 	},
 /turf/open/floor/iron,
 /area/station/cargo/miningoffice)
@@ -24206,16 +24080,15 @@
 	dir = 4
 	},
 /obj/effect/turf_decal/tile/blue,
-/obj/machinery/button/door{
-	id = "bridge blast";
-	name = "Bridge Access Blast Door Control";
-	pixel_x = 25;
-	pixel_y = -7;
-	req_access_txt = "19"
-	},
 /obj/machinery/camera/autoname/directional/east,
 /obj/machinery/keycard_auth/directional/east{
 	pixel_y = 8
+	},
+/obj/machinery/button/door/directional/east{
+	id = "bridge blast";
+	name = "Bridge Access Blast Door Control";
+	req_access = list("bridge");
+	pixel_y = -8
 	},
 /turf/open/floor/iron/dark,
 /area/station/command/bridge{
@@ -24508,24 +24381,18 @@
 /turf/closed/wall,
 /area/station/engineering/lobby)
 "nbK" = (
-/obj/item/radio/intercom{
-	freerange = 1;
-	listening = 0;
+/obj/item/radio/intercom/directional/north{
 	name = "Custom Channel";
-	pixel_y = 25
-	},
-/obj/item/radio/intercom{
 	freerange = 1;
-	name = "Common Channel";
-	pixel_x = -27;
-	pixel_y = 4
+	listening = 0
 	},
-/obj/item/radio/intercom{
-	freerange = 1;
-	frequency = 1447;
+/obj/item/radio/intercom/directional/west{
+	freerange = 1
+	},
+/obj/item/radio/intercom/directional/east{
 	name = "Private Channel";
-	pixel_x = 27;
-	pixel_y = 4
+	freerange = 1;
+	frequency = 1447
 	},
 /obj/machinery/door/window{
 	base_state = "leftsecure";
@@ -24815,13 +24682,7 @@
 /obj/item/stack/license_plates/empty/fifty,
 /obj/item/stack/license_plates/empty/fifty,
 /obj/machinery/camera/autoname/directional/east,
-/obj/item/radio/intercom{
-	desc = "Talk through this. It looks like it has been modified to not broadcast.";
-	name = "Prison Intercom (General)";
-	pixel_x = 28;
-	pixel_y = -2;
-	prison_radio = 1
-	},
+/obj/item/radio/intercom/prison/directional/east,
 /turf/open/floor/iron,
 /area/station/security/prison)
 "nlv" = (
@@ -25665,6 +25526,7 @@
 	dir = 8
 	},
 /obj/machinery/camera/autoname/directional/west,
+/obj/item/radio/intercom/directional/west,
 /turf/open/floor/iron,
 /area/station/cargo/storage{
 	@SKIP = None
@@ -25910,9 +25772,7 @@
 "nQa" = (
 /obj/structure/bed,
 /obj/item/bedsheet/mime,
-/obj/item/radio/intercom{
-	pixel_x = 27
-	},
+/obj/item/radio/intercom/directional/east,
 /obj/effect/landmark/start/mime,
 /turf/open/floor/carpet/black,
 /area/station/hallway/secondary/service)
@@ -26033,9 +25893,7 @@
 /obj/structure/closet/bombcloset,
 /obj/effect/turf_decal/bot,
 /obj/effect/turf_decal/stripes/line,
-/obj/item/radio/intercom{
-	pixel_x = 28
-	},
+/obj/item/radio/intercom/directional/east,
 /turf/open/floor/iron,
 /area/station/science/ordnance)
 "nSF" = (
@@ -26621,14 +26479,6 @@
 /turf/open/floor/wood/parquet,
 /area/station/command/heads_quarters/qm)
 "ojU" = (
-/obj/machinery/button/door{
-	desc = "A remote control-switch for secure storage.";
-	id = "Secure Storage";
-	name = "Engineering Secure Storage";
-	pixel_x = -24;
-	pixel_y = 5;
-	req_access_txt = "11"
-	},
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
 	},
@@ -26653,17 +26503,16 @@
 /turf/open/floor/wood,
 /area/station/security/detectives_office)
 "olf" = (
-/obj/machinery/button/door{
-	id = "cmoprivacy";
-	name = "CMO Privacy Shutters";
-	pixel_x = -7;
-	pixel_y = 27;
-	req_access_txt = "40"
-	},
 /obj/machinery/light/directional/north,
 /obj/machinery/light_switch{
 	pixel_x = 5;
 	pixel_y = 23
+	},
+/obj/machinery/button/door/directional/north{
+	id = "cmoprivacy";
+	name = "CMO Privacy Shutters";
+	req_access = list("cmo");
+	pixel_x = -8
 	},
 /turf/open/floor/wood/parquet,
 /area/station/command/heads_quarters/cmo)
@@ -27194,10 +27043,7 @@
 /obj/structure/chair/office{
 	dir = 8
 	},
-/obj/item/radio/intercom{
-	pixel_x = 32;
-	pixel_y = 2
-	},
+/obj/item/radio/intercom/directional/east,
 /obj/machinery/light/directional/east,
 /obj/effect/landmark/start/lawyer,
 /turf/open/floor/wood,
@@ -27628,9 +27474,7 @@
 /turf/open/floor/engine,
 /area/station/science/xenobiology)
 "oLE" = (
-/obj/item/radio/intercom{
-	pixel_x = -28
-	},
+/obj/item/radio/intercom/directional/west,
 /obj/machinery/light/small/directional/west,
 /turf/open/floor/iron,
 /area/station/service/hydroponics{
@@ -28187,9 +28031,7 @@
 /turf/open/floor/carpet/orange,
 /area/station/maintenance/central)
 "pbn" = (
-/obj/item/radio/intercom{
-	pixel_y = -31
-	},
+/obj/item/radio/intercom/directional/south,
 /obj/structure/cable,
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -28591,9 +28433,7 @@
 /turf/open/floor/wood,
 /area/station/cargo/lobby)
 "plb" = (
-/obj/item/radio/intercom{
-	pixel_y = 24
-	},
+/obj/item/radio/intercom/directional/north,
 /obj/structure/disposalpipe/segment{
 	dir = 6
 	},
@@ -29512,9 +29352,7 @@
 /obj/effect/turf_decal/trimline/yellow/filled/line{
 	dir = 4
 	},
-/obj/item/radio/intercom{
-	pixel_x = 31
-	},
+/obj/item/radio/intercom/directional/east,
 /turf/open/floor/iron,
 /area/station/engineering/lobby)
 "pIu" = (
@@ -29702,9 +29540,7 @@
 /turf/open/floor/iron/dark,
 /area/station/ai_monitored/turret_protected/aisat/foyer)
 "pLm" = (
-/obj/item/radio/intercom{
-	pixel_x = 32
-	},
+/obj/item/radio/intercom/directional/east,
 /obj/structure/cable,
 /turf/open/floor/iron,
 /area/station/hallway/secondary/entry)
@@ -29744,15 +29580,14 @@
 /turf/open/floor/iron/dark,
 /area/station/medical/storage)
 "pMV" = (
-/obj/machinery/button/door{
-	id = "Cabin6";
-	name = "Dorm Bolt Control";
-	normaldoorcontrol = 1;
-	pixel_x = -25;
-	specialfunctions = 4
-	},
 /obj/structure/closet/secure_closet/personal/cabinet,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
+/obj/machinery/button/door/directional/west{
+	id = "Cabin6";
+	name = "Door Bolt Control";
+	normaldoorcontrol = 1;
+	specialfunctions = 4
+	},
 /turf/open/floor/wood,
 /area/station/commons/dorms)
 "pNq" = (
@@ -29990,9 +29825,7 @@
 /obj/effect/turf_decal/siding/wood{
 	dir = 4
 	},
-/obj/item/radio/intercom{
-	pixel_y = 23
-	},
+/obj/item/radio/intercom/directional/north,
 /turf/open/floor/wood,
 /area/station/service/library{
 	@SKIP = None
@@ -30407,9 +30240,7 @@
 /obj/effect/turf_decal/trimline/blue/filled/line{
 	dir = 1
 	},
-/obj/item/radio/intercom{
-	pixel_y = 32
-	},
+/obj/item/radio/intercom/directional/north,
 /turf/open/floor/iron/white,
 /area/station/medical/medbay/central)
 "qfE" = (
@@ -30560,9 +30391,7 @@
 /obj/effect/turf_decal/tile/purple{
 	dir = 8
 	},
-/obj/item/radio/intercom{
-	pixel_x = -28
-	},
+/obj/item/radio/intercom/directional/west,
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -31231,9 +31060,7 @@
 /obj/effect/turf_decal/tile/purple{
 	dir = 8
 	},
-/obj/item/radio/intercom{
-	pixel_x = -28
-	},
+/obj/item/radio/intercom/directional/west,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
 /obj/machinery/light/directional/south,
 /obj/structure/cable,
@@ -31390,9 +31217,7 @@
 	@SKIP = None
 	})
 "qGP" = (
-/obj/item/radio/intercom{
-	pixel_x = 32
-	},
+/obj/item/radio/intercom/directional/east,
 /obj/structure/disposalpipe/segment,
 /obj/effect/turf_decal/tile/blue{
 	dir = 4
@@ -31400,9 +31225,7 @@
 /turf/open/floor/iron,
 /area/station/hallway/primary/port)
 "qHo" = (
-/obj/item/radio/intercom{
-	pixel_y = 25
-	},
+/obj/item/radio/intercom/directional/north,
 /obj/machinery/light/directional/north,
 /obj/effect/landmark/event_spawn,
 /turf/open/floor/iron/dark,
@@ -32026,12 +31849,7 @@
 	dir = 1
 	},
 /obj/effect/turf_decal/tile/red,
-/obj/item/radio/intercom{
-	desc = "A station intercom. It looks like it has been modified to not broadcast.";
-	name = "Prison Intercom (General)";
-	pixel_x = -30;
-	prison_radio = 1
-	},
+/obj/item/radio/intercom/prison/directional/west,
 /turf/open/floor/iron/white,
 /area/station/security/prison)
 "rdE" = (
@@ -32422,29 +32240,14 @@
 	@SKIP = None
 	})
 "roi" = (
-/obj/machinery/button/door{
-	id = "AI Chamber entrance shutters";
-	name = "AI Chamber entrance shutters control";
-	pixel_x = -23;
-	pixel_y = 23;
-	req_access_txt = "16"
-	},
-/obj/machinery/button/door{
-	id = "AI Core shutters";
-	name = "AI Core shutters control";
-	pixel_x = 24;
-	pixel_y = 23;
-	req_access_txt = "16"
-	},
-/obj/machinery/flasher{
-	id = "AI";
-	pixel_x = -23;
-	pixel_y = -23
-	},
 /obj/machinery/ai_slipper{
 	uses = 10
 	},
 /obj/effect/landmark/blobstart,
+/obj/machinery/flasher/directional/south{
+	pixel_x = -23;
+	id = "AI"
+	},
 /turf/open/floor/iron/dark,
 /area/station/ai_monitored/turret_protected/ai)
 "rop" = (
@@ -32469,17 +32272,6 @@
 	},
 /turf/open/floor/iron,
 /area/station/engineering/atmos)
-"roX" = (
-/obj/effect/turf_decal/trimline/red/filled/line{
-	dir = 8
-	},
-/obj/item/radio/intercom{
-	pixel_x = -32;
-	pixel_y = -31
-	},
-/obj/structure/disposalpipe/segment,
-/turf/open/floor/iron,
-/area/station/security/brig)
 "roZ" = (
 /obj/structure/table/reinforced,
 /obj/machinery/computer/security/telescreen{
@@ -33149,9 +32941,6 @@
 	pixel_x = -6;
 	pixel_y = -3
 	},
-/obj/item/radio/intercom{
-	pixel_y = 5
-	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/general/visible,
 /obj/effect/turf_decal/stripes/corner{
 	dir = 4
@@ -33423,9 +33212,7 @@
 /obj/effect/turf_decal/trimline/brown/filled/line{
 	dir = 4
 	},
-/obj/item/radio/intercom{
-	pixel_x = 31
-	},
+/obj/item/radio/intercom/directional/east,
 /obj/machinery/light/directional/east,
 /turf/open/floor/iron,
 /area/station/cargo/miningoffice)
@@ -33624,14 +33411,9 @@
 /area/station/hallway/secondary/entry)
 "rUJ" = (
 /obj/structure/chair,
-/obj/item/radio/intercom{
-	broadcasting = 1;
-	frequency = 1481;
-	name = "Confessional Intercom";
-	pixel_x = 25
-	},
 /obj/machinery/light/small/directional/south,
 /obj/effect/landmark/start/chaplain,
+/obj/item/radio/intercom/chapel/directional/east,
 /turf/open/floor/iron/dark,
 /area/station/service/chapel/office)
 "rUO" = (
@@ -33746,9 +33528,7 @@
 /area/station/cargo/miningoffice)
 "rYj" = (
 /obj/structure/cable,
-/obj/item/radio/intercom{
-	pixel_y = -31
-	},
+/obj/item/radio/intercom/directional/south,
 /turf/open/floor/iron/dark,
 /area/station/science/server)
 "rYk" = (
@@ -33911,9 +33691,7 @@
 /turf/open/floor/iron,
 /area/station/service/hydroponics/garden)
 "sdW" = (
-/obj/item/radio/intercom{
-	pixel_x = 32
-	},
+/obj/item/radio/intercom/directional/east,
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/iron,
 /area/station/hallway/secondary/entry)
@@ -34332,9 +34110,7 @@
 /area/station/security/lockers)
 "srS" = (
 /obj/structure/cable,
-/obj/item/radio/intercom{
-	pixel_y = -31
-	},
+/obj/item/radio/intercom/directional/south,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
 /turf/open/floor/iron,
 /area/station/ai_monitored/command/storage/eva{
@@ -34463,9 +34239,7 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 4
 	},
-/obj/item/radio/intercom{
-	pixel_x = 31
-	},
+/obj/item/radio/intercom/directional/east,
 /turf/open/floor/iron/dark,
 /area/station/command/bridge{
 	@SKIP = None
@@ -34552,9 +34326,7 @@
 /obj/effect/turf_decal/trimline/red/filled/line{
 	dir = 4
 	},
-/obj/item/radio/intercom{
-	pixel_x = 32
-	},
+/obj/item/radio/intercom/directional/east,
 /obj/machinery/camera/autoname/directional/east,
 /turf/open/floor/iron,
 /area/station/security/office)
@@ -35071,9 +34843,7 @@
 	},
 /obj/effect/turf_decal/tile/bar,
 /obj/structure/table,
-/obj/item/radio/intercom{
-	pixel_x = 33
-	},
+/obj/item/radio/intercom/directional/east,
 /turf/open/floor/iron,
 /area/station/service/bar/backroom{
 	@SKIP = None
@@ -35168,9 +34938,7 @@
 /turf/open/floor/iron,
 /area/station/commons/fitness/locker_room)
 "sKH" = (
-/obj/item/radio/intercom{
-	pixel_y = 32
-	},
+/obj/item/radio/intercom/directional/north,
 /obj/machinery/camera/directional/north,
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/captain)
@@ -35316,9 +35084,7 @@
 /area/station/science/research)
 "sNM" = (
 /obj/machinery/monkey_recycler,
-/obj/item/radio/intercom{
-	pixel_y = 22
-	},
+/obj/item/radio/intercom/directional/north,
 /obj/effect/turf_decal/bot_red/right,
 /turf/open/floor/iron,
 /area/station/science/xenobiology)
@@ -35517,15 +35283,14 @@
 /turf/open/floor/plating,
 /area/station/maintenance/disposal)
 "sUc" = (
-/obj/machinery/button/door{
+/obj/structure/table/wood,
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
+/obj/machinery/button/door/directional/west{
 	id = "Cabin7";
 	name = "Door Bolt Control";
 	normaldoorcontrol = 1;
-	pixel_x = -25;
 	specialfunctions = 4
 	},
-/obj/structure/table/wood,
-/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
 /turf/open/floor/wood,
 /area/station/commons/dorms)
 "sUx" = (
@@ -35669,9 +35434,7 @@
 	pixel_x = 4
 	},
 /obj/item/storage/secure/briefcase,
-/obj/item/radio/intercom{
-	pixel_y = -30
-	},
+/obj/item/radio/intercom/directional/south,
 /turf/open/floor/iron/cafeteria{
 	dir = 5
 	},
@@ -35958,7 +35721,7 @@
 	dir = 6
 	},
 /obj/effect/turf_decal/stripes/corner{
-	dir = 1
+	dir = 4
 	},
 /turf/open/floor/iron,
 /area/station/cargo/miningoffice)
@@ -36590,9 +36353,7 @@
 /turf/open/floor/iron,
 /area/station/hallway/primary/starboard)
 "tyB" = (
-/obj/item/radio/intercom{
-	pixel_x = -28
-	},
+/obj/item/radio/intercom/directional/west,
 /obj/structure/disposalpipe/segment,
 /obj/machinery/camera/autoname/directional/west,
 /obj/effect/turf_decal/tile/green{
@@ -36624,9 +36385,7 @@
 /turf/open/floor/iron,
 /area/station/maintenance/fore)
 "tAL" = (
-/obj/item/radio/intercom{
-	pixel_x = -28
-	},
+/obj/item/radio/intercom/directional/west,
 /turf/open/floor/iron,
 /area/station/hallway/primary/starboard)
 "tBc" = (
@@ -37545,9 +37304,7 @@
 /turf/open/floor/iron/dark,
 /area/station/medical/cryo)
 "tYO" = (
-/obj/item/radio/intercom{
-	pixel_x = -32
-	},
+/obj/item/radio/intercom/directional/west,
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/captain/private)
 "tZg" = (
@@ -38131,11 +37888,6 @@
 	},
 /turf/open/floor/iron/dark,
 /area/station/service/chapel/funeral)
-"uoa" = (
-/obj/structure/lattice/catwalk,
-/obj/structure/marker_beacon,
-/turf/open/space/basic,
-/area/space)
 "uov" = (
 /obj/structure/table/wood,
 /obj/item/folder/blue{
@@ -38697,9 +38449,7 @@
 /obj/effect/turf_decal/tile/yellow{
 	dir = 8
 	},
-/obj/item/radio/intercom{
-	pixel_y = 29
-	},
+/obj/item/radio/intercom/directional/north,
 /obj/machinery/disposal/bin,
 /obj/structure/disposalpipe/trunk{
 	dir = 8
@@ -39107,9 +38857,7 @@
 /obj/effect/turf_decal/trimline/purple/filled/line{
 	dir = 4
 	},
-/obj/item/radio/intercom{
-	pixel_x = 28
-	},
+/obj/item/radio/intercom/directional/east,
 /turf/open/floor/iron/white,
 /area/station/science/ordnance/testlab)
 "uQW" = (
@@ -40064,6 +39812,7 @@
 /obj/effect/turf_decal/trimline/brown/filled/line{
 	dir = 9
 	},
+/obj/item/radio/intercom/directional/west,
 /turf/open/floor/iron,
 /area/station/cargo/office)
 "vqK" = (
@@ -40232,10 +39981,7 @@
 /obj/effect/turf_decal/tile/purple{
 	dir = 8
 	},
-/obj/item/radio/intercom{
-	dir = 8;
-	pixel_x = -28
-	},
+/obj/item/radio/intercom/directional/west,
 /turf/open/floor/iron/white,
 /area/station/science/xenobiology)
 "vvh" = (
@@ -41299,13 +41045,8 @@
 /area/station/science/research)
 "vWE" = (
 /obj/structure/chair,
-/obj/item/radio/intercom{
-	broadcasting = 1;
-	frequency = 1481;
-	name = "Confessional Intercom";
-	pixel_x = -25
-	},
 /obj/machinery/light/small/directional/south,
+/obj/item/radio/intercom/chapel/directional/west,
 /turf/open/floor/iron/dark,
 /area/station/service/chapel)
 "vWH" = (
@@ -41358,6 +41099,7 @@
 	},
 /obj/machinery/door/firedoor,
 /obj/structure/disposalpipe/segment,
+/obj/item/radio/intercom/directional/west,
 /turf/open/floor/iron,
 /area/station/security/brig)
 "vXX" = (
@@ -41833,10 +41575,6 @@
 /obj/effect/turf_decal/trimline/red/filled/line{
 	dir = 8
 	},
-/obj/item/radio/intercom{
-	pixel_x = -32;
-	pixel_y = 29
-	},
 /obj/structure/cable,
 /obj/machinery/light/directional/west,
 /obj/structure/extinguisher_cabinet/directional/west,
@@ -41884,9 +41622,7 @@
 	dir = 1
 	},
 /obj/structure/table,
-/obj/item/radio/intercom{
-	pixel_y = 26
-	},
+/obj/item/radio/intercom/directional/north,
 /turf/open/floor/iron,
 /area/station/hallway/primary/starboard)
 "woE" = (
@@ -41944,11 +41680,11 @@
 	pixel_x = -6;
 	pixel_y = 24
 	},
-/obj/machinery/button/door{
+/obj/machinery/button/door/directional/north{
 	id = "barshutter";
 	name = "Bar Shutters Control";
-	pixel_x = 8;
-	pixel_y = 24
+	req_access = list("bar");
+	pixel_x = 8
 	},
 /turf/open/floor/iron,
 /area/station/service/bar/backroom{
@@ -42051,24 +41787,30 @@
 /area/station/medical/treatment_center)
 "wuo" = (
 /obj/effect/landmark/start/ai,
-/obj/item/radio/intercom{
-	freerange = 1;
-	name = "Common Channel";
-	pixel_x = -27;
-	pixel_y = 4
+/obj/item/radio/intercom/directional/west{
+	freerange = 1
 	},
-/obj/item/radio/intercom{
-	freerange = 1;
-	frequency = 1447;
+/obj/item/radio/intercom/directional/east{
 	name = "Private Channel";
-	pixel_x = 27;
-	pixel_y = 4
-	},
-/obj/item/radio/intercom{
 	freerange = 1;
-	listening = 0;
+	frequency = 1447
+	},
+/obj/item/radio/intercom/directional/north{
 	name = "Custom Channel";
-	pixel_y = 25
+	freerange = 1;
+	listening = 0
+	},
+/obj/machinery/button/door/directional/west{
+	id = "AI Chamber entrance shutters";
+	name = "AI Chamber entrance shutters control";
+	req_access = list("ai_upload");
+	pixel_y = -8
+	},
+/obj/machinery/button/door/directional/east{
+	id = "AI Core shutters";
+	name = "AI Core shutters control";
+	req_access = list("ai_upload");
+	pixel_y = -8
 	},
 /turf/open/floor/circuit/green,
 /area/station/ai_monitored/turret_protected/ai)
@@ -42298,10 +42040,10 @@
 /obj/effect/turf_decal/trimline/yellow/filled/line{
 	dir = 4
 	},
-/obj/effect/turf_decal/stripes/corner{
-	dir = 8
-	},
 /obj/structure/disposalpipe/segment,
+/obj/effect/turf_decal/stripes/corner{
+	dir = 1
+	},
 /turf/open/floor/iron,
 /area/station/engineering/lobby)
 "wED" = (
@@ -42425,10 +42167,10 @@
 	},
 /area/station/holodeck/rec_center)
 "wHJ" = (
-/obj/effect/turf_decal/stripes/corner{
-	dir = 1
-	},
 /obj/effect/turf_decal/trimline/red/filled/line{
+	dir = 4
+	},
+/obj/effect/turf_decal/stripes/corner{
 	dir = 4
 	},
 /turf/open/floor/iron,
@@ -42554,9 +42296,7 @@
 /obj/effect/turf_decal/trimline/purple/filled/line{
 	dir = 4
 	},
-/obj/item/radio/intercom{
-	pixel_x = 29
-	},
+/obj/item/radio/intercom/directional/east,
 /turf/open/floor/iron,
 /area/station/cargo/miningoffice)
 "wMK" = (
@@ -42811,9 +42551,7 @@
 /turf/open/floor/iron,
 /area/station/security/prison)
 "wUx" = (
-/obj/item/radio/intercom{
-	pixel_x = 33
-	},
+/obj/item/radio/intercom/directional/east,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
 /turf/open/floor/wood,
 /area/station/service/theater{
@@ -42964,9 +42702,7 @@
 /obj/effect/turf_decal/trimline/red/filled/line{
 	dir = 4
 	},
-/obj/item/radio/intercom{
-	pixel_x = 32
-	},
+/obj/item/radio/intercom/directional/east,
 /obj/machinery/camera/autoname/directional/east,
 /obj/structure/cable,
 /turf/open/floor/iron,
@@ -43036,10 +42772,7 @@
 /obj/effect/turf_decal/trimline/purple/filled/line{
 	dir = 4
 	},
-/obj/item/radio/intercom{
-	dir = 8;
-	pixel_x = -28
-	},
+/obj/item/radio/intercom/directional/west,
 /obj/machinery/light/directional/west,
 /turf/open/floor/iron/white,
 /area/station/science/xenobiology)
@@ -43236,9 +42969,7 @@
 /obj/effect/turf_decal/trimline/yellow/filled/line{
 	dir = 8
 	},
-/obj/item/radio/intercom{
-	pixel_x = -30
-	},
+/obj/item/radio/intercom/directional/west,
 /turf/open/floor/iron/white,
 /area/station/medical/chemistry)
 "xfX" = (
@@ -43427,9 +43158,7 @@
 /obj/effect/turf_decal/trimline/brown/filled/line{
 	dir = 8
 	},
-/obj/item/radio/intercom{
-	pixel_x = -29
-	},
+/obj/item/radio/intercom/directional/west,
 /obj/structure/cable,
 /turf/open/floor/iron,
 /area/station/cargo/lobby)
@@ -43531,9 +43260,7 @@
 /turf/closed/wall/r_wall,
 /area/station/engineering/hallway)
 "xoq" = (
-/obj/item/radio/intercom{
-	pixel_y = 29
-	},
+/obj/item/radio/intercom/directional/north,
 /obj/structure/chair/sofa/right/brown,
 /obj/item/toy/plush/moth,
 /turf/open/floor/carpet,
@@ -43976,10 +43703,6 @@
 /obj/effect/turf_decal/trimline/brown/filled/line{
 	dir = 8
 	},
-/obj/item/radio/intercom{
-	pixel_x = -28;
-	pixel_y = 24
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -44101,9 +43824,7 @@
 /turf/open/floor/iron/dark,
 /area/station/security/execution/education)
 "xEq" = (
-/obj/item/radio/intercom{
-	pixel_y = 32
-	},
+/obj/item/radio/intercom/directional/north,
 /obj/effect/turf_decal/siding/wood{
 	dir = 8
 	},
@@ -44349,9 +44070,7 @@
 "xMO" = (
 /obj/machinery/atmospherics/pipe/heat_exchanging/junction,
 /obj/structure/kitchenspike,
-/obj/item/radio/intercom{
-	pixel_y = 32
-	},
+/obj/item/radio/intercom/directional/north,
 /turf/open/floor/iron/kitchen_coldroom/freezerfloor,
 /area/station/service/kitchen/coldroom)
 "xNd" = (
@@ -44609,9 +44328,6 @@
 	},
 /area/station/security/prison)
 "xSr" = (
-/obj/item/radio/intercom{
-	pixel_y = 32
-	},
 /turf/open/floor/carpet,
 /area/station/command/heads_quarters/hop)
 "xSt" = (
@@ -44652,15 +44368,13 @@
 /turf/open/floor/iron/dark,
 /area/station/science/ordnance/storage)
 "xTb" = (
-/obj/machinery/button/door{
-	id = "Disposal Exit";
-	name = "Disposal Vent Control";
-	pixel_x = -25;
-	pixel_y = 4;
-	req_access_txt = "12"
-	},
 /obj/effect/spawner/random/trash/garbage,
 /obj/effect/decal/cleanable/dirt,
+/obj/machinery/button/door/directional/west{
+	id = "Disposal Exit";
+	name = "Disposal Vent Control";
+	req_access = list("maint_tunnels")
+	},
 /turf/open/floor/plating,
 /area/station/maintenance/disposal)
 "xUa" = (
@@ -44816,6 +44530,15 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/iron/white,
 /area/station/medical/chemistry)
+"xXW" = (
+/obj/effect/turf_decal/trimline/red/filled/line{
+	dir = 8
+	},
+/obj/machinery/door/firedoor,
+/obj/structure/cable,
+/obj/item/radio/intercom/directional/west,
+/turf/open/floor/iron,
+/area/station/security/brig)
 "xXX" = (
 /turf/closed/wall/r_wall,
 /area/station/engineering/supermatter/room)
@@ -44959,9 +44682,7 @@
 /area/station/ai_monitored/turret_protected/ai)
 "ycl" = (
 /obj/item/banner/cargo/mundane,
-/obj/item/radio/intercom{
-	pixel_x = 30
-	},
+/obj/item/radio/intercom/directional/east,
 /obj/structure/cable,
 /turf/open/floor/wood/parquet,
 /area/station/command/heads_quarters/qm)
@@ -45269,9 +44990,7 @@
 /obj/structure/chair{
 	pixel_y = -2
 	},
-/obj/item/radio/intercom{
-	pixel_y = 29
-	},
+/obj/item/radio/intercom/directional/north,
 /turf/open/floor/iron/dark,
 /area/station/service/chapel/funeral)
 "ylZ" = (
@@ -78145,7 +77864,7 @@ rAn
 qov
 rAn
 iFc
-uoa
+bHh
 ssW
 ssW
 ssW
@@ -78153,7 +77872,7 @@ juw
 ssW
 ssW
 ssW
-uoa
+bHh
 iFc
 rAn
 rYU
@@ -90246,7 +89965,7 @@ npi
 oRo
 nDu
 qoP
-sQB
+xXW
 wmm
 bQf
 bQf
@@ -90265,7 +89984,7 @@ iXY
 klO
 iXY
 gQq
-roX
+iXY
 vXN
 gkY
 svj
@@ -92055,7 +91774,7 @@ sIS
 dwC
 eOz
 kZa
-kFW
+akG
 nGZ
 bLG
 xLG
