@@ -11352,7 +11352,7 @@
 /obj/machinery/door/window/right/directional/south{
 	name = "Reception Window"
 	},
-/turf/open/floor/plating,
+/turf/open/floor/iron,
 /area/station/security/warden)
 "gim" = (
 /obj/effect/turf_decal/trimline/blue/filled/line{
