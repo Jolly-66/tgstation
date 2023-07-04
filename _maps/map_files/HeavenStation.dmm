@@ -21037,7 +21037,7 @@
 /area/station/cargo/lobby)
 "lhu" = (
 /obj/machinery/atmospherics/components/unary/portables_connector/visible,
-/obj/machinery/portable_atmospherics/canister/oxygen,
+/obj/machinery/portable_atmospherics/canister/anesthetic_mix,
 /obj/effect/turf_decal/tile/blue{
 	dir = 4
 	},
@@ -22929,7 +22929,6 @@
 /turf/open/floor/iron/white,
 /area/station/science/research)
 "mgJ" = (
-/obj/structure/lattice,
 /obj/structure/lattice/catwalk,
 /turf/open/space/basic,
 /area/station/medical/virology)
@@ -23234,9 +23233,8 @@
 /turf/open/floor/iron,
 /area/station/hallway/primary/starboard)
 "mpt" = (
-/obj/structure/lattice,
-/obj/structure/lattice/catwalk,
 /obj/structure/disposalpipe/segment,
+/obj/structure/lattice/catwalk,
 /turf/open/space/basic,
 /area/station/medical/virology)
 "mpy" = (
@@ -27205,9 +27203,8 @@
 	@SKIP = None
 	})
 "oxE" = (
-/obj/structure/lattice,
-/obj/structure/lattice/catwalk,
 /obj/machinery/camera/autoname/directional/south,
+/obj/structure/lattice/catwalk,
 /turf/open/space/basic,
 /area/station/medical/virology)
 "oxN" = (
@@ -33901,9 +33898,8 @@
 /turf/open/floor/iron,
 /area/station/hallway/primary/starboard)
 "sbt" = (
-/obj/structure/lattice,
-/obj/structure/lattice/catwalk,
 /obj/machinery/atmospherics/components/unary/outlet_injector/on/layer2,
+/obj/structure/lattice/catwalk,
 /turf/open/space/basic,
 /area/station/medical/virology)
 "sbJ" = (
@@ -34625,9 +34621,7 @@
 /area/station/security/office)
 "syb" = (
 /obj/machinery/computer/pandemic,
-/obj/structure/reagent_dispensers/wall/virusfood{
-	pixel_y = 32
-	},
+/obj/structure/reagent_dispensers/wall/virusfood/directional/north,
 /obj/effect/turf_decal/tile/green{
 	dir = 1
 	},
@@ -43463,12 +43457,11 @@
 	@SKIP = None
 	})
 "xjE" = (
-/obj/structure/lattice,
-/obj/structure/lattice/catwalk,
 /obj/structure/disposaloutlet,
 /obj/structure/disposalpipe/trunk{
 	dir = 1
 	},
+/obj/structure/lattice/catwalk,
 /turf/open/space/basic,
 /area/station/medical/virology)
 "xkc" = (
