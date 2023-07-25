@@ -465,13 +465,6 @@
 /obj/machinery/pdapainter/security,
 /turf/open/floor/wood,
 /area/space)
-"bV" = (
-/obj/item/storage/box/lethalshot,
-/obj/item/storage/box/lethalshot,
-/obj/item/storage/box/lethalshot,
-/obj/item/storage/box/lethalshot,
-/turf/open/floor/iron/dark/small,
-/area/space)
 "bW" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/cyan/visible,
 /obj/effect/turf_decal/stripes/line{
@@ -1703,6 +1696,11 @@
 	},
 /obj/structure/table,
 /obj/structure/reagent_dispensers/wall/peppertank/directional/west,
+/obj/effect/spawner/random/entertainment/cigarette_pack{
+	pixel_y = 6;
+	pixel_x = 6
+	},
+/obj/effect/spawner/random/entertainment/lighter,
 /turf/open/floor/iron/dark/small,
 /area/space)
 "ha" = (
@@ -2044,6 +2042,15 @@
 /obj/item/wrench,
 /obj/item/stack/cable_coil,
 /turf/open/floor/plating,
+/area/space)
+"if" = (
+/obj/structure/table,
+/obj/item/gun/energy/e_gun/dragnet{
+	pixel_y = 11;
+	pixel_x = 4
+	},
+/obj/effect/spawner/random/entertainment/money_small,
+/turf/open/floor/iron/dark/small,
 /area/space)
 "ih" = (
 /obj/effect/turf_decal/trimline/red/filled/warning{
@@ -4387,6 +4394,12 @@
 	id = "aslyum-lockdown"
 	},
 /obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/medical{
+	name = "Asylum Internal Access";
+	id_tag = "asylum_interior";
+	frequency = 1449;
+	autoclose = 0
+	},
 /turf/open/floor/iron/white,
 /area/space)
 "qP" = (
@@ -5891,6 +5904,9 @@
 /obj/effect/turf_decal/tile/red/opposingcorners{
 	dir = 8
 	},
+/obj/structure/rack,
+/obj/effect/spawner/random/armory/bulletproof_helmet,
+/obj/effect/spawner/random/armory/riot_helmet,
 /turf/open/floor/iron/checker,
 /area/space)
 "wx" = (
@@ -5907,6 +5923,7 @@
 /obj/effect/turf_decal/tile/red/opposingcorners{
 	dir = 8
 	},
+/obj/structure/rack,
 /turf/open/floor/iron/checker,
 /area/space)
 "wy" = (
@@ -8457,30 +8474,7 @@
 "Gi" = (
 /obj/structure/rack,
 /obj/structure/window/reinforced/spawner/directional/south,
-/obj/item/grenade/barrier{
-	pixel_x = 8;
-	pixel_y = 12
-	},
-/obj/item/grenade/barrier{
-	pixel_x = 8;
-	pixel_y = 8
-	},
-/obj/item/grenade/barrier{
-	pixel_x = 8;
-	pixel_y = 4
-	},
-/obj/item/grenade/barrier{
-	pixel_x = -8;
-	pixel_y = 12
-	},
-/obj/item/grenade/barrier{
-	pixel_x = -8;
-	pixel_y = 8
-	},
-/obj/item/grenade/barrier{
-	pixel_x = -8;
-	pixel_y = 4
-	},
+/obj/effect/spawner/random/armory/barrier_grenades/six,
 /turf/open/floor/iron/dark/small,
 /area/space)
 "Gj" = (
@@ -8532,41 +8526,15 @@
 /area/space)
 "Gp" = (
 /obj/structure/rack,
-/obj/item/clothing/suit/armor/riot{
-	pixel_x = -8;
-	pixel_y = 8
-	},
-/obj/item/clothing/suit/armor/riot{
-	pixel_x = -8;
-	pixel_y = 4
-	},
-/obj/item/clothing/suit/armor/riot{
-	pixel_x = -8
-	},
-/obj/item/clothing/suit/armor/bulletproof{
-	pixel_x = 8;
-	pixel_y = 8
-	},
-/obj/item/clothing/suit/armor/bulletproof{
-	pixel_x = 8;
-	pixel_y = 4
-	},
-/obj/item/clothing/suit/armor/bulletproof{
-	pixel_x = 8
-	},
-/obj/item/shield/riot{
-	pixel_y = 8
-	},
-/obj/item/shield/riot{
-	pixel_y = 4
-	},
-/obj/item/shield/riot,
 /obj/effect/turf_decal/siding/white/corner{
 	dir = 4
 	},
 /obj/effect/turf_decal/tile/red/opposingcorners{
 	dir = 8
 	},
+/obj/effect/spawner/random/armory/riot_armor,
+/obj/effect/spawner/random/armory/bulletproof_armor,
+/obj/effect/spawner/random/armory/riot_shield,
 /turf/open/floor/iron/checker,
 /area/space)
 "Gr" = (
@@ -9543,6 +9511,8 @@
 "Kk" = (
 /obj/structure/rack,
 /obj/structure/window/reinforced/spawner/directional/north,
+/obj/effect/spawner/random/armory/disablers,
+/obj/effect/spawner/random/armory/shotgun,
 /turf/open/floor/iron/dark/small,
 /area/space)
 "Kl" = (
@@ -9804,6 +9774,12 @@
 	id = "aslyum-lockdown"
 	},
 /obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/medical{
+	name = "Asylum External Access";
+	id_tag = "asylum_exterior";
+	frequency = 1449;
+	autoclose = 0
+	},
 /turf/open/floor/iron/white,
 /area/space)
 "Lw" = (
@@ -10029,6 +10005,8 @@
 /obj/effect/turf_decal/tile/red/opposingcorners{
 	dir = 8
 	},
+/obj/structure/rack,
+/obj/effect/spawner/random/armory/laser_gun,
 /turf/open/floor/iron/checker,
 /area/space)
 "Mr" = (
@@ -11029,6 +11007,13 @@
 	dir = 1
 	},
 /area/space)
+"Qr" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/glass_large{
+	name = "Courtroom"
+	},
+/turf/open/floor/iron/dark,
+/area/space)
 "Qs" = (
 /obj/effect/turf_decal/trimline/red/filled/end{
 	dir = 1
@@ -11636,6 +11621,8 @@
 /obj/effect/turf_decal/tile/red/opposingcorners{
 	dir = 8
 	},
+/obj/structure/rack,
+/obj/effect/spawner/random/armory/e_gun,
 /turf/open/floor/iron/checker,
 /area/space)
 "SB" = (
@@ -12226,28 +12213,6 @@
 /area/space)
 "UZ" = (
 /obj/structure/rack,
-/obj/item/clothing/head/helmet/toggleable/riot{
-	pixel_y = 8;
-	pixel_x = -8
-	},
-/obj/item/clothing/head/helmet/toggleable/riot{
-	pixel_y = 4;
-	pixel_x = -8
-	},
-/obj/item/clothing/head/helmet/toggleable/riot{
-	pixel_x = -8
-	},
-/obj/item/clothing/head/helmet/alt{
-	pixel_y = 8;
-	pixel_x = 8
-	},
-/obj/item/clothing/head/helmet/alt{
-	pixel_y = 4;
-	pixel_x = 8
-	},
-/obj/item/clothing/head/helmet/alt{
-	pixel_x = 8
-	},
 /obj/item/clothing/glasses/hud/security/sunglasses{
 	pixel_y = 8
 	},
@@ -13445,6 +13410,16 @@
 "Zs" = (
 /obj/effect/turf_decal/siding/white{
 	dir = 5
+	},
+/obj/structure/table,
+/obj/item/storage/box/lethalshot{
+	pixel_y = 16
+	},
+/obj/item/storage/box/rubbershot{
+	pixel_y = 10
+	},
+/obj/item/storage/box/rubbershot{
+	pixel_y = 4
 	},
 /turf/open/floor/iron/dark/small,
 /area/space)
@@ -96324,12 +96299,12 @@ AT
 Oo
 CU
 CO
-bV
+AV
 Kk
 xA
 bh
 Gi
-AV
+if
 CO
 Io
 XI
@@ -164677,13 +164652,13 @@ in
 Oo
 Oo
 Oo
-nF
+Qr
 Oo
 Oo
 Oo
 Oo
 Oo
-nF
+Qr
 Oo
 Fp
 Oo
