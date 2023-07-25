@@ -2464,6 +2464,13 @@
 	},
 /turf/open/floor/plating/rust,
 /area/space)
+"jI" = (
+/obj/machinery/elevator_control_panel/directional/north{
+	linked_elevator_id = "public1";
+	preset_destination_names = list("2"="Lower Hall","3"="Upper Hall")
+	},
+/turf/open/floor/iron/dark,
+/area/space)
 "jJ" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/security/glass{
@@ -4159,13 +4166,6 @@
 /obj/effect/turf_decal/bot_white,
 /turf/open/floor/iron/dark,
 /area/space)
-"pX" = (
-/obj/structure/bed,
-/obj/effect/turf_decal/tile/blue/opposingcorners{
-	dir = 1
-	},
-/turf/open/floor/iron/checker,
-/area/space)
 "pY" = (
 /obj/machinery/door/firedoor,
 /turf/open/floor/iron/stairs/medium{
@@ -4509,14 +4509,6 @@
 /obj/structure/chair/stool/bar/directional/east,
 /turf/open/floor/wood,
 /area/space)
-"rm" = (
-/obj/structure/table/glass,
-/obj/item/clothing/gloves/latex,
-/obj/effect/turf_decal/tile/blue/opposingcorners{
-	dir = 1
-	},
-/turf/open/floor/iron/checker,
-/area/space)
 "ro" = (
 /obj/structure/closet/secure_closet/medical3,
 /obj/structure/window/spawner/directional/north,
@@ -4849,6 +4841,10 @@
 	dir = 8
 	},
 /turf/open/floor/iron/herringbone,
+/area/space)
+"su" = (
+/obj/structure/industrial_lift/public,
+/turf/open/misc/dirt,
 /area/space)
 "sv" = (
 /obj/effect/turf_decal/trimline/blue/filled/warning{
@@ -5357,15 +5353,6 @@
 	},
 /turf/open/floor/iron/checker,
 /area/space)
-"us" = (
-/obj/structure/bed{
-	dir = 4
-	},
-/obj/effect/turf_decal/tile/blue/opposingcorners{
-	dir = 1
-	},
-/turf/open/floor/iron/checker,
-/area/space)
 "uu" = (
 /obj/structure/table,
 /obj/item/folder/red{
@@ -5729,6 +5716,12 @@
 	name = "Prosecution"
 	},
 /turf/open/floor/wood/parquet,
+/area/space)
+"vL" = (
+/obj/machinery/door/airlock/glass_large{
+	name = "Barber Shop"
+	},
+/turf/open/floor/iron/dark,
 /area/space)
 "vM" = (
 /obj/machinery/duct,
@@ -6384,14 +6377,6 @@
 /obj/structure/chair/office/light,
 /turf/open/floor/iron/dark,
 /area/space)
-"yp" = (
-/obj/effect/spawner/structure/window,
-/obj/structure/curtain/cloth/fancy/mechanical{
-	name = "Massage Parlor Privacy Curtains";
-	id = "mag-parlor2"
-	},
-/turf/open/floor/plating,
-/area/space)
 "yq" = (
 /obj/machinery/portable_atmospherics/canister/nitrous_oxide,
 /obj/machinery/atmospherics/components/unary/portables_connector/visible{
@@ -6419,13 +6404,6 @@
 "yB" = (
 /obj/structure/rack,
 /turf/open/floor/iron/dark,
-/area/space)
-"yD" = (
-/obj/structure/chair/stool/bar/directional/east,
-/obj/effect/turf_decal/tile/blue/opposingcorners{
-	dir = 1
-	},
-/turf/open/floor/iron/checker,
 /area/space)
 "yG" = (
 /obj/machinery/computer/pandemic,
@@ -6628,20 +6606,6 @@
 	name = "Cell 3"
 	},
 /turf/open/floor/iron,
-/area/space)
-"zE" = (
-/obj/machinery/button/curtain{
-	pixel_x = -24;
-	pixel_y = -8;
-	id = "mag-parlor";
-	name = "Front Curtains Control"
-	},
-/obj/structure/table/glass,
-/obj/item/clothing/gloves/latex,
-/obj/effect/turf_decal/tile/blue/opposingcorners{
-	dir = 1
-	},
-/turf/open/floor/iron/checker,
 /area/space)
 "zG" = (
 /obj/structure/railing{
@@ -7732,6 +7696,13 @@
 	},
 /turf/open/floor/iron/dark,
 /area/space)
+"Ds" = (
+/obj/machinery/elevator_control_panel/directional/north{
+	linked_elevator_id = "public1";
+	preset_destination_names = list("2"="Lower Hall","3"="Upper Hall")
+	},
+/turf/open/misc/dirt,
+/area/space)
 "Dv" = (
 /obj/machinery/ai_slipper{
 	uses = 10
@@ -8291,12 +8262,6 @@
 	pixel_y = 8
 	},
 /turf/open/floor/iron/dark,
-/area/space)
-"Fs" = (
-/obj/effect/turf_decal/tile/blue/opposingcorners{
-	dir = 1
-	},
-/turf/open/floor/iron/checker,
 /area/space)
 "Ft" = (
 /obj/structure/chair{
@@ -8884,13 +8849,6 @@
 	dir = 9
 	},
 /turf/open/floor/wood,
-/area/space)
-"HM" = (
-/obj/structure/chair/stool/bar/directional/west,
-/obj/effect/turf_decal/tile/blue/opposingcorners{
-	dir = 1
-	},
-/turf/open/floor/iron/checker,
 /area/space)
 "HN" = (
 /obj/machinery/computer/warrant{
@@ -9668,6 +9626,13 @@
 	},
 /turf/open/floor/iron/dark,
 /area/space)
+"KU" = (
+/obj/structure/industrial_lift/public,
+/obj/effect/landmark/lift_id{
+	specific_lift_id = "public1"
+	},
+/turf/open/misc/dirt,
+/area/space)
 "KV" = (
 /obj/machinery/photocopier,
 /obj/effect/turf_decal/tile/blue/opposingcorners{
@@ -9934,13 +9899,6 @@
 	},
 /turf/open/floor/iron/white,
 /area/space)
-"LZ" = (
-/obj/structure/sink/directional/west,
-/obj/effect/turf_decal/tile/blue/opposingcorners{
-	dir = 1
-	},
-/turf/open/floor/iron/checker,
-/area/space)
 "Ma" = (
 /obj/machinery/door/firedoor,
 /obj/effect/turf_decal/siding/white{
@@ -10205,14 +10163,6 @@
 "Nd" = (
 /obj/structure/chair/sofa/middle,
 /turf/open/floor/iron,
-/area/space)
-"Ne" = (
-/obj/effect/spawner/structure/window,
-/obj/structure/curtain/cloth/fancy/mechanical{
-	name = "Massage Parlor Privacy Curtains";
-	id = "mag-parlor"
-	},
-/turf/open/floor/plating,
 /area/space)
 "Nf" = (
 /obj/machinery/door/airlock/security{
@@ -10776,18 +10726,6 @@
 	},
 /turf/open/floor/wood,
 /area/space)
-"PA" = (
-/obj/machinery/button/curtain{
-	pixel_x = -24;
-	pixel_y = 8;
-	id = "mag-parlor2";
-	name = "Back Curtains Control"
-	},
-/obj/effect/turf_decal/tile/blue/opposingcorners{
-	dir = 1
-	},
-/turf/open/floor/iron/checker,
-/area/space)
 "PC" = (
 /obj/structure/table,
 /obj/effect/spawner/round_default_module,
@@ -10938,15 +10876,6 @@
 	name = "Chief Medical Officer's Quarters"
 	},
 /turf/open/floor/wood/parquet,
-/area/space)
-"Qb" = (
-/obj/machinery/door/airlock/public/glass{
-	name = "Massage Parlor"
-	},
-/obj/effect/turf_decal/tile/blue/opposingcorners{
-	dir = 1
-	},
-/turf/open/floor/iron/checker,
 /area/space)
 "Qc" = (
 /obj/effect/turf_decal/trimline/green/filled/line{
@@ -11390,6 +11319,13 @@
 	dir = 4
 	},
 /turf/open/floor/iron/dark,
+/area/space)
+"RM" = (
+/obj/effect/turf_decal/tile/bar/opposingcorners{
+	dir = 8
+	},
+/obj/structure/chair/stool/bar/directional/east,
+/turf/open/floor/iron/checker,
 /area/space)
 "RO" = (
 /obj/machinery/door/airlock/security/glass{
@@ -115318,9 +115254,9 @@ pg
 BT
 QJ
 yM
-CI
-CI
-CI
+yM
+yM
+yM
 CI
 CI
 CI
@@ -115575,8 +115511,8 @@ pg
 yM
 yM
 yM
-CI
-CI
+su
+KU
 CI
 CI
 CI
@@ -115832,8 +115768,8 @@ pg
 VI
 ej
 yM
-CI
-CI
+su
+su
 CI
 CI
 CI
@@ -116089,8 +116025,8 @@ pg
 yM
 yM
 yM
-CI
-CI
+su
+su
 CI
 CI
 CI
@@ -116346,10 +116282,10 @@ gh
 bI
 Up
 yM
-CI
-CI
-CI
-CI
+yM
+yM
+yM
+Ds
 CI
 CI
 CI
@@ -180590,7 +180526,7 @@ yM
 Oo
 Fp
 Oo
-Oo
+vL
 rv
 oN
 hv
@@ -181109,11 +181045,11 @@ Pz
 Xf
 Xf
 Xf
-yp
-PA
-us
-zE
-Ne
+qv
+PX
+vJ
+vJ
+Oo
 Oo
 Fp
 Oo
@@ -181366,11 +181302,11 @@ iE
 iE
 iE
 iE
-Fs
-Fs
-HM
-Fs
-Ne
+rv
+PX
+vJ
+vJ
+Oo
 Oo
 Fp
 Oo
@@ -181620,14 +181556,14 @@ Fp
 Oo
 PX
 iE
+RM
+RM
 iE
-iE
-iE
-Fs
-Fs
-Fs
-Fs
-Qb
+rv
+PX
+vJ
+vJ
+Oo
 Oo
 Fp
 Oo
@@ -181880,12 +181816,12 @@ iE
 Vv
 Vv
 Tc
-yp
-Fs
-yD
-Fs
-Ne
-Oo
+yM
+yM
+yM
+yM
+yM
+jI
 Fp
 Oo
 yM
@@ -182138,10 +182074,10 @@ yM
 yM
 yM
 yM
-LZ
-pX
-rm
-Ne
+JI
+JI
+JI
+yM
 Oo
 Fp
 Oo
