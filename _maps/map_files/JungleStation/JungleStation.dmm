@@ -5240,6 +5240,10 @@
 /obj/effect/turf_decal/bot_white,
 /turf/open/floor/iron/dark,
 /area/space)
+"tW" = (
+/obj/machinery/hydroponics/soil,
+/turf/open/misc/dirt,
+/area/space)
 "tX" = (
 /obj/effect/turf_decal/trimline/red/filled/line{
 	dir = 4
@@ -170220,9 +170224,9 @@ fu
 lX
 Ii
 oy
-Ii
+tW
 qY
-Ii
+tW
 yM
 Fp
 Fp
@@ -170477,9 +170481,9 @@ fu
 Ii
 Ii
 Jn
-Ii
+tW
 ni
-Ii
+tW
 PX
 Fp
 vZ
@@ -170734,9 +170738,9 @@ fu
 Ii
 Ut
 dJ
-Ii
+tW
 ni
-Ii
+tW
 PX
 Fp
 vZ
@@ -170991,9 +170995,9 @@ fu
 qJ
 qJ
 oy
-Ii
+tW
 ni
-Ii
+tW
 PX
 Fp
 vZ
@@ -173303,10 +173307,10 @@ Ii
 fu
 DI
 qX
-Ii
-Ii
-Ii
-Ii
+tW
+tW
+tW
+tW
 PX
 aK
 jo
@@ -173817,10 +173821,10 @@ Ii
 fu
 Ii
 oy
-Ii
-Ii
-Ii
-Ii
+tW
+tW
+tW
+tW
 yM
 yM
 MJ
@@ -174331,11 +174335,11 @@ Ii
 fu
 Ii
 oy
-Ii
-Ii
-Ii
-Ii
-Ii
+tW
+tW
+tW
+tW
+tW
 PX
 NL
 jo
