@@ -2638,16 +2638,6 @@
 /obj/machinery/keycard_auth/directional/east,
 /turf/open/floor/wood/tile,
 /area/space)
-"ko" = (
-/obj/effect/turf_decal/tile/blue/opposingcorners{
-	dir = 1
-	},
-/obj/machinery/door/window/brigdoor/left/directional/west{
-	req_access = list("security");
-	name = "Med-Sec Desk"
-	},
-/turf/open/floor/iron/white,
-/area/space)
 "kp" = (
 /obj/effect/turf_decal/trimline/red/filled/warning{
 	dir = 9
@@ -4839,9 +4829,7 @@
 	elevator_linked_id = "medical_main";
 	elevator_mode = 1
 	},
-/obj/machinery/door/firedoor/border_only{
-	dir = 1
-	},
+/obj/machinery/door/firedoor/border_only,
 /turf/open/floor/iron,
 /area/space)
 "sm" = (
@@ -5795,6 +5783,7 @@
 /obj/machinery/door/airlock/glass_large{
 	name = "Barber Shop"
 	},
+/obj/machinery/door/firedoor,
 /turf/open/floor/iron/dark,
 /area/space)
 "vM" = (
@@ -6901,6 +6890,7 @@
 /obj/effect/turf_decal/siding/wood{
 	dir = 8
 	},
+/obj/machinery/door/firedoor,
 /turf/open/floor/wood,
 /area/space)
 "As" = (
@@ -11166,6 +11156,15 @@
 	},
 /turf/open/floor/iron/dark,
 /area/space)
+"QN" = (
+/obj/item/reagent_containers/cup/watering_can{
+	pixel_y = 7;
+	pixel_x = 9
+	},
+/obj/item/reagent_containers/cup/watering_can,
+/obj/structure/flora/bush/fullgrass/style_random,
+/turf/open/misc/grass/jungle,
+/area/space)
 "QP" = (
 /obj/effect/turf_decal/siding/white/corner{
 	dir = 8
@@ -11797,6 +11796,9 @@
 "SZ" = (
 /obj/machinery/door/firedoor,
 /obj/structure/sign/departments/custodian/directional/west,
+/obj/machinery/door/airlock{
+	name = "Janitor's Closet"
+	},
 /turf/open/floor/iron/dark,
 /area/space)
 "Ta" = (
@@ -12716,6 +12718,14 @@
 /obj/structure/chair/plastic,
 /turf/open/floor/wood,
 /area/space)
+"WU" = (
+/obj/effect/turf_decal/weather/dirt,
+/obj/effect/turf_decal/weather/dirt{
+	dir = 1
+	},
+/obj/structure/flora/bush/fullgrass/style_random,
+/turf/open/misc/grass/jungle,
+/area/space)
 "WW" = (
 /obj/structure/table/glass,
 /obj/item/flashlight/lamp{
@@ -12897,9 +12907,7 @@
 	elevator_mode = 1;
 	elevator_linked_id = "medical_main"
 	},
-/obj/machinery/door/firedoor/border_only{
-	dir = 1
-	},
+/obj/machinery/door/firedoor/border_only,
 /turf/open/floor/iron,
 /area/space)
 "Xq" = (
@@ -104548,7 +104556,7 @@ yM
 se
 se
 Xp
-ko
+hs
 hs
 Zf
 Kw
@@ -162391,7 +162399,7 @@ cB
 Hq
 oN
 CO
-Ii
+JI
 JI
 JI
 JI
@@ -170317,7 +170325,7 @@ Ii
 Ii
 fu
 lX
-Ii
+ZN
 oy
 tW
 qY
@@ -170577,7 +170585,7 @@ Ii
 Ii
 Jn
 tW
-ni
+WU
 tW
 PX
 Fp
@@ -171088,7 +171096,7 @@ Ii
 Ii
 fu
 qJ
-qJ
+SQ
 oy
 tW
 ni
@@ -171604,9 +171612,9 @@ Ti
 tt
 CI
 EH
+ZN
 Ii
-Ii
-iI
+QN
 yM
 Ml
 Fp
@@ -173914,7 +173922,7 @@ Ii
 Ii
 Ii
 fu
-Ii
+lX
 oy
 tW
 tW
@@ -174947,7 +174955,7 @@ Ii
 Ii
 Ii
 Ii
-Ii
+lX
 Ii
 yM
 yM
@@ -175201,7 +175209,7 @@ Ii
 fu
 ZN
 Ii
-Ii
+lX
 Ii
 SQ
 qJ
@@ -180882,7 +180890,7 @@ yM
 Oo
 Fp
 Oo
-Oo
+nF
 rv
 oN
 MF
