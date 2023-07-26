@@ -814,22 +814,19 @@
 /area/space)
 "di" = (
 /obj/structure/table,
-/obj/item/folder/white{
-	pixel_y = 4;
-	pixel_x = 5
-	},
-/obj/item/phone{
-	pixel_y = 6;
-	pixel_x = 5
-	},
 /obj/machinery/button/door/directional/east{
 	name = "Medbay Door Control";
 	id_tag = "lowremeddoor"
 	},
-/obj/effect/turf_decal/tile/blue/opposingcorners{
-	dir = 1
+/obj/effect/turf_decal/tile/red/opposingcorners{
+	dir = 8
 	},
-/turf/open/floor/iron/white,
+/obj/machinery/computer/security/telescreen{
+	desc = "Used for monitoring medbay to ensure patient safety.";
+	name = "Medbay Monitor";
+	network = list("medbay")
+	},
+/turf/open/floor/iron/dark,
 /area/space)
 "dj" = (
 /obj/structure/easel,
@@ -1005,10 +1002,13 @@
 	name = "Medbay Door Control";
 	id = "lowremeddoor"
 	},
-/obj/effect/turf_decal/tile/blue/opposingcorners{
-	dir = 1
+/obj/effect/turf_decal/tile/red/opposingcorners{
+	dir = 8
 	},
-/turf/open/floor/iron/white,
+/obj/machinery/light_switch/directional/south{
+	pixel_x = -8
+	},
+/turf/open/floor/iron/dark,
 /area/space)
 "dQ" = (
 /turf/open/floor/circuit,
@@ -1890,11 +1890,15 @@
 	pixel_x = -7;
 	pixel_y = 9
 	},
-/obj/effect/turf_decal/tile/blue/opposingcorners{
-	dir = 1
+/obj/item/folder/white{
+	pixel_y = 4;
+	pixel_x = 5
+	},
+/obj/effect/turf_decal/tile/red/opposingcorners{
+	dir = 8
 	},
 /obj/machinery/door/firedoor,
-/turf/open/floor/iron/white,
+/turf/open/floor/iron/dark,
 /area/space)
 "hH" = (
 /obj/effect/spawner/structure/window/reinforced,
@@ -2888,6 +2892,16 @@
 /obj/item/stack/sheet/mineral/wood,
 /obj/item/stack/sheet/mineral/wood,
 /turf/open/floor/wood/parquet,
+/area/space)
+"lk" = (
+/obj/machinery/computer/records/medical,
+/obj/effect/turf_decal/tile/red/opposingcorners{
+	dir = 8
+	},
+/obj/machinery/requests_console/directional/north{
+	department = "Security"
+	},
+/turf/open/floor/iron/dark,
 /area/space)
 "lm" = (
 /obj/machinery/door/firedoor,
@@ -5623,6 +5637,16 @@
 /obj/effect/turf_decal/trimline/blue/filled/corner,
 /turf/open/floor/iron/white,
 /area/space)
+"vr" = (
+/obj/structure/chair/office/light{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/red/opposingcorners{
+	dir = 8
+	},
+/obj/structure/reagent_dispensers/wall/peppertank/directional/west,
+/turf/open/floor/iron/dark,
+/area/space)
 "vs" = (
 /obj/machinery/door/airlock/virology{
 	autoclose = 0;
@@ -5813,14 +5837,15 @@
 /turf/open/floor/iron,
 /area/space)
 "wa" = (
-/obj/machinery/door/airlock/medical/glass{
-	name = "Lower Medbay Desk"
-	},
-/obj/effect/turf_decal/tile/blue/opposingcorners{
-	dir = 1
+/obj/machinery/door/airlock/security/glass{
+	name = "Medbay Security Post"
 	},
 /obj/machinery/door/firedoor,
-/turf/open/floor/iron/white,
+/obj/effect/turf_decal/siding/white,
+/obj/effect/turf_decal/tile/red/opposingcorners{
+	dir = 8
+	},
+/turf/open/floor/iron/dark,
 /area/space)
 "wb" = (
 /obj/effect/turf_decal/siding/wood{
@@ -10138,14 +10163,11 @@
 /turf/open/floor/iron/dark,
 /area/space)
 "MZ" = (
-/obj/effect/turf_decal/siding/white{
-	dir = 1
-	},
 /obj/effect/spawner/random/structure/tank_holder,
-/obj/effect/turf_decal/tile/blue/opposingcorners{
-	dir = 1
+/obj/effect/turf_decal/tile/red/opposingcorners{
+	dir = 8
 	},
-/turf/open/floor/iron/white,
+/turf/open/floor/iron/dark,
 /area/space)
 "Na" = (
 /obj/structure/chair/sofa/bench/left,
@@ -10184,6 +10206,12 @@
 	id = "armory-shut"
 	},
 /turf/open/floor/iron/checker,
+/area/space)
+"Nh" = (
+/obj/effect/turf_decal/tile/red/opposingcorners{
+	dir = 8
+	},
+/turf/open/floor/iron/dark,
 /area/space)
 "Ni" = (
 /obj/effect/turf_decal/tile/green/opposingcorners,
@@ -10319,6 +10347,14 @@
 	pixel_y = 5
 	},
 /obj/effect/spawner/random/bureaucracy/pen,
+/turf/open/floor/iron/dark,
+/area/space)
+"NH" = (
+/obj/machinery/computer/records/security,
+/obj/effect/turf_decal/tile/red/opposingcorners{
+	dir = 8
+	},
+/obj/machinery/newscaster/directional/north,
 /turf/open/floor/iron/dark,
 /area/space)
 "NI" = (
@@ -12330,17 +12366,11 @@
 /turf/open/floor/iron/white,
 /area/space)
 "VM" = (
-/obj/effect/turf_decal/siding/white{
+/obj/structure/closet/secure_closet/security/med,
+/obj/effect/turf_decal/tile/red/opposingcorners{
 	dir = 8
 	},
-/obj/structure/table,
-/obj/effect/spawner/random/food_or_drink/donkpockets{
-	pixel_y = 6
-	},
-/obj/effect/turf_decal/tile/blue/opposingcorners{
-	dir = 1
-	},
-/turf/open/floor/iron/white,
+/turf/open/floor/iron/dark,
 /area/space)
 "VN" = (
 /obj/effect/turf_decal/siding/white/corner,
@@ -12662,13 +12692,17 @@
 /area/space)
 "Xa" = (
 /obj/structure/table,
-/obj/machinery/microwave{
-	pixel_y = 6
+/obj/effect/turf_decal/tile/red/opposingcorners{
+	dir = 8
 	},
-/obj/effect/turf_decal/tile/blue/opposingcorners{
-	dir = 1
+/obj/machinery/recharger{
+	pixel_y = 4
 	},
-/turf/open/floor/iron/white,
+/obj/item/phone{
+	pixel_y = 14;
+	pixel_x = 10
+	},
+/turf/open/floor/iron/dark,
 /area/space)
 "Xb" = (
 /obj/machinery/flasher/directional/south{
@@ -102652,9 +102686,9 @@ Gj
 PW
 kS
 yM
+Zf
 yM
-yM
-yM
+Zf
 yM
 Gj
 ty
@@ -102909,10 +102943,10 @@ Gj
 PW
 kS
 yM
-Nn
-iZ
+NH
+vr
 MZ
-PX
+Zf
 Kw
 ty
 cJ
@@ -103166,9 +103200,9 @@ Gj
 PW
 kS
 yM
-yI
-Oo
-GT
+lk
+Nh
+Nh
 wa
 sv
 ty
@@ -103422,11 +103456,11 @@ yM
 Kw
 PW
 kS
-yM
+Zf
 VM
-xZ
-qc
-PX
+Nh
+Nh
+Zf
 Kw
 fO
 PX
@@ -103679,7 +103713,7 @@ fQ
 sv
 OP
 ta
-yM
+Zf
 Xa
 di
 dP
@@ -108837,8 +108871,8 @@ PW
 PW
 MN
 yM
-Zf
-Zf
+PX
+PX
 yM
 hs
 Lm
@@ -109093,7 +109127,7 @@ sv
 PW
 PW
 BO
-Zf
+PX
 bl
 bl
 zI
@@ -109350,7 +109384,7 @@ Bc
 SX
 fE
 na
-Zf
+PX
 Oz
 Oz
 zI
