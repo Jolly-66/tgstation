@@ -265,6 +265,46 @@
 	},
 /turf/open/floor/plating,
 /area/space)
+"bH" = (
+/obj/structure/table,
+/obj/machinery/button/door{
+	desc = "A door remote control switch for the interior brig doors.";
+	id = "innerbrig";
+	name = "Brig Interior Door Control";
+	normaldoorcontrol = 1;
+	pixel_x = -6;
+	pixel_y = 7;
+	req_access = list("security")
+	},
+/obj/machinery/button/door{
+	desc = "A door remote control switch for the exterior brig doors.";
+	id = "outerbrig";
+	name = "Brig Exterior Door Control";
+	normaldoorcontrol = 1;
+	pixel_x = 6;
+	pixel_y = 7;
+	req_access = list("security")
+	},
+/obj/machinery/button/door{
+	desc = "A door remote control switch for the interior brig doors.";
+	id = "innerbrig-2";
+	name = "Brig Interior Door Control";
+	normaldoorcontrol = 1;
+	pixel_x = -6;
+	pixel_y = -3;
+	req_access = list("security")
+	},
+/obj/machinery/button/door{
+	desc = "A door remote control switch for the exterior brig doors.";
+	id = "outerbrig-2";
+	name = "Brig Exterior Door Control";
+	normaldoorcontrol = 1;
+	pixel_x = 6;
+	pixel_y = -3;
+	req_access = list("security")
+	},
+/turf/open/floor/iron,
+/area/space)
 "bI" = (
 /obj/machinery/door/airlock{
 	id_tag = "Toilet4";
@@ -2720,6 +2760,12 @@
 	},
 /turf/open/floor/circuit,
 /area/space)
+"ox" = (
+/obj/machinery/door/airlock/security/glass{
+	name = "Brig Desk"
+	},
+/turf/open/floor/iron,
+/area/space)
 "oy" = (
 /obj/effect/turf_decal/weather/dirt,
 /turf/open/misc/grass/jungle,
@@ -2896,6 +2942,12 @@
 	dir = 4
 	},
 /turf/open/floor/plating,
+/area/space)
+"py" = (
+/obj/structure/railing/corner/end/flip{
+	dir = 4
+	},
+/turf/open/floor/iron/white,
 /area/space)
 "pz" = (
 /obj/structure/table,
@@ -4428,6 +4480,12 @@
 /obj/effect/spawner/random/vending/colavend,
 /turf/open/floor/iron/dark,
 /area/space)
+"xa" = (
+/obj/machinery/computer/records/security{
+	dir = 8
+	},
+/turf/open/floor/iron,
+/area/space)
 "xd" = (
 /obj/machinery/shower/directional/east,
 /obj/structure/window/spawner/directional/north,
@@ -4528,8 +4586,8 @@
 /area/space)
 "xE" = (
 /obj/machinery/door/airlock/security/glass{
-	id_tag = "innerbrig-2";
-	name = "Brig"
+	id_tag = "outerbrig-2";
+	name = "Prison Access"
 	},
 /turf/open/floor/iron/dark,
 /area/space)
@@ -4768,6 +4826,14 @@
 "zk" = (
 /obj/machinery/rnd/production/circuit_imprinter/department/science,
 /turf/open/floor/iron/dark,
+/area/space)
+"zo" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/turf/open/floor/iron/stairs{
+	dir = 8
+	},
 /area/space)
 "zq" = (
 /obj/effect/turf_decal/tile/blue/opposingcorners{
@@ -6254,6 +6320,12 @@
 	},
 /turf/open/floor/iron/dark,
 /area/space)
+"GM" = (
+/obj/machinery/door/airlock/security/glass{
+	name = "Prison Medbay"
+	},
+/turf/open/floor/iron/dark,
+/area/space)
 "GO" = (
 /obj/structure/table/wood,
 /obj/item/food/grown/tomato{
@@ -6734,13 +6806,6 @@
 /obj/structure/sign/departments/medbay/alt/directional/north,
 /obj/effect/turf_decal/caution/stand_clear/white{
 	dir = 4
-	},
-/turf/open/floor/iron/dark,
-/area/space)
-"Jt" = (
-/obj/machinery/door/airlock/security/glass{
-	id_tag = "outerbrig-2";
-	name = "Brig"
 	},
 /turf/open/floor/iron/dark,
 /area/space)
@@ -8348,6 +8413,13 @@
 	},
 /turf/open/floor/wood,
 /area/space)
+"RQ" = (
+/obj/machinery/door/poddoor/shutters/window{
+	name = "Prison Medbay Access";
+	id = "prison-med"
+	},
+/turf/open/floor/iron/dark,
+/area/space)
 "RR" = (
 /obj/structure/table/reinforced,
 /obj/machinery/door/window/right/directional/east{
@@ -8637,6 +8709,18 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/plating,
+/area/space)
+"Tu" = (
+/obj/machinery/door/poddoor/shutters/window{
+	name = "Prison Medbay Access";
+	id = "prison-med"
+	},
+/obj/machinery/button/door/directional/west{
+	id = "prison-med";
+	req_access = list("warden");
+	pixel_y = 6
+	},
+/turf/open/floor/iron/dark,
 /area/space)
 "Tw" = (
 /obj/machinery/door/firedoor,
@@ -155125,11 +155209,11 @@ yM
 Oo
 Oo
 Oo
-yM
-Ii
-Ii
-Ii
-Ii
+CO
+CO
+CO
+CO
+CO
 Ii
 Ii
 Ii
@@ -155374,19 +155458,19 @@ Ii
 Ii
 Ii
 Ii
-Ii
-Ii
-Ii
-Ii
 yM
+yM
+yM
+yM
+CO
 Oo
 Fp
 Oo
+CO
+PW
+PW
+PW
 yM
-Ii
-Ii
-Ii
-Ii
 Ii
 Ii
 Ii
@@ -155631,21 +155715,21 @@ Ii
 Ii
 Ii
 Ii
-Ii
-Ii
-Ii
-Ii
 yM
+Fp
+Fp
+Fp
+CO
 Oo
 Fp
 Oo
+Tu
+PW
+PW
+PW
 yM
-Ii
-Ii
-Ii
-Ii
-Ii
-Ii
+Oo
+Oo
 yM
 yM
 yM
@@ -155888,21 +155972,21 @@ Ii
 Ii
 Ii
 Ii
-Ii
-Ii
-Ii
-Ii
+ox
+Fp
+Fp
+Fp
 Zf
 Oo
 Fp
 Oo
-Zf
-Ii
-Ii
-Ii
-Ii
-Ii
-Ii
+RQ
+PW
+PW
+PW
+yM
+Oo
+Oo
 yM
 JI
 JI
@@ -156145,21 +156229,21 @@ Ii
 Ii
 Ii
 Ii
-Ii
-Ii
-Ii
-Ii
+Zf
+Fp
+Fp
+Fp
 Zf
 Oo
 Fp
 Oo
 Zf
-Ii
-Ii
-Ii
-Ii
-Ii
-Ii
+PW
+PW
+py
+Zf
+Oo
+Oo
 yM
 JI
 JI
@@ -156402,21 +156486,21 @@ Ii
 Ii
 Ii
 Ii
-Ii
-Ii
-Ii
-Ii
+Zf
+Fp
+Fp
+vZ
 Zf
 Oo
 Fp
 Oo
 Zf
-Ii
-Ii
-Ii
-Ii
-Ii
-Ii
+PW
+PW
+zo
+Zf
+Oo
+Oo
 yM
 JI
 JI
@@ -156659,21 +156743,21 @@ Ii
 Ii
 Ii
 Ii
-Ii
-Ii
-Ii
-Ii
+Zf
+xa
+bH
+vZ
 Zf
 Oo
 Fp
 Oo
-Zf
-Ii
-Ii
-Ii
-Ii
-Ii
-Ii
+GM
+PW
+PW
+ER
+GM
+Oo
+Oo
 yM
 JI
 JI
@@ -156916,11 +157000,11 @@ Ii
 Ii
 Ii
 Ii
-yM
+CO
 Zf
 Zf
 Zf
-yM
+CO
 Oo
 Fp
 Oo
@@ -157181,7 +157265,7 @@ XD
 Oo
 Fp
 Oo
-Jt
+xE
 Oo
 Oo
 Oo
@@ -157695,7 +157779,7 @@ XD
 Oo
 Fp
 Oo
-Jt
+xE
 Oo
 Oo
 Oo
