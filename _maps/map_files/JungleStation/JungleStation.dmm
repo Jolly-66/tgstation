@@ -1795,7 +1795,7 @@
 /area/space)
 "hu" = (
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/glass_large{
+/obj/machinery/door/airlock/multi_tile/public/glass{
 	name = "Bar"
 	},
 /turf/open/floor/iron/dark,
@@ -2228,7 +2228,7 @@
 /area/space)
 "iL" = (
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/glass_large{
+/obj/machinery/door/airlock/multi_tile/public/glass{
 	name = "Service Lounge"
 	},
 /turf/open/floor/iron/dark/side,
@@ -5780,7 +5780,7 @@
 /turf/open/floor/wood/parquet,
 /area/space)
 "vL" = (
-/obj/machinery/door/airlock/glass_large{
+/obj/machinery/door/airlock/multi_tile/public/glass{
 	name = "Barber Shop"
 	},
 /obj/machinery/door/firedoor,
@@ -8579,7 +8579,7 @@
 	dir = 8
 	},
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/glass_large{
+/obj/machinery/door/airlock/multi_tile/public/glass{
 	name = "Prison Canteen"
 	},
 /turf/open/floor/iron,
@@ -9728,7 +9728,7 @@
 /area/space)
 "Le" = (
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/glass_large{
+/obj/machinery/door/airlock/multi_tile/public/glass{
 	name = "Diner"
 	},
 /turf/open/floor/iron,
@@ -11027,7 +11027,7 @@
 /area/space)
 "Qr" = (
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/glass_large{
+/obj/machinery/door/airlock/multi_tile/public/glass{
 	name = "Courtroom"
 	},
 /turf/open/floor/iron/dark,
@@ -13313,7 +13313,7 @@
 /area/space)
 "YK" = (
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/glass_large{
+/obj/machinery/door/airlock/multi_tile/public/glass{
 	name = "Theater"
 	},
 /turf/open/floor/wood,
