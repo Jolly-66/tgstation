@@ -59,6 +59,11 @@
 	},
 /turf/open/floor/iron/white,
 /area/space)
+"av" = (
+/obj/structure/table,
+/obj/machinery/button,
+/turf/open/floor/iron,
+/area/space)
 "ay" = (
 /obj/effect/turf_decal/siding/wood{
 	dir = 1
@@ -168,6 +173,12 @@
 	},
 /turf/open/floor/iron/dark,
 /area/space)
+"bc" = (
+/obj/machinery/door/airlock/security/glass{
+	name = "Armory"
+	},
+/turf/open/floor/iron/dark,
+/area/space)
 "be" = (
 /obj/machinery/door/airlock/security{
 	name = "Security Customs"
@@ -195,6 +206,11 @@
 /obj/item/clothing/neck/tie/red/tied,
 /obj/item/clothing/neck/tie/black,
 /turf/open/floor/iron/dark,
+/area/space)
+"bk" = (
+/obj/structure/bed/dogbed/mcgriff,
+/mob/living/basic/pet/dog/pug/mcgriff,
+/turf/open/floor/iron,
 /area/space)
 "bl" = (
 /obj/structure/sink/directional/east,
@@ -592,6 +608,26 @@
 	dir = 1
 	},
 /turf/open/floor/iron,
+/area/space)
+"cM" = (
+/obj/structure/table,
+/obj/item/stamp/granted{
+	pixel_x = 8;
+	pixel_y = 12
+	},
+/obj/item/stamp/denied{
+	pixel_x = 8;
+	pixel_y = 6
+	},
+/obj/item/folder/red{
+	pixel_y = 8;
+	pixel_x = -6
+	},
+/obj/item/folder/blue{
+	pixel_y = 1;
+	pixel_x = -5
+	},
+/turf/open/floor/iron/dark,
 /area/space)
 "cN" = (
 /obj/effect/turf_decal/siding/white{
@@ -1976,6 +2012,12 @@
 	dir = 4
 	},
 /turf/open/floor/wood/parquet,
+/area/space)
+"jO" = (
+/obj/structure/chair/office{
+	dir = 4
+	},
+/turf/open/floor/iron,
 /area/space)
 "jS" = (
 /obj/effect/turf_decal/trimline/blue/filled/warning{
@@ -3364,6 +3406,15 @@
 	},
 /turf/open/floor/iron/dark,
 /area/space)
+"qu" = (
+/obj/structure/table,
+/obj/machinery/fax{
+	fax_name = "Warden's Office";
+	name = "Warden's Office Fax Machine";
+	pixel_y = 6
+	},
+/turf/open/floor/iron/dark,
+/area/space)
 "qv" = (
 /obj/effect/turf_decal/siding/wood/corner{
 	dir = 4
@@ -4356,6 +4407,14 @@
 /obj/machinery/portable_atmospherics/canister/anesthetic_mix,
 /turf/open/floor/iron/dark,
 /area/space)
+"vf" = (
+/obj/structure/table,
+/obj/item/flashlight/lamp{
+	pixel_y = 14
+	},
+/obj/item/hand_labeler,
+/turf/open/floor/iron/dark,
+/area/space)
 "vg" = (
 /obj/structure/table/reinforced,
 /obj/machinery/door/window/left/directional/east{
@@ -4612,6 +4671,13 @@
 	name = "Cell 3"
 	},
 /turf/open/floor/iron,
+/area/space)
+"wf" = (
+/obj/machinery/door/poddoor/shutters/window{
+	id = "armory";
+	name = "Armory Shutters"
+	},
+/turf/open/floor/iron/dark,
 /area/space)
 "wg" = (
 /obj/structure/mop_bucket/janitorialcart,
@@ -4883,6 +4949,10 @@
 	name = "Prison Access"
 	},
 /turf/open/floor/iron/dark,
+/area/space)
+"xG" = (
+/obj/structure/rack,
+/turf/open/floor/iron,
 /area/space)
 "xH" = (
 /obj/effect/turf_decal/siding/wood/corner{
@@ -6959,6 +7029,14 @@
 	},
 /turf/open/floor/glass,
 /area/space)
+"Ic" = (
+/obj/structure/table,
+/obj/item/paper_bin{
+	pixel_y = 6
+	},
+/obj/item/pen,
+/turf/open/floor/iron/dark,
+/area/space)
 "Id" = (
 /obj/structure/railing/corner{
 	dir = 1
@@ -8294,6 +8372,18 @@
 /obj/structure/sign/calendar/directional/south,
 /turf/open/floor/carpet/red,
 /area/space)
+"Pe" = (
+/obj/machinery/door/poddoor/shutters/window{
+	id = "armory";
+	name = "Armory Shutters"
+	},
+/obj/machinery/button/door/directional/north{
+	id = "armory";
+	name = "Armory Shutters";
+	req_access = list("armory")
+	},
+/turf/open/floor/iron/dark,
+/area/space)
 "Pf" = (
 /obj/structure/railing{
 	dir = 1
@@ -8989,6 +9079,12 @@
 /obj/effect/turf_decal/siding/wood,
 /turf/open/floor/wood/parquet,
 /area/space)
+"Sq" = (
+/obj/machinery/photocopier{
+	pixel_y = 3
+	},
+/turf/open/floor/iron/dark,
+/area/space)
 "Sr" = (
 /obj/item/food/grown/banana/bunch,
 /turf/open/misc/dirt,
@@ -9364,6 +9460,10 @@
 	},
 /turf/open/floor/wood/parquet,
 /area/space)
+"Uj" = (
+/obj/machinery/door/poddoor/preopen,
+/turf/open/floor/iron/dark,
+/area/space)
 "Uk" = (
 /obj/effect/turf_decal/trimline/green/filled/warning{
 	dir = 1
@@ -9693,6 +9793,10 @@
 	name = "Unit 3"
 	},
 /turf/open/floor/iron/freezer,
+/area/space)
+"VK" = (
+/mob/living/simple_animal/bot/secbot/beepsky/armsky,
+/turf/open/floor/iron/dark,
 /area/space)
 "VL" = (
 /obj/effect/turf_decal/trimline/green/filled/warning{
@@ -84570,15 +84674,15 @@ CI
 CI
 CI
 CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
+CO
+CO
+CO
+CO
+CO
+CO
+CO
+CO
+CO
 CI
 CI
 CI
@@ -84827,15 +84931,15 @@ CI
 CI
 CI
 CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
+CO
+Oo
+Oo
+Oo
+Oo
+Oo
+Oo
+Oo
+CO
 CI
 CI
 CI
@@ -85084,15 +85188,15 @@ CI
 CI
 CI
 CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
+CO
+Oo
+xG
+Fp
+xG
+Fp
+xG
+Oo
+CO
 CI
 CI
 CI
@@ -85341,15 +85445,15 @@ CI
 CI
 CI
 CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
+CO
+Oo
+xG
+Fp
+xG
+Fp
+Oo
+Oo
+CO
 CI
 CI
 CI
@@ -85598,15 +85702,15 @@ CI
 CI
 CI
 CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
+CO
+Oo
+xG
+Fp
+xG
+Fp
+Oo
+CO
+CO
 CI
 CI
 CI
@@ -85855,14 +85959,14 @@ CO
 CI
 CI
 CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
+CO
+Oo
+xG
+Fp
+Oo
+Oo
+VK
+CO
 CI
 CI
 CI
@@ -86112,14 +86216,14 @@ Zf
 Oo
 Oo
 Oo
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
+CO
+Oo
+Oo
+Oo
+Oo
+CO
+CO
+CO
 CI
 CI
 CI
@@ -86369,12 +86473,12 @@ wd
 Oo
 Oo
 Oo
-CI
-CI
-CI
-CI
-CI
-CI
+CO
+Pe
+wf
+CO
+bc
+CO
 CI
 CI
 CI
@@ -86626,12 +86730,12 @@ yM
 Oo
 Oo
 Oo
-CI
-CI
-CI
-CI
-CI
-CI
+Oo
+Oo
+Oo
+Oo
+Oo
+CO
 CI
 CI
 CI
@@ -86883,12 +86987,12 @@ yM
 Oo
 Oo
 Oo
-CI
-CI
-CI
-CI
-CI
-CI
+Oo
+Oo
+Oo
+Oo
+Oo
+CO
 CI
 CI
 CI
@@ -87141,7 +87245,7 @@ Oo
 Oo
 Oo
 CO
-CO
+Zf
 Zf
 Zf
 Ks
@@ -87398,7 +87502,7 @@ Oo
 Oo
 Oo
 Zf
-Oo
+kc
 Oo
 Oo
 Oo
@@ -87656,7 +87760,7 @@ Oo
 Oo
 Zf
 Nn
-vZ
+av
 Fp
 Oo
 Oo
@@ -88171,11 +88275,11 @@ Oo
 Zf
 NU
 vZ
-Fp
+bk
 Fp
 Fp
 Oo
-Oo
+Sq
 CO
 CI
 CI
@@ -88424,15 +88528,15 @@ Fp
 Uw
 Oo
 Oo
-Oo
+Uj
 Ks
 Oo
 Fp
 Fp
 Fp
 Fp
-Fp
-Oo
+jO
+cM
 CO
 CI
 CI
@@ -88687,9 +88791,9 @@ Oo
 Oo
 Oo
 Oo
-Oo
-Oo
-Oo
+qu
+vf
+Ic
 CO
 CI
 CI
