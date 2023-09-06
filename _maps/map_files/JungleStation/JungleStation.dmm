@@ -184,6 +184,14 @@
 	},
 /turf/open/floor/iron/dark,
 /area/space)
+"bb" = (
+/obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/poddoor/shutters{
+	id = "visitation";
+	name = "Visitation Shutters"
+	},
+/turf/open/floor/plating,
+/area/space)
 "bc" = (
 /obj/machinery/door/airlock/security/glass{
 	name = "Armory"
@@ -582,6 +590,12 @@
 	},
 /obj/effect/turf_decal/trimline/blue/filled/line{
 	dir = 9
+	},
+/turf/open/floor/iron,
+/area/space)
+"cz" = (
+/obj/machinery/door/airlock/glass{
+	name = "Prison Cafeteria"
 	},
 /turf/open/floor/iron,
 /area/space)
@@ -3766,6 +3780,39 @@
 /obj/item/bikehorn/rubberducky,
 /turf/open/floor/iron/freezer,
 /area/space)
+"rm" = (
+/obj/structure/table,
+/obj/item/clothing/under/rank/prisoner/skirt{
+	pixel_y = 16;
+	pixel_x = -8
+	},
+/obj/item/clothing/under/rank/prisoner/skirt{
+	pixel_y = 8;
+	pixel_x = -8
+	},
+/obj/item/clothing/under/rank/prisoner/skirt{
+	pixel_x = -8
+	},
+/obj/item/clothing/under/rank/prisoner{
+	pixel_y = 16
+	},
+/obj/item/clothing/under/rank/prisoner{
+	pixel_y = 8
+	},
+/obj/item/clothing/under/rank/prisoner,
+/obj/item/clothing/shoes/sneakers/orange{
+	pixel_y = 16;
+	pixel_x = 8
+	},
+/obj/item/clothing/shoes/sneakers/orange{
+	pixel_y = 8;
+	pixel_x = 8
+	},
+/obj/item/clothing/shoes/sneakers/orange{
+	pixel_x = 8
+	},
+/turf/open/floor/iron/dark,
+/area/space)
 "ro" = (
 /obj/structure/closet/secure_closet/medical3,
 /obj/structure/window/spawner/directional/north,
@@ -4025,6 +4072,11 @@
 /obj/machinery/door/firedoor/border_only,
 /turf/open/floor/iron,
 /area/space)
+"sm" = (
+/obj/structure/window/reinforced/spawner/directional/south,
+/obj/structure/chair/stool/directional/west,
+/turf/open/floor/iron/dark,
+/area/space)
 "so" = (
 /obj/machinery/door/firedoor/border_only{
 	dir = 8
@@ -4150,6 +4202,12 @@
 "sS" = (
 /obj/structure/chair/stool/bar/directional/south,
 /turf/open/floor/wood,
+/area/space)
+"sW" = (
+/obj/machinery/door/airlock/security{
+	name = "Cell 2"
+	},
+/turf/open/floor/iron/dark,
 /area/space)
 "sY" = (
 /obj/effect/spawner/structure/window/reinforced,
@@ -4287,6 +4345,12 @@
 	dir = 1
 	},
 /turf/open/floor/iron/white,
+/area/space)
+"tF" = (
+/obj/machinery/door/airlock{
+	name = "Prison Kitchen"
+	},
+/turf/open/floor/iron/kitchen/small,
 /area/space)
 "tG" = (
 /obj/effect/turf_decal/siding/wood,
@@ -5367,6 +5431,10 @@
 	},
 /turf/open/floor/iron,
 /area/space)
+"yv" = (
+/obj/structure/closet/secure_closet/brig,
+/turf/open/floor/iron/dark,
+/area/space)
 "yB" = (
 /obj/structure/rack,
 /turf/open/floor/iron/dark,
@@ -5386,6 +5454,20 @@
 /area/space)
 "yI" = (
 /obj/machinery/computer/records/medical,
+/turf/open/floor/iron/dark,
+/area/space)
+"yL" = (
+/obj/machinery/button/flasher{
+	id = "visitorflash";
+	pixel_x = -6;
+	pixel_y = 24
+	},
+/obj/machinery/button/door/directional/north{
+	id = "visitation";
+	name = "Visitation Shutters";
+	pixel_x = 6;
+	req_access = list("brig")
+	},
 /turf/open/floor/iron/dark,
 /area/space)
 "yM" = (
@@ -5801,6 +5883,11 @@
 	name = "medical bed"
 	},
 /obj/machinery/defibrillator_mount/directional/north,
+/turf/open/floor/iron/dark,
+/area/space)
+"Ba" = (
+/obj/structure/window/reinforced/spawner/directional/north,
+/obj/structure/chair/stool/directional/west,
 /turf/open/floor/iron/dark,
 /area/space)
 "Bb" = (
@@ -6713,6 +6800,13 @@
 /obj/structure/chair/stool/directional/north,
 /turf/open/floor/wood,
 /area/space)
+"EA" = (
+/obj/machinery/flasher/directional/south{
+	id = "visitorflash"
+	},
+/obj/structure/chair/stool/directional/east,
+/turf/open/floor/iron/dark,
+/area/space)
 "EE" = (
 /obj/structure/table/wood,
 /turf/open/floor/carpet/donk,
@@ -6858,6 +6952,10 @@
 	},
 /obj/effect/spawner/random/entertainment/lighter,
 /turf/open/floor/wood,
+/area/space)
+"Fi" = (
+/obj/structure/chair/stool/directional/east,
+/turf/open/floor/iron/dark,
 /area/space)
 "Fj" = (
 /obj/structure/fence,
@@ -7498,6 +7596,12 @@
 	},
 /obj/structure/chair/stool/bar/directional/west,
 /turf/open/floor/iron/white,
+/area/space)
+"IF" = (
+/obj/machinery/door/airlock/security{
+	name = "Cell 1"
+	},
+/turf/open/floor/iron/dark,
 /area/space)
 "IG" = (
 /obj/structure/railing/corner{
@@ -8392,6 +8496,22 @@
 /obj/item/stack/spacecash/c1,
 /turf/open/floor/wood,
 /area/space)
+"MH" = (
+/obj/structure/table,
+/obj/item/restraints/handcuffs{
+	pixel_y = 10;
+	pixel_x = 8
+	},
+/obj/item/restraints/handcuffs{
+	pixel_y = 2;
+	pixel_x = -5
+	},
+/obj/item/reagent_containers/spray/pepper{
+	pixel_y = 6;
+	pixel_x = 8
+	},
+/turf/open/floor/iron/dark,
+/area/space)
 "MI" = (
 /obj/structure/bodycontainer/morgue/beeper_off{
 	dir = 1
@@ -8480,6 +8600,17 @@
 /obj/effect/spawner/random/structure/tank_holder,
 /obj/effect/turf_decal/tile/red/opposingcorners{
 	dir = 8
+	},
+/turf/open/floor/iron/dark,
+/area/space)
+"Na" = (
+/obj/structure/table,
+/obj/item/storage/box/prisoner{
+	pixel_y = 12;
+	pixel_x = 7
+	},
+/obj/item/storage/box/prisoner{
+	pixel_y = 6
 	},
 /turf/open/floor/iron/dark,
 /area/space)
@@ -8984,6 +9115,11 @@
 /obj/structure/table,
 /obj/machinery/door/window/right/directional/east{
 	name = "Prison Visitation Desk"
+	},
+/obj/structure/window/reinforced/spawner/directional/north,
+/obj/machinery/door/poddoor/shutters{
+	id = "visitation";
+	name = "Visitation Shutters"
 	},
 /turf/open/floor/iron/dark,
 /area/space)
@@ -9570,6 +9706,12 @@
 	dir = 1
 	},
 /area/space)
+"Sf" = (
+/obj/machinery/door/airlock/security/glass{
+	name = "Prison Visitation"
+	},
+/turf/open/floor/iron/dark,
+/area/space)
 "Sg" = (
 /obj/structure/railing,
 /obj/machinery/door/firedoor/border_only{
@@ -9802,6 +9944,12 @@
 	},
 /obj/effect/turf_decal/weather/dirt,
 /turf/open/misc/grass/jungle,
+/area/space)
+"Tl" = (
+/obj/machinery/door/airlock/security{
+	name = "Cell 3"
+	},
+/turf/open/floor/iron/dark,
 /area/space)
 "Tq" = (
 /obj/structure/chair/sofa/bench/right{
@@ -10475,6 +10623,13 @@
 /obj/structure/chair/comfy/black,
 /turf/open/floor/wood/parquet,
 /area/space)
+"Wo" = (
+/obj/machinery/flasher/directional/north{
+	id = "visitorflash"
+	},
+/obj/structure/chair/stool/directional/east,
+/turf/open/floor/iron/dark,
+/area/space)
 "Wp" = (
 /obj/structure/table/glass,
 /obj/item/storage/belt/medical,
@@ -10584,6 +10739,9 @@
 	},
 /obj/structure/flora/bush/fullgrass/style_random,
 /turf/open/misc/grass/jungle,
+/area/space)
+"WV" = (
+/turf/open/floor/iron/kitchen/small,
 /area/space)
 "WW" = (
 /obj/structure/table/glass,
@@ -11006,6 +11164,11 @@
 /obj/structure/table,
 /obj/machinery/door/window/left/directional/east{
 	name = "Prison Visitation Desk"
+	},
+/obj/structure/window/reinforced/spawner/directional/south,
+/obj/machinery/door/poddoor/shutters{
+	id = "visitation";
+	name = "Visitation Shutters"
 	},
 /turf/open/floor/iron/dark,
 /area/space)
@@ -81633,11 +81796,11 @@ CI
 CI
 CI
 CI
-CI
-CI
-CI
-CI
-CI
+CO
+CO
+CO
+CO
+CO
 CI
 CI
 CI
@@ -81890,11 +82053,11 @@ CI
 CI
 CI
 CI
-CI
-CI
-CI
-CI
-CI
+CO
+Oo
+Oo
+Oo
+CO
 CI
 CI
 CI
@@ -82141,20 +82304,20 @@ CI
 CI
 CI
 CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
+CO
+CO
+CO
+CO
+CO
+CO
+CO
+Oo
+Oo
+Oo
+CO
+CO
+CO
+CO
 CI
 CI
 CI
@@ -82398,20 +82561,20 @@ CI
 CI
 CI
 CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
+CO
+Oo
+Oo
+Oo
+Oo
+Oo
+CO
+CO
+CO
+Tl
+CO
+Oo
+Oo
+CO
 CI
 CI
 CI
@@ -82655,20 +82818,20 @@ CI
 CI
 CI
 CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
+CO
+Oo
+Oo
+Oo
+Oo
+Oo
+Oo
+Oo
+Oo
+Oo
+CO
+Oo
+Oo
+CO
 CI
 CI
 CI
@@ -82911,21 +83074,21 @@ CI
 CI
 CI
 CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
+CO
+CO
+CO
+tF
+CO
+Oo
+Oo
+Oo
+Oo
+Oo
+Oo
+sW
+Oo
+Oo
+CO
 CI
 CI
 CI
@@ -83168,21 +83331,21 @@ CI
 CI
 CI
 CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
+CO
+WV
+WV
+WV
+CO
+cz
+PX
+PX
+CO
+Oo
+Oo
+CO
+CO
+CO
+CO
 CI
 CI
 CI
@@ -83424,22 +83587,22 @@ CI
 CI
 CI
 CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
+CO
+CO
+WV
+WV
+WV
+CO
+Fp
+Lr
+vZ
+CO
+Oo
+Oo
+CO
+Oo
+Oo
+CO
 CI
 CI
 CI
@@ -83681,22 +83844,22 @@ CI
 CI
 CI
 CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
+CO
+WV
+WV
+WV
+WV
+CO
+Fp
+Lr
+vZ
+CO
+Oo
+Oo
+CO
+Oo
+Oo
+CO
 CI
 CI
 CI
@@ -83938,22 +84101,22 @@ CI
 CI
 CI
 CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
+CO
+WV
+WV
+WV
+WV
+CO
+Fp
+Lr
+vZ
+CO
+Oo
+Oo
+IF
+Oo
+Oo
+CO
 CI
 CI
 CI
@@ -84195,23 +84358,23 @@ CI
 CI
 CI
 CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
+CO
+CO
+CO
+CO
+tF
+CO
+cz
+PX
+PX
+CO
+Oo
+Oo
+CO
+CO
+CO
+CO
+CO
 CI
 CI
 CI
@@ -84454,10 +84617,7 @@ CI
 CI
 CI
 CI
-CI
-CI
-CI
-CI
+CO
 Oo
 Oo
 Oo
@@ -84468,7 +84628,10 @@ Oo
 Oo
 Oo
 Oo
-CI
+Oo
+Oo
+Oo
+CO
 CI
 CI
 CI
@@ -84711,10 +84874,7 @@ CI
 CI
 CI
 CI
-CI
-CI
-CI
-CI
+CO
 Oo
 Oo
 Oo
@@ -84725,7 +84885,10 @@ Oo
 Oo
 Oo
 Oo
-CI
+Oo
+Oo
+Oo
+CO
 CI
 CI
 CI
@@ -84971,18 +85134,18 @@ CI
 CO
 CO
 CO
+Sf
 CO
 CO
 CO
+Oo
+Oo
+Oo
+Oo
+Oo
+Oo
+Oo
 CO
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
-Oo
-CI
 CI
 CI
 CI
@@ -85483,11 +85646,11 @@ CI
 CI
 CI
 CO
-Oo
-Oo
+Wo
+Fi
 Zf
-Oo
-Oo
+Fi
+EA
 CO
 CO
 CO
@@ -85742,14 +85905,14 @@ CI
 CO
 YG
 PB
-Zf
+bb
 YG
 PB
 CO
-ep
-ep
+rm
 Oo
-Oo
+yv
+yv
 Oo
 Oo
 Oo
@@ -85997,13 +86160,13 @@ CI
 CI
 CI
 CO
-Oo
-Oo
+sm
+Ba
 Zf
-Oo
-Oo
+sm
+Ba
 CO
-ep
+MH
 Oo
 Oo
 Oo
@@ -86254,16 +86417,16 @@ CI
 CI
 CI
 CO
-Oo
+yL
 Oo
 Oo
 Oo
 Oo
 CO
-ep
-ep
+Na
 Oo
-Oo
+yv
+yv
 Oo
 Oo
 Oo
@@ -86514,8 +86677,8 @@ CO
 CO
 CO
 CO
-CO
-CO
+Zf
+Sf
 CO
 CO
 CO
