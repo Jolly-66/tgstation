@@ -887,8 +887,8 @@
 /area/space)
 "cQ" = (
 /obj/structure/rack,
-/obj/item/roller,
-/obj/item/roller{
+/obj/item/emergency_bed,
+/obj/item/emergency_bed{
 	pixel_y = 6
 	},
 /obj/effect/turf_decal/tile/blue{
