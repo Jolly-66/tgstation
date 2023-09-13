@@ -7982,6 +7982,11 @@
 	},
 /turf/open/floor/iron/dark,
 /area/space)
+"Bn" = (
+/obj/structure/table,
+/obj/item/wrench,
+/turf/open/floor/iron,
+/area/space)
 "Bo" = (
 /obj/structure/table,
 /obj/item/stack/medical/gauze,
@@ -15332,6 +15337,10 @@
 	dir = 4
 	},
 /turf/open/floor/iron/stairs,
+/area/space)
+"ZX" = (
+/obj/machinery/disposal/bin,
+/turf/open/floor/iron/white,
 /area/space)
 "ZY" = (
 /obj/structure/window/reinforced/spawner/directional/west,
@@ -114985,11 +114994,11 @@ Lu
 Fp
 Oo
 Zf
-PW
+ZX
 PW
 yK
 Wb
-vZ
+Bn
 yM
 PW
 PW
