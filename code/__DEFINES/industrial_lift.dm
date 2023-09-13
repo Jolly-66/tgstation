@@ -24,6 +24,9 @@
 ///the specific_lift_id of the trams on birdshot station
 #define PRISON_TRAM "prison_tram"
 #define MAINTENANCE_TRAM "maint_tram"
+/// the specific_lift_id of the tram on JungleStation
+#define SCIENCE_TRAM_RIGHT "science_tram_right"
+#define SCIENCE_TRAM_LEFT "science_tram_left"
 
 // Defines for update_lift_doors
 #define OPEN_DOORS "open"

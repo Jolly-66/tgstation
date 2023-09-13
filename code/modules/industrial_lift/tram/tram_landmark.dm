@@ -107,3 +107,34 @@ GLOBAL_LIST_EMPTY(tram_landmarks)
 	specific_lift_id = MAINTENANCE_TRAM
 	platform_code = BRIDSHOT_MAINTENANCE_RIGHT
 	tgui_icons = list("Starboard Platform" = "plane-arrival")
+
+// JungleStation
+/obj/effect/landmark/lift_id/junglestation/sci_right
+	specific_lift_id = SCIENCE_TRAM_RIGHT
+
+/obj/effect/landmark/lift_id/junglestation/sci_left
+	specific_lift_id = SCIENCE_TRAM_LEFT
+
+/obj/effect/landmark/tram/platform/junglestation/sci_left_1
+	name = "Main Platform"
+	specific_lift_id = SCIENCE_TRAM_RIGHT
+	platform_code = JUNGLESTATION_SCIENCE_RIGHT
+	tgui_icons = list("Main Platform" = "house")
+
+/obj/effect/landmark/tram/platform/junglestation/sci_right_1
+	name = "Experimentation Labratories Platform"
+	specific_lift_id = SCIENCE_TRAM_RIGHT
+	platform_code = JUNGLESTATION_SCIENCE_RIGHT
+	tgui_icons = list("Xenobiology" = "biohazard", "Ordnance" = "mask-ventilator")
+
+/obj/effect/landmark/tram/platform/junglestation/sci_left_2
+	name = "Laboratory Platform"
+	specific_lift_id = SCIENCE_TRAM_LEFT
+	platform_code = JUNGLESTATION_SCIENCE_LEFT
+	tgui_icons = list("Geneticts" = "dna", "Roboticts" = "android", "Circuits" = "microchip", "RD Office" = "user-graduate")
+
+/obj/effect/landmark/tram/platform/junglestation/sci_right_2
+	name = "Main Platform"
+	specific_lift_id = SCIENCE_TRAM_LEFT
+	platform_code = JUNGLESTATION_SCIENCE_LEFT
+	tgui_icons = list("Main Platform" = "house")
