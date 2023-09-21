@@ -2498,6 +2498,7 @@
 	pixel_x = -3;
 	pixel_y = 9
 	},
+/obj/structure/table/wood,
 /turf/open/floor/iron/dark,
 /area/station/service/cafeteria)
 "aUK" = (
@@ -4902,6 +4903,7 @@
 	pixel_y = 2
 	},
 /obj/structure/window/spawner/directional/west,
+/obj/structure/table/wood,
 /turf/open/floor/iron/dark,
 /area/station/service/cafeteria)
 "bLj" = (
@@ -15052,6 +15054,7 @@
 	dir = 4
 	},
 /obj/effect/turf_decal/tile/neutral,
+/obj/machinery/door/firedoor,
 /turf/open/floor/iron,
 /area/station/hallway/primary/central)
 "fDk" = (
@@ -25220,6 +25223,9 @@
 	dir = 1
 	},
 /obj/effect/turf_decal/tile/blue/half/contrasted,
+/obj/structure/chair{
+	dir = 1
+	},
 /turf/open/floor/iron/white,
 /area/station/medical/medbay/central)
 "jhn" = (
@@ -25885,6 +25891,9 @@
 	},
 /obj/effect/turf_decal/tile/blue/anticorner/contrasted{
 	dir = 8
+	},
+/obj/structure/chair{
+	dir = 1
 	},
 /turf/open/floor/iron/white,
 /area/station/medical/medbay/central)
@@ -27331,6 +27340,7 @@
 	location = "2.1-Leaving-Storage"
 	},
 /obj/structure/cable,
+/obj/structure/cable,
 /turf/open/floor/iron,
 /area/station/hallway/primary/central)
 "jQa" = (
@@ -28697,6 +28707,11 @@
 /obj/effect/turf_decal/plaque{
 	icon_state = "L5"
 	},
+/obj/structure/cable,
+/turf/open/floor/iron,
+/area/station/hallway/primary/central)
+"kpd" = (
+/obj/structure/cable,
 /obj/structure/cable,
 /turf/open/floor/iron,
 /area/station/hallway/primary/central)
@@ -42509,6 +42524,8 @@
 /obj/structure/closet/emcloset,
 /obj/structure/cable,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
+/obj/structure/closet/emcloset,
+/obj/structure/closet/emcloset,
 /turf/open/floor/iron/dark,
 /area/station/hallway/primary/central)
 "ppX" = (
@@ -47005,6 +47022,7 @@
 	},
 /obj/structure/window/spawner/directional/south,
 /obj/structure/window/spawner/directional/west,
+/obj/structure/table/wood,
 /turf/open/floor/iron/dark,
 /area/station/service/cafeteria)
 "qTH" = (
@@ -51818,6 +51836,7 @@
 	},
 /obj/structure/table/wood,
 /obj/structure/window/spawner/directional/south,
+/obj/structure/table/wood,
 /turf/open/floor/iron/dark,
 /area/station/service/cafeteria)
 "sEZ" = (
@@ -51889,6 +51908,13 @@
 /obj/effect/mapping_helpers/broken_floor,
 /turf/open/floor/plating,
 /area/station/maintenance/department/medical/central)
+"sGv" = (
+/obj/structure/closet/emcloset,
+/obj/effect/turf_decal/tile/neutral/fourcorners,
+/obj/structure/closet/emcloset,
+/obj/structure/closet/emcloset,
+/turf/open/floor/iron/dark,
+/area/station/hallway/primary/central)
 "sGw" = (
 /obj/machinery/atmospherics/pipe/smart/simple/cyan/visible/layer5{
 	dir = 9
@@ -54969,6 +54995,13 @@
 	},
 /turf/open/floor/iron/white,
 /area/station/science/research)
+"tKV" = (
+/obj/machinery/door/firedoor,
+/obj/structure/cable,
+/obj/structure/cable,
+/obj/machinery/door/firedoor,
+/turf/open/floor/iron,
+/area/station/hallway/primary/central)
 "tLb" = (
 /obj/structure/sign/warning/electric_shock/directional/south,
 /turf/open/space/basic,
@@ -56106,6 +56139,12 @@
 /obj/machinery/portable_atmospherics/canister,
 /turf/open/floor/iron/dark,
 /area/station/engineering/atmospherics_engine)
+"ucV" = (
+/obj/effect/landmark/event_spawn,
+/obj/structure/cable,
+/obj/structure/cable,
+/turf/open/floor/iron,
+/area/station/hallway/primary/central)
 "ude" = (
 /obj/machinery/holopad,
 /obj/effect/turf_decal/box/white{
@@ -59610,6 +59649,12 @@
 	},
 /turf/open/floor/iron/dark,
 /area/station/ai_monitored/turret_protected/ai)
+"vno" = (
+/obj/structure/closet/firecloset,
+/obj/effect/turf_decal/tile/neutral/fourcorners,
+/obj/structure/closet/firecloset,
+/turf/open/floor/iron/dark,
+/area/station/hallway/primary/central)
 "vnp" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
@@ -60211,6 +60256,7 @@
 	dir = 1
 	},
 /obj/machinery/digital_clock/directional/north,
+/obj/machinery/door/firedoor,
 /turf/open/floor/iron,
 /area/station/hallway/primary/central)
 "vxJ" = (
@@ -91144,7 +91190,7 @@ jWR
 fbE
 pAk
 ykS
-hPM
+ucV
 uoe
 oIa
 dqI
@@ -91658,7 +91704,7 @@ ipy
 ipy
 bdP
 buj
-htd
+kpd
 mZF
 oIa
 gja
@@ -91915,7 +91961,7 @@ mFi
 iBq
 iBq
 vxE
-kON
+tKV
 fDc
 oIa
 cpn
@@ -92170,9 +92216,9 @@ aaa
 aaf
 aaa
 ihq
-uCq
+vno
 hZZ
-htd
+kpd
 uoe
 oIa
 nnq
@@ -92429,7 +92475,7 @@ aaa
 khZ
 ppU
 ikR
-htd
+kpd
 fIS
 oIa
 oIa
@@ -92684,7 +92730,7 @@ vyv
 aJS
 aaa
 ihq
-ooP
+sGv
 hZZ
 rPO
 gmI
