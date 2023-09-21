@@ -8,6 +8,7 @@ help: There are things stacked on one another. Please check and remove them.
 /area:
   banned_neighbors:
   - /area
+help: There are cables stacked. Please remove the duplicates.
 =/obj/structure/cable:
   banned_neighbors:
   - =/obj/structure/cable
