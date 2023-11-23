@@ -209,10 +209,9 @@
 		launch_from.visible_message(span_warning("[mod.wearer] rockets into the air!"))
 	new /obj/effect/temp_visual/jet_plume(launch_from)
 
-	if (!HAS_TRAIT(mod.wearer, TRAIT_JETPACKING))
-		var/obj/item/mod/module/jetpack/linked_jetpack = locate() in mod.modules
-		if (!isnull(linked_jetpack))
-			linked_jetpack.on_activation()
+	var/obj/item/mod/module/jetpack/linked_jetpack = locate() in mod.modules
+	if (!isnull(linked_jetpack) && !linked_jetpack.active)
+		linked_jetpack.on_activation()
 	return TRUE
 
 #undef FAILED_ACTIVATION_COOLDOWN
@@ -751,6 +750,15 @@
 	if(forced || wearer.throwing || wearer.body_position == LYING_DOWN || wearer.buckled || CHECK_MOVE_LOOP_FLAGS(wearer, MOVEMENT_LOOP_OUTSIDE_CONTROL))
 		return
 	mod.core.add_charge(power_per_step)
+
+/obj/item/mod/module/hat_stabilizer/syndicate
+	name = "MOD elite hat stabilizer module"
+	desc = "A simple set of deployable stands, directly atop one's head; \
+		these will deploy under a hat to keep it from falling off, allowing them to be worn atop the sealed helmet. \
+		You still need to take the hat off your head while the helmet deploys, though. This is a must-have for \
+		Syndicate Operatives and Agents alike, enabling them to continue to style on the opposition even while in their MODsuit."
+	complexity = 0
+	removable = FALSE
 
 /// Module that shoves garbage inside its material container when the user crosses it, and eject the recycled material with MMB.
 /obj/item/mod/module/recycler
