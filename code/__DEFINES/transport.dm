@@ -19,6 +19,8 @@
 #define HILBERT_LINE_1 "hilb_1"
 #define BIRDSHOT_LINE_1 "bird_1"
 #define BIRDSHOT_LINE_2 "bird_2"
+#define JUNGLESTATION_LINE_1 "jungle_1"
+#define JUNGLESTATION_LINE_2 "jungle_2"
 
 // Destinations/platforms
 #define TRAMSTATION_WEST 1
@@ -34,6 +36,9 @@
 
 #define BIRDSHOT_MAINTENANCE_LEFT 1
 #define BRIDSHOT_MAINTENANCE_RIGHT 2
+
+#define JUNGLESTATION_SCIENCE_RIGHT 1
+#define JUNGLESTATION_SCIENCE_LEFT 2
 
 // Tram Navigation aids
 #define TRAM_NAV_BEACONS "tram_nav"
