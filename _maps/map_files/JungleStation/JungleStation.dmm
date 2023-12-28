@@ -1673,6 +1673,12 @@
 /obj/machinery/disposal/bin,
 /turf/open/floor/carpet/black,
 /area/space)
+"eg" = (
+/turf/closed/indestructible/riveted{
+	desc = "A wall impregnated with Fixium, able to withstand massive explosions with ease";
+	name = "hyper-reinforced wall"
+	},
+/area/space)
 "eh" = (
 /obj/effect/turf_decal/siding/white{
 	dir = 1
@@ -2564,6 +2570,12 @@
 /obj/effect/landmark/transport/transport_id/junglestation/sci_right,
 /obj/effect/turf_decal/tile/neutral/tram,
 /turf/open/indestructible/tram/plate,
+/area/space)
+"gy" = (
+/obj/machinery/mass_driver/ordnance{
+	dir = 4
+	},
+/turf/open/floor/plating,
 /area/space)
 "gz" = (
 /obj/structure/chair/sofa/corp/left,
@@ -3466,6 +3478,9 @@
 	req_access = list("captain")
 	},
 /turf/open/floor/circuit/red,
+/area/space)
+"iV" = (
+/turf/open/floor/plating/airless,
 /area/space)
 "iW" = (
 /obj/effect/turf_decal/trimline/red/filled/line{
@@ -5540,6 +5555,11 @@
 	pixel_y = 17
 	},
 /turf/open/floor/carpet/red,
+/area/space)
+"oA" = (
+/obj/machinery/door/poddoor/massdriver_ordnance,
+/obj/structure/fans/tiny,
+/turf/open/floor/plating,
 /area/space)
 "oB" = (
 /obj/structure/chair/stool/bar/directional/north,
@@ -8807,6 +8827,12 @@
 	dir = 9
 	},
 /turf/open/floor/iron,
+/area/space)
+"wJ" = (
+/obj/machinery/door/airlock/research{
+	name = "Ordnance Lab"
+	},
+/turf/open/floor/iron/white,
 /area/space)
 "wK" = (
 /obj/structure/thermoplastic/light,
@@ -16961,6 +16987,12 @@
 /obj/effect/turf_decal/trimline/red/filled/line,
 /turf/open/floor/iron/dark,
 /area/space)
+"RO" = (
+/obj/machinery/camera/preset/ordnance{
+	dir = 6
+	},
+/turf/open/floor/plating/airless,
+/area/space)
 "RP" = (
 /obj/effect/turf_decal/siding/wood{
 	dir = 10
@@ -19074,6 +19106,16 @@
 	dir = 1
 	},
 /area/space)
+"Xh" = (
+/obj/machinery/computer/pod/old/mass_driver_controller/ordnancedriver{
+	pixel_x = -24
+	},
+/obj/machinery/door/window/left/directional/north{
+	name = "Mass Driver Door";
+	req_access = list("ordnance")
+	},
+/turf/open/floor/plating,
+/area/space)
 "Xi" = (
 /obj/effect/turf_decal/trimline/red/filled/warning,
 /turf/open/floor/iron/dark/side{
@@ -19363,6 +19405,10 @@
 	name = "Xenobio Pen 7 Blast Door"
 	},
 /turf/open/floor/engine,
+/area/space)
+"XT" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating/airless,
 /area/space)
 "XU" = (
 /obj/effect/turf_decal/tile/purple{
@@ -19713,6 +19759,10 @@
 /obj/structure/sink/directional/east,
 /obj/structure/mirror/directional/west,
 /turf/open/floor/iron/freezer,
+/area/space)
+"YM" = (
+/obj/effect/spawner/random/engineering/tracking_beacon,
+/turf/open/floor/plating/airless,
 /area/space)
 "YN" = (
 /obj/machinery/button/door/directional/west{
@@ -70173,12 +70223,12 @@ CI
 CI
 CI
 CI
-CI
-CI
-CI
-CI
-CI
-CI
+CO
+CO
+CO
+CO
+CO
+CO
 CI
 CI
 CI
@@ -70427,15 +70477,15 @@ CI
 CI
 CI
 CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
+CO
+CO
+CO
+CO
+Oo
+Oo
+Oo
+Oo
+CO
 CI
 CI
 CI
@@ -70684,15 +70734,15 @@ CI
 CI
 CI
 CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
+CO
+PW
+PW
+wJ
+PW
+PW
+PW
+PW
+CO
 CI
 CI
 CI
@@ -70941,17 +70991,17 @@ CI
 CI
 CI
 CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
+CO
+PW
+PW
+wJ
+PW
+PW
+PW
+PW
+CO
+CO
+CO
 CI
 CI
 CI
@@ -71198,17 +71248,17 @@ CI
 CI
 CI
 CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
+CO
+PW
+PW
+CO
+Oo
+Oo
+Oo
+Oo
+Xh
+JI
+CO
 CI
 CI
 CI
@@ -71455,17 +71505,17 @@ CI
 CI
 CI
 CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
+CO
+PW
+PW
+CO
+Oo
+Oo
+Oo
+Oo
+Zf
+gy
+CO
 CI
 CI
 CI
@@ -71712,17 +71762,17 @@ CI
 CI
 CI
 CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
+CO
+PW
+PW
+CO
+Oo
+Oo
+Oo
+Oo
+Zf
+JI
+CO
 CI
 CI
 CI
@@ -71969,17 +72019,17 @@ CI
 CI
 CI
 CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
+CO
+PW
+PW
+CO
+Oo
+Oo
+Oo
+Oo
+Zf
+JI
+CO
 CI
 CI
 CI
@@ -72226,17 +72276,17 @@ CI
 CI
 CI
 CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
+CO
+PW
+PW
+CO
+Oo
+Oo
+Oo
+Oo
+CO
+oA
+CO
 CI
 CI
 CI
@@ -72483,16 +72533,16 @@ CI
 CI
 CI
 CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
+CO
+PW
+PW
+CO
+Oo
+Oo
+Oo
+Zf
+Zf
+JI
 CI
 CI
 CI
@@ -72741,13 +72791,13 @@ CI
 CI
 CI
 CO
-CI
-CI
-CI
-CI
-CI
-CI
-CI
+PW
+PW
+CO
+Zf
+Zf
+Zf
+Zf
 CI
 CI
 CI
@@ -73000,7 +73050,7 @@ CI
 CO
 PW
 PW
-CI
+CO
 CI
 CI
 CI
@@ -73257,7 +73307,7 @@ CI
 CO
 PW
 PW
-CI
+CO
 CI
 CI
 CI
@@ -73514,7 +73564,7 @@ CI
 CO
 PW
 PW
-CI
+CO
 CI
 CI
 CI
@@ -73771,7 +73821,7 @@ CI
 CO
 PW
 PW
-CI
+CO
 CI
 CI
 CI
@@ -74028,7 +74078,7 @@ CI
 CO
 Ga
 XM
-CI
+CO
 CI
 CI
 CI
@@ -74285,7 +74335,7 @@ CI
 CO
 Ga
 XM
-CI
+CO
 CI
 CI
 CI
@@ -74542,7 +74592,7 @@ CI
 CO
 kI
 kI
-CI
+CO
 CI
 CI
 CI
@@ -82514,9 +82564,9 @@ CI
 CI
 CI
 CI
-CI
-CI
-CI
+XT
+iV
+XT
 CI
 CI
 CI
@@ -82770,11 +82820,11 @@ CI
 CI
 CI
 CI
-CI
-CI
-CI
-CI
-CI
+XT
+XT
+iV
+XT
+XT
 CI
 CI
 CI
@@ -83026,13 +83076,13 @@ CI
 CI
 CI
 CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
+yM
+XT
+iV
+iV
+iV
+XT
+yM
 CI
 CI
 CI
@@ -83282,15 +83332,15 @@ CI
 CI
 CI
 CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
+XT
+XT
+iV
+iV
+iV
+iV
+iV
+XT
+XT
 CI
 CI
 CI
@@ -83539,15 +83589,15 @@ CI
 CI
 CI
 CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
+yM
+iV
+iV
+iV
+YM
+iV
+iV
+iV
+yM
 CI
 CI
 CI
@@ -83796,15 +83846,15 @@ CI
 CI
 CI
 CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
+XT
+XT
+iV
+iV
+iV
+iV
+iV
+XT
+XT
 CI
 CI
 CI
@@ -84054,13 +84104,13 @@ CI
 CI
 CI
 CI
-CI
-CI
-CI
-CI
-CI
-CI
-CI
+yM
+XT
+iV
+RO
+iV
+XT
+yM
 CI
 CI
 CI
@@ -84312,11 +84362,11 @@ CI
 CI
 CI
 CI
-CI
-CI
-CI
-CI
-CI
+XT
+XT
+eg
+XT
+XT
 CI
 CI
 CI
@@ -84570,9 +84620,9 @@ CI
 CI
 CI
 CI
-CI
-CI
-CI
+XT
+yM
+XT
 CI
 CI
 CI

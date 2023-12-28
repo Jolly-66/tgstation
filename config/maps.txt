@@ -31,6 +31,10 @@ map icebox
 	votable
 endmap
 
+map junglestation
+	votable
+endmap
+
 map metastation
 	minplayers 25
 	#voteweight 0.5
