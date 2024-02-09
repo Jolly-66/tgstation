@@ -1,0 +1,6 @@
+help: "Use the directional variants when possible."
+/obj:
+  banned_variables:
+    icon_state:
+    icon:
+    atom_integrity:
