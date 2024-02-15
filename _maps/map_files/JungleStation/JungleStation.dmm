@@ -1172,6 +1172,10 @@
 /obj/machinery/atmospherics/pipe/smart/simple/scrubbers/visible,
 /turf/open/floor/iron/dark,
 /area/space)
+"bFf" = (
+/obj/structure/closet/crate/bin,
+/turf/open/floor/carpet,
+/area/space)
 "bFA" = (
 /obj/effect/turf_decal/siding/white,
 /obj/item/wrench,
@@ -5338,7 +5342,7 @@
 /obj/structure/railing{
 	dir = 4
 	},
-/turf/open/floor/wood/tile,
+/turf/open/floor/iron/dark,
 /area/space)
 "gsG" = (
 /obj/effect/turf_decal/siding/white{
@@ -7030,6 +7034,8 @@
 /area/space)
 "hZv" = (
 /obj/structure/sink/directional/north,
+/obj/structure/mirror/directional/south,
+/obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/iron/freezer,
 /area/space)
 "hZG" = (
@@ -7869,6 +7875,13 @@
 /obj/structure/railing/corner/end,
 /turf/open/floor/wood,
 /area/space)
+"iQp" = (
+/obj/structure/lattice,
+/obj/machinery/door/firedoor/border_only{
+	dir = 4
+	},
+/turf/open/openspace,
+/area/space)
 "iQW" = (
 /obj/machinery/door/airlock/virology{
 	name = "Personnel Quarters"
@@ -7928,6 +7941,12 @@
 /turf/open/floor/iron/dark/smooth_corner{
 	dir = 1
 	},
+/area/space)
+"iWG" = (
+/obj/machinery/door/firedoor/border_only{
+	dir = 4
+	},
+/turf/open/openspace,
 /area/space)
 "iWN" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/general/visible,
@@ -8506,6 +8525,7 @@
 	specialfunctions = 4;
 	pixel_x = 8
 	},
+/obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/iron/freezer,
 /area/space)
 "jBP" = (
@@ -8628,6 +8648,7 @@
 /area/space)
 "jIG" = (
 /obj/structure/urinal/directional/north,
+/obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/iron/freezer,
 /area/space)
 "jIX" = (
@@ -9221,7 +9242,7 @@
 /obj/structure/railing{
 	dir = 8
 	},
-/turf/open/floor/wood/tile,
+/turf/open/floor/iron/dark,
 /area/space)
 "koJ" = (
 /obj/structure/chair/sofa/bench/left{
@@ -10180,6 +10201,10 @@
 	dir = 10
 	},
 /turf/open/floor/iron/dark,
+/area/space)
+"lBI" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/iron/freezer,
 /area/space)
 "lBX" = (
 /obj/structure/table/reinforced,
@@ -12424,6 +12449,13 @@
 	},
 /turf/open/floor/iron,
 /area/space)
+"nSs" = (
+/obj/structure/lattice,
+/obj/machinery/door/firedoor/border_only{
+	dir = 8
+	},
+/turf/open/openspace,
+/area/space)
 "nSB" = (
 /obj/structure/chair/stool/directional/east,
 /obj/effect/turf_decal/tile/red/opposingcorners{
@@ -12926,6 +12958,10 @@
 /obj/structure/table/wood,
 /turf/open/floor/wood/tile,
 /area/space)
+"ozP" = (
+/obj/machinery/door/firedoor/border_only,
+/turf/open/floor/iron/dark,
+/area/space)
 "oAc" = (
 /obj/machinery/door/airlock/medical/glass{
 	name = "Medbay Exam"
@@ -13188,6 +13224,13 @@
 	dir = 8
 	},
 /turf/open/floor/iron/dark,
+/area/space)
+"oJc" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/machinery/door/firedoor/border_only{
+	dir = 8
+	},
+/turf/open/openspace,
 /area/space)
 "oJn" = (
 /obj/structure/chair/sofa/bench/right,
@@ -13537,7 +13580,7 @@
 /area/space)
 "pcF" = (
 /obj/structure/stairs/north,
-/turf/open/floor/wood/tile,
+/turf/open/floor/iron/dark,
 /area/space)
 "pcN" = (
 /obj/structure/chair/sofa/bench,
@@ -13753,6 +13796,10 @@
 /obj/structure/fluff/tram_rail,
 /obj/structure/thermoplastic/light,
 /turf/open/floor/plating,
+/area/space)
+"ptx" = (
+/obj/structure/closet/crate/bin,
+/turf/open/floor/wood/tile,
 /area/space)
 "ptE" = (
 /obj/structure/chair/sofa/bench/right{
@@ -15226,6 +15273,11 @@
 /obj/machinery/door/firedoor/border_only,
 /turf/open/floor/iron,
 /area/space)
+"qYp" = (
+/obj/structure/lattice,
+/obj/machinery/door/firedoor/border_only,
+/turf/open/openspace,
+/area/space)
 "qYw" = (
 /obj/machinery/door/airlock/research{
 	name = "Ordnance Tank Storage"
@@ -16007,6 +16059,7 @@
 /obj/machinery/door/airlock/multi_tile/public/glass{
 	name = "Library"
 	},
+/obj/machinery/door/firedoor,
 /turf/open/floor/iron/dark,
 /area/space)
 "rTu" = (
@@ -18823,6 +18876,10 @@
 /obj/machinery/door/firedoor,
 /turf/open/floor/iron/dark,
 /area/space)
+"uSO" = (
+/obj/machinery/disposal/bin,
+/turf/open/floor/engine/cult,
+/area/space)
 "uUg" = (
 /obj/structure/railing/corner/end/flip,
 /turf/open/floor/iron/dark,
@@ -20657,6 +20714,10 @@
 	},
 /turf/open/floor/wood/parquet,
 /area/space)
+"xkw" = (
+/obj/structure/closet/crate/bin,
+/turf/open/floor/wood,
+/area/space)
 "xkH" = (
 /obj/structure/table/reinforced,
 /obj/structure/window/spawner/directional/south,
@@ -21274,6 +21335,13 @@
 "xVI" = (
 /obj/structure/flora/bush/flowers_br/style_random,
 /turf/open/misc/grass/jungle,
+/area/space)
+"xWk" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/machinery/door/firedoor/border_only{
+	dir = 4
+	},
+/turf/open/openspace,
 /area/space)
 "xWn" = (
 /obj/machinery/vending/wardrobe/viro_wardrobe,
@@ -121688,7 +121756,7 @@ qXp
 kOh
 bnX
 kOh
-kOh
+jsq
 kOh
 kOh
 kOh
@@ -121945,7 +122013,7 @@ afS
 kOh
 bnX
 bnX
-bnX
+vcw
 bnX
 bnX
 bnX
@@ -122202,7 +122270,7 @@ afS
 kOh
 kOh
 kOh
-kOh
+jsq
 kOh
 kOh
 bnX
@@ -122461,9 +122529,9 @@ jle
 qXp
 qXp
 qXp
-kOh
-bnX
-kOh
+jsq
+vcw
+jsq
 gBX
 gBX
 jaK
@@ -125545,9 +125613,9 @@ qXp
 qXp
 qXp
 qXp
-kOh
-bnX
-kOh
+jsq
+vcw
+jsq
 qXp
 caJ
 caJ
@@ -125771,6 +125839,7 @@ qXp
 kOh
 kOh
 kOh
+jsq
 kOh
 kOh
 kOh
@@ -125800,8 +125869,7 @@ kOh
 kOh
 kOh
 kOh
-kOh
-kOh
+jsq
 kOh
 bnX
 kOh
@@ -126028,6 +126096,7 @@ qXp
 kOh
 bnX
 bnX
+vcw
 bnX
 bnX
 bnX
@@ -126057,8 +126126,7 @@ bnX
 bnX
 bnX
 bnX
-bnX
-bnX
+vcw
 bnX
 bnX
 kOh
@@ -126285,6 +126353,7 @@ qXp
 kOh
 bnX
 kOh
+jsq
 kOh
 kOh
 kOh
@@ -126314,8 +126383,7 @@ kOh
 kOh
 kOh
 kOh
-kOh
-kOh
+jsq
 kOh
 kOh
 kOh
@@ -126539,9 +126607,9 @@ mVb
 mVb
 mVb
 qXp
-kOh
-bnX
-kOh
+jsq
+vcw
+jsq
 qXp
 qXp
 qXp
@@ -127562,7 +127630,7 @@ bSe
 thx
 thx
 rvU
-thx
+ptx
 thx
 thx
 ozl
@@ -128582,7 +128650,7 @@ mVb
 mVb
 mVb
 qXp
-knP
+uSO
 oAr
 rew
 vVb
@@ -129361,7 +129429,7 @@ qXp
 qXp
 qXp
 bbw
-kOh
+ddr
 kOh
 kOh
 kOh
@@ -129622,7 +129690,7 @@ ddp
 kOh
 kOh
 kOh
-kOh
+jsq
 kOh
 bnX
 kOh
@@ -130393,7 +130461,7 @@ kOh
 kOh
 kOh
 kOh
-kOh
+jsq
 kOh
 bnX
 kOh
@@ -131165,9 +131233,9 @@ dZQ
 thx
 ozl
 afS
-kOh
-bnX
-kOh
+jsq
+vcw
+jsq
 qXp
 afS
 afS
@@ -131425,7 +131493,7 @@ afS
 kOh
 bnX
 kOh
-kOh
+jsq
 kOh
 kOh
 kOh
@@ -131682,7 +131750,7 @@ afS
 kOh
 bnX
 bnX
-bnX
+vcw
 bnX
 bnX
 bnX
@@ -131939,7 +132007,7 @@ qXp
 kOh
 kOh
 kOh
-kOh
+jsq
 kOh
 kOh
 kOh
@@ -191307,10 +191375,10 @@ jyh
 jyh
 jyh
 jyh
-jyh
-jyh
-jyh
-jyh
+caJ
+caJ
+caJ
+caJ
 jyh
 jyh
 jyh
@@ -191564,10 +191632,10 @@ jyh
 jyh
 jyh
 jyh
+caJ
 jyh
 jyh
-jyh
-jyh
+caJ
 jyh
 jyh
 jyh
@@ -191808,7 +191876,7 @@ jyh
 jyh
 qXp
 uex
-iGV
+lBI
 hZv
 qXp
 afS
@@ -191821,10 +191889,10 @@ jyh
 jyh
 jyh
 jyh
+caJ
 jyh
 jyh
-jyh
-jyh
+caJ
 jyh
 jyh
 jyh
@@ -192064,7 +192132,7 @@ jyh
 jyh
 qXp
 qXp
-iGV
+lBI
 iGV
 qXp
 qXp
@@ -192328,7 +192396,7 @@ fAT
 wxf
 nRc
 gBH
-dgT
+bFf
 qXp
 jyh
 jyh
@@ -192336,9 +192404,9 @@ jyh
 jyh
 jyh
 jyh
-jyh
-jyh
-jyh
+caJ
+caJ
+caJ
 jyh
 jyh
 jyh
@@ -192592,9 +192660,9 @@ qXp
 jyh
 jyh
 jyh
+caJ
 jyh
-jyh
-jyh
+caJ
 jyh
 jyh
 jyh
@@ -192850,9 +192918,9 @@ jyh
 jyh
 jyh
 jyh
-jyh
-jyh
-jyh
+caJ
+caJ
+caJ
 jyh
 jyh
 jyh
@@ -193352,21 +193420,21 @@ thx
 thx
 thx
 qXp
-kPb
-kPb
-yeO
-kPb
-kPb
+hhj
+hhj
+nSs
+hhj
+oJc
 vrn
 thx
 qXp
 qXp
 qXp
 qXp
-jyh
-jyh
-jyh
-jyh
+caJ
+caJ
+caJ
+caJ
 jyh
 jyh
 jyh
@@ -193613,16 +193681,16 @@ kPb
 kPb
 yeO
 kPb
-kPb
+ahx
 oEN
 thx
 afS
 kOh
 kOh
 qXp
+caJ
 jyh
-jyh
-jyh
+caJ
 jyh
 jyh
 jyh
@@ -193870,14 +193938,14 @@ kPb
 kPb
 mfG
 kPb
-kPb
+ahx
 ukp
 thx
 afS
 kOh
 kOh
 qXp
-jyh
+caJ
 jyh
 jyh
 jyh
@@ -194127,7 +194195,7 @@ yeO
 nlC
 tbk
 nlC
-yeO
+qYp
 ukp
 thx
 afS
@@ -194136,11 +194204,11 @@ kOh
 qXp
 jyh
 jyh
-jyh
-jyh
-jyh
-jyh
-jyh
+caJ
+caJ
+caJ
+caJ
+caJ
 qXp
 dGJ
 dGJ
@@ -194384,7 +194452,7 @@ kPb
 kPb
 yeO
 kPb
-kPb
+ahx
 ukp
 thx
 afS
@@ -194393,11 +194461,11 @@ kOh
 qXp
 jyh
 jyh
+caJ
 jyh
+caJ
 jyh
-jyh
-jyh
-jyh
+caJ
 qXp
 dGJ
 dGJ
@@ -194641,7 +194709,7 @@ kPb
 kPb
 yeO
 kPb
-kPb
+ahx
 uNT
 thx
 afS
@@ -194650,11 +194718,11 @@ kOh
 qXp
 jyh
 jyh
+caJ
 jyh
 jyh
 jyh
-jyh
-jyh
+caJ
 qXp
 dGJ
 dGJ
@@ -194898,7 +194966,7 @@ afS
 afS
 yeO
 kPb
-kPb
+ahx
 vrn
 thx
 qXp
@@ -195151,11 +195219,11 @@ kOh
 kOh
 kOh
 kOh
-kOh
+ozP
 kPb
 yeO
 kPb
-kPb
+ahx
 vrn
 thx
 jYs
@@ -195408,11 +195476,11 @@ bbw
 kOh
 kOh
 kOh
-kOh
+ozP
 kPb
 yeO
 kPb
-kPb
+ahx
 stg
 thx
 afS
@@ -195665,11 +195733,11 @@ kOh
 kOh
 kOh
 kOh
-kOh
+ozP
 kPb
 yeO
 kPb
-kPb
+ahx
 vrn
 thx
 jYs
@@ -195926,7 +195994,7 @@ afS
 afS
 yeO
 kPb
-kPb
+ahx
 vrn
 thx
 qXp
@@ -196183,7 +196251,7 @@ kPb
 kPb
 yeO
 kPb
-kPb
+ahx
 oEN
 thx
 afS
@@ -196429,7 +196497,7 @@ jyh
 qXp
 qXp
 qXp
-dGJ
+xkw
 dGJ
 nhB
 iXr
@@ -196440,7 +196508,7 @@ kPb
 kPb
 yeO
 kPb
-kPb
+ahx
 ukp
 thx
 afS
@@ -196697,7 +196765,7 @@ yeO
 nlC
 tbk
 nlC
-yeO
+qYp
 ukp
 thx
 afS
@@ -196954,7 +197022,7 @@ kPb
 kPb
 mfG
 kPb
-kPb
+ahx
 ukp
 thx
 afS
@@ -197211,7 +197279,7 @@ kPb
 kPb
 yeO
 kPb
-kPb
+ahx
 uNT
 thx
 afS
@@ -197464,11 +197532,11 @@ thx
 thx
 thx
 qXp
-kPb
-kPb
-yeO
-kPb
-kPb
+iWG
+iWG
+iQp
+iWG
+xWk
 vrn
 thx
 qXp
@@ -197984,7 +198052,7 @@ thx
 thx
 thx
 thx
-thx
+ptx
 qXp
 jyh
 jyh
