@@ -1264,6 +1264,13 @@
 /obj/machinery/deepfryer,
 /turf/open/floor/iron/kitchen,
 /area/space)
+"bJA" = (
+/obj/effect/turf_decal/trimline/purple/filled/corner,
+/obj/effect/turf_decal/trimline/purple/filled/line{
+	dir = 1
+	},
+/turf/open/floor/iron/white,
+/area/space)
 "bJS" = (
 /obj/effect/turf_decal/tile/purple/opposingcorners,
 /turf/open/floor/iron/white,
@@ -5707,6 +5714,12 @@
 	dir = 5
 	},
 /turf/open/floor/iron/dark,
+/area/space)
+"gEg" = (
+/obj/effect/turf_decal/trimline/purple/filled/line{
+	dir = 5
+	},
+/turf/open/floor/iron/white,
 /area/space)
 "gEF" = (
 /obj/structure/closet/crate/hydroponics{
@@ -194680,9 +194693,9 @@ kOh
 kOh
 bVJ
 gBX
-tod
-tod
-tod
+iDZ
+oVV
+dUW
 gBX
 jyh
 jyh
@@ -194937,9 +194950,9 @@ gvg
 gvg
 aKg
 gBX
-tod
-tod
-tod
+bJA
+pou
+jZh
 gBX
 jyh
 jyh
@@ -195452,9 +195465,9 @@ tod
 scT
 hMg
 fiB
-tod
-tod
-tod
+iDZ
+oVV
+lYz
 kPb
 kPb
 kPb
@@ -195709,9 +195722,9 @@ tod
 scT
 eOf
 fiB
-tod
-tod
-tod
+sWM
+whR
+sSC
 kPb
 kPb
 kPb
@@ -195966,8 +195979,8 @@ eRU
 iuv
 liV
 fiB
-tod
-tod
+sWM
+xPk
 qXp
 qXp
 kPb
@@ -196223,8 +196236,8 @@ kOh
 srN
 tvq
 fiB
-tod
-tod
+sWM
+xPk
 afS
 kPb
 kPb
@@ -196480,9 +196493,9 @@ xwJ
 lyp
 lbV
 fiB
-tod
-tod
-tod
+sWM
+fEs
+wLu
 osE
 osE
 osE
@@ -196711,7 +196724,7 @@ jyh
 jyh
 jyh
 jyh
-qXp
+afS
 kOh
 kOh
 kOh
@@ -196737,8 +196750,8 @@ tod
 scT
 kOh
 fiB
-tod
-tod
+nDZ
+xPk
 afS
 kPb
 kPb
@@ -196968,7 +196981,7 @@ jyh
 jyh
 jyh
 jyh
-qXp
+afS
 kOh
 jkW
 uPN
@@ -196994,8 +197007,8 @@ oac
 scT
 kOh
 hDD
-tod
-tod
+trQ
+xPk
 qXp
 qXp
 kPb
@@ -197225,7 +197238,7 @@ jyh
 jyh
 jyh
 jyh
-qXp
+afS
 kOh
 sHk
 kPb
@@ -197251,9 +197264,9 @@ fiB
 fiB
 gBX
 gBX
-tod
-tod
-tod
+cDz
+bvy
+lYz
 kPb
 kPb
 kPb
@@ -197508,9 +197521,9 @@ llv
 ffG
 jyh
 gBX
-tod
-tod
-tod
+gEg
+flV
+sSC
 kPb
 kPb
 kPb
@@ -197732,7 +197745,7 @@ thx
 afS
 kOh
 kOh
-kOh
+qXp
 qXp
 jyh
 jyh
@@ -197778,7 +197791,7 @@ jyh
 jyh
 peP
 jyh
-qXp
+afS
 kOh
 bnX
 kOh
@@ -198035,7 +198048,7 @@ jyh
 jyh
 xVI
 jyh
-qXp
+afS
 kOh
 bnX
 kOh
@@ -198253,7 +198266,7 @@ jyh
 jyh
 jyh
 jyh
-qXp
+afS
 kOh
 sHk
 kPb
@@ -198292,7 +198305,7 @@ jYR
 jyh
 jYR
 qcU
-qXp
+afS
 kOh
 bnX
 kOh
@@ -198510,7 +198523,7 @@ jyh
 jyh
 jyh
 jyh
-qXp
+afS
 kOh
 gCK
 nNm
@@ -198767,7 +198780,7 @@ jyh
 jyh
 jyh
 jyh
-qXp
+afS
 kOh
 kOh
 kOh
@@ -199320,7 +199333,7 @@ jyh
 jyh
 llv
 jyh
-qXp
+afS
 kOh
 bnX
 kOh
@@ -199577,7 +199590,7 @@ jyh
 jyh
 jyh
 jyh
-qXp
+afS
 kOh
 bnX
 kOh
@@ -199834,7 +199847,7 @@ jyh
 rWy
 tdW
 jyh
-qXp
+afS
 kOh
 bnX
 kOh
