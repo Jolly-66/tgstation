@@ -328,6 +328,9 @@
 	},
 /turf/open/floor/iron/dark,
 /area/space)
+"azQ" = (
+/turf/open/floor/carpet/orange,
+/area/space)
 "azS" = (
 /obj/machinery/vending/cola/red,
 /obj/effect/turf_decal/trimline/red/filled/line{
@@ -416,6 +419,7 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
 	},
+/obj/machinery/disposal/bin,
 /turf/open/floor/iron/dark,
 /area/space)
 "aDX" = (
@@ -991,6 +995,11 @@
 "bmB" = (
 /obj/structure/flora/tree/jungle,
 /turf/open/misc/grass/jungle,
+/area/space)
+"bna" = (
+/obj/effect/turf_decal/bot,
+/obj/effect/turf_decal/stripes/line,
+/turf/open/floor/iron/dark,
 /area/space)
 "bnI" = (
 /obj/structure/chair/office,
@@ -2410,6 +2419,12 @@
 /obj/structure/cable,
 /turf/open/floor/plating,
 /area/space)
+"cNT" = (
+/obj/machinery/computer/security/qm{
+	dir = 8
+	},
+/turf/open/floor/wood/tile,
+/area/space)
 "cOl" = (
 /obj/structure/flora/tree/jungle/style_2,
 /obj/structure/flora/bush/jungle/a/style_random,
@@ -3043,6 +3058,20 @@
 "dxL" = (
 /obj/effect/spawner/xmastree,
 /turf/open/floor/carpet/lone/star,
+/area/space)
+"dxZ" = (
+/obj/machinery/pdapainter/supply,
+/obj/machinery/requests_console/directional/north{
+	department = "Quartermaster's Desk";
+	name = "Quartermaster's Requests Console"
+	},
+/obj/effect/mapping_helpers/requests_console/supplies,
+/obj/effect/mapping_helpers/requests_console/announcement,
+/obj/machinery/computer/security/telescreen/vault{
+	pixel_x = -30;
+	dir = 4
+	},
+/turf/open/floor/wood/tile,
 /area/space)
 "dyg" = (
 /obj/structure/flora/bush/jungle/c/style_random,
@@ -7361,6 +7390,12 @@
 /obj/machinery/rnd/production/circuit_imprinter/department/science,
 /turf/open/floor/iron/dark,
 /area/space)
+"hME" = (
+/obj/machinery/modular_computer/preset/id{
+	dir = 4
+	},
+/turf/open/floor/wood/tile,
+/area/space)
 "hMS" = (
 /obj/structure/table,
 /obj/effect/spawner/random/food_or_drink/donkpockets{
@@ -9184,6 +9219,15 @@
 	},
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/iron/freezer,
+/area/space)
+"jBJ" = (
+/obj/structure/table/wood,
+/obj/machinery/fax{
+	fax_name = "Quartermaster's Office";
+	name = "Quartermaster's Fax Machine";
+	pixel_y = 6
+	},
+/turf/open/floor/wood/tile,
 /area/space)
 "jBP" = (
 /obj/effect/turf_decal/siding/white/corner,
@@ -12431,13 +12475,17 @@
 /obj/machinery/door/airlock/command{
 	name = "Quartermaster's Office"
 	},
-/turf/open/misc/dirt,
+/turf/open/floor/iron,
 /area/space)
 "mUu" = (
 /turf/open/floor/carpet/lone,
 /area/space)
 "mVb" = (
 /turf/open/misc/dirt,
+/area/space)
+"mWa" = (
+/obj/structure/chair/comfy/brown,
+/turf/open/floor/wood/tile,
 /area/space)
 "mWr" = (
 /obj/effect/turf_decal/trimline/red/filled/warning{
@@ -15007,6 +15055,10 @@
 /obj/structure/railing,
 /turf/open/floor/iron,
 /area/space)
+"pDB" = (
+/obj/structure/chair/stool/bar/directional/north,
+/turf/open/floor/iron,
+/area/space)
 "pDE" = (
 /obj/structure/closet/secure_closet/brig{
 	id = "Cell 2";
@@ -16053,6 +16105,12 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 6
 	},
+/obj/machinery/conveyor_switch/oneway{
+	id = "mining";
+	dir = 1;
+	pixel_y = 14;
+	pixel_x = 3
+	},
 /turf/open/floor/iron/dark,
 /area/space)
 "qLX" = (
@@ -16307,6 +16365,12 @@
 	dir = 4
 	},
 /turf/open/floor/iron/white,
+/area/space)
+"qXo" = (
+/obj/machinery/door/airlock/command{
+	name = "Quartermaster's Quarters"
+	},
+/turf/open/floor/wood/tile,
 /area/space)
 "qXp" = (
 /turf/closed/wall,
@@ -19970,6 +20034,12 @@
 	},
 /turf/open/floor/iron/large,
 /area/space)
+"uKJ" = (
+/obj/machinery/computer/cargo{
+	dir = 8
+	},
+/turf/open/floor/wood/tile,
+/area/space)
 "uLo" = (
 /obj/structure/table,
 /obj/machinery/button/door{
@@ -20399,6 +20469,14 @@
 /obj/effect/turf_decal/siding/wood,
 /obj/machinery/door/firedoor/border_only,
 /turf/open/floor/wood,
+/area/space)
+"vix" = (
+/obj/structure/table/wood,
+/obj/item/flashlight/lamp{
+	pixel_y = 10;
+	pixel_x = -5
+	},
+/turf/open/floor/carpet/orange,
 /area/space)
 "viD" = (
 /obj/machinery/conveyor{
@@ -21002,6 +21080,10 @@
 	dir = 1
 	},
 /turf/open/floor/iron/white,
+/area/space)
+"vTy" = (
+/obj/machinery/computer/order_console/mining,
+/turf/open/floor/iron,
 /area/space)
 "vUg" = (
 /obj/structure/chair/comfy/teal{
@@ -21899,6 +21981,15 @@
 	},
 /turf/open/floor/iron/dark,
 /area/space)
+"wLj" = (
+/obj/structure/bed/double{
+	dir = 1
+	},
+/obj/item/bedsheet/qm/double{
+	dir = 1
+	},
+/turf/open/floor/carpet/orange,
+/area/space)
 "wLu" = (
 /obj/effect/turf_decal/trimline/purple/filled/warning,
 /turf/open/floor/iron/white,
@@ -22222,6 +22313,7 @@
 /area/space)
 "xkd" = (
 /obj/effect/decal/cleanable/rubble,
+/obj/effect/turf_decal/delivery,
 /obj/effect/turf_decal/stripes/line,
 /turf/open/floor/iron/dark,
 /area/space)
@@ -22577,6 +22669,10 @@
 	id = "conc-shut"
 	},
 /turf/open/floor/iron/kitchen/small,
+/area/space)
+"xEn" = (
+/obj/structure/closet/secure_closet/quartermaster,
+/turf/open/floor/wood/tile,
 /area/space)
 "xEJ" = (
 /obj/structure/closet/secure_closet/freezer/kitchen/all_access,
@@ -134397,7 +134493,7 @@ mVb
 mVb
 mVb
 mVb
-mVb
+qXp
 mVb
 mVb
 mVb
@@ -134653,8 +134749,8 @@ mVb
 mVb
 mVb
 mVb
-mVb
-mVb
+qXp
+qXp
 mVb
 mVb
 mVb
@@ -134910,7 +135006,7 @@ mVb
 mVb
 mVb
 mVb
-mVb
+qXp
 mVb
 mVb
 mVb
@@ -135167,7 +135263,7 @@ mVb
 mVb
 mVb
 mVb
-mVb
+qXp
 mVb
 mVb
 mVb
@@ -135175,10 +135271,10 @@ mVb
 mVb
 qXp
 qXp
-mVb
-mVb
-mVb
-qXp
+thx
+thx
+thx
+fiB
 bnX
 bnX
 qXp
@@ -135424,18 +135520,18 @@ mVb
 mVb
 mVb
 mVb
-mVb
-mVb
 qXp
 qXp
 qXp
 qXp
 qXp
-mVb
-mVb
-mVb
-mVb
 qXp
+qXp
+hME
+jBJ
+thx
+thx
+fiB
 bnX
 bnX
 qXp
@@ -135681,18 +135777,18 @@ mVb
 mVb
 mVb
 mVb
-mVb
-mVb
 qXp
-mVb
-mVb
-mVb
+wLj
+vix
+thx
+thx
 qXp
-mVb
-mVb
-mVb
-mVb
-qXp
+dxZ
+mWa
+ozl
+thx
+thx
+fiB
 bnX
 bnX
 qXp
@@ -135938,18 +136034,18 @@ mVb
 mVb
 mVb
 mVb
-mVb
-mVb
 qXp
-mVb
-mVb
-mVb
-qXp
-mVb
-mVb
-mVb
-mVb
-qXp
+azQ
+azQ
+thx
+thx
+qXo
+thx
+thx
+thx
+thx
+thx
+fiB
 bnX
 bnX
 qXp
@@ -136195,18 +136291,18 @@ mVb
 mVb
 mVb
 mVb
-mVb
-mVb
 qXp
-mVb
-mVb
-mVb
+azQ
+azQ
+thx
+thx
 qXp
-mVb
-mVb
-mVb
-mVb
-qXp
+cNT
+uKJ
+thx
+thx
+thx
+fiB
 bnX
 bnX
 qXp
@@ -136452,11 +136548,11 @@ mVb
 mVb
 mVb
 mVb
-mVb
-mVb
 qXp
-mVb
-mVb
+qXp
+azQ
+otM
+xEn
 qXp
 qXp
 qXp
@@ -136710,7 +136806,7 @@ mVb
 mVb
 mVb
 mVb
-mVb
+qXp
 qXp
 qXp
 qXp
@@ -195794,7 +195890,7 @@ qXp
 lxr
 toj
 kOh
-kOh
+bYB
 bVJ
 gBX
 iDZ
@@ -198655,7 +198751,7 @@ kOh
 fiB
 bnX
 kOh
-sVG
+bna
 rKE
 pdu
 qXp
@@ -200965,7 +201061,7 @@ qXp
 bnX
 bnX
 fiB
-bnX
+vTy
 bnX
 bnX
 kOh
@@ -201217,7 +201313,7 @@ uUd
 kOh
 kOh
 bnX
-bnX
+kOm
 bnX
 bnX
 bnX
@@ -201471,7 +201567,7 @@ bnX
 kOh
 fiB
 dBg
-kOh
+sVi
 bnX
 bnX
 bnX
@@ -201479,9 +201575,9 @@ bnX
 bnX
 bnX
 fiB
-bnX
-bnX
-bnX
+lnH
+hXh
+pDB
 kOh
 jDa
 qXp
@@ -201736,8 +201832,8 @@ woN
 bnX
 bnX
 fiB
-bnX
-bnX
+kOm
+spl
 bnX
 bnX
 qXp
@@ -203526,7 +203622,7 @@ kOh
 kOh
 kOh
 fiB
-bnX
+kOm
 bnX
 bnX
 bnX
