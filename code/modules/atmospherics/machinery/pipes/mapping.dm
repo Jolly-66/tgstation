@@ -1,28 +1,16 @@
 //Colored pipes, use these for mapping
 
 #define HELPER_PIPING_LAYER(Fulltype) \
-	##Fulltype/visible/layer2 { \
-		piping_layer = 2; \
-	} \
-	##Fulltype/visible/layer4 { \
-		piping_layer = 4; \
-	} \
-	##Fulltype/visible/layer1 { \
+	##Fulltype/layer1 { \
 		piping_layer = 1; \
 	} \
-	##Fulltype/visible/layer5 { \
-		piping_layer = 5; \
-	} \
-	##Fulltype/hidden/layer2 { \
+		##Fulltype/layer2 { \
 		piping_layer = 2; \
 	} \
-	##Fulltype/hidden/layer4 { \
+		##Fulltype/layer4 { \
 		piping_layer = 4; \
 	} \
-	##Fulltype/hidden/layer1 { \
-		piping_layer = 1; \
-	} \
-	##Fulltype/hidden/layer5 { \
+		##Fulltype/layer5 { \
 		piping_layer = 5; \
 	}
 
