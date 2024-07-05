@@ -15,7 +15,8 @@
 	}
 
 #define HELPER_PARTIAL(Fulltype, Iconbase, Color) \
-	HELPER_PIPING_LAYER(Fulltype) \
+	HELPER_PIPING_LAYER(Fulltype/visible) \
+	HELPER_PIPING_LAYER(Fulltype/hidden) \
 	##Fulltype { \
 		pipe_color = Color; \
 		color = Color; \
